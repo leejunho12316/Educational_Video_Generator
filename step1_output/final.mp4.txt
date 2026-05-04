@@ -1,1 +1,0 @@
-file 'C:\Users\User\PycharmProjects\Educational_Video_Generator\step1_output\slide1_lecture_subtitled.mp4'
