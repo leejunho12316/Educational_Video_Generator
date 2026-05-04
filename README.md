@@ -182,7 +182,7 @@ Name: tavily_search
 
 - 자막 적용된 영상
 
-[![영상 제목](https://img.youtube.com/vi/0SWb5iNzfkc/maxresdefault.jpg)](https://youtu.be/0SWb5iNzfkc)
+[![영상 제목](https://img.youtube.com/vi/xbdGqKdn39E/maxresdefault.jpg)](https://www.youtube.com/watch?v=xbdGqKdn39E)
 
 | 노드 | 내용 |
 |------|------|
