@@ -95,6 +95,8 @@ OpenAI, Tavily API 키를 코드에 하드코딩하지 않고 Secrets Manager에
 <video src="./step1_output/slide1_lecture.mp4" controls autoplay loop muted width="600">
 </video>
 
+[slide1_lecture.mp4](step1_output/slide1_lecture.mp4)
+
 | 노드 | 내용 |
 |------|------|
 | **9. acc_step** | **입력** : X<br>**처리** : 다음 슬라이드 준비, video 링크 저장 등 현재 분기 처리 마무리 작업 진행. 남은 슬라이드가 있는지 확인 후 다음 슬라이드 처리 진행 또는 작업 마치고 다음 노드로 진행.<br>**출력** : X |
