@@ -214,7 +214,9 @@ RAG 시스템 구현 시 발생할 수 있는 도전 과제와 이를 해결하�
 | **6.tts** | **입력** : 스크립트<br>**처리** : OpenAI TTS (gpt-4o-mini-tts) 모델로 스크립트를 음성 mp3로 변환. 사용자 입력 prompt로 목소리와 톤 조정 가능.<br>**출력** : tts mp3 |
 
 
-**mp3 link** : [![SoundCloud](https://img.shields.io/badge/SoundCloud-FF3300?style=for-the-badge&logo=soundcloud&logoColor=white)](https://soundcloud.com/pydlfit2hjqg/narration_1-mp3-1)
+**mp3 link**
+
+[![SoundCloud](https://img.shields.io/badge/SoundCloud-FF3300?style=for-the-badge&logo=soundcloud&logoColor=white)](https://soundcloud.com/pydlfit2hjqg/narration_1-mp3-1)
 
 <br><br><br>
 
@@ -222,7 +224,8 @@ RAG 시스템 구현 시 발생할 수 있는 도전 과제와 이를 해결하�
 |------|------|
 | **7.make_video** | **입력** : 스냅샷 이미지, tts mp3,<br>**처리** : ffmpeg로 스냅샷 이미지에 tts mp3를 오디오 트랙으로 합쳐 mp4 영상 생성.<br>**출력** : 영상 mp4 |
 
-- 영상 (링크)
+**영상 (링크)**
+
 <a href="https://youtu.be/U2FxMrMzho8"><img src="https://img.youtube.com/vi/U2FxMrMzho8/maxresdefault.jpg" width="500"></a>
 
 <br><br>
@@ -231,7 +234,7 @@ RAG 시스템 구현 시 발생할 수 있는 도전 과제와 이를 해결하�
 |------|------|
 | **8.add_subtitle** | **입력** : 스크립트, 영상 mp4<br>**처리** : 스크립트를 문장 단위로 분리하고 각 문장 별 문자 수 비례로 시간을 배분해 SRT 자막 파일 생성. ffmpeg subtitles 필터로 자막을 영상에 burn-in 방식으로 추가.<br>**출력** : 자막 영상 mp4 |
 
-- 자막 예시
+**자막 예시**
 ```
 1
 00:00:00,000 --> 00:00:01,200
@@ -250,7 +253,7 @@ RAG는 정보 검색과 콘텐츠 생성을 결합하여 데이터 활용의 효
 ...
 ```
 
-- 자막 적용된 영상 (링크)
+**자막 적용된 영상 (링크)**
 
 <a href="https://youtu.be/JblS0vA-9vY"><img src="https://img.youtube.com/vi/JblS0vA-9vY/maxresdefault.jpg" width="500"></a>
 
@@ -265,7 +268,7 @@ RAG는 정보 검색과 콘텐츠 생성을 결합하여 데이터 활용의 효
 |------|------|
 | **10.concat_videos** | **입력** : 전체 자막 영상 mp4 경로 리스트<br>**처리** : ffmpeg concat demuxer로 모든 자막 영상 mp4를 재인코딩 없는 스트림 복사 방식으로 이어붙여 최종 영상 생성.<br>**출력** : 최종 영상 mp4 |
 
-- 최종 영상 (링크)
+**최종 영상 (링크)**
 
 <a href="https://youtu.be/ssa31l4iDNQ"><img src="https://img.youtube.com/vi/ssa31l4iDNQ/maxresdefault.jpg" width="500"></a>
 
