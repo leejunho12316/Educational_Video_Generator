@@ -35,6 +35,10 @@ PPT 슬라이드 인식 기반 교육 영상 자동 생성 Agent System - Tool C
 
 <img src="./README_resources/Screenshot_upload.png">
 
+**영상 처리중**
+
+<img src="./README_resources/Screenshot_processing.png">
+
 **완성 영상 조회**
 
 <img src="./README_resources/Screenshot_video2.png">
