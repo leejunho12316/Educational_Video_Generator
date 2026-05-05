@@ -1,4 +1,6 @@
 # Educational_Video_Generator
+
+
 PPT 슬라이드 인식 기반 교육 영상 자동 생성 Agent System - Tool Calling Multi Agent System
 
 기업 내에서는 다양한 형태의 자료가 지속적으로 생산됩니다. 경영 현황, 실적 보고 등의 사내 보고서나 Tool Calling, Multi Agent임원 보고, 프로젝트 발표자료 등의 발표 자료, 부서 간 안내 자료 등의 pdf와 ppt 파일들이 그 예입니다.
@@ -12,9 +14,18 @@ PPT 슬라이드 인식 기반 교육 영상 자동 생성 Agent System - Tool C
 또한 자료가 포함하지 못한 최신 연구, 실무 상황 적용 시 문제점과 주의점을 최신 내용 검색을 통해 내용을 보완합니다.
 이 서비스를 사용해 직원들에게 일정한 품질의 교육 영상을 신속하게 제작해 전달 수 있을 것입니다.
 
+## Index
+- [📸 ScreenShots](#screenshots)
+- [🎯 Stacks](#stacks)
+- [💎 Implementation Details](#implementation-details)
+  - [State Specifications](#state-specifications)
+  - [Node Specifications](#node-specifications)
+- [💫 Special Requirements](#special-requirements)
+
+
 <br><br><br>
 
-# ScreenShots
+# 📸ScreenShots
 
 **메인 페이지**
 
@@ -30,7 +41,7 @@ PPT 슬라이드 인식 기반 교육 영상 자동 생성 Agent System - Tool C
 
 <br><br><br>
 
-# Stacks
+# 🎯Stacks
 
 - Language : Python
 - AI : LangGraph, LangChain, OpenAI, Tavily
@@ -42,7 +53,7 @@ https://www.slideshare.net/slideshow/rag-tutorial-01-rag-pdf/270232354?from_sear
 <br><br><br>
 
 
-# Implementation Details
+# 💎Implementation Details
 ## 1. LangGraph Graph
 
 <img src="./README_resources/LangGraph_Graph.png" width="250">
@@ -262,7 +273,7 @@ RAG는 정보 검색과 콘텐츠 생성을 결합하여 데이터 활용의 효
 <br><br><br>
 
 
-# Special Requirements
+# 💫Special Requirements
 
 1. 필요한 라이브러리 설치
 ``` python
@@ -281,7 +292,7 @@ pip install langchain-openai langchain-community python-pptx pillow gradio langc
 
 <br><br><br>
 
-# notes
+# 📋Notes
 
 함수 설명
 1. split_sents()
