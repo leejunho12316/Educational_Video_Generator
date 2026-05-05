@@ -15,12 +15,12 @@ PPT 슬라이드 인식 기반 교육 영상 자동 생성 Agent System - Tool C
 이 서비스를 사용해 직원들에게 일정한 품질의 교육 영상을 신속하게 제작해 전달 수 있을 것입니다.
 
 ## Index
-- [📸 ScreenShots](#screenshots)
-- [🎯 Stacks](#stacks)
-- [💎 Implementation Details](#implementation-details)
+- [📸ScreenShots](#screenshots)
+- [🎯Stacks](#stacks)
+- [💎Implementation Details](#implementation-details)
   - [State Specifications](#state-specifications)
   - [Node Specifications](#node-specifications)
-- [💫 Special Requirements](#special-requirements)
+- [💫Special Requirements](#special-requirements)
 
 
 <br><br><br>
