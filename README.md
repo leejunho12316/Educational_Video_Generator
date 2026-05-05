@@ -12,19 +12,23 @@ PPT 슬라이드 인식 기반 교육 영상 자동 생성 Agent System - Tool C
 또한 자료가 포함하지 못한 최신 연구, 실무 상황 적용 시 문제점과 주의점을 최신 내용 검색을 통해 내용을 보완합니다.
 이 서비스를 사용해 직원들에게 일정한 품질의 교육 영상을 신속하게 제작해 전달 수 있을 것입니다.
 
+<br><br><br>
+
 # ScreenShots
 
-메인 페이지
+**메인 페이지**
 
 <img src="./README_resources/Screenshot_mainpage.png">
 
-영상 업로드
+**영상 업로드**
 
 <img src="./README_resources/Screenshot_upload.png">
 
-완성 영상 조회
+**완성 영상 조회**
 
 <img src="./README_resources/Screenshot_video2.png">
+
+<br><br><br>
 
 # Stacks
 
@@ -32,25 +36,20 @@ PPT 슬라이드 인식 기반 교육 영상 자동 생성 Agent System - Tool C
 - AI : LangGraph, LangChain, OpenAI, Tavily
 - Others : LibreOffice, python-pptx, FFmpeg
 
-
-
-
-# 추가할 내용
- 
-3. 성능 고도화, LLM Judge 등 정량적 측정 2개
-
-
-#### 예시 slide 출처
+예시 slide 출처 : 
 https://www.slideshare.net/slideshow/rag-tutorial-01-rag-pdf/270232354?from_search=1
 
+<br><br><br>
 
-# LangGraph Graph
+
+# Implementation Details
+## 1. LangGraph Graph
 
 <img src="./README_resources/LangGraph_Graph.png" width="250">
 
 <br><br><br>
 
-# State Specifications
+## 2. State Specifications
 
 | 이름 | 설명 | 자료형 | 값 예시 |
 |------|------|--------|---------|
@@ -102,7 +101,7 @@ https://www.slideshare.net/slideshow/rag-tutorial-01-rag-pdf/270232354?from_sear
 
 <br><br><br>
 
-# Node Specifications
+## 3. Node Specifications
 
 | 노드 | 내용 |
 |------|------|
@@ -260,25 +259,6 @@ RAG는 정보 검색과 콘텐츠 생성을 결합하여 데이터 활용의 효
 <a href="https://youtu.be/ssa31l4iDNQ"><img src="https://img.youtube.com/vi/ssa31l4iDNQ/maxresdefault.jpg" width="500"></a>
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <br><br><br>
 
 
@@ -299,7 +279,7 @@ pip install langchain-openai langchain-community python-pptx pillow gradio langc
 
 (PATH 추가 방법 : 시스템 속성 → 환경 변수 → Path → 새로 만들기 → 해당 폴더 경로 입력)
 
-
+<br><br><br>
 
 # notes
 
