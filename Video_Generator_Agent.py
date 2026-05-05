@@ -783,6 +783,7 @@ graph = builder.compile()
 # 외부 실행용 함수
 def run(pptx_path: str, prompt: dict = None):
     ppt_name = Path(pptx_path).stem
+    ppt_name = re.sub(r'[^\w\-]', '_', ppt_name)  # 공백·쉼표 등 특수문자 → _
     work_dir = f"./video_outputs/{ppt_name}"
     media_dir = f"{work_dir}/media"
 

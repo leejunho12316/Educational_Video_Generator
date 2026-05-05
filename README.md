@@ -12,6 +12,19 @@ PPT 슬라이드 인식 기반 교육 영상 자동 생성 Agent System - Tool C
 또한 자료가 포함하지 못한 최신 연구, 실무 상황 적용 시 문제점과 주의점을 최신 내용 검색을 통해 내용을 보완합니다.
 이 서비스를 사용해 직원들에게 일정한 품질의 교육 영상을 신속하게 제작해 전달 수 있을 것입니다.
 
+# ScreenShots
+
+메인 페이지
+
+<img src="./README_resources/Screenshot_mainpage.png">
+
+영상 업로드
+
+<img src="./README_resources/Screenshot_upload.png">
+
+완성 영상 조회
+
+<img src="./README_resources/Screenshot_video2.png">
 
 # Stacks
 
@@ -21,59 +34,14 @@ PPT 슬라이드 인식 기반 교육 영상 자동 생성 Agent System - Tool C
 
 
 
-## 예시 slide 출처
-https://www.slideshare.net/slideshow/rag-tutorial-01-rag-pdf/270232354?from_search=1
 
 # 추가할 내용
-~~1. 디테일한 개요 - B2B 관점 아이데이션~~
-2. FE/BE 붙여 스크린샷
+ 
 3. 성능 고도화, LLM Judge 등 정량적 측정 2개
-~~4. 최종 결과 YouTube Link~~
-
-# Cloud 적용 시 
-
-1. AWS S3 - 저장소 구성
-
-ppt 입력용, 최종 mp4 출력용 S3 저장소 구성
-사용자가 엔드포인트에서 ppt 업로드하면 S3 Bucket에 업로드. Video Generator 코드 실행 시 Bucket 주소로부터 ppt 가져오고 영상 생성. 최종 영상 생성되면 S3 Bucket에 업로드 하고 사용자가 엔드포인트에서 그 Bucket 업로드 된 영샹을 다운받을 수 있도록 설계.
-(중간 과정 부산물들은 임시 local에 그냥 저장.)
-
-2. AWS ECR - 컨테이너 레지스트리
-
-Project 코드 전체 Docker 컨테이너화 -> AWS ECR에 push
-
-3. AWS SQS - 작업 큐
-
-영상 생성 요청을 AWS SQS를 통해 큐에 적재해 차례대로 생성.
-
-4. AWS ECS Fargate - 워커 컴퓨팅
-
-ECS를 통해 ECR에 저장되어 있는 Docker Image pull 하고 실행. SQS를 통해 작업 요청을 차례대로 받아들이며 영상 생성 진행.
-(Fargate : 서버리스. Fargate X : EC2위에서 돌리기)
-(워커 컴퓨팅 : 작업을 받아서 처리하는 데 특화된 컴퓨팅 방식)
-
-5. AWS API Gateway + Lamgda - API 엔드포인트
-
-사용자 ppt 파일 전송 -> API Gateway -> Lambda -> S3에 PPT 저장, SQS에 작업 등록
-
-6. AWS Secrets Manager - API 키 관리
-
-OpenAI, Tavily API 키를 코드에 하드코딩하지 않고 Secrets Manager에서 주입
-
-7. 웹 UI (선택)
-  - Gradio나 FastAPI를 ECS에 같이 올리거나
-  - 슬라이드 수에 따라 처리 시간이 달라지므로 타임아웃 여유있게 설정 필요
 
 
-
-
-
-
-
-
-
-
-
+#### 예시 slide 출처
+https://www.slideshare.net/slideshow/rag-tutorial-01-rag-pdf/270232354?from_search=1
 
 
 # LangGraph Graph
@@ -355,3 +323,51 @@ make_srt_from_script의 단순 버전.
 
 자막 burn-in : 자막이 영상과 한 몸이 된 상태
 soft subtitle : 자막 트랙을 별도로 삽입해 켜고 끌 수 있는 방식.
+
+
+README
+- ppt 리스트 좀 늘린 후 스샷 추가 
+- B2B 관점 아이데이션 디테일한 개요
+- 최종 결과 YouTube Link
+
+FE/BE
+- FE/BE 붙여 스크린샷
+- 완료 시 영상 재생
+- 사이드바 채팅 메세지 입력 삭제
+- ppt 업로드 시 팝업으로 prompt 작성
+- 로고 추가
+
+
+### Cloud 적용 시 
+
+1. AWS S3 - 저장소 구성
+
+ppt 입력용, 최종 mp4 출력용 S3 저장소 구성
+사용자가 엔드포인트에서 ppt 업로드하면 S3 Bucket에 업로드. Video Generator 코드 실행 시 Bucket 주소로부터 ppt 가져오고 영상 생성. 최종 영상 생성되면 S3 Bucket에 업로드 하고 사용자가 엔드포인트에서 그 Bucket 업로드 된 영샹을 다운받을 수 있도록 설계.
+(중간 과정 부산물들은 임시 local에 그냥 저장.)
+
+2. AWS ECR - 컨테이너 레지스트리
+
+Project 코드 전체 Docker 컨테이너화 -> AWS ECR에 push
+
+3. AWS SQS - 작업 큐
+
+영상 생성 요청을 AWS SQS를 통해 큐에 적재해 차례대로 생성.
+
+4. AWS ECS Fargate - 워커 컴퓨팅
+
+ECS를 통해 ECR에 저장되어 있는 Docker Image pull 하고 실행. SQS를 통해 작업 요청을 차례대로 받아들이며 영상 생성 진행.
+(Fargate : 서버리스. Fargate X : EC2위에서 돌리기)
+(워커 컴퓨팅 : 작업을 받아서 처리하는 데 특화된 컴퓨팅 방식)
+
+5. AWS API Gateway + Lamgda - API 엔드포인트
+
+사용자 ppt 파일 전송 -> API Gateway -> Lambda -> S3에 PPT 저장, SQS에 작업 등록
+
+6. AWS Secrets Manager - API 키 관리
+
+OpenAI, Tavily API 키를 코드에 하드코딩하지 않고 Secrets Manager에서 주입
+
+7. 웹 UI (선택)
+  - Gradio나 FastAPI를 ECS에 같이 올리거나
+  - 슬라이드 수에 따라 처리 시간이 달라지므로 타임아웃 여유있게 설정 필요
