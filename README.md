@@ -1,14 +1,34 @@
 # Educational_Video_Generator
-교육 영상 제작 Tool Calling Multi Agent System
+PPT 슬라이드 인식 기반 교육 영상 자동 생성 Agent System - Tool Calling Multi Agent System
+
+기업 내에서는 다양한 형태의 자료가 지속적으로 생산됩니다. 경영 현황, 실적 보고 등의 사내 보고서나 Tool Calling, Multi Agent임원 보고, 프로젝트 발표자료 등의 발표 자료, 부서 간 안내 자료 등의 pdf와 ppt 파일들이 그 예입니다.
+그리고 DX (Digital Transformation) 시대에 직원 교육에는 교육 영상을 만들어 제공하는 것이 효과적일 것입니다.
+
+하지만 수 많은 자료들을 사용해 수동으로 교육 영상을 생성하려면 번거로운 작업이 많으며 시간 소모가 큽니다. 발표 스크립트 작성, 영상 녹화, 영상 편집, 자막 삽입 등의 작업에 수일이 걸리는 것이 보통입니다.
+또, 발표자에 따라서 교육 스타일이 매번 달라지니 일정한 품질의 교육 영상을 생성하는 데에도 무리가 있습니다.
+
+따라서 이러한 시간, 비용, 품질의 제약사항을 해결하기 위해 본 Agent System을 제작했습니다.
+이 Agent는 ppt 내부의 텍스트, 이미지, 그래프, 표를 자동적으로 추출하고 이해합니다. 또, 이해한 내용을 바탕으로 발표 스크립트 생성, TTS 적용, 자막을 적용한 영상 생성까지 한 번에 진행합니다.
+또한 자료가 포함하지 못한 최신 연구, 실무 상황 적용 시 문제점과 주의점을 최신 내용 검색을 통해 내용을 보완합니다.
+이 서비스를 사용해 직원들에게 일정한 품질의 교육 영상을 신속하게 제작해 전달 수 있을 것입니다.
+
+
+# Stacks
+
+- Language : Python
+- AI : LangGraph, LangChain, OpenAI, Tavily
+- Others : LibreOffice, python-pptx, FFmpeg
+
+
 
 ## 예시 slide 출처
 https://www.slideshare.net/slideshow/rag-tutorial-01-rag-pdf/270232354?from_search=1
 
 # 추가할 내용
-1. 디테일한 개요 - B2B 관점 아이데이션
+~~1. 디테일한 개요 - B2B 관점 아이데이션~~
 2. FE/BE 붙여 스크린샷
 3. 성능 고도화, LLM Judge 등 정량적 측정 2개
-4. 최종 결과 YouTube Link
+~~4. 최종 결과 YouTube Link~~
 
 # Cloud 적용 시 
 
@@ -224,7 +244,8 @@ RAG 시스템 구현 시 발생할 수 있는 도전 과제와 이를 해결하�
 |------|------|
 | **7.make_video** | **입력** : 스냅샷 이미지, tts mp3,<br>**처리** : ffmpeg로 스냅샷 이미지에 tts mp3를 오디오 트랙으로 합쳐 mp4 영상 생성.<br>**출력** : 영상 mp4 |
 
-[![영상](https://img.youtube.com/vi/U2FxMrMzho8/maxresdefault.jpg)](https://youtu.be/U2FxMrMzho8)
+- 영상 (링크)
+<a href="https://youtu.be/U2FxMrMzho8"><img src="https://img.youtube.com/vi/U2FxMrMzho8/maxresdefault.jpg" width="500"></a>
 
 <br><br>
 
@@ -251,9 +272,9 @@ RAG는 정보 검색과 콘텐츠 생성을 결합하여 데이터 활용의 효
 ...
 ```
 
-- 자막 적용된 영상
+- 자막 적용된 영상 (링크)
 
-[![영상 제목](https://img.youtube.com/vi/JblS0vA-9vY/maxresdefault.jpg)](https://youtu.be/JblS0vA-9vY)
+<a href="https://youtu.be/JblS0vA-9vY"><img src="https://img.youtube.com/vi/JblS0vA-9vY/maxresdefault.jpg" width="500"></a>
 
 
 | 노드 | 내용 |
@@ -266,9 +287,9 @@ RAG는 정보 검색과 콘텐츠 생성을 결합하여 데이터 활용의 효
 |------|------|
 | **10.concat_videos** | **입력** : 전체 자막 영상 mp4 경로 리스트<br>**처리** : ffmpeg concat demuxer로 모든 자막 영상 mp4를 재인코딩 없는 스트림 복사 방식으로 이어붙여 최종 영상 생성.<br>**출력** : 최종 영상 mp4 |
 
-- 최종 영상
+- 최종 영상 (링크)
 
-[![최종 영상](https://img.youtube.com/vi/ssa31l4iDNQ/maxresdefault.jpg)](https://youtu.be/ssa31l4iDNQ)
+<a href="https://youtu.be/ssa31l4iDNQ"><img src="https://img.youtube.com/vi/ssa31l4iDNQ/maxresdefault.jpg" width="500"></a>
 
 
 
