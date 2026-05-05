@@ -178,25 +178,19 @@ RAG 서비스를 구현하기 위해 고려해야 할 사항들은 다음과 같
 ```
 ================================== Ai Message ==================================
 Tool Calls:
-  tavily_search (call_EaoAKTg4jRylIXmrcnfATblp)
- Call ID: call_EaoAKTg4jRylIXmrcnfATblp
+  tavily_search (call_zIsH9DQ8jpgRh6YVPYx9LC8i)
+ Call ID: call_zIsH9DQ8jpgRh6YVPYx9LC8i
   Args:
-    query: 모델 성능 모니터링
+    query: RAG Retrieval Augmented Generation edge cases implementation challenges
     search_depth: advanced
 ================================= Tool Message =================================
 Name: tavily_search
 
-{
-   "query": "모델 성능 모니터링", "follow_up_questions": null, "answer": null, "images": [],
-   "results": [{"url": "https://docs.newrelic.com/kr/docs/mlops/get-started/intro-mlops/", 
-      "title": "모델 성능 모니터링(MLOps) 소개 | New Relic Documentation", 
-      "content": "여기에서 시작하기\n\n데이터 모니터링\n\n데이터 인사이트\n\n보안\n\n제품 업데이트\n\n관리 및 데이터\n\n# 모델 성능 모니터링(MLOps) 소개\n\n머신 러닝 작업은 품질을 높이고 관리 프로세스를 간소화하며 대규모 운영 환경에서 머신 러닝 모델의 배포를 자동화하도록 설계된 일련의 관행으로 구성됩니다.\n\n인공 지능과 머신 러닝에 투자하는 기업이 늘어나면서, 머신 러닝 모델을 개발하는 데이터 과학 팀과 이 모델을 지원하는 애플리케이션을 운영하는 데브옵스 팀 사이에 이해의 격차가 존재하게 되었습니다. 현재 기업의 15%만이 전체 활동에 AI를 구현합니다. 게다가 배포, 모니터링, 관리 및 거버넌스의 문제로 인해 운영에서 머신 러닝 모델의 75%가 전혀 사용되지 않고 있습니다. 궁극적으로 모델 작업을 하는 엔지니어와 데이터 과학자의 막대한 시간이 낭비되고, 투자에 대한 막대한 순손실이 발생하며, 머신 러닝 모델이 정량화 가능한 성장을 지원하는 경우 전반적인 신뢰 부족을 야기합니다.\n\n모델 성능 모니터링은 운영 중인 모델의 행동과 효과를 모니터링하여 데이터 과학자와 MLOP 실무자에게 머신 러닝 애플리케이션에 대한 가시성을 제공합니다. 이를 통해 데이터 팀은 지속적인 개발, 테스트 및 운영 모니터링 프로세스를 생성하는 데브옵스 팀과 직접적으로 협업할 수 있습니다.\n\n## 머신 러닝 모델을 모니터링하는 방법\n\n다음과 같은 몇 가지 옵션을 통해, 뉴렐릭 알림에서 모델 성능 모델링을 사용할 수 있습니다. [...] 다음과 같은 몇 가지 옵션을 통해, 뉴렐릭 알림에서 모델 성능 모델링을 사용할 수 있습니다.\n\nBring your own data (BYOD): 뉴렐릭이 권장하는 접근 방식입니다. 뉴렐릭의 ML 모델 성능 모니터링은 ML 모델이 운영에서 작동하는 방식에 대한 심층적인 옵저버빌리티를 제공합니다. BYOD(자체 데이터 사용)는 모든 환경(Python 스크립트, 컨테이너, Lambda 함수, SageMaker 등)에서 사용될 수 있으며, 모든 머신 러닝 프레임워크(Scikit-learn, Keras, Pytorch, Tensorflow, Jax 등)와 쉽게 통합될 수 있습니다. 자체 데이터를 사용하면 자체적인 ML 모델 텔레메트리를 뉴렐릭으로 가져와 ML 모델 데이터에서 가치를 실현할 수 있습니다. 단 몇 분 만에 모니터링하려는 다른 커스텀 메트릭과 함께 기능 분포, 통계 데이터 및 예측 분포를 확보할 수 있습니다. 뉴렐릭 문서에서 BYOD를 사용하는 방법을 자세히 알아보십시오.\n\nIntegrations: 뉴렐릭은 또한 Amazon SageMaker와 협력해, SageMaker에서 뉴렐릭으로 성능 메트릭 뷰를 제공하며 ML 엔지니어 및 데이터 과학 팀의 옵저버빌리티에 대한 액세스를 확장해줍니다. Amazon SageMaker 통합에 대해 자세히 알아보십시오.",
-      "score": 0.91306627, "raw_content": null}], 
-   "response_time": 1.16, "request_id": "be6b4c36-7e65-40b9-8d57-075417d53ca2"
-}
+{"query": "RAG Retrieval Augmented Generation edge cases implementation challenges", "follow_up_questions": null, "answer": null, "images": [], "results": [{"url": "https://medium.com/@bijit211987/5-practical-challenges-of-rag-and-their-mitigation-ideas-034217d8ed96", "title": "5 Practical Challenges of RAG and Their Mitigation Ideas - Medium", "content": "## A Holistic and Tool-Rich Approach to RAG Implementation\\n\\nBuilding and deploying RAG systems in production presents unique challenges. As a practitioner, I’ve faced issues like retrieval quality, latency, noise in the knowledge base, and integration complexity. However, with the right combination of strategies and tools, these challenges can be effectively addressed. Advanced retrieval models like SBERT, ColBERT, and OpenSearch, combined with semantic caching and multi-stage ranking, can ensure high-quality, low-latency results.", "score": 0.9999826, "raw_content": null}], "response_time": 0.0, "request_id": "bdb7e202-a9f9-4434-ad22-63a49e38eae4"}
+
 ================================== Ai Message ==================================
 
-모델 성능 모니터링은 머신 러닝 모델의 성능과 동작을 지속적으로 추적하고 분석하는 과정으로, 데이터 품질 저하나 환경 변화 등의 리스크를 관리하는 데 중요합니다. 이를 통해 성능 저하를 조기에 발견하고, 문제의 근본 원인을 분석하여 해결책을 모색할 수 있습니다. New Relic의 문서에 따르면, 머신 러닝 모델의 운영을 지원하기 위해 데이터 과학자와 DevOps 팀 간의 협업이 필요하며, 다양한 통합 옵션을 통해 모델 성능을 효과적으로 모니터링할 수 있습니다.
+RAG(Recovery Augmented Generation) 시스템 구현 시 발생할 수 있는 예외 상황과 실무적인 주의사항에 대한 내용을 검색한 결과, RAG 시스템의 구현에는 여러 가지 도전 과제가 있으며, 이를 해결하기 위한 전략과 도구의 조합이 필요하다는 점이 강조되었습니다. 주요 도전 과제로는 검색 품질, 지연 시간, 지식 기반의 노이즈, 통합 복잡성이 있으며, 이를 해결하기 위해 고급 검색 모델(SBERT, ColBERT 등)과 세멘틱 캐싱, 다단계 랭킹 기법이 효과적이라는 내용이 포함되어 있습니다. 또한, RAG의 성공적인 구현을 위해서는 데이터 소스의 정기적인 업데이트, 지속적인 교육 및 성능 모니터링, 데이터 프라이버시 및 규정 준수와 같은 윤리적 고려사항이 필요하다는 점도 강조되었습니다.
 ```
 
 <br><br>
