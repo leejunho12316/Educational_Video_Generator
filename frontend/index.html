@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Educational Video Generator</title>
+  <link rel="icon" type="image/png" href="Icon_8yeegz_nookie_resized.png">
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif;
+      background: #f0ede8;
+      display: flex;
+      height: 100vh;
+      overflow: hidden;
+      color: #1a1a1a;
+    }
+
+    /* ─────────── Sidebar ─────────── */
+    .sidebar {
+      width: 0;
+      background: #ffffff;
+      border-right: 1px solid #e8e4df;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      transition: width 0.25s cubic-bezier(.4,0,.2,1);
+      flex-shrink: 0;
+      z-index: 10;
+    }
+    .sidebar.open { width: 256px; }
+
+    .sidebar-inner {
+      width: 256px;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+    }
+
+    .sidebar-header {
+      padding: 18px 20px 14px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      border-bottom: 1px solid #f0ede8;
+      flex-shrink: 0;
+    }
+    .sidebar-logo {
+      font-size: 15px;
+      font-weight: 700;
+      color: #1a1a1a;
+      letter-spacing: -0.01em;
+      white-space: nowrap;
+      text-decoration: none;
+    }
+    .sidebar-logo:hover { opacity: 0.7; }
+
+    .sidebar-nav {
+      padding: 10px 10px 4px;
+      flex-shrink: 0;
+    }
+
+    .nav-item {
+      display: flex;
+      align-items: center;
+      gap: 11px;
+      padding: 9px 12px;
+      border-radius: 9px;
+      cursor: pointer;
+      font-size: 14px;
+      color: #3a3a3a;
+      transition: background 0.15s;
+      white-space: nowrap;
+      user-select: none;
+    }
+    .nav-item:hover { background: #f5f1ec; }
+    .nav-item svg { flex-shrink: 0; }
+
+    .nav-input-wrap {
+      padding: 6px 10px 8px;
+      flex-shrink: 0;
+    }
+    .nav-search {
+      width: 100%;
+      padding: 8px 12px;
+      border: 1px solid #e0dbd5;
+      border-radius: 9px;
+      font-size: 13px;
+      background: #faf8f5;
+      color: #1a1a1a;
+      outline: none;
+      transition: border-color 0.15s;
+    }
+    .nav-search:focus { border-color: #b0a89e; }
+
+    .nav-chat-wrap {
+      padding: 0 10px 8px;
+      flex-shrink: 0;
+    }
+    .nav-chat {
+      width: 100%;
+      padding: 8px 12px;
+      border: 1px solid #e0dbd5;
+      border-radius: 9px;
+      font-size: 13px;
+      background: #faf8f5;
+      color: #1a1a1a;
+      outline: none;
+      resize: none;
+      height: 68px;
+      transition: border-color 0.15s;
+      font-family: inherit;
+    }
+    .nav-chat:focus { border-color: #b0a89e; }
+
+    .sidebar-divider {
+      height: 1px;
+      background: #f0ede8;
+      margin: 4px 10px 0;
+      flex-shrink: 0;
+    }
+
+    .sidebar-scroll {
+      flex: 1;
+      overflow-y: auto;
+      padding: 4px 10px 20px;
+    }
+    .sidebar-scroll::-webkit-scrollbar { width: 4px; }
+    .sidebar-scroll::-webkit-scrollbar-thumb {
+      background: #d5d0ca;
+      border-radius: 4px;
+    }
+
+    .section-label {
+      font-size: 11px;
+      font-weight: 600;
+      color: #999;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      padding: 14px 12px 6px;
+    }
+
+    .history-item {
+      display: block;
+      padding: 7px 12px;
+      border-radius: 8px;
+      font-size: 13px;
+      color: #3a3a3a;
+      cursor: pointer;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      transition: background 0.15s;
+      user-select: none;
+    }
+    .history-item:hover { background: #f5f1ec; }
+
+    .history-empty {
+      padding: 8px 12px;
+      font-size: 13px;
+      color: #bbb;
+    }
+
+    /* ─────────── Main ─────────── */
+    .main {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      overflow: hidden;
+      padding-bottom: 16vh;
+    }
+
+    .toggle-btn {
+      position: absolute;
+      top: 16px;
+      left: 16px;
+      width: 36px;
+      height: 36px;
+      border: 1.5px solid #d8d3cd;
+      background: #fff;
+      border-radius: 9px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background 0.15s, border-color 0.15s;
+      z-index: 20;
+    }
+    .toggle-btn:hover { background: #f0ede8; border-color: #bfb9b2; }
+
+    /* ─────────── Greeting ─────────── */
+    .greeting-wrap {
+      text-align: center;
+      margin-bottom: 52px;
+      user-select: none;
+    }
+    .greeting-star { font-size: 36px; color: #c06040; line-height: 1; margin-bottom: 14px; }
+    .greeting-text { font-size: 44px; font-weight: 300; color: #1a1a1a; letter-spacing: -0.02em; }
+
+    /* ─────────── Upload ─────────── */
+    .upload-area { width: 100%; max-width: 560px; padding: 0 24px; }
+
+    .upload-btn {
+      width: 100%;
+      background: #fff;
+      border: 2px dashed #ccc8c2;
+      border-radius: 18px;
+      padding: 52px 32px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 14px;
+      cursor: pointer;
+      transition: border-color 0.2s, background 0.2s, transform 0.15s;
+      user-select: none;
+    }
+    .upload-btn:hover { border-color: #9a8a7a; background: #faf8f5; }
+    .upload-btn:active { transform: scale(0.99); }
+    .upload-btn.dragover { border-color: #9a8a7a; background: #f5f0ea; }
+    .upload-btn.loading { opacity: 0.6; pointer-events: none; }
+
+    .upload-icon { color: #9a8a7a; }
+    .upload-label { font-size: 17px; font-weight: 500; color: #2a2a2a; }
+    .upload-sub { font-size: 13px; color: #999; }
+
+    #file-input { display: none; }
+
+    /* ─────────── Modal ─────────── */
+    .modal-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.35);
+      z-index: 200;
+      align-items: center;
+      justify-content: center;
+    }
+    .modal-overlay.open { display: flex; }
+
+    .modal {
+      background: #fff;
+      border-radius: 18px;
+      padding: 32px 36px;
+      width: 100%;
+      max-width: 460px;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.15);
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      animation: modalIn 0.2s ease;
+    }
+    @keyframes modalIn {
+      from { opacity: 0; transform: translateY(12px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    .modal-title { font-size: 17px; font-weight: 600; color: #1a1a1a; }
+    .modal-filename { font-size: 13px; color: #888; margin-top: -12px; }
+
+    .modal-field { display: flex; flex-direction: column; gap: 6px; }
+    .modal-label { font-size: 13px; font-weight: 500; color: #3a3a3a; }
+
+    .modal-select, .modal-input {
+      padding: 10px 12px;
+      border: 1px solid #e0dbd5;
+      border-radius: 9px;
+      font-size: 14px;
+      font-family: inherit;
+      color: #1a1a1a;
+      background: #faf8f5;
+      outline: none;
+      transition: border-color 0.15s;
+    }
+    .modal-select:focus, .modal-input:focus { border-color: #b0a89e; }
+    .modal-input { resize: vertical; min-height: 68px; }
+
+    .modal-actions { display: flex; gap: 10px; justify-content: flex-end; margin-top: 4px; }
+
+    .btn {
+      padding: 10px 22px;
+      border-radius: 9px;
+      font-size: 14px;
+      font-weight: 500;
+      cursor: pointer;
+      border: none;
+      transition: background 0.15s;
+    }
+    .btn-cancel { background: #f0ede8; color: #555; }
+    .btn-cancel:hover { background: #e5e0da; }
+    .btn-confirm { background: #2a2a2a; color: #fff; }
+    .btn-confirm:hover { background: #444; }
+
+    /* ─────────── Toast ─────────── */
+    .toast {
+      position: fixed;
+      bottom: 32px;
+      left: 50%;
+      transform: translateX(-50%) translateY(12px);
+      background: #2a2a2a;
+      color: #fff;
+      padding: 12px 22px;
+      border-radius: 10px;
+      font-size: 14px;
+      opacity: 0;
+      transition: opacity 0.25s, transform 0.25s;
+      pointer-events: none;
+      white-space: nowrap;
+      z-index: 100;
+    }
+    .toast.show { opacity: 1; transform: translateX(-50%) translateY(0); }
+    .toast.error { background: #b94040; }
+  </style>
+</head>
+<body>
+
+<!-- ── Sidebar ── -->
+<aside class="sidebar" id="sidebar">
+  <div class="sidebar-inner">
+
+    <div class="sidebar-header">
+      <a class="sidebar-logo" href="index.html">
+        <img src="Icon_8yeegz_nookie_resized.png" height="28" style="vertical-align:middle;margin-right:8px;">Video Generator
+      </a>
+    </div>
+
+    <nav class="sidebar-nav">
+      <div class="nav-item" onclick="document.getElementById('file-input').click()">
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+          <line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/>
+        </svg>
+        새 PPT 업로드
+      </div>
+    </nav>
+
+    <div class="nav-input-wrap">
+      <input class="nav-search" id="nav-search" type="text" placeholder="🔍  검색" oninput="onSearch(this.value)">
+    </div>
+
+    <div class="sidebar-divider"></div>
+
+    <div class="sidebar-scroll">
+      <div class="section-label">즐겨찾기</div>
+      <div id="favorites-list"><div class="history-empty">즐겨찾기 없음</div></div>
+
+      <div class="section-label">최근 항목</div>
+      <div id="recent-list">
+        <div class="history-empty">업로드된 파일이 없습니다</div>
+      </div>
+    </div>
+
+  </div>
+</aside>
+
+<!-- ── Main ── -->
+<main class="main">
+
+  <button class="toggle-btn" onclick="toggleSidebar()" title="사이드바 열기/닫기">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#555" stroke-width="1.8">
+      <rect x="3" y="3" width="18" height="18" rx="2.5"/>
+      <line x1="9" y1="3" x2="9" y2="21"/>
+    </svg>
+  </button>
+
+  <div class="greeting-wrap">
+    <img src="Icon_8yeegz_nookie.png" height="240">
+    <div class="greeting-text" id="greeting"></div>
+  </div>
+
+  <div class="upload-area">
+    <div class="upload-btn" id="upload-btn"
+         onclick="document.getElementById('file-input').click()"
+         ondragover="onDragOver(event)"
+         ondragleave="onDragLeave()"
+         ondrop="onDrop(event)">
+      <svg class="upload-icon" width="48" height="48" viewBox="0 0 24 24"
+           fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round">
+        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+        <polyline points="17 8 12 3 7 8"/>
+        <line x1="12" y1="3" x2="12" y2="15"/>
+      </svg>
+      <span class="upload-label" id="upload-label">PPT 파일 업로드</span>
+      <span class="upload-sub">.pptx 파일을 클릭하거나 드래그해서 올려주세요</span>
+    </div>
+    <input type="file" id="file-input" accept=".pptx,.ppt" onchange="onFileSelect(event)">
+  </div>
+
+</main>
+
+<!-- ── Modal ── -->
+<div class="modal-overlay" id="modal-overlay">
+  <div class="modal">
+    <div class="modal-title">영상 생성 설정</div>
+    <div class="modal-filename" id="modal-filename"></div>
+
+    <div class="modal-field">
+      <label class="modal-label">Voice</label>
+      <select class="modal-select" id="modal-voice">
+        <option value="alloy">alloy</option>
+        <option value="ash">ash</option>
+        <option value="ballad">ballad</option>
+        <option value="cedar">cedar</option>
+        <option value="coral">coral</option>
+        <option value="echo">echo</option>
+        <option value="fable">fable</option>
+        <option value="marin">marin</option>
+        <option value="nova" selected>nova</option>
+        <option value="onyx">onyx</option>
+        <option value="sage">sage</option>
+        <option value="shimmer">shimmer</option>
+        <option value="verse">verse</option>
+      </select>
+    </div>
+
+    <div class="modal-field">
+      <label class="modal-label">Tone <span style="color:#bbb;font-weight:400">(비워두면 기본값)</span></label>
+      <textarea class="modal-input" id="modal-tone" placeholder="친절하고 명료한 강의 톤"></textarea>
+    </div>
+
+    <div class="modal-field">
+      <label class="modal-label">Style <span style="color:#bbb;font-weight:400">(비워두면 기본값)</span></label>
+      <textarea class="modal-input" id="modal-style" placeholder="예시와 핵심 요점 중심"></textarea>
+    </div>
+
+    <div class="modal-actions">
+      <button class="btn btn-cancel" onclick="closeModal()">취소</button>
+      <button class="btn btn-confirm" onclick="confirmUpload()">영상 생성 시작</button>
+    </div>
+  </div>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script>
+  const API = 'http://localhost:8000';
+
+  // ── Greeting ──
+  (function () {
+    const h = new Date().getHours();
+    const text = h >= 6 && h < 12 ? '좋은 아침입니다'
+               : h >= 12 && h < 18 ? '행복한 오후에요'
+               : '나른한 저녁입니다';
+    document.getElementById('greeting').textContent = text;
+  })();
+
+  // ── Sidebar ──
+  let sidebarOpen = false;
+  function toggleSidebar() {
+    sidebarOpen = !sidebarOpen;
+    document.getElementById('sidebar').classList.toggle('open', sidebarOpen);
+    if (sidebarOpen) loadFiles();
+  }
+
+  // ── 즐겨찾기 ──
+  function getFavorites() {
+    return JSON.parse(localStorage.getItem('favorites') || '[]');
+  }
+  function renderFavoritesList() {
+    const container = document.getElementById('favorites-list');
+    const favs = getFavorites();
+    if (!favs.length) {
+      container.innerHTML = '<div class="history-empty">즐겨찾기 없음</div>';
+      return;
+    }
+    container.innerHTML = favs.map(name =>
+      `<a class="history-item" href="detail.html?file=${encodeURIComponent(name)}" title="${name}">⭐ ${name.replace(/\.pptx?$/i, '')}</a>`
+    ).join('');
+  }
+
+  // ── Recent list ──
+  let allFiles = [];
+
+  async function loadFiles() {
+    try {
+      const res = await fetch(`${API}/files`);
+      const data = await res.json();
+      allFiles = data.files || [];
+      const query = document.getElementById('nav-search')?.value || '';
+      renderRecentList(query ? allFiles.filter(f => f.toLowerCase().includes(query.toLowerCase())) : allFiles);
+      renderFavoritesList();
+    } catch {
+      // 서버 미실행 시 무시
+    }
+  }
+
+  function renderRecentList(files) {
+    const container = document.getElementById('recent-list');
+    if (!files || files.length === 0) {
+      container.innerHTML = '<div class="history-empty">일치하는 파일이 없습니다</div>';
+      return;
+    }
+    container.innerHTML = files
+      .map(name => `<a class="history-item" href="detail.html?file=${encodeURIComponent(name)}" title="${name}">📄 ${name}</a>`)
+      .join('');
+  }
+
+  function onSearch(query) {
+    const filtered = query
+      ? allFiles.filter(f => f.toLowerCase().includes(query.toLowerCase()))
+      : allFiles;
+    renderRecentList(filtered);
+  }
+
+  // ── Upload ──
+  function onDragOver(e) {
+    e.preventDefault();
+    document.getElementById('upload-btn').classList.add('dragover');
+  }
+  function onDragLeave() {
+    document.getElementById('upload-btn').classList.remove('dragover');
+  }
+  function onDrop(e) {
+    e.preventDefault();
+    document.getElementById('upload-btn').classList.remove('dragover');
+    const file = e.dataTransfer.files[0];
+    if (file) handleFile(file);
+  }
+  function onFileSelect(e) {
+    const file = e.target.files[0];
+    if (file) handleFile(file);
+    e.target.value = '';
+  }
+
+  // 모달에서 사용할 파일 임시 저장
+  let pendingFile = null;
+
+  function handleFile(file) {
+    if (!file.name.match(/\.pptx?$/i)) {
+      showToast('⚠️ .pptx 파일만 업로드할 수 있어요', true);
+      return;
+    }
+    pendingFile = file;
+    document.getElementById('modal-filename').textContent = `📄 ${file.name}`;
+    document.getElementById('modal-overlay').classList.add('open');
+  }
+
+  function closeModal() {
+    pendingFile = null;
+    document.getElementById('modal-overlay').classList.remove('open');
+  }
+
+  async function confirmUpload() {
+    if (!pendingFile) return;
+
+    const file     = pendingFile;
+    const voice    = document.getElementById('modal-voice').value;
+    const tone     = document.getElementById('modal-tone').value.trim();
+    const style    = document.getElementById('modal-style').value.trim();
+
+    closeModal();
+
+    try {
+      const form = new FormData();
+      form.append('file', file);
+      form.append('voice', voice);
+      form.append('tone',  tone);
+      form.append('style', style);
+
+      const res = await fetch(`${API}/upload`, { method: 'POST', body: form });
+      if (!res.ok) {
+        const err = await res.json();
+        throw new Error(err.detail || '업로드 실패');
+      }
+
+      const { filename, ppt_name } = await res.json();
+      location.href = `detail.html?file=${encodeURIComponent(filename)}`;
+
+    } catch (e) {
+      showToast(`❌ ${e.message}`, true);
+    }
+  }
+
+  function pollStatus(ppt_name, filename) {
+    const interval = setInterval(async () => {
+      try {
+        const res = await fetch(`${API}/output-status/${encodeURIComponent(ppt_name)}`);
+        const job = await res.json();
+
+        if (job.status === 'done') {
+          clearInterval(interval);
+          showToast(`✅ ${filename} 영상 생성 완료!`);
+        } else if (job.status === 'error') {
+          clearInterval(interval);
+          showToast(`❌ 오류: ${job.error}`, true);
+        }
+      } catch {
+        clearInterval(interval);
+      }
+    }, 3000);
+  }
+
+  // ── Toast ──
+  let toastTimer;
+  function showToast(msg, isError = false) {
+    const el = document.getElementById('toast');
+    el.textContent = msg;
+    el.classList.toggle('error', isError);
+    el.classList.add('show');
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(() => el.classList.remove('show'), 3000);
+  }
+
+  // 페이지 로드 시 파일 목록 + 즐겨찾기 초기화
+  loadFiles();
+  renderFavoritesList();
+</script>
+
+</body>
+</html>

@@ -15,7 +15,9 @@ result = run(pptx_path=PPTX_PATH, prompt=prompt)
 print("최종 영상 경로:", result.get("final_video"))
 
 # 최종 state 파일 저장
-STATE_OUTPUT = "./step1_output/final_state.json"
+from pathlib import Path
+ppt_name = Path(PPTX_PATH).stem
+STATE_OUTPUT = f"./video_outputs/{ppt_name}/final_state.json"
 with open(STATE_OUTPUT, "w", encoding="utf-8") as f:
     json.dump(result, f, ensure_ascii=False, indent=2, default=str)
 print("State 저장 완료:", STATE_OUTPUT)

@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>상세 정보 — Video Generator</title>
+  <link rel="icon" type="image/png" href="Icon_8yeegz_nookie_resized.png">
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif;
+      background: #f0ede8;
+      display: flex;
+      height: 100vh;
+      overflow: hidden;
+      color: #1a1a1a;
+    }
+
+    /* ─────────── Sidebar ─────────── */
+    .sidebar {
+      width: 0;
+      background: #ffffff;
+      border-right: 1px solid #e8e4df;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      transition: width 0.25s cubic-bezier(.4,0,.2,1);
+      flex-shrink: 0;
+      z-index: 10;
+    }
+    .sidebar.open { width: 256px; }
+    .sidebar-inner { width: 256px; height: 100%; display: flex; flex-direction: column; overflow: hidden; }
+
+    .sidebar-header {
+      padding: 18px 20px 14px;
+      display: flex;
+      align-items: center;
+      border-bottom: 1px solid #f0ede8;
+      flex-shrink: 0;
+    }
+    .sidebar-logo {
+      font-size: 15px;
+      font-weight: 700;
+      color: #1a1a1a;
+      letter-spacing: -0.01em;
+      white-space: nowrap;
+      text-decoration: none;
+    }
+    .sidebar-logo:hover { opacity: 0.7; }
+
+    .sidebar-nav { padding: 10px 10px 4px; flex-shrink: 0; }
+    .nav-item {
+      display: flex;
+      align-items: center;
+      gap: 11px;
+      padding: 9px 12px;
+      border-radius: 9px;
+      cursor: pointer;
+      font-size: 14px;
+      color: #3a3a3a;
+      transition: background 0.15s;
+      white-space: nowrap;
+      user-select: none;
+      text-decoration: none;
+    }
+    .nav-item:hover { background: #f5f1ec; }
+    .nav-item svg { flex-shrink: 0; }
+
+    .nav-input-wrap { padding: 6px 10px 8px; flex-shrink: 0; }
+    .nav-search {
+      width: 100%;
+      padding: 8px 12px;
+      border: 1px solid #e0dbd5;
+      border-radius: 9px;
+      font-size: 13px;
+      background: #faf8f5;
+      color: #1a1a1a;
+      outline: none;
+      transition: border-color 0.15s;
+    }
+    .nav-search:focus { border-color: #b0a89e; }
+
+    .nav-chat-wrap { padding: 0 10px 8px; flex-shrink: 0; }
+    .nav-chat {
+      width: 100%;
+      padding: 8px 12px;
+      border: 1px solid #e0dbd5;
+      border-radius: 9px;
+      font-size: 13px;
+      background: #faf8f5;
+      color: #1a1a1a;
+      outline: none;
+      resize: none;
+      height: 68px;
+      transition: border-color 0.15s;
+      font-family: inherit;
+    }
+    .nav-chat:focus { border-color: #b0a89e; }
+
+    .sidebar-divider { height: 1px; background: #f0ede8; margin: 4px 10px 0; flex-shrink: 0; }
+
+    .sidebar-scroll { flex: 1; overflow-y: auto; padding: 4px 10px 20px; }
+    .sidebar-scroll::-webkit-scrollbar { width: 4px; }
+    .sidebar-scroll::-webkit-scrollbar-thumb { background: #d5d0ca; border-radius: 4px; }
+
+    .section-label {
+      font-size: 11px;
+      font-weight: 600;
+      color: #999;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      padding: 14px 12px 6px;
+    }
+    .history-item {
+      display: block;
+      padding: 7px 12px;
+      border-radius: 8px;
+      font-size: 13px;
+      color: #3a3a3a;
+      cursor: pointer;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      transition: background 0.15s;
+      user-select: none;
+      text-decoration: none;
+    }
+    .history-item:hover { background: #f5f1ec; }
+    .history-item.active { background: #ede8e2; font-weight: 500; }
+    .history-empty { padding: 8px 12px; font-size: 13px; color: #bbb; }
+
+    /* ─────────── Main ─────────── */
+    .main {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .toggle-btn {
+      position: absolute;
+      top: 16px;
+      left: 16px;
+      width: 36px;
+      height: 36px;
+      border: 1.5px solid #d8d3cd;
+      background: #fff;
+      border-radius: 9px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background 0.15s;
+      z-index: 20;
+    }
+    .toggle-btn:hover { background: #f0ede8; }
+
+    /* ─────────── Detail Card ─────────── */
+    .detail-wrap {
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 32px;
+      width: 100%;
+      max-width: 560px;
+      padding: 0 24px;
+    }
+
+    .file-name-row {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .file-name {
+      font-size: 28px;
+      font-weight: 700;
+      color: #1a1a1a;
+      letter-spacing: -0.02em;
+      word-break: break-all;
+    }
+
+    .star-btn {
+      font-size: 28px;
+      line-height: 1;
+      background: none;
+      border: none;
+      cursor: pointer;
+      color: #ccc;
+      transition: color 0.15s, transform 0.15s;
+      flex-shrink: 0;
+      padding: 0;
+    }
+    .star-btn:hover { transform: scale(1.2); }
+    .star-btn.active { color: #f5c000; }
+
+    .status-card {
+      width: 100%;
+      background: #fff;
+      border-radius: 18px;
+      padding: 40px 32px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 16px;
+      border: 1.5px solid #e8e4df;
+    }
+
+    .status-icon { font-size: 44px; line-height: 1; }
+
+    .status-label {
+      font-size: 20px;
+      font-weight: 400;
+      color: #2a2a2a;
+    }
+
+    .status-sub {
+      font-size: 13px;
+      color: #999;
+    }
+
+    /* 스피너 */
+    .spinner {
+      width: 44px;
+      height: 44px;
+      border: 3px solid #e8e4df;
+      border-top-color: #9a8a7a;
+      border-radius: 50%;
+      animation: spin 0.9s linear infinite;
+    }
+    @keyframes spin { to { transform: rotate(360deg); } }
+
+    /* 진행 점 */
+    .dots::after {
+      content: '';
+      animation: dots 1.5s steps(4, end) infinite;
+    }
+    @keyframes dots {
+      0%   { content: ''; }
+      25%  { content: '.'; }
+      50%  { content: '..'; }
+      75%  { content: '...'; }
+      100% { content: ''; }
+    }
+
+    .video-path {
+      font-size: 13px;
+      color: #888;
+      background: #f5f1ec;
+      border-radius: 8px;
+      padding: 8px 14px;
+      word-break: break-all;
+      text-align: left;
+      width: 100%;
+    }
+
+    /* ─────────── 완료 애니메이션 ─────────── */
+    .detail-wrap { transition: max-width 0.9s cubic-bezier(.4,0,.2,1); }
+    .detail-wrap.expanded { max-width: min(92vw, 1080px) !important; }
+
+    .status-card { transition: padding 0.9s ease, background 0.9s ease, border-color 0.9s ease, border-radius 0.9s ease; }
+    .status-card.video-mode {
+      padding: 16px;
+      background: #111;
+      border-color: #2a2a2a;
+    }
+
+    .completion-header {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 16px;
+    }
+    .completion-header.fade-out {
+      animation: gradientFadeOut 1s ease-out forwards;
+    }
+    @keyframes gradientFadeOut {
+      0%   {
+        opacity: 1;
+        -webkit-mask-image: linear-gradient(to bottom, black 100%, transparent 100%);
+        mask-image: linear-gradient(to bottom, black 100%, transparent 100%);
+      }
+      100% {
+        opacity: 0;
+        -webkit-mask-image: linear-gradient(to bottom, black 0%, transparent 65%);
+        mask-image: linear-gradient(to bottom, black 0%, transparent 65%);
+      }
+    }
+
+    .video-container {
+      opacity: 0;
+      width: 100%;
+      pointer-events: none;
+    }
+    .video-container.visible {
+      opacity: 1;
+      pointer-events: auto;
+      transition: opacity 0.9s ease;
+    }
+    #main-video {
+      width: 100%;
+      border-radius: 8px;
+      max-height: 72vh;
+      background: #000;
+    }
+
+    /* ─────────── Toast ─────────── */
+    .toast {
+      position: fixed;
+      bottom: 32px;
+      left: 50%;
+      transform: translateX(-50%) translateY(12px);
+      background: #2a2a2a;
+      color: #fff;
+      padding: 12px 22px;
+      border-radius: 10px;
+      font-size: 14px;
+      opacity: 0;
+      transition: opacity 0.25s, transform 0.25s;
+      pointer-events: none;
+      white-space: nowrap;
+      z-index: 100;
+    }
+    .toast.show { opacity: 1; transform: translateX(-50%) translateY(0); }
+    .toast.error { background: #b94040; }
+  </style>
+</head>
+<body>
+
+<!-- ── Sidebar ── -->
+<aside class="sidebar" id="sidebar">
+  <div class="sidebar-inner">
+
+    <div class="sidebar-header">
+      <a class="sidebar-logo" href="index.html">
+        <img src="Icon_8yeegz_nookie_resized.png" height="28" style="vertical-align:middle;margin-right:8px;">Video Generator
+      </a>
+    </div>
+
+    <nav class="sidebar-nav">
+      <div class="nav-item" onclick="location.href='index.html'">
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+          <line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/>
+        </svg>
+        새 PPT 업로드
+      </div>
+    </nav>
+
+    <div class="nav-input-wrap">
+      <input class="nav-search" id="nav-search" type="text" placeholder="🔍  검색" oninput="onSearch(this.value)">
+    </div>
+
+    <div class="sidebar-divider"></div>
+
+    <div class="sidebar-scroll">
+      <div class="section-label">즐겨찾기</div>
+      <div id="favorites-list"><div class="history-empty">즐겨찾기 없음</div></div>
+
+      <div class="section-label">최근 항목</div>
+      <div id="recent-list">
+        <div class="history-empty">업로드된 파일이 없습니다</div>
+      </div>
+    </div>
+
+  </div>
+</aside>
+
+<!-- ── Main ── -->
+<main class="main">
+
+  <button class="toggle-btn" onclick="toggleSidebar()" title="사이드바 열기/닫기">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#555" stroke-width="1.8">
+      <rect x="3" y="3" width="18" height="18" rx="2.5"/>
+      <line x1="9" y1="3" x2="9" y2="21"/>
+    </svg>
+  </button>
+
+  <div class="detail-wrap">
+    <div class="file-name-row">
+      <div class="file-name" id="file-name">—</div>
+      <button class="star-btn" id="star-btn" onclick="toggleFavorite()">☆</button>
+    </div>
+    <div class="status-card" id="status-card">
+      <div class="spinner"></div>
+      <div class="status-label">불러오는 중...</div>
+    </div>
+  </div>
+
+</main>
+
+<div class="toast" id="toast"></div>
+
+<script>
+  const API = 'http://localhost:8000';
+
+  // ── URL 파라미터에서 파일명 읽기 ──
+  const params = new URLSearchParams(location.search);
+  const filename = decodeURIComponent(params.get('file') || '');
+
+  document.getElementById('file-name').textContent = filename ? filename.replace(/\.pptx?$/i, '') : '파일을 선택해주세요';
+  document.title = filename ? `${filename} — Video Generator` : 'Video Generator';
+  updateStarBtn();
+  renderFavoritesList();
+
+  // ── 즐겨찾기 ──
+  function getFavorites() {
+    return JSON.parse(localStorage.getItem('favorites') || '[]');
+  }
+  function saveFavorites(favs) {
+    localStorage.setItem('favorites', JSON.stringify(favs));
+  }
+  function updateStarBtn() {
+    const btn = document.getElementById('star-btn');
+    if (!btn || !filename) return;
+    const isFav = getFavorites().includes(filename);
+    btn.textContent = isFav ? '★' : '☆';
+    btn.classList.toggle('active', isFav);
+  }
+  function toggleFavorite() {
+    if (!filename) return;
+    let favs = getFavorites();
+    if (favs.includes(filename)) {
+      favs = favs.filter(f => f !== filename);
+    } else {
+      favs.unshift(filename);
+    }
+    saveFavorites(favs);
+    updateStarBtn();
+    renderFavoritesList();
+  }
+  function renderFavoritesList() {
+    const container = document.getElementById('favorites-list');
+    const favs = getFavorites();
+    if (!favs.length) {
+      container.innerHTML = '<div class="history-empty">즐겨찾기 없음</div>';
+      return;
+    }
+    container.innerHTML = favs.map(name => {
+      const active = name === filename ? ' active' : '';
+      return `<a class="history-item${active}" href="detail.html?file=${encodeURIComponent(name)}" title="${name}">⭐ ${name.replace(/\.pptx?$/i, '')}</a>`;
+    }).join('');
+  }
+
+  // ── Sidebar ──
+  let sidebarOpen = false;
+  function toggleSidebar() {
+    sidebarOpen = !sidebarOpen;
+    document.getElementById('sidebar').classList.toggle('open', sidebarOpen);
+    if (sidebarOpen) loadFiles();
+  }
+
+  let allFiles = [];
+  async function loadFiles() {
+    try {
+      const res = await fetch(`${API}/files`);
+      const data = await res.json();
+      allFiles = data.files || [];
+      renderRecentList(allFiles);
+      renderFavoritesList();
+    } catch {}
+  }
+
+  function renderRecentList(files) {
+    const container = document.getElementById('recent-list');
+    if (!files || files.length === 0) {
+      container.innerHTML = '<div class="history-empty">업로드된 파일이 없습니다</div>';
+      return;
+    }
+    container.innerHTML = files.map(name => {
+      const active = name === filename ? ' active' : '';
+      return `<a class="history-item${active}" href="detail.html?file=${encodeURIComponent(name)}" title="${name}">📄 ${name}</a>`;
+    }).join('');
+  }
+
+  function onSearch(query) {
+    const filtered = query
+      ? allFiles.filter(f => f.toLowerCase().includes(query.toLowerCase()))
+      : allFiles;
+    renderRecentList(filtered);
+  }
+
+  // ── 상태 카드 렌더링 ──
+  function renderStatus(job) {
+    const card = document.getElementById('status-card');
+
+    if (job.status === 'pending') {
+      card.innerHTML = `
+        <div class="spinner"></div>
+        <div class="status-label">대기 중<span class="dots"></span></div>
+        <div class="status-sub">영상 생성 순서를 기다리고 있습니다</div>`;
+
+    } else if (job.status === 'running') {
+      card.innerHTML = `
+        <div class="spinner"></div>
+        <div class="status-label">영상 생성 중<span class="dots"></span></div>
+        <div class="status-sub">슬라이드 분석 · 스크립트 생성 · TTS · 영상 합성 진행 중</div>`;
+
+    } else if (job.status === 'done') {
+      if (card.dataset.rendered === 'done') return;  // 중복 실행 방지
+      card.dataset.rendered = 'done';
+
+      const videoUrl = `${API}/videos/${encodeURIComponent(ppt_name)}/final.mp4`;
+      card.innerHTML = `
+        <div class="completion-header" id="completion-header">
+          <div class="status-icon">✅</div>
+          <div class="status-label">영상 생성 완료</div>
+          <div class="status-sub">잠시 후 영상이 재생됩니다</div>
+        </div>
+        <div class="video-container" id="video-container">
+          <video id="main-video" controls>
+            <source src="${videoUrl}" type="video/mp4">
+          </video>
+        </div>`;
+
+      // 1. 완료 텍스트 그라데이션 페이드아웃
+      setTimeout(() => {
+        document.getElementById('completion-header')?.classList.add('fade-out');
+      }, 900);
+
+      // 2. 영상 페이드인 + 컨테이너 확장
+      setTimeout(() => {
+        document.getElementById('completion-header').style.display = 'none';
+        document.getElementById('video-container')?.classList.add('visible');
+        document.querySelector('.detail-wrap')?.classList.add('expanded');
+        document.querySelector('.status-card')?.classList.add('video-mode');
+      }, 1900);
+
+    } else if (job.status === 'error') {
+      card.innerHTML = `
+        <div class="status-icon">❌</div>
+        <div class="status-label">오류 발생</div>
+        <div class="video-path" style="color:#b94040">${job.error || '알 수 없는 오류'}</div>`;
+
+    } else {
+      card.innerHTML = `
+        <div class="status-icon">📂</div>
+        <div class="status-label">정보 없음</div>
+        <div class="status-sub">업로드 후 영상을 생성하면 여기에 상태가 표시됩니다</div>`;
+    }
+  }
+
+  // ── 상태 폴링 ──
+  const ppt_name = filename.replace(/\.pptx?$/i, '');
+  let pollInterval = null;
+
+  async function fetchStatus() {
+    if (!ppt_name) return;
+    try {
+      const res = await fetch(`${API}/output-status/${encodeURIComponent(ppt_name)}`);
+      const job = await res.json();
+      renderStatus(job);
+      if (job.status === 'done' || job.status === 'error' || job.status === 'not_started') {
+        clearInterval(pollInterval);
+      }
+    } catch {
+      renderStatus({ status: 'not_started' });
+      clearInterval(pollInterval);
+    }
+  }
+
+  // ── 초기화 ──
+  if (filename) {
+    fetchStatus();
+    pollInterval = setInterval(fetchStatus, 3000);
+  } else {
+    renderStatus({ status: 'unknown' });
+  }
+
+  loadFiles();
+
+  // ── Toast ──
+  let toastTimer;
+  function showToast(msg, isError = false) {
+    const el = document.getElementById('toast');
+    el.textContent = msg;
+    el.classList.toggle('error', isError);
+    el.classList.add('show');
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(() => el.classList.remove('show'), 3000);
+  }
+</script>
+
+</body>
+</html>

@@ -23,10 +23,6 @@ load_dotenv()
 
 # ### (4) 상수 모음
 
-# 디렉토리
-WORK_DIR = "./step1_output"
-MEDIA_DIR = "./step1_output/media"
-
 # 모델
 LLM_MODEL = "gpt-4o-mini"
 TTS_MODEL = "gpt-4o-mini-tts"
@@ -254,8 +250,8 @@ def node_parse_all(state: State) -> State:
                 tables.append(tbl)
             if sh.shape_type == MSO_SHAPE_TYPE.PICTURE:
                 ext = sh.image.ext
-                # <<image 저장 path에 slide index 추가>>
-                path = os.path.join(MEDIA_DIR, f"{os.path.splitext(os.path.basename(state['pptx_path']))[0]}_slide{idx}_{i}.{ext}")
+                media_dir = os.path.join(state["work_dir"], "media")
+                path = os.path.join(media_dir, f"{os.path.splitext(os.path.basename(state['pptx_path']))[0]}_slide{idx}_{i}.{ext}")
                 images.append(path)
                 try:
                     with open(path, "wb") as f: f.write(sh.image.blob)
@@ -786,8 +782,12 @@ graph = builder.compile()
 
 # 외부 실행용 함수
 def run(pptx_path: str, prompt: dict = None):
-    os.makedirs(WORK_DIR, exist_ok=True)
-    os.makedirs(MEDIA_DIR, exist_ok=True)
+    ppt_name = Path(pptx_path).stem
+    work_dir = f"./video_outputs/{ppt_name}"
+    media_dir = f"{work_dir}/media"
+
+    os.makedirs(work_dir, exist_ok=True)
+    os.makedirs(media_dir, exist_ok=True)
 
     if prompt is None:
         prompt = {
@@ -798,7 +798,7 @@ def run(pptx_path: str, prompt: dict = None):
 
     result = graph.invoke({
         "pptx_path": pptx_path,
-        "work_dir": WORK_DIR,
+        "work_dir": work_dir,
         "prompt": prompt,
     })
 
