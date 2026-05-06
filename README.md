@@ -49,7 +49,9 @@ PPT 슬라이드 인식 기반 교육 영상 자동 생성 Agent System - Tool C
 
 - Language : Python
 - AI : LangGraph, LangChain, OpenAI, Tavily
-- Others : LibreOffice, python-pptx, FFmpeg
+- BackEnd : FastAPI
+- FrontEnd : HTML, CSS, JS
+- Others : LibreOffice, python-pptx, FFmpeg, PIL
 
 예시 slide 출처 : 
 https://www.slideshare.net/slideshow/rag-tutorial-01-rag-pdf/270232354?from_search=1
