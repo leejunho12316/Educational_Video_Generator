@@ -64,30 +64,44 @@ https://www.slideshare.net/slideshow/rag-tutorial-01-rag-pdf/270232354?from_sear
 
 <br><br><br>
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ## 2. State Specifications
 
-| 이름 | 설명 | 자료형 | 값 예시 |
-|------|------|--------|---------|
-| `pptx_path` | 입력 PPT 파일 경로 | `str` | `"./ppt_examples/01ragpublish-240714071933-12313109.pptx"` |
-| `work_dir` | 중간 산출물 저장 디렉토리 경로 | `str` | `"./step1_output"` |
-| `prompt` | TTS 목소리·톤·스크립트 스타일 옵션 | `Dict` | `{"voice": "nova", "tone": "명확하고 귀여움이 넘치는 톤", "style": "핵심에 집중하고 예시를 포함하는 깔끔하고 명확한 스타일"}` |
-| `slides` | 슬라이드별 파싱 데이터 리스트. 각 요소는 index, title, texts, tables, images, snap, script 포함 | `List[Dict]` | `[{"index": 1, "title": "Retrieval Argumented Generation", "texts": [...], "tables": [], "images": [], "snap": "C:\\...\\slide_img-1.png", "script": "안녕하세요. 오늘은 RAG에 대해..."}, ...]` |
-| `n_slides` | 전체 슬라이드 수 | `int` | `7` |
-| `slide_index` | 현재 처리 중인 슬라이드 인덱스. 모든 처리 완료 후에는 n_slides와 같아짐 | `int` | `7` |
-| `cur_search_context` | 현재 슬라이드에 대한 Tavily 검색 결과 요약. 검색 불필요 시 `'검색 필요 없음'` | `str` | `"RAG 시스템 구현 시 발생할 수 있는 주요 도전 과제로는 검색 품질, 지연 시간, 지식 기반의 노이즈..."` |
-| `cur_page_content` | 현재 슬라이드 파싱 데이터를 LLM이 정제한 설명문 | `str` | `"# RAG 서비스 구현\n\n## 1. 어떤 프로그래밍 언어를 이용할 것인가?\n- Python을 바탕으로..."` |
-| `cur_script` | 현재 슬라이드의 강의 스크립트 | `str` | `"RAG 서비스를 구현하기 위해서는 몇 가지 중요한 요소를 고려해야 합니다. 첫째, Python을 기본으로..."` |
-| `cur_audio` | 현재 슬라이드의 TTS 오디오 파일 경로 | `str` | `"./step1_output/narration_7.mp3"` |
-| `cur_video` | 현재 슬라이드의 자막 미적용 영상 파일 경로 | `str` | `"./step1_output/slide7_lecture.mp4"` |
-| `cur_video_subtitled` | 현재 슬라이드의 자막 적용 영상 파일 경로 | `str` | `"./step1_output/slide7_lecture_subtitled.mp4"` |
-| `video_paths` | 슬라이드별 자막 영상 경로 누적 리스트 | `List[str]` | `["./step1_output/slide1_lecture_subtitled.mp4", ..., "./step1_output/slide7_lecture_subtitled.mp4"]` |
-| `final_video` | 전체 슬라이드 영상을 이어붙인 최종 영상 경로 | `str` | `"./step1_output/final.mp4"` |
-| `messages` | Tavily ToolNode 연동용 LangGraph 내부 메시지 목록 | `Annotated[list, add_messages]` | `[AIMessage(content='[정제 text]\n### RAG의 정의...'), ToolMessage(content='{"query": "RAG..."}'), AIMessage(...)]` |
+| 이름 | 자료형 | 설명 |
+|------|--------|------|
+| `pptx_path` | `str` | 입력 PPT 파일 경로 |
+| `work_dir` | `str` | 중간 산출물 저장 디렉토리 경로 |
+| `prompt` | `Dict` | TTS 목소리·톤·스크립트 스타일 옵션 |
+| `slides` | `List[Dict]` | 슬라이드별 파싱 데이터 리스트. 각 요소는 index, title, texts, tables, images, snap, script 포함 |
+| `n_slides` | `int` | 전체 슬라이드 수 |
+| `slide_index` | `int` | 현재 처리 중인 슬라이드 인덱스. 모든 처리 완료 후에는 n_slides와 같아짐 |
+| `cur_search_context` | `str` | 현재 슬라이드에 대한 Tavily 검색 결과 요약. 검색 불필요 시 `'검색 필요 없음'` |
+| `cur_page_content` | `str` | 현재 슬라이드 파싱 데이터를 LLM이 정제한 설명문 |
+| `cur_script` | `str` | 현재 슬라이드의 강의 스크립트 |
+| `cur_audio` | `str` | 현재 슬라이드의 TTS 오디오 파일 경로 |
+| `cur_video` | `str` | 현재 슬라이드의 자막 미적용 영상 파일 경로 |
+| `cur_video_subtitled` | `str` | 현재 슬라이드의 자막 적용 영상 파일 경로 |
+| `video_paths` | `List[str]` | 슬라이드별 자막 영상 경로 누적 리스트 |
+| `final_video` | `str` | 전체 슬라이드 영상을 이어붙인 최종 영상 경로 |
+| `messages` | `Annotated[list, add_messages]` | Tavily ToolNode 연동용 LangGraph 내부 메시지 목록 |
 
 <br>
 
-
-**State 전체 예시**
+**State 전체 값 예시**
 
 ```
 {'pptx_path': './ppt_examples/01ragpublish-240714071933-12313109.pptx', 
@@ -173,8 +187,8 @@ RAG 서비스를 구현하기 위해 고려해야 할 사항들은 다음과 같
 
 | 노드 | 내용 |
 |------|------|
-| **3. tool_search** | **입력** : 정제된 슬라이드 설명문<br>**처리** : 슬라이드 내용에 실무적 예외 상황 (Edge Case)에 대한 내용 보완이 필요한지 tool binding된 LLM으로 판단. 보완이 필요하면 Tavily 검색 Tool Call, 검색했다면 검색 내용 정리, 검색 불필요시 다음 노드로 진행.<br>**출력** : 검색 결과 정리 내용 또는 '검색 필요 없음' |
-| **4. tool_node** | **입력** : tool binding LLM의 tool call용 검색 쿼리를 포함한 인수.<br>**처리** : LangGraph Tavily ToolNode가 웹 검색 실행 후 결과 반환.<br>**출력** : Tavily 검색 결과. |
+| **3.tool_search** | **입력** : 정제된 슬라이드 설명문<br>**처리** : 슬라이드 내용에 실무적 예외 상황 (Edge Case)에 대한 내용 보완이 필요한지 tool binding된 LLM으로 판단. 보완이 필요하면 Tavily 검색 Tool Call, 검색했다면 검색 내용 정리, 검색 불필요시 다음 노드로 진행.<br>**출력** : 검색 결과 정리 내용 또는 '검색 필요 없음' |
+| **4.tool_node** | **입력** : tool binding LLM의 tool call용 검색 쿼리를 포함한 인수.<br>**처리** : LangGraph Tavily ToolNode가 웹 검색 실행 후 결과 반환.<br>**출력** : Tavily 검색 결과. |
 
 
 ```
@@ -199,7 +213,7 @@ RAG(Recovery Augmented Generation) 시스템 구현 시 발생할 수 있는 예
 
 | 노드 | 내용 |
 |------|------|
-| **5. gen_script_ctx** | **입력** : 정체된 슬라이드 설명문, 검색 결과 정리 내용<br>**처리** : 정제된 설명문과 검색 결과를 바탕으로 강의 스크립트 생성. 첫 슬라이드와 마지막 슬라이드에 인트로/아웃트로 추가. 이전 스크립트를 참고 맥락으로 제공해 중복 내용 제외. 각 스크립트 끝에 2문장으로 검색 결과를 자연스럽게 추가. 사용자 입력 prompt 참고해 스크립트 스타일 조정 가능.<br>**출력** : 스크립트 |
+| **5.gen_script_ctx** | **입력** : 정체된 슬라이드 설명문, 검색 결과 정리 내용<br>**처리** : 정제된 설명문과 검색 결과를 바탕으로 강의 스크립트 생성. 첫 슬라이드와 마지막 슬라이드에 인트로/아웃트로 추가. 이전 스크립트를 참고 맥락으로 제공해 중복 내용 제외. 각 스크립트 끝에 2문장으로 검색 결과를 자연스럽게 추가. 사용자 입력 prompt 참고해 스크립트 스타일 조정 가능.<br>**출력** : 스크립트 |
 
 ```
 안녕하세요. 오늘은 Retrieval Argumented Generation, 즉 RAG에 대해 알아보겠습니다. 
