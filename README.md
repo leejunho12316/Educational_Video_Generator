@@ -1,31 +1,33 @@
-# Educational_Video_Generator
-
-
-PPT 슬라이드 인식 기반 교육 영상 자동 생성 Agent System - Tool Calling Multi Agent System
-
-기업 내에서는 다양한 형태의 자료가 지속적으로 생산됩니다. 경영 현황, 실적 보고 등의 사내 보고서나 Tool Calling, Multi Agent임원 보고, 프로젝트 발표자료 등의 발표 자료, 부서 간 안내 자료 등의 pdf와 ppt 파일들이 그 예입니다.
-그리고 DX (Digital Transformation) 시대에 직원 교육에는 교육 영상을 만들어 제공하는 것이 효과적일 것입니다.
-
-하지만 수 많은 자료들을 사용해 수동으로 교육 영상을 생성하려면 번거로운 작업이 많으며 시간 소모가 큽니다. 발표 스크립트 작성, 영상 녹화, 영상 편집, 자막 삽입 등의 작업에 수일이 걸리는 것이 보통입니다.
-또, 발표자에 따라서 교육 스타일이 매번 달라지니 일정한 품질의 교육 영상을 생성하는 데에도 무리가 있습니다.
-
-따라서 이러한 시간, 비용, 품질의 제약사항을 해결하기 위해 본 Agent System을 제작했습니다.
-이 Agent는 ppt 내부의 텍스트, 이미지, 그래프, 표를 자동적으로 추출하고 이해합니다. 또, 이해한 내용을 바탕으로 발표 스크립트 생성, TTS 적용, 자막을 적용한 영상 생성까지 한 번에 진행합니다.
-또한 자료가 포함하지 못한 최신 연구, 실무 상황 적용 시 문제점과 주의점을 최신 내용 검색을 통해 내용을 보완합니다.
-이 서비스를 사용해 직원들에게 일정한 품질의 교육 영상을 신속하게 제작해 전달 수 있을 것입니다.
-
-## Index
-- [📸ScreenShots](#screenshots)
-- [🎯Stacks](#stacks)
-- [💎Implementation Details](#implementation-details)
+# Index
+- [ScreenShots](#screenshots)
+- [Stacks](#stacks)
+- [Implementation Details](#implementation-details)
   - [State Specifications](#state-specifications)
   - [Node Specifications](#node-specifications)
-- [💫Special Requirements](#special-requirements)
+- [Special Requirements](#special-requirements)
 
 
-<br><br><br>
 
-# 📸ScreenShots
+# Educational_Video_Generator
+
+PPT 기반 교육 동영상 자동 생성 Agent System
+
+## 개요
+
+기업에서는 보고서, 발표자료, 안내문 등 다양한 PPT/PDF 자료가 계속 만들어집니다. DX (Digital Transformation) 시대에 이를 교육 영상으로 만들어 직원 교육에 활용하면 효과적이겠지만, 수동 제작은 스크립트 작성, 녹화, 편집, 자막 삽입에 수일이 걸리고 발표자마다 품질이 들쑥날쑥하다는 문제가 있습니다.
+
+
+이 문제를 해결하기 위해 본 **Tool Calling 기반 Multi Agent System으로 영상 제작 과정을 자동화**했습니다. PPT 내 텍스트, 이미지, 그래프, 표를 추출하고 이해한 뒤 발표 스크립트 생성, TTS 적용, 자막 삽입까지 한 번에 처리합니다.
+또한 자료에 없는 최신 연구나 실무 적용 시 주의점은 웹 검색으로 보완하여, 일정한 품질의 교육 영상을 빠르게 제작할 수 있습니다.
+
+---
+
+
+
+
+
+
+# ScreenShots
 
 **메인 페이지**
 
@@ -45,13 +47,11 @@ PPT 슬라이드 인식 기반 교육 영상 자동 생성 Agent System - Tool C
 
 <br><br><br>
 
-# 🎯Stacks
+# Stacks
 
 - Language : Python
 - AI : LangGraph, LangChain, OpenAI, Tavily
-- BackEnd : FastAPI
-- FrontEnd : HTML, CSS, JS
-- Others : LibreOffice, python-pptx, FFmpeg, PIL
+- Others : LibreOffice, python-pptx, FFmpeg
 
 예시 slide 출처 : 
 https://www.slideshare.net/slideshow/rag-tutorial-01-rag-pdf/270232354?from_search=1
@@ -59,7 +59,7 @@ https://www.slideshare.net/slideshow/rag-tutorial-01-rag-pdf/270232354?from_sear
 <br><br><br>
 
 
-# 💎Implementation Details
+# Implementation Details
 ## 1. LangGraph Graph
 
 <img src="./README_resources/LangGraph_Graph.png" width="250">
@@ -296,7 +296,13 @@ RAG는 정보 검색과 콘텐츠 생성을 결합하여 데이터 활용의 효
 <br><br><br>
 
 
-# 💫Special Requirements
+# Evaluation
+
+
+
+
+
+# Special Requirements
 
 1. 필요한 라이브러리 설치
 ``` python
@@ -385,3 +391,19 @@ OpenAI, Tavily API 키를 코드에 하드코딩하지 않고 Secrets Manager에
 7. 웹 UI (선택)
   - Gradio나 FastAPI를 ECS에 같이 올리거나
   - 슬라이드 수에 따라 처리 시간이 달라지므로 타임아웃 여유있게 설정 필요
+
+---
+
+추가할 내용 모음
+
+1. 테스트 데이터 생성 후 데이터 파싱, 텍스트 정제, 검색 노드 단위테스트 진행
+- 프롬프트 고도화
+데이터 파싱 내용 빼먹는정도 0%->0%
+텍스트 정제시 내용 빼먹는 정도 0%->0%
+검색 노드 성늠 0%->0%
+
+2. 툴 종류 평가
+- tavily 일반적 상황, arxiv 연구주제 포함 시
+3. 툴 query 평가
+- 스크립트 원본과 query input 후 1-5점 ragas
+-> 위 괴정을 다양한 llm 사용해 비교분석
