@@ -319,12 +319,18 @@ def node_generate_text(state : State)->State:
                 images.insert(0, slide_img)
 
     # system message, user message 구성
-    sys_msg = f'''당신은 PPT 내용 정리 전문가입니다.
-    아래는 PPT로부터 추출한 PPT 객체 내용들입니다. 객체 내용을 참고해 전체 내용을 정리해주세요.
-    
-    규칙
-    1. 어떠한 내용도 왜곡, 과장하거나 빠트리지 말 것.
-    2. 있는 그대로 모든 것을 설명할 것.
+    sys_msg = f'''
+    # 역할
+    당신은 PPT 내용 정리 전문가입니다.
+    아래는 PPT로부터 추출한 전체 객체들입니다. 입력된 객체 내용을 사용해 전체 내용을 작성해주세요.
+
+    # 규칙
+    1. 모든 내용을 단 하나도 빠트리지 말고 전부 사용할 것.
+    2. 왜곡, 과장하거나 상상해서 적지 말 것.
+    3. 있는 그대로 모든 것을 작성할 것.
+    4. 고유명사를 임의로 다른 단어로 변경해 작성하지 말 것.
+    5. ppt 내용 외의 출력은 제한할 것.
+    6. 입력된 이미지를 충분히 설명할 것..
     '''
 
     user_text = []
@@ -355,15 +361,43 @@ def node_generate_text(state : State)->State:
     return state
 
 
+from langchain_community.tools import ArxivQueryRun, WikipediaQueryRun
+from langchain_community.utilities import WikipediaAPIWrapper
+from langchain.tools import tool
 from langchain_tavily import TavilySearch
 from langgraph.prebuilt import ToolNode
+import arxiv
 
-tavily_tool = TavilySearch(max_results = 1)
 
-tool_list = [tavily_tool]
-tool_node = ToolNode(tool_list)
+tavily_tool = TavilySearch(max_results=3)
+                          # description = "최신 뉴스, 실무 적용 사례, 구현 예시, 현장 트러블슈팅을 찾을 때 사용")
 
-llm_with_tools = llm.bind_tools(tool_list)
+@tool
+def arxiv_tool(query: str) -> str:
+    """학술 논문, 연구 결과, 알고리즘의 이론적 근거를 찾을 때 사용"""
+    client = arxiv.Client()
+    search = arxiv.Search(query=query, max_results=1)
+
+    results = []
+    for paper in client.results(search):
+        results.append(
+            f"제목: {paper.title}\n"
+            f"연도: {paper.published.year}\n"
+            f"요약: {paper.summary}\n"
+            f"URL: {paper.entry_id}"
+        )
+    result_text = "\n\n".join(results) if results else "결과 없음"
+    print('paper_info : ', result_text)
+    return result_text
+
+wiki_tool = WikipediaQueryRun(api_wrapper=WikipediaAPIWrapper(top_k_results=3, doc_content_chars_max=2000),)
+                            #  description = "기술 용어 정의, 개념 배경지식, 역사적 맥락을 찾을 때 사용")
+
+tool_list = [tavily_tool, arxiv_tool, wiki_tool]
+tool_node = ToolNode(tool_list, handle_tool_errors=True)
+
+tool_llm = ChatOpenAI(model='gpt-5.5', temperature=0.3)
+llm_with_tools = tool_llm.bind_tools(tool_list)
 
 def tool_search(state : State):
 
@@ -373,16 +407,53 @@ def tool_search(state : State):
 
     # 프롬프트 작성
     sys_msg = """
-    # 역할
-    당신은 기술 강사입니다. 현재 PPT 슬라이드 내용을 바탕으로 보완해야 할 내용을 검색해야 합니다.
-    
-    # 지침
-    1. 슬라이드 내용에 이론 실제 구현 시 발생할 수 있는 예외 상황(Edge Case)에 대한 설명이 충분한지 판단하세요.
-    2. 만약 내용이 이론 중심적이고 실무적인 주의사항이 부족하다면, 이를 보완하기 위한 구체적인 검색을 진행해주세요.
-    
+    #역할
+    당신은 검색 전문가입니다. 입력은 현재 PPT 슬라이드의 전체 내용을 빠짐없이 적은 것입니다.
+    이를 읽고 도구 선택 기준에 맞으면 도구를 사용해 검색해주세요.
+    사용할 수 있는 도구는 다음과 같습니다. : tavily_search, arxiv_search
+    구체적인 내용 없이 전체 내용이 짧은 경우 표지, 목차, 섹션 구분 등에 해당합니다.
+
+    # 도구 선택 기준
+    1. tavily_search : 특정 서비스와 제품에 대한 정보가 필요할 때
+    특정 제품/서비스가 명시되어 있고 그에 대한 구체적인 정보(기능, 성능, 비교 등) 내용을 담은 슬라이드일 때 해당 제품에 대한 최신 정보와 동향을 검색.
+
+    - tavily 쿼리 지침
+    쿼리는 핵심 키워드만 사용해 간결하게 작성하세요.
+    슬라이드에 나와 있는 핵심 제품 한 가지에 대해서만 검색하세요.
+    검색어는 3~5단어면 충분합니다.
+
+    검색 필요 예시)
+    MAAL (Multilingual Adaptive Augmentation Language-model) 한국어에 강한 언어 생성 모델 MAAL을 기반으로 On-premise LLM 솔루션을 제공합니다. 다양한 파라미터 수의 모델(8B-70B)을 기반으로 고객의 니즈에 맞는 모델을 지원합니다... On-premise용으로는 성능이 뛰어나며 범용적으로 사용하기 좋은 MAAL-albatross(70B)를 권장하고 있습니다. -> MAAL 관련 검색
+    Agados UI, Flow Design & Visibility Technologies Structure of this presentation Application을 위한 Architecture - SW Package를 위한 Smart Architecture - Hybrid Architecture Overview - 타 시스템과의 Interface... -> Agados 관련 검색
+
+    2. arxiv_search : 연구에 대한 구체적인 성능 내용이 필요할 때
+    연구, 성능 그래프, 성능 표, 논문 인용 표기 등이 명시되어 있을 때 그와 관련한 논문 검색.
+
+    - arxiv 쿼리 지침
+    슬라이드에 나와 있는 핵심적인 것 단 한가지에 대해서만 검색하세요.
+
+    검색 필요 예시)
+    - "REPLUG: Retrieval-Augmented Black-Box Language Models, NAACL24'", "Dense Passage Retrieval for Open-Domain Question Answering, EMNLP20'" -> 논문 검색
+    - 마크다운 형식으로 전환된 그래프의 성능, 메트릭 표 -> 논문 검색
+    - 특정 모델의 벤치마크 점수가 수치로 제시된 경우 예) "MAAL 70B: 9.06 / GPT-4o: 9.59" 처럼 모델별 점수 비교표가 포함된 슬라이드 -> 논문 검색
+    - LogicKor, KoBEST, MMLU 등 평가 지표명이 명시된 경우
+
+    3. 검색이 필요 없는 경우
+    그 외 아래의 경우에 해당할 경우 '검색 필요 없음'과 그 이유를 출력하세요
+    - 형식적 내용 : 표지, 개요, 목차, 섹션 구분, 마지막 페이지(Q&A, 감사합니다) 등의 슬라이드로 판단되는 경우
+    - 소개 : 학습 목표, 강사 소개, 참고문헌 목록, 레퍼런스 목록 등을 소개하는 내용인 경우.
+    - 그 외 어떠한 도구 선택 기준의 경우에도 해당하지 않는 경우.
+
+    검색 불필요 예시)
+    - 제목: 제목 없음\n- Chapter 2. 오픈소스 컨설팅의 On-premise LLM 솔루션\n- MAAL (Multilingual Adaptive Augmentation Language-model) MAAL 기반 On-premise 패키지\n  - 챗봇\n  - Chatplay\n  - LLM Task UI\n- 표: 없음 -> 목차 슬라이드
+    Biz. Application을 위한 디자이너/재조정기\n‘아가도스’는 귀사의 SW Application내에서 Configure Tool의 역할 수행\n19\nⒸ 2014 agados All rights reserved. -> 섹션 구분
+    제목: Jamcracker 소개 시작\n\nCloud Management Platform & Cloud Service Brokerage\n\n- CLOUD SERVICES BROKERAGE\n- CLOUD GOVERNANCE\n- MICROSOFT CSP ENABLEMENT\n- HYBRID CLOUD MANAGEMENT\n- Microsoft Cloud Solution Provider\n- OSC ASIA GROUP LIMITED\n- @ OSC Korea & OSC Asia Group jerry@osckorea.com jerry@oscasia.net +82 10 9196 1416 -> 목차 슬라이드
+
     # 규칙
-    검색 할 필요가 없으면 '검색 필요 없음'이라고 출력하세요.
-    검색을 했다면 그 검색 내용을 한 문단으로 요약해주세요. 검색 결과에 대한 내용 외에 그 어떤 내용도 추가하지 마세요.
+    - 검색 시 하나의 도구만 사용하세요.
+    - 대화 로그를 보았을 때 이미 검색을 진행했다면 추가 검색을 하지 말고 검색 결과를 전체 정리해주세요.
+    - 검색 결과 정리시 핵심 내용을 정리해 작성해주세요.
+    - 검색 결과 요약 시 검색 결과를 제외한 다른 어떠한 출력도 하지 마세요.
     """
 
     human_msg = "[슬라이드 내용]" + "\n\n".join([message.content for message in state['messages']])
