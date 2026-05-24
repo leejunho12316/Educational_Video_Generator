@@ -296,48 +296,108 @@ RAG는 정보 검색과 콘텐츠 생성을 결합하여 데이터 활용의 효
 <br><br><br>
 
 
-# 프롬프트 고도화
 
-데이터 정제 노드 추가
-node_generate_text 추가로 파싱된 데이터 정제 과정 거치기.
 
-```
-    # 역할
-    당신은 PPT 내용 정리 전문가입니다.
-    아래는 PPT로부터 추출한 전체 객체들입니다. 입력된 객체 내용을 사용해 전체 내용을 작성해주세요.
+# Evaluation
 
-    # 규칙
-    1. 모든 내용을 단 하나도 빠트리지 말고 전부 사용할 것.
-    2. 왜곡, 과장하거나 상상해서 적지 말 것.
-    3. 있는 그대로 모든 것을 작성할 것.
-    4. 고유명사를 임의로 다른 단어로 변경해 작성하지 말 것.
-    5. ppt 내용 외의 출력은 제한할 것.
-```
+검색 Tool을 사용한 Script 보완 Node의 성능평가 진행.
 
-Tool Node Prompt 정교화
-Tool별 역할과 도구 사용/미사용 케이스 명확화로 정확도 향상
+## Test Dataset 생성
+
+
+각 Tool 호출을 기대하는 PPT 슬라이드 Slideshare 로부터 수집. Tavily 호출 슬라이드 50장, Arxiv 호출 슬라이드 51장, Tool 비호출 슬라이드 30장 총 131개의 슬라이드 데이터 수집.
+
+전체 Graph 중 [데이터 파싱 - 데이터 정제], [Tool Calling Node - Tool Node]만 분리해 서브 노드 생성.
+
+첫번째 Graph를 사용해 데이터 정제 -> **test_dataset_XXX.csv**
+두 번째 Graph와 Tool Call 지침을 명확히 한 프롬프트 + GPT-5.5 Model을 사용해 테스트 정답 데이터 생성. -> **test_dataset_XXX_labeled.csv**
+
+### 1. 데이터 출처
+
+<details>
+<summary>테스트 데이터셋 출처</summary>
+
+1. [오픈소스컨설팅]온프레미스 LLM 솔루션_202410.pdf
+https://www.slideshare.net/slideshow/llm-_202410-pdf-b7c7/272838193?utm_source=clipboard_share_button&utm_campaign=slideshare_make_sharing_viral_v2&utm_variation=control&utm_medium=share
+
+2. Trustworthy Analytics with Generative AI: Four Use Cases for ChatGPT / GPT-4
+https://www.slideshare.net/slideshow/trustworthy-analytics-with-generative-ai-four-use-cases-for-chatgpt-gpt4/261325439?utm_source=clipboard_share_button&utm_campaign=slideshare_make_sharing_viral_v2&utm_variation=control&utm_medium=share
+
+3. 2024.05.01 RAG 세미나: 자연어처리의 정보검색 기법과 최신 RAG 모델
+https://www.slideshare.net/slideshow/2024-05-01-rag-rag/269542352?utm_source=clipboard_share_button&utm_campaign=slideshare_make_sharing_viral_v2&utm_variation=control&utm_medium=share
+
+4. 아가도스(agados) 기능과 특징 소개
+https://www.slideshare.net/slideshow/agados-function-featurekr/28725502?utm_source=clipboard_share_button&utm_campaign=slideshare_make_sharing_viral_v2&utm_variation=control&utm_medium=share
+
+5. Pivotal HAWQ 소개
+https://www.slideshare.net/slideshow/pivotal-hawq/49813063?utm_source=clipboard_share_button&utm_campaign=slideshare_make_sharing_viral_v2&utm_variation=control&utm_medium=share
+
+6. Statista 소개
+https://www.slideshare.net/slideshow/statista-256300771/256300771?utm_source=clipboard_share_button&utm_campaign=slideshare_make_sharing_viral_v2&utm_variation=control&utm_medium=share
+
+7. 비엣서베이 - 베트남 인플루언서 설문조사 서비스 소개서 (뷰티·식품 브랜드 베트남 진출)
+https://www.slideshare.net/slideshow/ss-b4a0/287255834?utm_source=clipboard_share_button&utm_campaign=slideshare_make_sharing_viral_v2&utm_variation=control&utm_medium=share
+
+8. 카카오싱크 서비스 소개서_Ver 1.1_20190411.pdf
+https://www.slideshare.net/slideshow/ver-1120190411pdf/265449262?utm_source=clipboard_share_button&utm_campaign=slideshare_make_sharing_viral_v2&utm_variation=control&utm_medium=share
+
+9. Allganize AI seminar - GPT3 and PET
+https://www.slideshare.net/slideshow/201016-allganize-ai-seminar-gpt3-and-pet/240932307?utm_source=clipboard_share_button&utm_campaign=slideshare_make_sharing_viral_v2&utm_variation=control&utm_medium=share
+
+10. LLaMA 2.pptx
+https://www.slideshare.net/slideshow/llama-2pptx/261196207?utm_source=clipboard_share_button&utm_campaign=slideshare_make_sharing_viral_v2&utm_variation=control&utm_medium=share
+
+11. Customizing LLMs
+https://www.slideshare.net/slideshow/customizing-llms-cbd3/263022617?utm_source=clipboard_share_button&utm_campaign=slideshare_make_sharing_viral_v2&utm_variation=control&utm_medium=share
+
+12. LLM 모델 기반 서비스 실전 가이드
+https://www.slideshare.net/slideshow/llm-261139869/261139869?utm_source=clipboard_share_button&utm_campaign=slideshare_make_sharing_viral_v2&utm_variation=control&utm_medium=share
+</details>
+
+
+### 2. Sub Graph
+
+<img src="README_resources/test_dataset_creating_graph_1.png"> <img src="README_resources/test_dataset_creating_graph_2.png" width = '300'>
+
+왼) 데이터 정제 Graph / 오) Tool Calling Graph
+
+### 3. tool_search node 프롬프트
+
+tavily_search : 현재 PPT에 특정 제품 또는 서비스가 명시되어 있고, 현재 PPT의 주된 내용이 그에 대한 내용을 담고 있을 때 실행. 해당 제품에 대한 최신 정보와 동향을 검색.
+arxiv : 현재 PPT에 연구, 성능 그래프, 벤치마크 표, 눈문 인용 표기 등이 명시되어 있을 때 그와 관련된 논문/연구자료 검색.
+None : 현재 PPT가 표지, 개요, 목차, 섹션 구분, 소개 등 형식적인 PPT에 속할 때. 또는 위의 어떠한 도구 선택 기준에도 해당하지 않는 경우.
 
 ```
 #역할
 당신은 검색 전문가입니다. 입력은 현재 PPT 슬라이드의 전체 내용을 빠짐없이 적은 것입니다.
 이를 읽고 도구 선택 기준에 맞으면 도구를 사용해 검색해주세요.
-사용할 수 있는 도구는 다음과 같습니다. : tavily_search, arxiv_search, wikipedia
+사용할 수 있는 도구는 다음과 같습니다. : tavily_search, arxiv_search
 구체적인 내용 없이 전체 내용이 짧은 경우 표지, 목차, 섹션 구분 등에 해당합니다.
 
 # 도구 선택 기준
 1. tavily_search : 특정 서비스와 제품에 대한 정보가 필요할 때
 특정 제품/서비스가 명시되어 있고 그에 대한 구체적인 정보(기능, 성능, 비교 등) 내용을 담은 슬라이드일 때 해당 제품에 대한 최신 정보와 동향을 검색.
-검색 필요 예시)
 
-검색 불필요 예시)
+- tavily 쿼리 지침
+쿼리는 핵심 키워드만 사용해 간결하게 작성하세요.
+슬라이드에 나와 있는 핵심 제품 한 가지에 대해서만 검색하세요.
+검색어는 3~5단어면 충분합니다.
+
+검색 필요 예시)
+MAAL (Multilingual Adaptive Augmentation Language-model) 한국어에 강한 언어 생성 모델 MAAL을 기반으로 On-premise LLM 솔루션을 제공합니다. 다양한 파라미터 수의 모델(8B-70B)을 기반으로 고객의 니즈에 맞는 모델을 지원합니다... On-premise용으로는 성능이 뛰어나며 범용적으로 사용하기 좋은 MAAL-albatross(70B)를 권장하고 있습니다. -> MAAL 관련 검색
+Agados UI, Flow Design & Visibility Technologies Structure of this presentation Application을 위한 Architecture - SW Package를 위한 Smart Architecture - Hybrid Architecture Overview - 타 시스템과의 Interface... -> Agados 관련 검색
 
 2. arxiv_search : 연구에 대한 구체적인 성능 내용이 필요할 때
 연구, 성능 그래프, 성능 표, 논문 인용 표기 등이 명시되어 있을 때 그와 관련한 논문 검색.
 
+- arxiv 쿼리 지침
+슬라이드에 나와 있는 핵심적인 것 단 한가지에 대해서만 검색하세요.
+
 검색 필요 예시)
-- "REPLUG: Retrieval-Augmented Black-Box Language Models, NAACL24'" -> 논문 검색
-- "Dense Passage Retrieval for Open-Domain Question Answering, EMNLP20'" -> 논문 검색
+- "REPLUG: Retrieval-Augmented Black-Box Language Models, NAACL24'", "Dense Passage Retrieval for Open-Domain Question Answering, EMNLP20'" -> 논문 검색
 - 마크다운 형식으로 전환된 그래프의 성능, 메트릭 표 -> 논문 검색
+- 특정 모델의 벤치마크 점수가 수치로 제시된 경우 예) "MAAL 70B: 9.06 / GPT-4o: 9.59" 처럼 모델별 점수 비교표가 포함된 슬라이드 -> 논문 검색
+- LogicKor, KoBEST, MMLU 등 평가 지표명이 명시된 경우
 
 3. 검색이 필요 없는 경우
 그 외 아래의 경우에 해당할 경우 '검색 필요 없음'과 그 이유를 출력하세요
@@ -351,17 +411,65 @@ Biz. Application을 위한 디자이너/재조정기\n‘아가도스’는 귀�
 제목: Jamcracker 소개 시작\n\nCloud Management Platform & Cloud Service Brokerage\n\n- CLOUD SERVICES BROKERAGE\n- CLOUD GOVERNANCE\n- MICROSOFT CSP ENABLEMENT\n- HYBRID CLOUD MANAGEMENT\n- Microsoft Cloud Solution Provider\n- OSC ASIA GROUP LIMITED\n- @ OSC Korea & OSC Asia Group jerry@osckorea.com jerry@oscasia.net +82 10 9196 1416 -> 목차 슬라이드
 
 # 규칙
-- 대화 로그를 보았을 때 이미 검색을 진행했다면 검색 결과를 전체 정리해주세요.
+- 검색 시 하나의 도구만 사용하세요.
+- 대화 로그를 보았을 때 이미 검색을 진행했다면 추가 검색을 하지 말고 검색 결과를 전체 정리해주세요.
 - 검색 결과 정리시 핵심 내용을 정리해 작성해주세요.
 - 검색 결과 요약 시 검색 결과를 제외한 다른 어떠한 출력도 하지 마세요.
 ```
 
 
 
+### 4. Labeled Data 예시
 
-# Evaluation
+**칼럼 설명**
+- slide_index : ppt 번호
+- title : 슬라이드 제목
+- tool_called : tool calling 여부 (True/False)
+- tool_name : 사용한 tool 이름
+- query : tool에 입력된 query
+- raw_tool_result : tool이 반환한 원본 결과
+- tool_node_result : tool calling 결과 요약
+
+<br>
+
+**test_dataset_None_labeled.csv**
+
+Tool Calling을 하지 말아야 할 데이터.
+
+| slide_index | title | tool_called | tool_name | query | raw_tool_result | tool_node_result |
+|---|---|---|---|---|---|---|
+| 1 | 제목 없음 | False | none | | | 검색 필요 없음: 표지 슬라이드로 판단됩니다. 구체적인 제품/서비스 기능, 성능, 연구 논문 내용이 없어 검색 대상이 아닙니다. |
+| 2 | 제목 없음 | False | none | | | 검색 필요 없음: 제품 차별성, 사내 On-premise LLM 필요성, On-premise LLM 솔루션 등 큰 항목만 나열된 목차/섹션 구분 슬라이드로 판단됩니다. |
+
+**test_dataset_tavily_labeled.csv**
+
+tavily search를 Call 해야 할 데이터.
+
+| slide_index | title | tool_called | tool_name | query | raw_tool_result | tool_node_result |
+|---|---|---|---|---|---|---|
+| 1 | 제목 없음 | True | tavily_search | MAAL albatross language model | {"query": "MAAL albatross language model", "results": [{"url": "https://albatross-lang.sourceforge.net", "title": "Albatross", ...}]} | MAAL-Albatross 관련 직접 정보는 공개 웹에서 제한적으로 확인됨. 마음AI 인스타그램 게시물이 가장 유의미한 결과로 확인됨. |
+| 2 | 제목 없음 | True | tavily_search | MAAL 오픈소스컨설팅 LLM | {"query": "MAAL 오픈소스컨설팅 LLM", "results": [{"url": "https://www.irobotnews.com/...", "title": "마음AI, 거대언어모델 '라마3 MAAL-허밍버드' 오픈소스 공개", ...}]} | 오픈소스컨설팅의 기업용 On-premise LLM 관련 자료 확인. 사내망 기반 LLM 도입 필요성, 업무 자동화, 생산성 향상, 보안 요구사항 대응 등이 핵심 주제. |
+
+**test_dataset_arxiv_labeled.csv**
+
+arxiv를 Call 해야 할 데이터.
+
+| slide_index | title | tool_called | tool_name | query | raw_tool_result | tool_node_result |
+|---|---|---|---|---|---|---|
+| 1 | 차별성 1 – 독보적인 성능 | True | arxiv_tool | LogicKor Korean LLM benchmark GPT-4-turbo MAAL 70B | 제목: Korean VLBI Network: the First Dedicated Mm-Wavelength VLBI Network in East Asia / 연도: 2005 / URL: http://arxiv.org/abs/astro-ph/0511065v1 | 제목: Korean VLBI Network: the First Dedicated Mm-Wavelength VLBI Network in East Asia (2005) — 관련 논문 검색 결과 |
+| 2 | Generative AI: Your Mileage May Vary | True | arxiv_tool | Who Answers It Better? An In-Depth Analysis of ChatGPT and Stack Overflow | 제목: Morescient GAI for Software Engineering (Extended Version) / 연도: 2024 / URL: http://arxiv.org/abs/2406.04710v2 | 제목: Morescient GAI for Software Engineering (Extended Version) (2024) — 생성형 AI가 소프트웨어 공학 산출물을 자동으로 검사·합성·수정하는 능력에 관한 연구 |
 
 
+
+
+
+## Test Dataset 무결성 검사
+
+Rule-Based, LLM-as-a-Judge
+
+## 평가
+
+LLM 종류별로 tool calling 정확도, query 적절성, 검색 결과 등 평가.
 
 
 
