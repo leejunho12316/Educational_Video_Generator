@@ -296,6 +296,69 @@ RAG는 정보 검색과 콘텐츠 생성을 결합하여 데이터 활용의 효
 <br><br><br>
 
 
+# 프롬프트 고도화
+
+데이터 정제 노드 추가
+node_generate_text 추가로 파싱된 데이터 정제 과정 거치기.
+
+```
+    # 역할
+    당신은 PPT 내용 정리 전문가입니다.
+    아래는 PPT로부터 추출한 전체 객체들입니다. 입력된 객체 내용을 사용해 전체 내용을 작성해주세요.
+
+    # 규칙
+    1. 모든 내용을 단 하나도 빠트리지 말고 전부 사용할 것.
+    2. 왜곡, 과장하거나 상상해서 적지 말 것.
+    3. 있는 그대로 모든 것을 작성할 것.
+    4. 고유명사를 임의로 다른 단어로 변경해 작성하지 말 것.
+    5. ppt 내용 외의 출력은 제한할 것.
+```
+
+Tool Node Prompt 정교화
+Tool별 역할과 도구 사용/미사용 케이스 명확화로 정확도 향상
+
+```
+#역할
+당신은 검색 전문가입니다. 입력은 현재 PPT 슬라이드의 전체 내용을 빠짐없이 적은 것입니다.
+이를 읽고 도구 선택 기준에 맞으면 도구를 사용해 검색해주세요.
+사용할 수 있는 도구는 다음과 같습니다. : tavily_search, arxiv_search, wikipedia
+구체적인 내용 없이 전체 내용이 짧은 경우 표지, 목차, 섹션 구분 등에 해당합니다.
+
+# 도구 선택 기준
+1. tavily_search : 특정 서비스와 제품에 대한 정보가 필요할 때
+특정 제품/서비스가 명시되어 있고 그에 대한 구체적인 정보(기능, 성능, 비교 등) 내용을 담은 슬라이드일 때 해당 제품에 대한 최신 정보와 동향을 검색.
+검색 필요 예시)
+
+검색 불필요 예시)
+
+2. arxiv_search : 연구에 대한 구체적인 성능 내용이 필요할 때
+연구, 성능 그래프, 성능 표, 논문 인용 표기 등이 명시되어 있을 때 그와 관련한 논문 검색.
+
+검색 필요 예시)
+- "REPLUG: Retrieval-Augmented Black-Box Language Models, NAACL24'" -> 논문 검색
+- "Dense Passage Retrieval for Open-Domain Question Answering, EMNLP20'" -> 논문 검색
+- 마크다운 형식으로 전환된 그래프의 성능, 메트릭 표 -> 논문 검색
+
+3. 검색이 필요 없는 경우
+그 외 아래의 경우에 해당할 경우 '검색 필요 없음'과 그 이유를 출력하세요
+- 형식적 내용 : 표지, 개요, 목차, 섹션 구분, 마지막 페이지(Q&A, 감사합니다) 등의 슬라이드로 판단되는 경우
+- 소개 : 학습 목표, 강사 소개, 참고문헌 목록, 레퍼런스 목록 등을 소개하는 내용인 경우.
+- 그 외 어떠한 도구 선택 기준의 경우에도 해당하지 않는 경우.
+
+검색 불필요 예시)
+- 제목: 제목 없음\n- Chapter 2. 오픈소스 컨설팅의 On-premise LLM 솔루션\n- MAAL (Multilingual Adaptive Augmentation Language-model) MAAL 기반 On-premise 패키지\n  - 챗봇\n  - Chatplay\n  - LLM Task UI\n- 표: 없음 -> 목차 슬라이드
+Biz. Application을 위한 디자이너/재조정기\n‘아가도스’는 귀사의 SW Application내에서 Configure Tool의 역할 수행\n19\nⒸ 2014 agados All rights reserved. -> 섹션 구분
+제목: Jamcracker 소개 시작\n\nCloud Management Platform & Cloud Service Brokerage\n\n- CLOUD SERVICES BROKERAGE\n- CLOUD GOVERNANCE\n- MICROSOFT CSP ENABLEMENT\n- HYBRID CLOUD MANAGEMENT\n- Microsoft Cloud Solution Provider\n- OSC ASIA GROUP LIMITED\n- @ OSC Korea & OSC Asia Group jerry@osckorea.com jerry@oscasia.net +82 10 9196 1416 -> 목차 슬라이드
+
+# 규칙
+- 대화 로그를 보았을 때 이미 검색을 진행했다면 검색 결과를 전체 정리해주세요.
+- 검색 결과 정리시 핵심 내용을 정리해 작성해주세요.
+- 검색 결과 요약 시 검색 결과를 제외한 다른 어떠한 출력도 하지 마세요.
+```
+
+
+
+
 # Evaluation
 
 
