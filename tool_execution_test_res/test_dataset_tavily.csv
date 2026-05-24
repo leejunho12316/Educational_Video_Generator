@@ -1,0 +1,1153 @@
+﻿slide_index,title,content,answer_tool,answer_query
+1,제목 없음,"제목: 제목 없음
+
+MAAL (Multilingual Adaptive Augmentation Language-model)
+
+한국어에 강한 언어 생성 모델 MAAL을 기반으로 On-premise LLM 솔루션을 제공합니다. 다양한 파라미터 수의 모델(8B-70B)을 기반으로 고객의 니즈에 맞는 모델을 지원합니다. On-premise용으로는 성능이 뛰어나며 범용적으로 사용하기 좋은 MAAL-albatross(70B)를 권장하고 있습니다.
+
+모델 비교
+- MAAL-hummingbird*
+  - 특징: 가장 가볍고 빠름, 특정 Task 특화
+  - 주요 용도: On-device AI
+  - 모델 사이즈: 8B
+  - 최소 GPU 사양: L40S 1EA (혹은 이하)
+  - Max Token Length: 8k
+- MAAL-albatross
+  - 특징: 가장 성능이 우수, 범용적 사용 가능
+  - 주요 용도: ChatGPT와 같은 범용적인 활용
+  - 모델 사이즈: 70B
+  - 최소 GPU 사양: A100 2EA
+  - Max Token Length: 8k",,
+2,제목 없음,"제목: 제목 없음
+
+슬라이드 대제목
+- MAAL : 오픈소스컨설팅의 On-premise LLM 솔루션
+
+설명
+- 오픈소스컨설팅의 MAAL 솔루션은 고객사 내부 망에 탑재되어 다양한 대내/대외 서비스를 구현해드립니다.
+
+Service
+- 내부 서비스 (직원 사무 생산성 향상)
+  - 문서 요약
+  - 보고서 첨삭
+  - 코드 작성
+  - 번역
+  - 단위 통일
+  - 홍보 문구 생성
+- 외부 서비스 (업무 무인화 + 고객 만족도 향상)
+  - 고객 상담
+  - 예약 접수
+  - 제품 추천
+
+System
+- AI 제공 솔루션
+  - Large Language Model
+  - RAG
+  - Agent
+- 고객사 내부 망 (On-premise)
+  - 고객사 Knowledge Base
+  - 고객사 내부 시스템
+- 가드레일
+
+보안/데이터 안내
+- *외부 유출이 불가한 자료는 Data Base에 적재
+
+프로세스 캡션
+- [On-premise LLM 서비스 프로세스]
+
+기타 표기
+- Service
+- System
+- MAAL : 오픈소스컨설팅의 On-premise LLM 솔루션
+- 오픈소스컨설팅 OPEN SOURCE CONSULTING
+- 페이지 번호: 14",,
+3,제목 없음,"제목 없음
+
+MAAL : 오픈소스컨설팅의 On-premise LLM 솔루션
+
+1. MAAL 챗봇
+- 자유로운 채팅을 통해 질문에 대한 답변을 제공받을 수 있습니다.
+
+2. Task UI
+- Task UI는 31개 이상의 사내 업무 (생성/요약/첨삭/번역/분석/코드) 를 자동화 할 수 있도록 사전 제작된 툴입니다. 고객사에 맞는 커스터마이징이 가능합니다.
+
+- *어떤 프롬프트를 넣을 지의 고민/노하우 없이 ‘빈칸을 채워 넣는’ 간단한 방식으로 높은 퀄리티의 결과물 획득 가능",,
+4,제목 없음,"제목 없음
+
+MAAL : 오픈소스컨설팅의 On-premise LLM 솔루션
+3. Chatplay – 내부 문서 기반 RAG 챗봇
+
+사내 지식 기반의 검색 / 대화를 가능하게 만드는 툴입니다.
+
+대화를 통한 편리한 검색
+- 원하는 정보를 얻기 위해 방대한 양의 회사 문서를 일일이 찾아야 했던 기존의 검색 방식과 달리, LLM 검색 툴을 활용하면 ‘단 한 마디의 질문’만으로 쉽고 빠르게 필요한 정보를 찾을 수 있습니다.
+
+파일 업로드를 통한 RAG 구현
+- .pdf, .doc, .txt 형식의 문서를 업로드하여 RAG 챗봇을 구축할 수 있습니다. 답변과 함께, 답변의 근거로 정보를 가져온 문서와 페이지까지 제시하기 때문에 할루시네이션(거짓 정보)의 우려 없이 활용이 가능합니다.",,
+5,맞춤형 AI 솔루션 제시,"- 슬라이드 제목: 맞춤형 AI 솔루션 제시
+- 상단 헤더: MAAL : 오픈소스컨설팅의 On-premise LLM 솔루션
+- 소개 문구: 'MAAL'을 바탕으로 보안에 대한 걱정 없이 최상의 업무 효율성을 달성할 수 있도록 다양한 업종별 기업에게 '안전하고 커스터마이징이 용이한 On-premise LLM 구축' 서비스를 제공하고 있습니다.
+- 섹션 타이틀: 맞춤형 AI 솔루션 제시
+- 본문: 기업 니즈에 맞는 최적의 AI 솔루션 도입이 가능하며, 소프트웨어 및 하드웨어를 묶은 하나의 패키지로 제공되어 추가적인 RAG 구축이나 개발에 시간을 들일 필요 없이 즉시 회사 서버 내 가져다 사용하실 수 있습니다.
+- 제품/서비스명: MAAL : 오픈소스컨설팅의 On-premise LLM 솔루션
+- 패키지 설명: Language Foundation Model 'MAAL' 기반 On-premise 패키지
+  - 구성: LLM 챗봇 + RAG 챗봇 제작 툴 Chatplay + 업무 효율화 툴 LLM Task UI
+- 하단 표시: 오픈소스컨설팅 OPEN SOURCE CONSULTING
+- 페이지 번호: 17
+- 표: 없음",,
+6,제목 없음,"제목: 제목 없음
+
+- MAAL : 오픈소스컨설팅의 On-premise LLM 솔루션
+- 자체 챗봇 서비스 개발을 위한 Chatplay를 제공합니다. 파일을 첨부하는 방식으로 자신만의 LLM/RAG 챗봇을 제작 할 수 있습니다. 생성된 답변 로그를 통해 성능 테스트도 진행하며 프롬프트 엔지니어링 실험용 툴로도 활용 가능합니다.
+
+표: 없음",,
+7,제목 없음,"제목 없음
+
+MAAL : 오픈소스컨설팅의 On-premise LLM 솔루션
+
+Chatplay를 통한 RAG Chatbot 생성 과정
+- 신규 Retrieval 모델 등록
+  - Retrieval 모델명 및 Text Split 정보를 입력해 주세요.
+  - 주의! 한번 설정한 모델명은 변경할 수 없습니다.
+  - 모델명* : maumAI  [중복 확인]  사용 가능한 모델명입니다.
+  - Chunk Size (300~700)* : 300
+  - Chunk Overlap (0~200) : 200
+  - [취소] [다음]
+- 신규 Retrieval 모델 등록
+  - RAG 챗봇을 구현하기 위해 파일을 등록하는 단계입니다. 임베딩하기 위한 파일을 선택후 [지정] 버튼을 눌러주세요.
+  - [파일업로드]
+  - No 1 | 파일명: On_premise_Large_Language_Model_053... | 사이즈: 3.0MB | 삭제
+  - * 각 파일의 최대 사이즈는 30MB 이내이며, 5개까지 등록 가능합니다.
+  - * 등록 가능한 파일은 .pdf, .docx, .txt 입니다.
+  - 3.0MB / 150MB
+  - [뒤로] [생성]
+- 채팅 화면 예시
+  - User: 어떤 상품이 있어?
+  - 마음AI 마케팅 팀장: (응답 표시)
+  - 출처(리스트에 표시): On_premise_Large_Language_Model_0530.pdf (반복 표시)
+
+하단 단계 안내
+- 원하는 RAG 모델 등록
+- 내부 PDF 파일 업로드
+- PDF 내의 내용을 찾아 답변을 생성하는 RAG 챗봇 생성
+
+오픈소스컨설팅 OPEN SOURCE CONSULTING
+19",,
+8,제목 없음,"제목: 제목 없음
+
+MAAL : 오픈소스컨설팅의 On-premise LLM 솔루션
+자체 챗봇 Task UI는 생성/요약/첨삭/번역/코드 등 31개 이상의 사내 업무를 자동화 할 수 있도록 사전 제작된 툴입니다.
+Task UI Builder를 통해 고객사에 맞는 커스터마이징이 가능하며 프론트, 백엔드 없이도 원하는 Task를 생성하여 관리할 수 있습니다.
+
+표: 없음",,
+9,"Agados UI, Flow Design & Visibility Technologies","Agados UI, Flow Design & Visibility Technologies
+Structure of this presentation
+
+Application을 위한 Architecture
+- SW Package를 위한 Smart Architecture
+- Hybrid Architecture Overview
+- 타 시스템과의 Interface
+
+Designer 개요
+- Functions & Features ( 다양한 Controls, Object/Node 유형)
+- 화면 디자인/재설정
+- Flow(Logic) 디자인/재설정
+- ResultSet Manager
+- Scripts Manager
+- Test Tool ( Unit, Stress )
+
+Visibility(가시성) 개요
+- 디자인 Time
+- 실행 Time
+- 모니터 Time
+
+Application를 위한 Benefit
+- 선진 고도화된 SW PKG 자격 조건
+- 선진 고도화된 SW PKG 제작 & 커스터마이징 라이프사이클 Governing
+
+9
+Ⓒ 2014 agados All rights reserved.",,
+10,"업무처리 Application 를 위한 Agados의 Smart Architecture
+SW Package 아키텍처의 새로운 패러다임","업무처리 Application 를 위한 Agados의 Smart Architecture
+SW Package 아키텍처의 새로운 패러다임
+
+Biz. Application을 위한 Smart Architecture
+
+- Visual
+  - 비쥬얼한 모든 Logics (Design Flow)
+  - 비쥬얼한 모니터링
+  - 비쥬얼한 Objects 관계성
+- Smart
+  - Design, Flows & Rules 정의
+  - 변화에 대한 높은 대응력
+  - 지능적인 Customizing 능력
+- Hybrid
+  - Agados & 타 시스템간 교차 이용
+  - Java & .NET 환경 모두 지원
+  - 대부분의 RDBMS, WAS 지원
+- Cloud
+  - Cloud 컴퓨팅 지향
+  - PKG의 ‘SaaS’ & ‘PaaS’ 서비스 가능
+  - Private / Public 클라우드 구성 가능
+
+Visual / Hybrid / Smart / Cloud
+
+10
+Ⓒ 2014 agados All rights reserved.",,
+11,업무처리 Application 를 위한 Agados의 Smart Architecture,"제목
+- 업무처리 Application 를 위한 Agados의 Smart Architecture
+
+설명
+- Application 에게 Hybrid Architecture 제공
+- 타 프래임웍 상의 컴포넌트와 교차 사용 인터페이스 가진 Hybrid Architecture
+
+구성/요소
+- General JSP /Servlet / ASP
+- Presentation Layer by Agados
+  - Object    Object
+- Biz. Logics by Agados
+  - I/F Object
+- Data Access by Agados
+  - Object    Object
+- Servlet ( java, .NET)
+- EJB/COM/ …
+- JDBC/ODBC Connection
+- Middleware
+- External Module
+- Application DB
+- I/F OBJ
+- I/F, I/F, I/F
+- Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object
+
+기타
+- 11
+- Ⓒ 2014 agados All rights reserved.",,
+12,업무처리 Application 를 위한 Agados의 Smart Architecture,"업무처리 Application 를 위한 Agados의 Smart Architecture
+Application 에게 Hybrid Architecture 제공
+Agados Smart Client를 General JSP or ASP로 대체 (아키텍처 응용)
+I/F OBJ
+Biz. Logics by Agados
+General JSP /Servlet / ASP
+Object
+Servlet
+( java,
+.NET)
+Object
+Object
+Object
+Object
+Object
+I/F Object
+Object
+Object
+Object
+Data Access by Agados
+Object	Object
+Object
+Object
+Object
+Object
+Object
+Object
+Presentation Layer by Agados
+Object	Object
+Object
+EJB/COM/ …
+JDBC/ODBC Connection
+Middleware
+External Module
+I/F
+Application DB
+12
+Ⓒ 2014 agados All rights reserved.
+I/F
+I/F",,
+13,업무처리 Application 를 위한 Agados의 Smart Architecture,"- 제목: 업무처리 Application 를 위한 Agados의 Smart Architecture
+- 설명: 타 System 과의 인터페이스 , 외부 System 에서 Agados 기반 Application 기능 사용 ( Call Agados Engine )
+- 구성 요소: 외부 Module, Agados Engine
+- 코드:
+  CoMap coMap = new CoMap();
+  new SopRun().Run(coMap);
+  // Call Agados engine module
+- 기능 블록: Rule run
+- 파라미터: Input Parameters, Output Parameters
+- 사용 방식: 외부 JSP , ASP , Class , 기타 모듈 내부에서 Agados 기반 Application 의 Object를 호출해 사용
+- 슬라이드 번호: 13
+- 저작권: Ⓒ 2014 agados All rights reserved.",,
+14,Agados based Biz. Application 이 갖게 될 Benefit,"제목
+- Agados based Biz. Application 이 갖게 될 Benefit
+
+텍스트
+- '' (빈 문자열)
+- Agados based Biz. Application 이 갖게 될 Benefit
+- 14
+- Ⓒ 2014 agados All rights reserved.
+- 선진 고도화된 SW PKG를 위한 제품화 지수들
+- 글로벌 비즈니스를 해야 할 SW 패키지 제품의 품질은 소스 품질, 안전성 검증 등만으로는 한계
+
+표
+- Technical Categories: 커스터마이징 시 (가장 기본 요건)
+  - SW PKG 제품화 지수 항목: 커스터마이징 경우 패키지 본체에 대한 재컴파일이 발생 하지 않도록 함.
+  - Agados 기반의 Application: ○
+- Technical Categories: Customizing 방법
+  - SW PKG 제품화 지수 항목: 제품 본체 : Configurable Changing (재조정)
+  - Agados 기반의 Application: ○
+- Technical Categories: (공란)
+  - SW PKG 제품화 지수 항목: Add-On 기능 : ① 3GL 코딩을 통해 패키지와 인터페이스 할 수 있는 Biz. API 제공하는가? ② Coding 과 재컴파일 없이 사용자 추가 기능을 패키지에 탑재할 수 있는가?
+  - Agados 기반의 Application: ① Designed BAPIs for Add-On (컨설팅 제공) ② Adding Design & Rule Definition on Agados
+- Technical Categories: Customizing 시 (Locale; 지역화)
+  - SW PKG 제품화 지수 항목: Locale Data Setting 자동화 ( 통화, Date-Time 표기방식, 기타…)
+  - Agados 기반의 Application: ○
+- Technical Categories: (공란)
+  - SW PKG 제품화 지수 항목: 다중 언어 지원 자동화 ( 화면 문자, 메뉴, 메시지, etc…)
+  - Agados 기반의 Application: ○
+
+이미지
+- 슬라이드 이미지 및 agados 로고 이미지 포함",,
+15,제목 없음,"제목: 제목 없음
+
+텍스트:
+ 
+- Agados based Biz. Application 이 갖게 될 Benefit
+- 선진 고도화된 SW PKG를 위한 제품화 지수들
+
+표:
+- Technical Categories | SW PKG 제품화 지수 항목 | Agados 기반의 Application
+- Customizing ( 패키지 Source 유출 방 지) | 커스터마이징 할 경우 제품 소스가 오픈 되지 않는가? (SW Package 가치 보호) | ○
+- Customizing (Application DB , DB Handling ) | SW Package Data Model 유지성 ( 데이터의 추가에 대한 Impact로 부터 제품이 받는 영향 도를 낮출 수 있는가) | ○ (Provide Consulting, Applied Application DB Model)
+-  | SW (Package) Data Model 확장성 ( Expansibility for Base on Adding) | (Provide Consulting, Applied Application DB Model)
+-  | DB Locking 방지 ( Prevent Mistakes of Customizer ) | ○ (Agados 내 DB Handling 시 Locking 방지)
+-  | 제품 개발 소스와 SQL Statements, Procedures 등의 문 장 정보들의 분리성 (소스 내에 있는 경우, 요구사항 변경 시 , 소스를 변경해야 함으로 Impact 커짐) | (SQL Statements, Procedures are managed Separately )
+- Customizing ( 다른 시스템과의 Interface) | 타 시스템 ( 어플리케이션 ) 과 SW PKG 간의 I/F 를 위한 방법 제공 | ○ ( I/F 방법 제공 )",,
+16,제목 없음,"제목 없음
+
+Agados based Biz. Application 이 갖게 될 Benefit
+선진 고도화된 SW PKG를 위한 제품화 지수들
+
+Technical Categories | Qualification Indicators | Agados Based Application
+- Running Time (변경 SW PKG 배포)
+  - PKG 변경 시, 사용자의 별도 액션 없이 자동 배포 | ○ (Smart Client Publishing)
+
+- Visibilities (SW PKG의 운영 상태에 대한 다양한 가시성, Monitoring, Tracing , etc…, )
+  - SW PKG 자체적으로 운영 상태 뷰 제공, Monitoring/Analysis Features | ○
+  - SW PKG 실행중 혹은 커스터마이징 시 Testing Features | ○
+  - SW PKG 구성 요소간 상호 연결성 정보 제공, ( Relationship Matrix , etc… ) | ○
+  - SW PKG 실행중 혹은 커스터마이징 시, Performance & Tracing Features ( 업무 기능 실행 시 , 구간별 반응 시간 등) | ○
+  - 문장형 정보의 별도 관리 , SQL Statements, etc… , | ○
+  - SERVER 상의 리소스 라이프타임 관리 (Database Resource , 등 ) | ○
+
+1
+Ⓒ 2014 agados All rights reserved.",,
+17,Agados based Biz. Application 이 갖게 될 Benefit,"Agados based Biz. Application 이 갖게 될 Benefit
+
+Agados based Biz. Application 이 갖게 될 Benefit
+3GL 기반 Package에 비해 Agados 기반 Package화의 다른 점
+3GL 기반 SW(Package) System
+Language
+Code…
+변경/ 추가된 Code
+Agados 기반 SW(Package/서비스) System
+Language Code…
+변경/ 추가된 Code
+Rules…
+변경/ 추 가된 Rule
+
+Code 자체는 정보로서의 가치가 없다
+
+Rule 은 그 자체가 정보
+Rules Repository
+내에서 변경 정보
+관리
+Agados 상에서는 Codes 역시 하나의 Object로 관리
+Customizing/Changing Needs
+변경된 요구 사항
+추가된 요구 사항
+2
+Ⓒ 2014 agados All rights reserved.",,
+18,제목 없음,"제목 없음
+
+Agados based Biz. Application 이 갖게 될 Benefit
+Build(제작) & Customization(커스터마이징) Lifecycle에 대한, 고도화된 Governance 확보
+
+Smart Architecture
+
+Build(제작)
+- Rule & Flow 정의 방식
+- 비쥬얼한 제작
+- 선진화된 SW PKG 아키텍처
+
+Configure (재조정)
+- 단지 PKG내의 Configure Tool 사용
+- 비쥬얼한 Configuration 작업
+- Coding 요소 절감
+
+Maintain (유지)
+- Presentation, Biz. Logic, 그리고 Data 계층의 완벽한 구분
+- 모든 PKG 구성정보 Meta화
+- 완벽한 통제성 확보
+- 비쥬얼한 Debugging
+
+Upgrade (버전 업)
+- PKG 기본(표준) Model 관리
+- PKG 변화 관리
+- 새 Version 자동 배포
+- 재작업 최소화
+
+3
+Ⓒ 2014 agados All rights reserved.",,
+19,Agados based Biz. Application 이 갖게 될 Benefit,"제목
+- Agados based Biz. Application 이 갖게 될 Benefit
+
+부제/설명
+- 선진 고도화된 SW PKG Business Process로의 변화 (완벽한 채널비즈니스 체계 확보)
+- Agados , Application 업체, Application 사업 파트너 그리고 고객사 간의 관계 agados Application제작 업체 Channels
+
+agados
+- Platform R&D
+- Agados 제공
+- 기술 지원
+- 트러블 슈팅
+- 컨설팅 서비스
+- Before/After 서비스
+
+PKG R&D 파트
+- Biz. PKG R&D
+- PKG 제작
+- PKG 업그레이드
+- PKG 제공
+- PKG 모델 관리
+- PKG QA
+- PKG R&D
+
+PKG 사업 수행 파트
+- Sales/ Marketing
+- Partner 관리 /훈련
+- Before/After 서비스
+- PKG 기술 지원
+- PKG 컨설팅 서비스
+- PKG 커스터마이징 SVC
+
+PKG 사업 파트너
+- Sales/ Marketing
+- PKG 컨설팅 서비스
+- PKG 커스터마이징 서비스
+- PKG 기술지원
+- Before/After 서비스
+
+PKG 고객사
+- PKG 사용
+- 직접 기능 추가
+
+PKG Customer
+- • Using PKG
+
+추가 표기
+- Sales/ Marketing
+- * Before/After 서비스 : 교육/훈련/Contents 제공 등
+- 4
+- Ⓒ 2014 agados All rights reserved.",,
+20,제목 없음,"제목: 제목 없음
+
+- “Software-Defined Application”이 될 수 있다
+- Agados based Biz. Application 이 갖게 될 Benefit
+  - Rule (Meta Data)은 그 자체가 정보
+- 왜 Rules(Metadata) 이어야 하나?
+  - Rule (metadata) 관리 기반 플랫폼의 의미와 가치
+  - Control (제어)
+  - Analysis (분석)
+  - Configure (재조정)
+  - Value Create (가치 창출)
+- 5
+- Ⓒ 2014 agados All rights reserved.",,
+21,"Agados based Biz. Application 이 갖게 될 Benefit
+Technical(기술적) Benefit"," 
+Agados based Biz. Application 이 갖게 될 Benefit
+Technical(기술적) Benefit
+
+Agados 기반 PKG의 Technical Benefit ?
+
+Compatibility
+(호환성)
+Locale , OS , WAS , JDK , Network , Database , Client 환경 의 다양성 및 버전 변화 등에 최소한 의 비용으로 대응이 가능하다.
+
+Curability (지속성)
+지속적 Upgrade 에 대한 안정성 담보 , 영향도 분석 및 적용이 가능하다.
+
+Protective
+(보호성)
+Source ( java , .NET ) 등으로 구성되어진 Application 과 비교하여 , 구성되어진 Logic 등이 Data 화 되어있고 , 실행은 엔진이 담당하므로 인하여 , Application 의 구성 정보를 보호할 수 있다.
+
+Manageability (관리성)
+Application 의 Visibility 와 Monitoring , 수준 높은 시스템 품질 제공, 비정상적 오류 감지 , 추출 , 제어, Refactoring 등의 기능을 제공하여 관리성을 높인다.
+
+Analyzability (분석성)
+Design viewer , Visibility , 영향도 분석 , 실행 패턴 분석 등을 통하여 분석성을 높인다.
+
+6
+Ⓒ 2014 agados All rights reserved.",,
+22,"Agados based Biz. Application 이 갖게 될 Benefit
+Business(사업적) Benefit","- Agados based Biz. Application 이 갖게 될 Benefit
+- Business(사업적) Benefit
+
+- Agados Based PKG의 Biz. Benefit ?
+
+- Governance
+  (지배력)
+  - 사업 Partner와 Customer 에 대한 지배력을 확보, 완벽한 Channel business 를 가능하게 한다. 또 한 제품의 커스터마이징 단계에서 부터 유지보수 단계에 이르는 전체 서비스 프로세스 상에서 본 사의 완벽한 Governance를 확보한다.
+
+- Economic Feasibility
+  (경제성)
+  - 짧은 커스터마이징 기간이 가능함으로, 투입 인력 절감으로 인한 라이선스 수익 비율을 높일 수 있으며, 프로그래머 투입이 아닌, 제품 컨설턴트 투입으로 프로젝트 서비스의 질과 수익을 증대할 수 있다.
+
+- Responsive Force (대응력)
+  - 100% Configure 환경으로 새로운 Biz. Needs 나 변화에 능동적으로 대응할 수 있으며, 동시 다발
+적인 프로젝트를 진행할 수 있는 글로벌 비즈니스 대응력을 확보할 수 있다.
+
+- 7
+
+- Ⓒ 2014 agados All rights reserved.",,
+23,제목 없음,"제목: 제목 없음
+
+Agados based Biz. Application 이 가 갖게 될 Benefit
+Application(Package/Service) Version 관리
+
+완벽한 Version 관리
+
+AS-IS
+- Base Application
+- Base + A / Base + B / Base + C
+- A Site B Site C Site
+- Site 별로 서로 다른 시스템화 된다.
+- 동시 버전 업그래이드 불가능
+
+Agados 기반 Application
+- Base Application
+- A / B / C
+- Base / Base / Base
+- A Site B Site C Site
+- Base Model이 사이트마다 유지
+- 동시 업그래이드 가능
+
+8
+Ⓒ 2014 agados All rights reserved.",,
+24,Agados 기반 Application의 아키텍처 형상,"제목
+- Agados 기반 Application의 아키텍처 형상
+
+내용
+- Agados가 적용되었을 때의 Application 아키텍처 ( Full 적용 )
+- Your Application Smart Client (Web Client)
+  - Agados Smart Client
+  - Configure Tool
+    Higher Configure Tool
+  - Designer Lower Configure Tool
+  - Visual Monitor Client
+- Your Application
+  Smart Server
+  - WAS (JBoss, IIS, …)
+  - Agados Server
+    (Design, Execute)
+  - Agados
+    Monitor Server
+  - Agados
+    Log Server
+  - Your App. Biz. Objects
+- DB
+  Server
+  - Application
+  - DB
+  - Application
+  - Rule DB
+  - Application
+  - Log DB
+- Application/Service Out-of-Box
+  - Reporting Tool
+- External System
+- HTTP
+- HTTP
+- 9
+- Ⓒ 2014 agados All rights reserved.
+- Operating Environment
+  Server : Windows Server, Unix, Linux for Java / .NET
+  DBMS : SQL Server, Oracle, MySQL, …",,
+25,Agados 기반 Application의 아키텍처 형상,"제목: Agados 기반 Application의 아키텍처 형상
+
+부분적인 Agados 적용 시의 Application 아키텍처 (Hybrid 아키텍처)
+
+Operating Environment
+- Server : Windows Server, Unix, Linux for Java / .NET
+- DBMS : SQL Server, Oracle, MySQL, …
+
+Your Application Smart Client (Web client)
+- Agados Smart Client
+- Configure Tool Higher Configure Tool
+- Designer Lower Configure Tool
+- Visual Monitor Client
+
+Your Application Smart Server
+- WAS (JBoss, IIS, …)
+- Agados Server (Design, Execute)
+- Agados Monitor Server
+- Agados Log Server
+- Your App. Biz. Assembly (Agados OBJ)
+- Your PKG Biz. Assembly (General Class)
+
+DB Server
+- Application DB
+- Application Rule DB
+- Application Log DB
+
+External System
+
+Other Framework
+- JSP, ASP
+- Servlet
+
+HTTP
+
+Application/서비스
+Out-of-Box
+Reporting Tool
+
+Agados 기반 Application의 아키텍처 형상
+
+10
+Ⓒ 2014 agados All rights reserved.",,
+26,Pivotal HAWQ,"Pivotal HAWQ
+
+- 15년 이상 기업 시장에서 검증된 Greenplum 데이터베이스 엔진 사용
+  - Partition, Compression, Resource 관리
+- 100% ANSI SQL Compliant – 기존 BI, SAS 툴 재활용
+- 실시간 쿼리 가능
+  - MapReduce를 사용하지 않고 분산되어 있는 데이터에 직접 접근
+- PXF External Table로 HDFS, HBase, Hive 및 다양한 데이터 통합
+- Libhdfs 개선(JavaC)으로 일반 HDFS보다 빠른 속도
+- PL/R, Madlib 등 다양한 분석 패키지 지원
+- 보안 및 유저 권한 관리, 암호화 지원
+
+© 2015 Pivotal Software, Inc. All rights reserved.
+11",,
+27,"Pivotal Query Optimizer (PQO)
+For HAWQ and Greenplum Database","제목: Pivotal Query Optimizer (PQO) For HAWQ and Greenplum Database
+
+- Greenplum DB HAWQ
+- PIVOTAL VALUE-ADDED FUNCTIONALITY: Turns a SQL query into an execution plan
+- First Cost Based Optimizer for BIG data
+- Applies all possible optimizations at the same time
+- New Extensible Code Base
+- Rapid adoption of emerging technologies
+- 1.2B Possible Plans in 250ms for TPC-H Query 21
+- © 2015 Pivotal Software, Inc. All rights reserved. 18
+
+표: 없음",,
+28,Pivotal HAWQ – Polymorphic AO Storage,"- 제목: Pivotal HAWQ – Polymorphic AO Storage
+- 설명: GPDB와 동일한 유연한 Row/column based table/partition 구성으로 성능 및 저장공간 최적화
+- 저장 방식 및 활용
+  - Columnar storage is well suited to scanning a large percentage of the data
+  - Row storage excels at small lookups
+  - Most systems need to do both
+  - Row and column orientation can be mixed within a table or database
+- 압축
+  - Both types can be dramatically more efficient with compression
+  - Compression is definable column by column:
+    - Blockwise: Gzip1-9 & QuickLZ
+    - Streamwise: Run Length Encoding (RLE) (levels 1-4)
+- 인덱싱/파티셔닝
+  - Flexible indexing, partitioning enable more granular control and enable true ILM
+- 예시 도식
+  - TABLE ‘SALES’
+  - Mar, Apr, May, Jun, Jul, Aug, Sept, Oct, Nov
+  - Column-oriented for Full Scans
+  - Row-oriented for Small Scans
+- 저작권: © 2015 Pivotal Software, Inc. All rights reserved.
+- 페이지: 13",,
+29,Pivotal eXtension Framework (PXF),"Pivotal eXtension Framework (PXF)
+
+- Pivotal eXtension Framework (PXF)
+- External Table Interface 제공: Hadoop eco의 다양한
+  data store 를 조회
+  Hadoop \uf0e8 HAWQ 로 데이터 적재 혹은 직접 쿼리
+  Enables combining HAWQ data and Hadoop data in single queryaa
+  Supports connectors for HDFS, HBase and Hive
+  Provides extensible framework API to enable
+- PIVOTAL---HD EXTENSION FRAMEWORK
+- HDFS
+- HBase
+- Hive
+- custom connector
+  Industry diﬀeren;ators :
+  \uf09f  LAovwaillaabtelenocyn oGnitlhaurbg:eJdSaOtaNs, eAtscumulo, S3…
+  \uf09f EHxAteWnQsibMleapaRndedcuucsetoRmeiczoarbdleReader
+  Considers cost model of federated sources
+- HAWQ
+- HAWQ
+- © 2015 Pivotal Software, Inc. All rights reserved.
+- 14",,
+30,PXF Features,"제목: PXF Features
+
+- PXF Features
+- Hbase,Hive 의 연계시 filter 조건으로 predicate push down
+- Hive table Partitioning exclusion
+- HDFS data에 대한 통계정보 수집으로 최적화된 수행 계획 작성
+- Extensible Framework JAVA API 제공으로 다른 데이터소스(eg: Oracle DB)/format에 대한 custom 개발 용이
+- HDFS block locality to HAWQ processing segment
+- 빠른 Parallel Optimizer(ORCA)
+- 사용예:
+  1) HAWQ 의 Dimension Table 과 HBase fact table과 Join
+  2) HDFS, Hive, HBase 데이터를 빠르게 HAWQ로 로드하여 통합 관리
+  3) 다양한 포맷과 저장소의 데이터에 대한 materialization없이 통합(federation) 쿼리 엔진 으로 사용
+- © 2015 Pivotal Software, Inc. All rights reserved.
+- 15
+- \uf09f",,
+31,PXF External Table 예제,"- 제목: PXF External Table 예제
+- Simple HDFS Text
+- CREATE EXTERNAL TABLE jan_2012_sales (
+id int, total int,
+comments varchar
+)
+LOCATION(‘pxf://10.76.72.26:50070/sales/ 2012/01/items_*.csv?
+profile=HdfsTextSimple
+)
+FORMAT ‘TEXT’ (delimiter ‘,’);
+- Hbase Table
+- CREATE EXTERNAL TABLE hbase_sales (
+recordkey bytea, “cf1:saleid” int, “cf8:comments” varchar
+)
+LOCATION(‘pxf://10.76.72.26:50070/sales?
+profile=HBase
+) FORMAT
+‘custom’ (formatter='gpxfwritable_import');
+- Export to HDFS using Writable PXF
+- CREATE WRITABLE EXTERNAL TABLE ...
+LOCATION(‘pxf://<host:port>/sales? profile=HdfsTextSimple&COMPRESSION_CODEC=org.apache.hadoop.io.compress.GzipCodec') FORMAT ‘text’(delimiter ‘,’);
+- © 2015 Pivotal Software, Inc. All rights reserved.
+- 1
+- 표: 없음",,
+32,MADlib Advantages,"제목: MADlib Advantages
+
+핵심 내용
+- Better parallelism
+  - Algorithms designed to leverage MPP and Hadoop architecture
+- Better scalability
+  - Algorithms scale as your data set scales
+- Better predictive accuracy
+  - Can use all data, not a sample
+- Open source
+  - Available for customiza;on and op;miza;on by user if desired
+
+추가 내용
+- Big Data Machine Learning in SQL for Data Scientists
+  - Open Source, commercially usable BSD license
+  - Supports Postgres, Pivotal Greenplum Database, and Pivotal HAWQ
+  - Powerful analytics for Big Data
+- HAWQ
+- © 2015 Pivotal Software, Inc. All rights reserved.
+- 2",,
+33,Functions,"Functions
+
+Predictive Modeling Library
+- Generalized Linear Models
+  - Linear Regression
+  - Logistic Regression
+  - Multinomial Logistic Regression
+  - Cox Proportional Hazards Regression
+  - Elastic Net Regularization
+    - Robust Variance (Huber-White), Clustered Variance, Marginal Effects
+- Matrix Factorization
+  - Single Value Decomposition (SVD)
+  - Low Rank
+- Linear Systems
+  - Sparse and Dense Solvers
+  - Linear Algebra
+- Other Machine Learning Algorithms
+  - Principal Component Analysis (PCA)
+  - Association Rules (Apriori)
+  - Topic Modeling (Parallel LDA)
+  - Decision Trees
+  - Random Forest
+  - Support Vector Machines
+  - Conditional Random Field (CRF)
+  - Clustering (K-means)
+  - Cross Validation
+  - Naïve Bayes
+  - Support Vector Machines (SVM)
+- Time Series
+  - ARIMA
+
+Descriptive Statistics
+- Sketch-Based Estimators
+  - CountMin (Cormode-Muth.)
+  - FM (Flajolet-Martin)
+  - MFV (Most Frequent Values) Correlation
+- Summary
+
+Inferential Statistics
+- Hypothesis Tests
+
+Support Modules
+- Array Operations
+- Sparse Vectors
+- Random Sampling
+- Probability Functions
+- Data Preparation
+- PMML Export
+- Conjugate Gradient
+
+Oct 2014
+© 2015 Pivotal Software, Inc. All rights reserved.
+3",,
+34,"Calling MADlib Functons: Fast Training, Scoring","Calling MADlib Functons: Fast Training, Scoring
+
+SELECT madlib.linregr_train( 'houses’,
+'houses_linregr’,
+'price’,
+'ARRAY[1, tax, bath, size]’);
+
+MADlib model function
+Table containing training data
+Table in which to save results
+Column containing
+dependent variable
+Features included in the model
+
+MADlib allows users to easily and create models without moving data out of the systems
+- Model generation
+- Model validation
+- Scoring (evaluation of) new data
+All the data can be used in one model
+Built---in functionality to create of multiple smaller models (e.g. classiﬁcation grouped by feature)
+Open---source lets you tweak and extend methods, or build your own
+
+HAWQ
+© 2015 Pivotal Software, Inc. All rights reserved.
+4",,
+35,PivotalR: Bringing MADlib and HAWQ to a familiar R interface,"PivotalR: Bringing MADlib and HAWQ to a familiar R interface
+
+Challenge
+Want to harness the familiarity of R’s interface and the performance & scalability benefits of in-DB analytics
+
+Simple solution:
+Translate R code into SQL
+
+Pivotal R	SQL Code
+
+d <- db.data.frame(”houses"")
+houses_linregr <- madlib.lm(price ~ tax
++ bath
++ size
+, data=d)
+
+SELECT madlib.linregr_train( 'houses’,
+'houses_linregr’,
+'price’,
+'ARRAY[1, tax, bath, size]’);
+
+https://github.com/pivotalsoftware/PivotalR
+
+© 2015 Pivotal Software, Inc. All rights reserved.
+
+5",,
+36,PivotalR Design Overview,"PivotalR Design Overview
+
+- PivotalR Design Overview
+- Call MADlib’s in-DB machine learning functions directly from R
+  Syntax is analogous to native R function
+- 1.	R \uf0e8 SQL
+- 2. SQL to execute
+- 3. Computation results
+- RPostgreSQL
+- PivotalR
+- Database/Hadoop w/ MADlib
+- No data here
+- Data lives here
+- Data doesn’t need to leave the database
+  All heavy lifting, including model estimation & computation, are done in the database
+- © 2015 Pivotal Software, Inc. All rights reserved.
+- 6",,
+37,제목 없음,"제목 없음
+
+Statista's Data
+스태티스타 데이터 출처
+데이터 출처
+
+49% 스태티스타 독점 데이터
+- ✓ 공식 발간된 산업별 데이터를 기반으로 스태티스타가 개발한 알고리즘에 맞게 산출한 주요 시장 전망
+- ✓ 전 세계 소비자 대상 설문조사 결과
+- ✓ 도시에 플러스, 브랜드 리포트, 이커머스 리포트 등 심층 분석 연구 리포트
+
+35% 2차 출처 독점 데이터
+- ✓ 데이터 파트너사 공유 등의 독점 데이터
+
+16% 신뢰도 높은 오픈 소스 데이터
+- ✓ 국가별 공공기관 및 국제기구 발간 데이터
+
+statista",,
+38,Statista’s Data,"Statista’s Data
+
+Statista’s Data
+
+스태티스타 데이터 혜택
+데이터 혜택
+
+ALL
+
+ALL STATISTICS
+85,000개의 주제와 170개의 산업에 대한 기본 · 프리미엄 통계 자료를 자유롭게 열람하고 다운로드 하실 수 있습니다.
+
+ALL DOWNLOAD FORMATS
+원하는 주제의 통계 자료를 PPTX, XLS, PNG 및 PDF 포맷으로 다운받아 바로 실무에 활용이 가능합니다.
+
+ALL BACKGROUND INFORMATION
+스태티스타에서 제공하는 모든 통계자료의 출처에 언제나 접근할 수 있습니다.
+
+ALL PUBLICATION RIGHTS
+논문 및 연구 자료 제작 시 스태티스타 데이터를 저작권 걱정 없이 사용하거나 배포하실 수 있습니다.
+
+- 스태티스타 소속 리서치 전문가가 공신력 있는 기관에서 수집한 데이터를 바탕으로 통계 자료 및 연구 리포트를 제작해 발행합니다.
+- 약 22,500개의 오픈 소스를 비롯해 데이터 파트너십 기업에서 독점 제공하는 2차 출처에서 데이터까지 스태티스타 안에서 합리적인 구독료로 이용이 가능합니다.
+
+statista",,
+39,제목 없음,"- 제목: 제목 없음
+- Statista’s Data
+- 스태티스타를 통한 리서치 시간 절약
+- 데이터 혜택
+- per Research 28 min.
+- 리서치 당 평균 28분의 시간을 절약할 수 있습니다.
+- without Statista
+  - 통계 검색 16 min.
+  - 파워포인트 변환 8 min.
+  - 엑셀 변환 7 min.
+- with statista
+  - 통계 검색 1.4 min.
+  - 파워포인트 변환 1.6 min.
+  - 엑셀 변환 5 sec.",,
+40,제목 없음,"제목: 제목 없음
+
+메인 타이틀
+- Statista’s Data
+- 스태티스타 데이터 활용 범위
+- (상단 우측 표기) 스태티스타 활용 범위
+
+텍스트(추출 항목)
+- 빈 항목 2개 포함
+- MANAGEMENT
+- SALES
+- PRODUCT DEVELOPMENT
+- BUSINESS DEVELOPMENT
+- MARKETING
+- MARKET RESEARCH
+- HUMAN RESOURCES
+
+세부 내용
+- MANAGEMENT
+  - 프리젠테이션 데이터 직접 삽입
+  - 투명하고 확실한 데이터 소스 제공
+- SALES
+  - 자사 디자인으로 PPT에 적용
+  - 가격 변동, 산업 전망 분석
+  - 신규 고객사 발굴: 해당 산업 100대 기업정보 및 연락처
+- PRODUCT DEVELOPMENT
+  - 트렌드, 소비자 데이터 제공
+  - SWOT 분석에 활용 가능
+  - 포괄적인 시장 데이터를 활용한 경쟁사 및 마켓 분석
+- MARKETING
+  - 마켓 모니터, 디지털 소비자 트렌드, 소비자 인사이트
+  - Consumer Market Insights 를 통한 소비자 행동 양식 분석, 매출액 인사이트 확보
+- MARKET RESEARCH
+  - 세부 마켓 별 현황 분석과 전망
+  - 전 산업 독점 전망치 포함된 심층 분석 리포트
+- BUSINESS DEVELOPMENT
+  - 향후 5년 세계 경제 동향 독점 전망 자료 활용
+  - 핵심 산업 디지털화 관련 사용자·매출 활용
+  - 외부 심층 리포트, 산업 및 기업 분석·연구 자료 열람
+- HUMAN RESOURCES
+  - 산업군 별 급여 데이터 열람
+  - 인재 채용 트렌드 확인
+
+기타
+- 체크 표시 아이콘 사용
+- statista 로고 표기
+- 파란색 톤의 그래픽 요소(원형/사각형 장식, 별 패턴 배경) 포함
+
+표
+- 없음",,
+41,고객사에서 원하는 질문항목을 만들어 보세요.,"[제목]
+고객사에서 원하는 질문항목을 만들어 보세요.
+
+고객사에서 원하는 질문항목을 만들어 보세요.
+제품의 품질, 사용자의 경험,
+베트남 소비자들에 궁금했던 질문 등 시장적합성을 알기 위한 질문을 만들어보세요.
+베트남어로 번역하여 인플루언서(KOC)에 전달합니다.
+
+한국어 설문 -> 베트남어 설문
+
+이런 질문들을 물어볼 수 있어요
+제품 추천 의향 — ""이 제품을 친구에게도 추천하고 싶은가요?""
+판매 참여 의향 — ""직접 이 제품을 판매해보고 싶은가요?""
+성분·효능 만족도 — ""미백·보습 등 핵심 기능에 대한 체감 효과는 어떤가요?""
+피부 트러블 여부 — ""사용 후 자극이나 트러블이 있었나요?""
+전반적인 사용 경험 — ""제품 사용 후 보습 효과에 대해 어떻게 생각하시나요?""
+
+11",,
+42,"비엣서베이는,","비엣서베이는,
+
+비엣서베이는,
+베트남 인플루언서 홍보도 가능합니다.
+설문조사에서 긍정적인 반응을 보인 인플루언서를 대상으로 실제 SNS 홍보 콘텐츠를 제작합니다.
+
+이런 점이 다릅니다
+검증된 인플루언서만 선별 — 단순 팔로워 수가 아닌, 우리 제품에 실제로 긍정적인 반응을 보인 인플루언서와 협업합니다
+진정성 있는 콘텐츠 — 설문에서 이미 제품을 경험하고 만족한 인플루언서가 제작하므로 광고가 아닌 진짜 후기처럼 느껴집니다베트남
+현지 최적화 — 베트남 소비자의 정서와 트렌드에 맞는 SNS 콘텐츠를 현지 감각으로 제작합니다조사 → 홍보 원스톱 — 시장조사부터 인플루언서 마케팅까지 하나의 플랫폼에서 연결됩니다
+
+12",,
+43,베트남 현지 판매도 가능합니다.,"- 제목: 베트남 현지 판매도 가능합니다.
+
+- 비엣서베이는, 베트남 현지 판매도 가능합니다.
+- 비엣서베이 설문조사 → 인허가 + 배송 대행 → 캐치셀로 베트남 판매
+
+- 01 샘플 없이 판매 가능
+  - 5,600명 KOC 네트워크로 즉시 판매 연결
+- 02 홍보비 · 입점비 무료
+  - 판매 발생 시 공급가 기준 정산
+- 03 SNS 링크 판매
+  - 유튜브 · 틱톡 · 인스타그램 다채널 동시 노출
+
+- CATCHSELL 베트남 | 2026년 9월 오픈 예정
+  설문조사 후 긍정 반응이 확인된 제품은 인허가 대행을 거쳐 캐치셀로 베트남 현 지에서 바로 판매 가능합니다.
+
+- CATCH SELL
+  베트남 SNS 링크 판매 플랫폼
+
+- STEP 1
+  시장 반응 확인
+- STEP 2
+  위드소프트 베트남
+- STEP 3
+  SNS 링크 판매
+- 캐치셀로 베트남 판매",,
+44,제목 없음,"제목 없음
+
+하나의 동의창, 한 번의 클릭으로
+1초만에 내 회원 확보
+
+카카오싱크 원클릭 간편가입
+방문고객은 많은데 내 회원으로 만들기 어려우셨죠?
+기존의 소셜로그인과 달리 회원 가입에 필수적인 고객 정보를 제공할 뿐만 아니라, 여러분의 서비스 이용 약관과 플러스친구 추가 항목까지 하나의 동의창에 담았습니다.
+
+단 한 번의 클릭으로 고객은 내 서비스의 회원이 됩니다.
+6",,
+45,"""오프라인 매장에 방문하는 고객들을 온라인 회원으로 만들고 싶🕔요.""","- 제목: ""오프라인 매장에 방문하는 고객들을 온라인 회원으로 만들고 싶🕔요.""
+- 카카오싱크 활용하기 #1
+- 내용: 고객들을 위한 혜택(멤버십 포인트 적립, 할인 쿠폰 등)을 마련하여 매장 곳곳에 QR코드를 설치해 보세요. QR코드 스캔을 통해 고객들은 손쉽게 여러분들의 멤버십 회원이 됩니다.
+- 표: 없음
+- 페이지: 13",,
+46,카카오싱크 활용하기 #2,"- 제목: 카카오싱크 활용하기 #2
+- 인용: ""온라인 스토어 매출을 더 많이 늘리고 싶어요.""
+- 본문: 고객들은 카카오톡 내에서 여러분의 온라인 스토어에 방문해도 자동으로 로그인 상태가 유지됩니다. 고객들이 번거롭게 회원 정보를 입력할 필요가 없어 구매전환율을 높일 수 있어요.
+- 부제/반복 문구: 카카오싱크 활용하기 #2
+- 표: 없음
+- 페이지: 14",,
+47,카카오싱크 활용하기 #3,"제목: 카카오싱크 활용하기 #3
+
+“온/오프라인 프로모션에 고객들의 참여를 더 높이고 싶어요."" (온 / 오프라인)
+
+온/오프라인 프로모션 진행도 카카오싱크와 함께하면 쉬워집니다.
+카카오싱크 간편가입을 통해 전화번호, 이메일 등 고객 정보를 한 번에 수집해 이벤트 참여율을 높일 수 있어요.
+
+진행 흐름
+- 온라인(플러스친구 메시지)/오프라인(QR Code)
+  - K Premium Outlet 예시
+  - ACC. SEASON Off / Accessory Season Off
+  - 이벤트
+    - 40%: 신규 가입 회원 40%할인 쿠폰 증정 이벤트
+    - 50%: 생활가전 특가 이벤트 (참여시 10,000포인트 증정)
+    - 15%: SNS 해시태그 이벤트 (참여시 15%쿠폰 증정)
+  - 버튼: 온라인 스토어, 공유하기
+- 프로모션(이벤트) 페이지
+  - 신규회원 40% 할인 쿠폰 증정
+  - 버튼: 가입하기
+  - coupon ENJOY 40% OFF
+- 카카오싱크 : 이용 동의
+  - K Premium Outlet
+  - 전체 동의하기
+  - [필수] 필수 제공 항목: 프로필정보(닉네임/프로필사진), 카카오계정(이메일), 전화번호, 생년월일, 암호화된 이용자 확인값(CI)
+  - K Premium Outlet 서비스 동의
+    - [필수] 서비스 이용약관 동의 (보기)
+    - [필수] 개인정보 수집 및 이용 동의 (보기)
+    - [선택] 마케팅 활용 및 광고성 정보 수신 동의
+    - [선택] K Premium Outlet 의 광고 메시지를 카카오톡
+  - 버튼: 동의하고 계속하기
+- 프로모션 참여 완료
+  - 예시 정보: 이은호 / 010.2586.9731 / penny.lane@kmail.com
+  - 문구: 회원가입을 축하합니다
+  - 40% 할인 쿠폰
+  - 버튼: 쇼핑하러가기
+  - 안내: 쿠폰은 마이페이지에서 확인할 수 있으며, 다운로드 후 30일 동안 사용하실 수 있습니다.
+
+15",,
+48,카카오싱크  활용하기 #4,"- 제목: 카카오싱크  활용하기 #4
+- 인용문: ""고객들에게 APP 다운로드를 유도하고 싶어요.""
+- 본문: 앱 다운로드를 유도하고 싶은 그룹에게 타게팅 된 메시지를 보내 보세요. 정확한 데이터를 바탕으로 높은 앱 다운로드 전환율을 경험할 수 있습니다.
+- 페이지 번호: 16
+- 섹션 표기: 카카오싱크  활용하기 #4",,
+49,카카오싱크  활용하기 #5,"카카오싱크  활용하기 #5
+
+""멤버십 회원에게 더 효과적인 마케팅 활동을 하고 싶어요.""
+
+카카오싱크  활용하기 #5
+멤버십 회원 데이터를 바탕으로 기존보다 더욱 세분화된 고객별 맞춤 혜택을 제공해 보세요. 신규 등록, 구매, 적립, 등급별로 고객에게 딱 맞는 마케팅 활동이 가능해집니다.
+
+17",,
+50,카카오싱크  활용하기 #6,"제목: 카카오싱크  활용하기 #6
+
+인용문: ""플러스친구 메시지 클릭율을 더 높이고 싶어요.""
+
+안내 문구: 고객의 구매 이력과 장바구니, 관심 상품 등의 정보를 활용해 메시지를 보내 보세요. 고객에게 필요한 메시지 발송으로 더 높은 메시지 효율과 구매 전환까지 기대할 수 있습니다.
+
+파트너사의 회원 데이터
+- 멤버십 가입일
+- 최근 렌탈일자
+- 경쟁사 제품 보유 고객
+- 휴면 고객
+- 공기청정기 필터 교체 필요 고객
+- 최근 방문일
+- 특별 요청 / 문의 사항
+
+카카오 식별정보 업로드
+
+파트너사 회원데이터로 타겟 그룹 생성
+
+타겟 그룹 예시
+- 경쟁사 '의류청정기' 보유 고객
+- 휴면 고객
+- 공기청정기 필터 교체 필요 고객
+
+메시지 예시
+1) 상품 홍보 메시지 (AFresh)
+- 본문: AFresh 의류청정기를 사용해야하는 이유를 알아보세요. 옷에 남아있는 미세먼지와 냄새로부터 옷장 겉부터 속까지 청정공기로 깨끗하게 케어합니다.
+- 버튼: AFresh 의류 청정기 알아보기
+- 수신거부: 홈 > 친구차단
+- 시간: 오전 9:00
+
+2) 상품 구매(렌탈) 유도 메시지 (AFresh)
+- 이미지 문구: Fresh Water for everyday
+- 본문: 새롭게 업그레이드된 식수 정수기 우리 가족 모두 깨끗한 물로 건강하게
+- 버튼: 신상 정수기 렌탈 예약하기
+- 수신거부: 홈 > 친구차단
+- 시간: 오전 9:00
+
+3) 상품/고객관리 메시지 (AFresh)
+- 상단 문구: 필터 교체할 시기가 다가왔어요!
+- 배지: 필터교체 팁!
+- 안내 문구 1: 미세먼지 많은 요즘은, 가습필터 매주 1회 세척이 필수!
+- 안내 문구 2: 오염도 센서 먼지 제거 한번으로 청정기 측정 정확도 향상!
+- 버튼: 교체 신청하기 / 공유하기
+- 수신거부: 홈 > 친구차단
+- 시간: 오전 9:00
+
+하단 라벨
+- 상품 홍보 메시지
+- 상품 구매(렌탈) 유도 메시지
+- 상품/고객관리 메시지
+
+페이지: 18",,

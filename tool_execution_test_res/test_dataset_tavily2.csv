@@ -1,0 +1,380 @@
+﻿slide_index,title,content,answer_tool,answer_query
+1,제목 없음,"제목 없음
+
+Agados based Biz. Application 이 갖게 될 Benefit
+선진 고도화된 SW PKG를 위한 제품화 지수들
+
+Technical Categories | Qualification Indicators | Agados Based Application
+- Running Time (변경 SW PKG 배포)
+  - PKG 변경 시, 사용자의 별도 액션 없이 자동 배포 | ○ (Smart Client Publishing)
+
+- Visibilities (SW PKG의 운영 상태에 대한 다양한 가시성, Monitoring, Tracing , etc…, )
+  - SW PKG 자체적으로 운영 상태 뷰 제공, Monitoring/Analysis Features | ○
+  - SW PKG 실행중 혹은 커스터마이징 시 Testing Features | ○
+  - SW PKG 구성 요소간 상호 연결성 정보 제공, ( Relationship Matrix , etc… ) | ○
+  - SW PKG 실행중 혹은 커스터마이징 시, Performance & Tracing Features ( 업무 기능 실행 시 , 구간별 반응 시간 등) | ○
+  - 문장형 정보의 별도 관리 , SQL Statements, etc… , | ○
+  - SERVER 상의 리소스 라이프타임 관리 (Database Resource , 등 ) | ○
+
+1
+Ⓒ 2014 agados All rights reserved.",,
+2,Agados based Biz. Application 이 갖게 될 Benefit,"Agados based Biz. Application 이 갖게 될 Benefit
+
+Agados based Biz. Application 이 갖게 될 Benefit
+3GL 기반 Package에 비해 Agados 기반 Package화의 다른 점
+3GL 기반 SW(Package) System
+Language
+Code…
+변경/ 추가된 Code
+Agados 기반 SW(Package/서비스) System
+Language Code…
+변경/ 추가된 Code
+Rules…
+변경/ 추 가된 Rule
+
+Code 자체는 정보로서의 가치가 없다
+
+Rule 은 그 자체가 정보
+Rules Repository
+내에서 변경 정보
+관리
+Agados 상에서는 Codes 역시 하나의 Object로 관리
+Customizing/Changing Needs
+변경된 요구 사항
+추가된 요구 사항
+2
+Ⓒ 2014 agados All rights reserved.",,
+3,제목 없음,"제목 없음
+
+Agados based Biz. Application 이 갖게 될 Benefit
+Build(제작) & Customization(커스터마이징) Lifecycle에 대한, 고도화된 Governance 확보
+
+Smart Architecture
+
+Build(제작)
+- Rule & Flow 정의 방식
+- 비쥬얼한 제작
+- 선진화된 SW PKG 아키텍처
+
+Configure (재조정)
+- 단지 PKG내의 Configure Tool 사용
+- 비쥬얼한 Configuration 작업
+- Coding 요소 절감
+
+Maintain (유지)
+- Presentation, Biz. Logic, 그리고 Data 계층의 완벽한 구분
+- 모든 PKG 구성정보 Meta화
+- 완벽한 통제성 확보
+- 비쥬얼한 Debugging
+
+Upgrade (버전 업)
+- PKG 기본(표준) Model 관리
+- PKG 변화 관리
+- 새 Version 자동 배포
+- 재작업 최소화
+
+3
+Ⓒ 2014 agados All rights reserved.",,
+4,Agados based Biz. Application 이 갖게 될 Benefit,"제목
+- Agados based Biz. Application 이 갖게 될 Benefit
+
+부제/설명
+- 선진 고도화된 SW PKG Business Process로의 변화 (완벽한 채널비즈니스 체계 확보)
+- Agados , Application 업체, Application 사업 파트너 그리고 고객사 간의 관계 agados Application제작 업체 Channels
+
+agados
+- Platform R&D
+- Agados 제공
+- 기술 지원
+- 트러블 슈팅
+- 컨설팅 서비스
+- Before/After 서비스
+
+PKG R&D 파트
+- Biz. PKG R&D
+- PKG 제작
+- PKG 업그레이드
+- PKG 제공
+- PKG 모델 관리
+- PKG QA
+- PKG R&D
+
+PKG 사업 수행 파트
+- Sales/ Marketing
+- Partner 관리 /훈련
+- Before/After 서비스
+- PKG 기술 지원
+- PKG 컨설팅 서비스
+- PKG 커스터마이징 SVC
+
+PKG 사업 파트너
+- Sales/ Marketing
+- PKG 컨설팅 서비스
+- PKG 커스터마이징 서비스
+- PKG 기술지원
+- Before/After 서비스
+
+PKG 고객사
+- PKG 사용
+- 직접 기능 추가
+
+PKG Customer
+- • Using PKG
+
+추가 표기
+- Sales/ Marketing
+- * Before/After 서비스 : 교육/훈련/Contents 제공 등
+- 4
+- Ⓒ 2014 agados All rights reserved.",,
+5,제목 없음,"제목: 제목 없음
+
+- “Software-Defined Application”이 될 수 있다
+- Agados based Biz. Application 이 갖게 될 Benefit
+  - Rule (Meta Data)은 그 자체가 정보
+- 왜 Rules(Metadata) 이어야 하나?
+  - Rule (metadata) 관리 기반 플랫폼의 의미와 가치
+  - Control (제어)
+  - Analysis (분석)
+  - Configure (재조정)
+  - Value Create (가치 창출)
+- 5
+- Ⓒ 2014 agados All rights reserved.",,
+6,"Agados based Biz. Application 이 갖게 될 Benefit
+Technical(기술적) Benefit"," 
+Agados based Biz. Application 이 갖게 될 Benefit
+Technical(기술적) Benefit
+
+Agados 기반 PKG의 Technical Benefit ?
+
+Compatibility
+(호환성)
+Locale , OS , WAS , JDK , Network , Database , Client 환경 의 다양성 및 버전 변화 등에 최소한 의 비용으로 대응이 가능하다.
+
+Curability (지속성)
+지속적 Upgrade 에 대한 안정성 담보 , 영향도 분석 및 적용이 가능하다.
+
+Protective
+(보호성)
+Source ( java , .NET ) 등으로 구성되어진 Application 과 비교하여 , 구성되어진 Logic 등이 Data 화 되어있고 , 실행은 엔진이 담당하므로 인하여 , Application 의 구성 정보를 보호할 수 있다.
+
+Manageability (관리성)
+Application 의 Visibility 와 Monitoring , 수준 높은 시스템 품질 제공, 비정상적 오류 감지 , 추출 , 제어, Refactoring 등의 기능을 제공하여 관리성을 높인다.
+
+Analyzability (분석성)
+Design viewer , Visibility , 영향도 분석 , 실행 패턴 분석 등을 통하여 분석성을 높인다.
+
+6
+Ⓒ 2014 agados All rights reserved.",,
+7,"Agados based Biz. Application 이 갖게 될 Benefit
+Business(사업적) Benefit","- Agados based Biz. Application 이 갖게 될 Benefit
+- Business(사업적) Benefit
+
+- Agados Based PKG의 Biz. Benefit ?
+
+- Governance
+  (지배력)
+  - 사업 Partner와 Customer 에 대한 지배력을 확보, 완벽한 Channel business 를 가능하게 한다. 또 한 제품의 커스터마이징 단계에서 부터 유지보수 단계에 이르는 전체 서비스 프로세스 상에서 본 사의 완벽한 Governance를 확보한다.
+
+- Economic Feasibility
+  (경제성)
+  - 짧은 커스터마이징 기간이 가능함으로, 투입 인력 절감으로 인한 라이선스 수익 비율을 높일 수 있으며, 프로그래머 투입이 아닌, 제품 컨설턴트 투입으로 프로젝트 서비스의 질과 수익을 증대할 수 있다.
+
+- Responsive Force (대응력)
+  - 100% Configure 환경으로 새로운 Biz. Needs 나 변화에 능동적으로 대응할 수 있으며, 동시 다발
+적인 프로젝트를 진행할 수 있는 글로벌 비즈니스 대응력을 확보할 수 있다.
+
+- 7
+
+- Ⓒ 2014 agados All rights reserved.",,
+8,제목 없음,"제목: 제목 없음
+
+Agados based Biz. Application 이 가 갖게 될 Benefit
+Application(Package/Service) Version 관리
+
+완벽한 Version 관리
+
+AS-IS
+- Base Application
+- Base + A / Base + B / Base + C
+- A Site B Site C Site
+- Site 별로 서로 다른 시스템화 된다.
+- 동시 버전 업그래이드 불가능
+
+Agados 기반 Application
+- Base Application
+- A / B / C
+- Base / Base / Base
+- A Site B Site C Site
+- Base Model이 사이트마다 유지
+- 동시 업그래이드 가능
+
+8
+Ⓒ 2014 agados All rights reserved.",,
+9,Agados 기반 Application의 아키텍처 형상,"제목
+- Agados 기반 Application의 아키텍처 형상
+
+내용
+- Agados가 적용되었을 때의 Application 아키텍처 ( Full 적용 )
+- Your Application Smart Client (Web Client)
+  - Agados Smart Client
+  - Configure Tool
+    Higher Configure Tool
+  - Designer Lower Configure Tool
+  - Visual Monitor Client
+- Your Application
+  Smart Server
+  - WAS (JBoss, IIS, …)
+  - Agados Server
+    (Design, Execute)
+  - Agados
+    Monitor Server
+  - Agados
+    Log Server
+  - Your App. Biz. Objects
+- DB
+  Server
+  - Application
+  - DB
+  - Application
+  - Rule DB
+  - Application
+  - Log DB
+- Application/Service Out-of-Box
+  - Reporting Tool
+- External System
+- HTTP
+- HTTP
+- 9
+- Ⓒ 2014 agados All rights reserved.
+- Operating Environment
+  Server : Windows Server, Unix, Linux for Java / .NET
+  DBMS : SQL Server, Oracle, MySQL, …",,
+10,Agados 기반 Application의 아키텍처 형상,"제목: Agados 기반 Application의 아키텍처 형상
+
+부분적인 Agados 적용 시의 Application 아키텍처 (Hybrid 아키텍처)
+
+Operating Environment
+- Server : Windows Server, Unix, Linux for Java / .NET
+- DBMS : SQL Server, Oracle, MySQL, …
+
+Your Application Smart Client (Web client)
+- Agados Smart Client
+- Configure Tool Higher Configure Tool
+- Designer Lower Configure Tool
+- Visual Monitor Client
+
+Your Application Smart Server
+- WAS (JBoss, IIS, …)
+- Agados Server (Design, Execute)
+- Agados Monitor Server
+- Agados Log Server
+- Your App. Biz. Assembly (Agados OBJ)
+- Your PKG Biz. Assembly (General Class)
+
+DB Server
+- Application DB
+- Application Rule DB
+- Application Log DB
+
+External System
+
+Other Framework
+- JSP, ASP
+- Servlet
+
+HTTP
+
+Application/서비스
+Out-of-Box
+Reporting Tool
+
+Agados 기반 Application의 아키텍처 형상
+
+10
+Ⓒ 2014 agados All rights reserved.",,
+11,Pivotal HAWQ,"Pivotal HAWQ
+
+- 15년 이상 기업 시장에서 검증된 Greenplum 데이터베이스 엔진 사용
+  - Partition, Compression, Resource 관리
+- 100% ANSI SQL Compliant – 기존 BI, SAS 툴 재활용
+- 실시간 쿼리 가능
+  - MapReduce를 사용하지 않고 분산되어 있는 데이터에 직접 접근
+- PXF External Table로 HDFS, HBase, Hive 및 다양한 데이터 통합
+- Libhdfs 개선(JavaC)으로 일반 HDFS보다 빠른 속도
+- PL/R, Madlib 등 다양한 분석 패키지 지원
+- 보안 및 유저 권한 관리, 암호화 지원
+
+© 2015 Pivotal Software, Inc. All rights reserved.
+11",,
+12,"Pivotal Query Optimizer (PQO)
+For HAWQ and Greenplum Database","제목: Pivotal Query Optimizer (PQO) For HAWQ and Greenplum Database
+
+- Greenplum DB HAWQ
+- PIVOTAL VALUE-ADDED FUNCTIONALITY: Turns a SQL query into an execution plan
+- First Cost Based Optimizer for BIG data
+- Applies all possible optimizations at the same time
+- New Extensible Code Base
+- Rapid adoption of emerging technologies
+- 1.2B Possible Plans in 250ms for TPC-H Query 21
+- © 2015 Pivotal Software, Inc. All rights reserved. 18
+
+표: 없음",,
+13,Pivotal HAWQ – Polymorphic AO Storage,"- 제목: Pivotal HAWQ – Polymorphic AO Storage
+- 설명: GPDB와 동일한 유연한 Row/column based table/partition 구성으로 성능 및 저장공간 최적화
+- 저장 방식 및 활용
+  - Columnar storage is well suited to scanning a large percentage of the data
+  - Row storage excels at small lookups
+  - Most systems need to do both
+  - Row and column orientation can be mixed within a table or database
+- 압축
+  - Both types can be dramatically more efficient with compression
+  - Compression is definable column by column:
+    - Blockwise: Gzip1-9 & QuickLZ
+    - Streamwise: Run Length Encoding (RLE) (levels 1-4)
+- 인덱싱/파티셔닝
+  - Flexible indexing, partitioning enable more granular control and enable true ILM
+- 예시 도식
+  - TABLE ‘SALES’
+  - Mar, Apr, May, Jun, Jul, Aug, Sept, Oct, Nov
+  - Column-oriented for Full Scans
+  - Row-oriented for Small Scans
+- 저작권: © 2015 Pivotal Software, Inc. All rights reserved.
+- 페이지: 13",,
+14,Pivotal eXtension Framework (PXF),"Pivotal eXtension Framework (PXF)
+
+- Pivotal eXtension Framework (PXF)
+- External Table Interface 제공: Hadoop eco의 다양한
+  data store 를 조회
+  Hadoop \uf0e8 HAWQ 로 데이터 적재 혹은 직접 쿼리
+  Enables combining HAWQ data and Hadoop data in single queryaa
+  Supports connectors for HDFS, HBase and Hive
+  Provides extensible framework API to enable
+- PIVOTAL---HD EXTENSION FRAMEWORK
+- HDFS
+- HBase
+- Hive
+- custom connector
+  Industry diﬀeren;ators :
+  \uf09f  LAovwaillaabtelenocyn oGnitlhaurbg:eJdSaOtaNs, eAtscumulo, S3…
+  \uf09f EHxAteWnQsibMleapaRndedcuucsetoRmeiczoarbdleReader
+  Considers cost model of federated sources
+- HAWQ
+- HAWQ
+- © 2015 Pivotal Software, Inc. All rights reserved.
+- 14",,
+15,PXF Features,"제목: PXF Features
+
+- PXF Features
+- Hbase,Hive 의 연계시 filter 조건으로 predicate push down
+- Hive table Partitioning exclusion
+- HDFS data에 대한 통계정보 수집으로 최적화된 수행 계획 작성
+- Extensible Framework JAVA API 제공으로 다른 데이터소스(eg: Oracle DB)/format에 대한 custom 개발 용이
+- HDFS block locality to HAWQ processing segment
+- 빠른 Parallel Optimizer(ORCA)
+- 사용예:
+  1) HAWQ 의 Dimension Table 과 HBase fact table과 Join
+  2) HDFS, Hive, HBase 데이터를 빠르게 HAWQ로 로드하여 통합 관리
+  3) 다양한 포맷과 저장소의 데이터에 대한 materialization없이 통합(federation) 쿼리 엔진 으로 사용
+- © 2015 Pivotal Software, Inc. All rights reserved.
+- 15
+- \uf09f",,

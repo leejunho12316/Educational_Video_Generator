@@ -1,0 +1,593 @@
+﻿slide_index,title,content,answer_tool,answer_query
+1,제목 없음,"- 제목: 제목 없음
+- 상단 표기: Knowledge Intelligence Lab. Hanbat National University
+- 섹션: Retrievals – Embeddings and ranking – RAG
+- 슬라이드 제목: Advanced RAG
+  - RAPTOR
+  - 의미가 유사한 chunk 별로
+    - clustering -> 추상 요약
+  - 관련 정보를 포함하고 있는
+    - chunk 별로 새로운 chunk 생성
+    - 유의미한 multi-hop 생성
+  - Document clustering
+    - Gaussian Mixture Models
+    - 100 token chunking
+- 참고: RAPTOR: Recursive Abstractive Processing for Tree-Organized Retrieval, ICLR24’
+- 페이지: 1",,
+2,제목 없음,"제목 없음
+
+- 상단 표기: Knowledge Intelligence Lab. Hanbat National University
+- Retrievals – Embeddings and ranking – RAG
+- Modular RAG
+  - 다양한 모듈과 기능을 통합하여 더 큰 다양성과 유연성을 제공
+- Search Module
+  - 특정 시나리오에 맞춰 LLM이 생성한 코드나 SQL, 사용자 도구 등을 사 용하여 직접 검색
+  - 외부 검색 엔진이나 text / table / knowledge graph 등 사용
+- Memory Module
+  - LLM 자체의 메모리 기능을 사용하여 검색을 개선
+  - Retrieval-enhanced generator를 활용하여 original query와 dual query를 결합
+- Query Augmentation / Routing Modules
+- Context Generation Module
+  - HyDE와 같은 방법
+- Task Adapter
+  - Downstream task에 적용하기 위한 방법
+  - 필요한 zero-shot prompt를 사용
+  - Zero-shot query를 생성
+- 모듈 추가 교체 (Adding or Replacing Modules)
+  - 기존 Retriever / Reader에 신규 모듈 추가
+  - Rewrite / Rerank 와 같은 모듈
+- 모듈간 흐름 제어 (Adjusting the Flow between Modules)
+- 출처: Retrieval-Augmented Generation for Large Language Models: A Survey, Arxiv24’
+- 슬라이드 번호: 2",,
+3,제목 없음,"Knowledge Intelligence Lab. Hanbat National University
+
+Retrievals – Embeddings and ranking – RAG
+Modular RAG
+• Iter-RetGen: Iterative Retrieval-Generation Synergy
+
+Question: q
+What is the height of the player who won the 2015 AFL Rising Star award?
+
+Retrieval: q → D_q
+Title: 2015 AFL Rising Star Context: The NAB AFL Rising Star award is given annually to a stand out young player in the Australian Football League. The award was won by Jesse Hogan of Melbourne
+
+Retrieval-Augmented Generation: D_q || q → y_1
+The 2015 AFL Rising Star award was won by Jesse Hogan of Melbourne. Jesse Hogan is a professional Australian rules footballer. He is 198 cm tall. So the answer is 198 cm
+
+Iteration 1
+
+Question: q
+What is the height of the player who won the 2015 AFL Rising Star award?
+
+Generation-Augmented Retrieval: y_1 || q → D_{y_1||q}
+Title: Jesse Hogan Context: Jesse Hogan … playing for the Melbourne Football Club. A key forward, Hogan is 1.95 m tall … made his AFL debut in the 2015 season and won the Ron Evans Medal as the AFL Rising Star
+
+Retrieval-Augmented Generation: D_{y_1||q} || q → y_2
+The 2015 AFL Rising Star award was won by Jesse Hogan of Melbourne. Jesse Hogan is 1.95 m tall. So the answer is 1.95 m
+
+Enhancing Retrieval-Augmented Large Language Models with Iterative Retrieval-Generation Synergy, EMNLP23’
+Knowledge Intelligence Lab. Hanbat National University
+3",,
+4,제목 없음,"제목 없음
+
+- Knowledge Intelligence Lab. Hanbat National University
+- Retrievals – Embeddings and ranking – RAG
+- Modular RAG
+  - Self-RAG
+  - Naïve RAG는 검색 결과를 그대로 반영
+    - 답변과 관련 없는 내용 출력
+    - 여전히 hallucination 존재
+    - 검색 결과가 필요 없어도 사용
+  - Self-RAG: Retrieval 결과를 평가하여 사용
+    1. Reflection token 생성
+    2. R.token 결과 기반 ranking
+    3. Output 확인: 응답 생성 or 1, 2 반복
+       1. 마지막으로 관련된 chunk를 모두 사용하여
+          LLM 응답 생성
+    4. Retrieval이 필요하지 않는 경우
+       1. 바로 LLM으로 응답 생성
+- SELF-RAG: LEARNING TO RETRIEVE, GENERATE, AND CRITIQUE THROUGH SELF-REFLECTION, ICLR24’
+- 4",,
+5,제목 없음,"제목: 제목 없음
+
+소속/로고: Knowledge Intelligence Lab. Hanbat National University
+
+섹션: Retrievals – Embeddings and ranking – RAG
+
+슬라이드 제목: Modular RAG
+
+핵심 항목
+- Adaptive-RAG
+- RAG 시스템에 대한 전략적 방법 제안
+- 주어진 query type 분류
+- 분류된 type에 따라 RAG 방식 선택
+
+고려해볼 점
+- Query classifier에 의존성
+- Query classifier 에 의존성
+- Query 분류 데이터가 적을 경우?
+- Query 분류 데이터가 적을 경우 ?
+- Labeling 비용
+- Serving 할 때 query와 관련 없는 입력 대응
+- Serving 할 때 query 와 관련 없는 입력 대응
+
+도식 (A) Single-Step Approach
+- Simple Query: When is the birthday of Michael F. Phelps?
+  - Retrieval → Documents → Answer
+- Complex Query: What currency is in Billy Giles’ birthplace?
+  - Retrieval → Documents → Answer
+  - Inaccurate
+
+도식 (B) Multi-Step Approach
+- Simple Query: When is the birthday of Michael F. Phelps?
+  - Retrieval → k times → Documents → (Intermediate) Answers
+  - Inefficient
+- Complex Query: What currency is in Billy Giles’ birthplace?
+  - Retrieval → k times → Documents → (Intermediate) Answers
+
+도식 (C) Our Adaptive Approach
+- Straightforward Query: Paris is the capital of what?
+  - → Answer
+- Simple Query: When is the birthday of Michael F. Phelps?
+  - Retrieval → Documents → Answer
+- Complex Query: What currency is in Billy Giles’ birthplace?
+  - Retrieval → Documents → (Intermediate) Answers
+- Classifier
+- k times
+
+참고
+- Adaptive-RAG: Learning to Adapt Retrieval-Augmented Large Language Models through Question Complexity, NAACL24’
+- Knowledge Intelligence Lab. Hanbat National University
+- 5",,
+6,제목 없음,"제목 없음
+
+- Knowledge Intelligence Lab. Hanbat National University
+- Retrievals – Embeddings and ranking – RAG
+- Modular RAG
+- RAT: Retrieval Augmented Thoughts
+- Hallucination 해결 방법
+- Let’s think step-by-step
+  1. Prompt 입력 -> CoT 생성
+  2. [Task prompt; CoT] 검색
+  3. + 검색결과 -> LLM CoT 수정
+  4. 2-3 번 반복
+
+Step 0
+- Draft initial step-by-step zero-shot CoTs based on the task prompt.
+- A task prompt is given by a human user.
+- Task Prompt (I): How to obtain diamond sword in Minecraft?
+- LLM makes zero-shot step-by-step reasoning based on the prompt.
+- This initial zero-shot CoT answer may be flawed.
+- Initial CoTs: T1, T2, T3, …, Tn
+  - T1: Mine 4 planks (flawed)
+  - T2: craft table from planks
+  - …
+  - Tn: Craft diamond sword
+
+Step 1 - Step n
+- Retrieve relevant information and iteratively revise each CoT with all previous generations in context.
+- Retrieve with the task prompt and previous generated CoTs.
+- LLM revises the i-th steps in thought chains (T1:i−1, Ti) based on the retrieved content.
+- The thought chain (T1:i−1, Ti) is replaced with the revised generation T*1:i.
+
+Step 1
+- Retrieval (Library)
+- Augmented Revision
+- Revised CoTs: T1*, T2, T3, …, Tn
+  - T1*: Mine 4 logs
+  - T2: craft table from planks
+  - …
+  - Tn: Craft diamond sword
+
+Step n
+- Retrieval (Library)
+- Augmented Revision
+- Revised CoTs: T1*, T2*, T3*, …, Tn*
+  - T1*: Mine 4 logs
+  - T2*: craft 12 planks
+  - …
+  - Tn*: Craft diamond sword
+
+- RAT: Retrieval Augmented Thoughts Elicit Context-Aware Reasoning in Long-Horizon Generation, Arxiv24’
+- 6",,
+7,제목 없음,"제목 없음
+
+Knowledge Intelligence Lab. Hanbat National University
+
+Retrievals – Embeddings and ranking – RAG
+Modular RAG
+• RAT: Retrieval Augmented Thoughts
+
+DIRECT
+Q: Introduce Jin Yong's life.
+A: Jin Yong, born Louis Cha in 1924 ...
+Graduating from the University of Cambridge, he later begin to write full-time, leaving an indelible mark on Chinese literature and culture...
+[not informative, loose structure] 😺
+
+RAG
+Q: Introduce Jin Yong's life.
+A: Jin Yong, born Louis Cha in 1924... In his eighties, he applied at Cambridge University for a doctorate in Asian Studies and another doctorate in Chinese literature at Peking University... [too specific, loose structure] 😺
+
+CoT
+Q: Introduce Jin Yong's life. Let's think it step-by-step.
+A: Jin Yong is a Chinese novelist...
+The details of his life are introduced as follows:
+Early Life: Jin Yong, born on February 6, 1924...
+Education: ...He graduated from the University of Cambridge before dedicating himself to writing full-time...
+Literature: His first novel, ""The Book and the Sword,"" was published in 1955, followed by successful works including ""Handsome Siblings"", ... 😺
+
+RAT
+Q: Introduce Jin Yong's life. Let's think it step-by-step.
+A: Jin Yong is a Chinese novelist... The details of his life are introduced as follows:
+Early Life: Jin Yong, born on February 6, 1924, in Haining, Zhejiang province, China, was a renowned Chinese novelist known by his pen name Louis Cha....
+Education: ...In his eighties, he applied at Cambridge University for a doctorate in Asian Studies and another doctorate in Chinese literature at Peking University...
+Literature: In 1955, Jin Yong published his first arts novel, ""The Book and the Sword,"" which achieved immense success and marked the beginning of his literary journey. He went on to write many acclaimed novels, including the revered ""Legends of the Condor Heroes"" and ""The Deer and the Cauldron."" 😺
+
+Charts
+- Embodied Planning: Executability Success Rate (bars: DIRECT, CoT, RAG, RAT)
+- Code Generation: pass@1 on HumanEval (bars: DIRECT, CoT, RAG, RAT)
+- Mathematical Reasoning: Accuracy on GSMHard (bars: DIRECT, CoT, RAG, RAT)
+- Creative Writing: Human Rating Score (bars: DIRECT, CoT, RAG, RAT)
+
+RAT: Retrieval Augmented Thoughts Elicit Context-Aware Reasoning in Long-Horizon Generation, Arxiv24’
+
+7",,
+8,제목 없음,"제목 없음
+
+- Knowledge Intelligence Lab. Hanbat National University
+- Retrievals – Embeddings and ranking – RAG
+- Multimodal RAG
+  - Reveal: Retrieval-Augmented Visual Language Model
+  - T5, GPT, PaLM, Flamingo 등 거대 모델들은 텍스트, 이미지 등의 world-knowledge를 학습할 수 있음을 보임
+    - 두 가지 단점을 가짐
+      - Parameter, data, 계산 등 high cost
+      - World-knowledge가 업데이트 될 때마다 재학습 필요
+  - Single-modality의 한계
+    - 기존 Retrieval-augmented model에서는 single-modality backbone이 연구됨
+  - Reveal은 Retrieval-augmented approach을 사용
+  - Neural representation learning을 통해 지식을 key-value memory로 변환
+  - Knowledge memorization과 reasoning을 분리 -> external knowledge 사용 가능케 함
+  - Wikipedia passages and images
+  - WikiData knowledge graph
+  - Web image-text pairs and VQA data
+- REVEAL: Retrieval-Augmented Visual-Language Pre-Training with Multi-Source Multimodal Knowledge Memory, CVF23’
+- 8",,
+9,제목 없음,"- 제목: 제목 없음
+- 소속: Knowledge Intelligence Lab. Hanbat National University
+- 주제/섹션 표기:
+  - Retrievals – Embeddings and ranking – RAG
+  - Multimodal RAG
+  - Reveal: Retrieval-Augmented Visual Language Model
+  - REVEAL: Retrieval-Augmented Visual-Language Pre-Training with Multi-Source Multimodal Knowledge Memory, CVF23’
+  - 슬라이드 번호: 9
+
+- 모델 다이어그램 구성
+  - (a) Input Query Encoding
+    - Q: Which Part of the meal has most carbohydrates?
+    - Lower T5
+    - ViT
+    - Base V-L Encoder
+    - Query Head
+    - Query
+    - (…) 시퀀스 임베딩
+  - (c) Online Retrieval of Top-K Re-Encoded or In-Memory Knowledge
+    - Corpus Gating
+    - Corpus Weights
+    - Maximum Inner Product Search
+    - Top-K Indexes
+    - Re-Encoded Knowledge
+    - In-Memory Knowledge
+    - Lookup by index
+    - Unified Memory (M~)
+      - Memory (M^1) for WIT: Keys, Values
+      - Memory (M^i) for VQA v2: Keys, Values
+  - (b) Asynchronous Memory Update
+    - Base V-L Encoder
+    - Key → Key Head
+    - Value (Compressed) → Value Head (Perceiver to compress value)
+  - (d) Fusion & Decode
+    - Attentive Knowledge Fusion
+    - T5 Decoder
+    - Top-K Retrieved Knowledge (M): Keys, Values
+    - Answer: Rice
+
+- 데이터/지식 소스 예시
+  - Wiki-Image-Text (WIT)
+    - Rice
+    - Carbohydrate
+  - WikiData triplets
+    - Staple Food (Q736427)
+    - food that considered a dominant portion of a standard diet
+    - <staple food, contains, carbohydrate>
+    - <various grains, belongs to, staple food>
+  - VQA v2
+    - Q: Why would someone eat this?
+    - A: hungry
+
+- Notation List
+  - vector-wise multiply
+  - one d-dim embedding
+  - sequence of scalar
+  - sequence of token embeddings",,
+10,제목 없음,"- 출처/라벨
+  - Knowledge Intelligence Lab. Hanbat National University
+  - Retrievals – Embeddings and ranking – RAG
+  - Multimodal RAG
+  - MuRAG
+  - MuRAG: Multimodal Retrieval-Augmented Generator for Open Question Answering over Images and Text, EMNLP22’
+  - 10
+
+- 구성도(상단: Pre-Training Stage)
+  - 제목: Pre-Training Stage: Query is (Image, Text) Pair, Memory is Text, the output the text
+  - 좌측 Retriever Stage
+    - ViT, Emb
+    - CC, PAQ, VQA
+    - generate: where is …
+    - what is the color…
+    - x_I, x_p
+    - MIPS
+  - 중앙 External Memory
+    - Index
+    - m = (m^T)
+    - White House during Christmas
+    - Capitol Hill, Washington DC
+    - “Capitol Hill” 설명 문단(본문 박스)
+  - 우측 Reader Stage
+    - y1, y2, y3, …, y_{n-1}, y_n
+    - g_θ
+    - TopK(M)
+    - f_θ
+    - 하단 모듈: ViT, Emb, Emb … Emb
+
+- 구성도(하단: Fine-Tune Stage)
+  - 제목: Fine-Tune Stage: Query is text, Memory is (Image, Text) Pairs, the output is text
+  - 좌측 Retriever Stage
+    - Emb
+    - What’s the color of …
+    - MIPS
+  - 중앙 External Memory
+    - Index
+    - m = (m^I, m^T)
+    - 이미지+텍스트 예시: White House during Christmas
+    - 이미지+텍스트 예시: Capitol Hill, Washington DC
+    - Empty
+  - 우측 Reader Stage
+    - y1, y2, y3, …, y_{n-1}, y_n
+    - g_θ
+    - TopK(M)
+    - f_θ
+    - 하단 모듈: Emb, ViT, Emb, ViT, Emb
+    - 하단 라벨: m_1^I, m_1^T, …, m_k^I, m_k^T",,
+11,Abstract,"제목: Abstract
+페이지: 2
+링크: https://arxiv.org/pdf/2009.07118.pdf
+
+논문 제목
+- It’s Not Just Size That Matters: Small Language Models Are Also Few-Shot Learners
+
+저자 및 소속
+- Timo Schick1,2 and Hinrich Schütze1
+- 1 Center for Information and Language Processing, LMU Munich, Germany
+- 2 Sulzer GmbH, Munich, Germany
+- timo.schick@sulzer.de
+
+Abstract
+- When scaled to hundreds of billions of parameters, pretrained language models such as GPT-3 (Brown et al., 2020) achieve remarkable few-shot performance on challenging natural language understanding benchmarks. In this work, we show that performance similar to GPT-3 can be obtained with language models whose parameter count is several orders of magnitude smaller. This is achieved by converting textual inputs into cloze questions that contain some form of task description, combined with gradient-based optimization; additionally exploiting unlabeled data gives further improvements. Based on our findings, we identify several key factors required for successful natural language understanding with small language models.1
+
+그림/도표
+- 축/범례 표기: SuperGLUE Performance(세로축), Parameters (Millions)(가로축), 범례 iPET / PET / GPT-3
+- Figure 1: Performance of ALBERT with PET/iPET and GPT-3 on SuperGLUE for 32 training examples. ALBERT with PET/iPET outperforms GPT-3 even though it has three orders of magnitude fewer parameters.",,
+12,GPT-3: Larger model,"제목
+- GPT-3: Larger model
+
+텍스트
+- GPT-3: Larger model
+- 12
+
+그래프/이미지 내 텍스트
+- Zero-shot
+- One-shot
+- Few-shot
+- Natural Language Prompt
+- No Prompt
+- Accuracy (%)
+- Number of Examples in Context (K)
+- 175B Params
+- 13B Params
+- 1.3B Params
+
+Figure caption
+- Figure 1.2: Larger models make increasingly efficient use of in-context information. We show in-context learning performance on a simple task requiring the model to remove random symbols from a word, both with and without a natural language task description (see Sec. 3.9.2). The steeper “in-context learning curves” for large models demonstrate improved ability to learn a task from contextual information. We see qualitatively similar behavior across a wide range of tasks.
+
+표
+- 없음",,
+13,GPT-3: Performance,"- 제목: GPT-3: Performance
+- 본문 텍스트: 
+  - 'GPT-3: Performance'
+  - '13'
+- 표: 없음
+
+- 그래프 1: SuperGLUE Performance
+  - 축
+    - x축: Billions of Parameters in LM (0.1, 0.4, 0.8, 1.3, 2.6, 6.7, 13, 175)
+    - y축: SuperGLUE Score
+  - 범례: Zero-shot(파란색), One-shot(초록색), Few-shot (K=32)(주황색)
+  - 기준선(점선): Human, Fine-tuned SOTA, Fine-tuned BERT++, Fine-tuned BERT Large, Random Guessing
+  - 내용 요약: 매개변수 수가 증가할수록 세 곡선 모두 점진적으로 상승하며, 주황색(Few-shot)이 항상 가장 높고, 초록색(One-shot)이 그다음, 파란색(Zero-shot)이 가장 낮음. 가장 큰 규모(175)에서 Few-shot은 ‘Fine-tuned BERT++’ 기준선 부근, One-shot은 ‘Fine-tuned BERT Large’ 부근, Zero-shot은 ‘Random Guessing’보다 위에서 마무리됨.
+
+- 그래프 2: In-Context Learning on SuperGLUE
+  - 축
+    - x축: Number of Examples in Context (K) (0, 1, 2, 3, 4, 8, 16, 32)
+    - y축: SuperGLUE Score
+  - 범례: Few-shot GPT-3 175B(주황색)
+  - 기준선(점선): Human, Fine-tuned SOTA, Fine-tuned BERT++, Fine-tuned BERT Large, Random Guessing
+  - 내용 요약: K가 0에서 1~4로 늘어날 때 급격히 상승하고, 이후 8→16→32로 증가하면서 완만히 추가 개선. 전체 구간에서 ‘Random Guessing’보다 높고, ‘Fine-tuned BERT Large’ 위, ‘Fine-tuned BERT++’ 부근에서 형성되며 ‘Fine-tuned SOTA’와 ‘Human’ 기준선 아래에 위치함.",,
+14,PET: Without Knowledge Distillation,"제목
+- PET: Without Knowledge Distillation
+
+텍스트
+- PET: Without Knowledge Distillation
+- Without knowledge distillation using unlabeled dataset, PET performs even better.
+  But n*k times larger than the distilled model. (k=number of PVPs, n=number of LMs per each PVP)
+
+표
+- Model | CB Acc. / F1 | RTE Acc. | MultiRC EM / F1a | Avg –
+- PET (p_ours) | 85.1 / 59.4 | 69.8 | 37.9 / 77.3 | 66.6
+- PET (pGPT-3) | 83.3 / 58.1 | 71.8 | 25.4 / 68.3 | 63.1
+- PFT (pcomb) | 84.5 / 59.0 | 74.7 | 39.1 / 77.7 | 68.3
+- PET (p_ours) - dist | 83.9 / 76.2 | 66.4 | 38.9 / 76.2 | 68.0
+- PET (pcomb) - dist | 83.9 / 76.2 | 72.9 | 39.6 / 76.6 | 70.4
+
+캡션
+- Table 2: Results on selected tasks for various sets of PVPs for regular PET and for an ensemble of PET models with no knowledge distillation (“- dist”)",,
+15,iPET,"제목: iPET
+
+텍스트:
+- iPET
+- Some patterns perform worse than others -> The training set for final model may contain many falsely labeled examples.
+- 15
+
+그림 설명:
+- Figure 2: Schematic representation of iPET (a) The initial training set is used to train an ensemble of models as in regular PET. (b) For each model, a random subset of two other models (λ = 2/3) is used to generate a new training set by labeling examples from D. (c) A new set of PET models is trained using the larger, model-specific datasets. (d) The previous two steps are repeated k times, each time increasing the size of the generated training sets by a factor of d. (e) The set of models at iteration k is used to create a soft-labeled dataset T_C as in regular PET; the final classifier C is trained on this dataset.",,
+16,PET vs. GPT-3,"제목: PET vs. GPT-3
+
+텍스트:
+- PET vs. GPT-3
+- 16
+
+표/결과(이미지의 표 내용 전체 전사):
+- 컬럼: Model | Params (M) | BoolQ Acc. | CB Acc. / F1 | COPA Acc. | RTE Acc. | WiC Acc. | WSC Acc. | MultiRC EM / F1a | ReCoRD Acc. / F1 | Avg –
+- dev
+  - GPT-3 Small: 125 | 43.1 | 42.9 / 26.1 | 67.0 | 52.3 | 49.8 | 58.7 | 6.1 / 45.0 | 69.8 / 70.7 | 50.1
+  - GPT-3 Med: 350 | 60.6 | 58.9 / 40.4 | 64.0 | 48.4 | 55.0 | 60.6 | 11.8 / 55.9 | 77.2 / 77.9 | 56.2
+  - GPT-3 Large: 760 | 62.0 | 53.6 / 32.6 | 72.0 | 46.9 | 53.0 | 54.8 | 16.8 / 64.2 | 81.3 / 82.1 | 56.8
+  - GPT-3 XL: 1,300 | 64.1 | 69.6 / 48.3 | 77.0 | 50.9 | 53.0 | 49.0 | 20.8 / 65.4 | 83.1 / 84.0 | 60.0
+  - GPT-3 2.7B: 2,700 | 70.3 | 67.9 / 45.7 | 83.0 | 56.3 | 51.6 | 62.5 | 24.7 / 69.5 | 86.6 / 87.5 | 64.3
+  - GPT-3 6.7B: 6,700 | 70.0 | 60.7 / 44.3 | 83.0 | 49.5 | 53.1 | 67.3 | 23.8 / 66.4 | 87.9 / 88.8 | 63.6
+  - GPT-3 13B: 13,000 | 70.2 | 66.1 / 46.0 | 86.0 | 60.6 | 51.1 | 75.0 | 25.0 / 69.3 | 88.9 / 89.8 | 66.9
+  - GPT-3: 175,000 | 77.5 | 82.1 / 57.2 | 92.0 | 72.9 | 55.3 | 75.0 | 32.5 / 74.8 | 89.0 / 90.1 | 73.2
+  - PET: 223 | 79.4 | 85.1 / 59.4 | 95.0 | 69.8 | 52.4 | 80.1 | 37.9 / 77.3 | 86.0 / 86.5 | 74.1
+  - iPET: 223 | 80.6 | 92.9 / 92.4 | 95.0 | 74.0 | 52.2 | 80.1 | 33.0 / 74.0 | 86.0 / 86.5 | 76.8
+- test
+  - GPT-3: 175,000 | 76.4 | 75.6 / 52.0 | 92.0 | 69.0 | 49.4 | 80.1 | 30.5 / 75.4 | 90.2 / 91.1 | 71.8
+  - PET: 223 | 79.1 | 87.2 / 60.2 | 90.8 | 67.2 | 50.7 | 88.4 | 36.4 / 76.6 | 85.4 / 85.9 | 74.0
+  - iPET: 223 | 81.2 | 88.8 / 79.9 | 90.8 | 70.8 | 49.3 | 88.4 | 31.7 / 74.1 | 85.4 / 85.9 | 75.4
+  - SotA: 11,000 | 91.2 | 93.9 / 96.8 | 94.8 | 92.5 | 76.9 | 93.8 | 88.1 / 63.3 | 94.1 / 93.4 | 89.3
+
+표 캡션(이미지 내 문구):
+- Table 1: Results on SuperGLUE for GPT-3 primed with 32 randomly selected examples and for PET / iPET with ALBERT-xxlarge-v2 after training on FewGLUE. State-of-the-art results when using the regular, full size training sets for all tasks (Raffel et al., 2019) are shown in italics.",,
+17,LLaMA 2 - Model Evaluations,"- 제목: LLaMA 2 - Model Evaluations
+- 텍스트: LLaMA 2 - Model Evaluations
+- 표: 없음",,
+18,제목 없음,"제목: 제목 없음
+
+본문:
+- Few-shot In-context Learning example
+- LLM can modify its behavior based on previous prompts
+- Exhibiting chain-of-thought, or reasoning, in prompts produces better responses.
+- 18
+
+그림 내용:
+- Standard Prompting
+  - Model Input
+    - Q: Roger has 5 tennis balls. He buys 2 more cans of tennis balls. Each can has 3 tennis balls. How many tennis balls does he have now?
+    - A: The answer is 11.
+    - Q: The cafeteria had 23 apples. If they used 20 to make lunch and bought 6 more, how many apples do they have?
+  - Model Output
+    - A: The answer is 27.
+- Chain-of-Thought Prompting
+  - Model Input
+    - Q: Roger has 5 tennis balls. He buys 2 more cans of tennis balls. Each can has 3 tennis balls. How many tennis balls does he have now?
+    - A: Roger started with 5 balls. 2 cans of 3 tennis balls each is 6 tennis balls. 5 + 6 = 11. The answer is 11.
+    - Q: The cafeteria had 23 apples. If they used 20 to make lunch and bought 6 more, how many apples do they have?
+  - Model Output
+    - A: The cafeteria had 23 apples originally. They used 20 to make lunch. So they had 23 - 20 = 3. They bought 6 more apples, so they have 3 + 6 = 9. The answer is 9.
+- Figure 1: Chain-of-thought prompting enables large language models to tackle complex arithmetic, commonsense, and symbolic reasoning tasks. Chain-of-thought reasoning processes are highlighted.",,
+19,제목 없음,"제목 없음
+
+Context Window Size
+Input Size
+
+마이크로소프트(MS)가 롱넷(LongNet) 트랜스포머 모델을 도입하여 10억 토큰의 컨텍스트를 0.5초에 처리하고 기하급수적인 비용 증가를 선형으로 개선함. 토큰 수가 증가하면 비용이 증가하며, 롱넷을 통해 저렴한 비용으로 해리포터 1000권을 0.5초에 처리할 수 있게 되었다. 큰 컨텍스트 창은 LLM 성능 향상과 학습 기능 강화에 기여하며, 컨텍스트 내 학습이 더 나은 답변을 가능하게 함.
+
+출처 : https://www.aitimes.com/news/articleView.html?idxno=152588
+
+ChatGPT Prompt Learning Research LAB Leader TAE YOUNG LEE
+
+표: 없음",,
+20,InstructGPT,"제목: InstructGPT
+
+- 출현 배경
+- InstructGPT
+- 출처 : https://velog.io/@mmodestaa/InstructGPT-ChatGPT
+- ChatGPT Prompt Learning Research LAB Leader TAE YOUNG LEE
+
+Prompt 유형
+- Zero Shot Prompt
+- One Shot Prompt
+- Few Shot Prompt
+- Chain of Thought Prompt
+
+그래프/지표
+- Likert score
+- Model size: 1.5B parameters, 6B, 175B
+- 곡선/모델: GPT, GPT (prompted), Supervised Fine-Tuning, InstructGPT
+- Dataset RealToxicity: GPT 0.233, Supervised Fine-Tuning 0.199, InstructGPT 0.196
+- Dataset TruthfulQA: GPT 0.224, Supervised Fine-Tuning 0.206, InstructGPT 0.413
+- API Dataset Hallucinations: GPT 0.414, Supervised Fine-Tuning 0.078, InstructGPT 0.172
+- API Dataset Customer Assistant Appropriate: GPT 0.811, Supervised Fine-Tuning 0.880, InstructGPT 0.902",,
+21,제목 없음,"제목 없음
+
+Instruction Tuning
+Instruction Tuning
+
+출처 : Wei, Jason, et al. ""Finetuned language models are zero-shot learners."" arXiv preprint arXiv:2109.01652 (2021)
+
+- Instruction을 통해 설명된 데이터 세트 모음에서 언어 모델을 미세 조정
+- Unseen task에서 Zero Shot 성능 개선
+- Instruction Tuning는 Instruction으로 표현된 mixture data로 사전 	학습된 언어 모델을 튜닝하며, 추론 시에는 unseen 작업 유형을 	평가
+- 3가지 unseen 작업 유형에 대해, zero-shot, few-shot GPT-3과 비교하여 zero-shot FLAN(Finetuned LAnguage Net)의 성능을 평가
+- 작은 LLM에서도 좋은 성능
+
+학습/추론 개요
+- LMs
+- Task B, C, D의 instructions/templates로 LM학습
+- Task A에 대해 추론
+
+Performance on unseen task types
+- Natural language inference: GPT-3 175B zero shot 42.9, GPT-3 175B few-shot 53.2, FLAN 137B zero-shot 56.2
+- Reading Comprehension: GPT-3 175B zero shot 63.7, GPT-3 175B few-shot 72.6, FLAN 137B zero-shot 77.4
+- Closed-Book QA: GPT-3 175B zero shot 49.8, GPT-3 175B few-shot 55.7, FLAN 137B zero-shot 56.6
+
+ChatGPT Prompt Learning Research LAB Leader TAE YOUNG LEE
+
+[표] 없음",,
+22,제목 없음,"제목: 제목 없음
+
+텍스트
+- Base Model의 중요성
+- Base Model 의 중요성
+- 출처 : https://twitter.com/karpathy/status/1655994367033884672
+- ChatGPT Prompt Learning Research LAB Leader TAE YOUNG LEE
+
+도식/그래프 내용
+- 세로축: task accuracy
+  - 0%
+  - 100%
+- 가로축: effort/complexity
+- 구간/라벨
+  - zero-shot prompts
+  - few-shot prompts
+  - retrieval-augmented few-shot prompting
+  - finetuning
+- 내부 텍스트
+  - prompt engineering
+  - model training (finetuning, RLHF) data engine
+- 우측 라벨
+  - big base model
+  - small base model
+- 선/표식
+  - 파란 선: big base model
+  - 빨간 선: small base model
+- 이미지 상단 표기: 출처 : https://twitter.com/karpathy/status/1655994367033884672
+- 이미지 하단 표기: ChatGPT Prompt Learning Research LAB Leader TAE YOUNG LEE",,

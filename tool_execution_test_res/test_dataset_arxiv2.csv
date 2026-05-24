@@ -1,0 +1,515 @@
+﻿slide_index,title,content,answer_tool,answer_query
+1,제목 없음,"제목: 제목 없음
+
+소속: Knowledge Intelligence Lab. Hanbat National University
+
+주제: Generative Retrieval
+- HyDE: Hypothetical Document Embeddings
+
+핵심 내용
+- Zero-shot retrieval 성능 향상을 위해 제안
+- 주어진 query에 대한 relevant passage를 생성 모델로 생성
+- 생성된 passage를 기반으로 collection에 검색
+- Query-passage 검색에 비하여 유의미 함
+- 단지 생성에 필요한 시간
+
+섹션: Retrievals
+
+모델 및 그림 설명
+- Figure 1: An illustration of the HyDE model. Documents snippets are shown. HyDE serves all types of queries without changing the underlying GPT-3 and Contriever/mContriever models.
+- 구성 요소: HyDE, GPT, Contriever
+- 예시
+  - instruction: write a passage to answer the question
+    - query: how long does it take to remove wisdom tooth
+    - generated document: It usually takes between 30 minutes and two hours to remove a wisdom tooth...
+    - real document: How wisdom teeth are removed... Some ... a few minutes, whereas others can take 20 minutes or longer....
+  - instruction: write a scientific paper passage to answer the question
+    - query: How has the COVID-19 pandemic impacted mental health?
+    - generated document: ...depression and anxiety had increased by 20% since the start of the pandemic...
+    - real document: ... two studies investigating COVID-19 patients ... significantly higher level of depressive ...
+  - instruction: write a passage in Korean to answer the question in detail
+    - query: 인간은 언제 불을 사용했는가?
+    - generated document: 인간이 불을 사용한 기록은 약 800만 년 전부터 나타난다...
+    - real document: ... 불을 처음 사용한 시기는 호모 에렉투스가 살았던 142만 년 전으로 거슬러간다...
+- 범례: instruction / query / generated document / real document
+
+결과(표의 수치)
+- Unsupervised
+  - BM25: DL19 mAP 30.1, nDCG@10 50.6, Recall@1k 75.0 | DL20 mAP 28.6, nDCG@10 48.0, Recall@1k 78.6
+  - Contriever: DL19 mAP 24.0, nDCG@10 44.5, Recall@1k 74.6 | DL20 mAP 24.0, nDCG@10 42.1, Recall@1k 75.4
+  - HyDE: DL19 mAP 41.8, nDCG@10 61.3, Recall@1k 88.0 | DL20 mAP 38.2, nDCG@10 57.9, Recall@1k 84.4
+- Supervised
+  - DPR: DL19 mAP 36.5, nDCG@10 62.2, Recall@1k 76.9 | DL20 mAP 41.8, nDCG@10 65.3, Recall@1k 81.4
+  - ANCE: DL19 mAP 37.1, nDCG@10 64.5, Recall@1k 75.5 | DL20 mAP 40.8, nDCG@10 64.6, Recall@1k 77.6
+  - Contriever-ft: DL19 mAP 41.7, nDCG@10 62.1, Recall@1k 83.6 | DL20 mAP 43.6, nDCG@10 63.2, Recall@1k 85.8
+
+참고 문헌
+- Precise Zero-Shot Dense Retrieval without Relevance Labels, ACL23’
+
+페이지: 23",,
+2,제목 없음,"제목 없음
+
+Knowledge Intelligence Lab. Hanbat National University
+
+Retrievals
+
+Generative Retrieval
+- 기존 retriever의 한계
+  - Inverted Index 방식의 한계
+    - Exact term matching에 의존하므로 semantic matching이 어려움
+    - Query와 document가 동일한 term을 포함하지 않으면 retrieval 불가
+  - Dense Retrieval 방식의 한계
+    - Document를 single embedding vector로 표현하는 데에는 한계가 있음
+    - Document의 모든 semantic information을 함축하기 어려움
+    - Query와 document 사이의 interaction을 모델링하기 어려움
+    - Representation은 Query와 독립적으로 미리 계산되므로
+    - Retrieval 시에는 cosine similarity 등 간단한 함수만 사용
+  - Retrieval 최적화의 어려움
+    - Index는 retrieval target과 독립적으로 구축됨
+    - Target metric에 맞게 직접 최적화하는 것이 불가능
+  - System 관점에서의 비효율성
+    - Retrieval 이후에 별도의 ranking model이 필요함
+    - Index 구축과 retrieval, ranking이 독립적으로 이뤄지므로 비효율적
+    - 전체 pipeline을 end-to-end로 최적화하는 것이 어려움
+
+2
+
+A Neural Corpus Indexer for Document Retrieval, NeurIPS22’",,
+3,제목 없음,"- 제목 없음
+
+- Knowledge Intelligence Lab. Hanbat National University
+
+- Generative Retrieval
+  - A Neural Corpus Indexer (NCI) for Document Retrieval
+
+- Retrievals
+
+- A Neural Corpus Indexer for Document Retrieval, NeurIPS22’
+
+- 3
+
+- Figure 1: Overview of Neural Corpus Indexer (NCI).
+  - (a) Preprocessing. Each document is represented by a semantic identifier via hierarchical k-means.
+    - Docid: 705
+  - (b) Query Generation. Queries are generated for each document based on the content.
+    - Ground-Truth Query: Foods and supplements to lower blood sugar
+    - Generated Query: Does cinnamon lower blood sugar?
+    - Doc: Researchers are finding that cinnamon reduces blood sugar levels naturally when taken daily...
+    - Docid: 705
+    - Query Generation
+  - (c) Training pipeline of Neural Corpus Indexer
+    - Ground-Truth or Generated Query
+    - Encoder
+    - PAWA Decoder
+    - Ground-Truth Docid: 705
+    - Cross-Entropy Loss
+    - Consistency-based Regularization Loss
+
+- Knowledge Intelligence Lab. Hanbat National University",,
+4,제목 없음,"제목: 제목 없음
+
+소속
+- Knowledge Intelligence Lab. Hanbat National University
+
+섹션
+- Retrievals
+
+슬라이드 제목
+- Generative Retrieval
+
+핵심 내용
+- A Neural Corpus Indexer (NCI) for Document Retrieval
+- Prefix-Aware Weight Adaptive (PAWA) Decoder
+  - Semantic identifier 생성 decoder
+  - 동일한 token이 identifier 내 다른 위치에 오면 다른 embedding을 가짐
+    - 1: (1_1, 1_2, 5_3), 2: (2_1, 4_2, 5_3)
+    - 1과 2에서 마지막 위치의 5_3은 같은 토큰이지만, prefix가 서로 다르기 때문에 다른 의미임
+- Prefix-Aware Blocks
+  - 매 decoding 타임마다 prefix에 대하여 인코딩
+
+수식
+- p(l|x, θ) = ∏_{i=1}^{m} p(r_i | x, r1, r2, ..., r_{i-1}, θ_i)
+- r_i = Softmax(h_i W_i)
+
+구성 요소/도식 내 표기
+- Encoder
+- PAWA Decoder
+- Ground-Truth or Generated Query
+- Ground-Truth Docid:705
+- Cross-Entropy Loss
+- Consistency-based Regularization Loss
+- Weight-Adaptive Projection
+- Decoder Blocks
+- Prefix-Aware Blocks
+- Position-aware Embeddings
+- r1, r2, r3
+- W1, W2, W3
+- 1, r0, 2, r1, 3, r2
+- (c) Training pipeline of Neural Corpus Indexer
+- A Neural Corpus Indexer for Document Retrieval, NeurIPS22’
+
+페이지 표기
+- 4",,
+5,제목 없음,"제목: 제목 없음
+
+텍스트:
+- Knowledge Intelligence Lab. Hanbat National University
+- Generative Retrieval
+  A Neural Corpus Indexer (NCI) for Document Retrieval
+- Retrievals
+- A Neural Corpus Indexer for Document Retrieval, NeurIPS22’
+- 5
+
+Table 1: Performance comparison on NQ320k retrieval task. The settings with qg-ft refer to query generation by the DocT5Query model fine-tuned on this dataset. Other settings use the original checkpoint of DocT5Query.
+
+Method — Recall@1 — Recall@10 — Recall@100 — MRR@100
+- Neural Corpus Indexer (Base): 65.86 — 85.20 — 92.42 — 73.12
+- Neural Corpus Indexer (Large): 66.23 — 85.27 — 92.49 — 73.37
+- Neural Corpus Indexer (Ensemble): 70.46 — 89.35 — 94.75 — 77.82
+- Neural Corpus Indexer w/ qg-ft (Base): 68.91 — 88.48 — 94.48 — 76.17
+- Neural Corpus Indexer w/ qg-ft (Large): 68.65 — 88.45 — 94.53 — 76.10
+- Neural Corpus Indexer w/ qg-ft (Ensemble): 72.78 — 91.76 — 96.22 — 80.12
+- DSI (Base) [50]: 27.40 — 56.60 — – — –
+- DSI (Large) [50]: 35.60 — 62.60 — – — –
+- DSI (XXL) [50]: 40.40 — 70.30 — – — –
+- SEAL (Base) [4]: 56.98 — 79.97 — 91.39 — 65.48
+- SEAL (Large) [4]: 59.93 — 81.24 — 90.93 — 67.70
+- ANCE (FirstP) [54]: 51.33 — 80.33 — 91.78 — 61.71
+- ANCE (MaxP) [54]: 52.63 — 80.38 — 91.31 — 62.84
+- BERT + BruteForce [15]: 28.65 — 53.42 — 73.16 — 36.60
+- BERT + ANN (Faiss) [28]: 27.92 — 53.63 — 73.01 — 37.08
+- BM25 + DocT5Query [40]: 35.43 — 61.83 — 76.92 — 44.47
+- BM25 [44]: 15.11 — 32.48 — 50.54 — 21.07",,
+6,제목 없음,"제목 없음
+
+Knowledge Intelligence Lab. Hanbat National University
+
+Retrievals – Embeddings and ranking
+Large-scale Embedding
+• CPT-text
+
+구성/도식
+- ENCODER E(.) 입력: [SOS] ⊕ INPUT x ⊕ [EOS] → 출력 임베딩 v_x
+- 쌍 임베딩 유사도: cosine_similarity(v_x, v_y)
+- 쌍 입력: [SOS]_x ⊕ x ⊕ [EOS]_x, [SOS]_y ⊕ y ⊕ [EOS]_y → ENCODER E(.) → v_x, v_y
+
+Table 1. Batch size used to train the models of different sizes.
+- Model S: Parameters 300M, Embed Dimensions 1024, Batch size 12288
+- Model M: Parameters 1.2B, Embed Dimensions 2048, Batch size 6912
+- Model L: Parameters 6B, Embed Dimensions 4096, Batch size 5896
+- Model XL: Parameters 175B, Embed Dimensions 12288, Batch size 4976
+
+평가 결과 (열: MR, CR, SUBJ, MPQA, SST, TREC, MRPC, Avg.)
+Unsupervised
+- BERT (Devlin et al., 2019): 78.7, 86.2, 94.4, 88.7, 84.4, 92.8, 69.4, 84.9
+- SimCSE (Gao et al., 2021): 84.7, 88.6, 95.4, 87.5, 89.5, 95.0, 72.4, 87.6
+- DECLUTR (Giorgi et al., 2020): 85.2, 90.7, 95.8, 88.5, 90.0, 93.2, 74.6, 88.3
+- cpt-text S: 87.1, 90.1, 94.9, 88.3, 91.8, 95.2, 71.6, 88.4
+- cpt-text M: 89.0, 90.9, 96.7, 89.6, 93.9, 96.6, 73.6, 89.9
+- cpt-text L: 90.6, 92.6, 97.0, 90.6, 95.3, 97.0, 73.6, 90.9
+- cpt-text XL: 92.2, 93.5, 97.4, 91.5, 96.2, 97.4, 74.1, 91.8
+
+Transfer from NLI data
+- SBERT (Reimers & Gurevych, 2019): 84.9, 90.1, 94.5, 90.3, 90.7, 87.4, 75.9, 87.7
+- SimCSE (Gao et al., 2021): 88.4, 92.5, 95.2, 90.1, 93.3, 93.8, 77.7, 90.2
+- cpt-text S: 87.3, 91.0, 94.6, 90.5, 91.4, 95.0, 75.6, 89.3
+- cpt-text M: 89.8, 92.7, 95.7, 91.3, 95.3, 96.6, 76.5, 91.1
+- cpt-text L: 90.8, 93.5, 96.2, 91.2, 95.7, 96.0, 76.9, 91.5
+- cpt-text XL: 92.4, 93.9, 97.0, 91.8, 95.8, 96.4, 78.1, 92.2
+
+Text and Code Embeddings by Contrastive Pre-Training, arxiv22’
+6",,
+7,제목 없음,"제목: 제목 없음
+
+- Knowledge Intelligence Lab. Hanbat National University
+- Retrievals – Embeddings and ranking
+- Large-scale Embedding
+  - E5: EmbEddings from bidirEctional Encoder rEpresentations
+  - Retrieval, clustering, classification 등 NLP task와 zero-shot 환경에서 범용적으로 사용할 embedding을 만들고자 함
+  - BERT를 기반으로 2-stage 학습
+  - 1st-stage: 직접 구축한 CCPair dataset으로 pretraining 수행
+    - Large scale q-p pair 수집 (첫번째 학습)
+      - Reddit <post-comment>, Wiki <title-passage>, …
+    - CCPair로 두번째 학습: 학습된 모델로 학습데이터 ranking -> top-2에 포함되는 경우 사용
+  - 2nd-stage: MS-Marco, NLI, NQ dataset으로 finetuning 수행
+  - Text Embeddings by Weakly-Supervised Contrastive Pre-training (E5), arxiv22’
+
+Figure 1: Overview of our data curation pipeline and model architecture.
+- 데이터 소스: reddit, Semantic Scholar, Common Crawl, StackExchange, … 
+- 파이프라인: 1.3B unfiltered → consistency-based filter → 270M CCPairs
+- 모델 구조: 두 개의 Encoder(share)와 average pool을 통해 Eq, Ep 생성, query: text 1 / passage: text 2, ⊗ 표시
+
+7",,
+8,제목 없음,"제목 없음
+
+Knowledge Intelligence Lab. Hanbat National University
+Retrievals – Embeddings and ranking
+
+Large-scale Embedding
+E5_mistral-7b (backbone: mistral-7b)
+Previous embedding approaches
+Billion 단위 text로 pretraining
+Labeled dataset으로 fine-tuning
+단점
+엔지니어링 수고가 많이 필요
+Labeled dataset에 의존
+-> task나 language에 대한 diversity 부족
+데이터셋 구축: 다양한 prompt 템플릿을 설계하여 task 유형 별 로 다양한 데이터 생성
+Asymmetric task
+Step 1: GPT-4에 task 생성하도록 요청
+Step 2: 생성한 task에 대한 (query, positive, negative) triple 생 성 요청
+Symmetric task
+Query와 document가 의미는 같지만 다른 형태를 가진 경우 생성
+학습: (Q_inst; d)로 contrastive learning
+
+Improving Text Embeddings with Large Language Models, arxiv24’
+8",,
+9,제목 없음,"제목 없음
+
+- Knowledge Intelligence Lab. Hanbat National University
+- Retrievals – Embeddings and ranking
+- Large-scale Embedding
+- M3-Embedding:
+  - Multi-Linguality
+    - 100+ Languages
+    - Multi-Lingual
+    - Cross-Lingual
+  - Multi-Functionality
+    - Dense Retrieval
+    - Sparse Retrieval
+    - Multi-Vec Retrieval
+  - Multi-Granularity
+    - Sentence-Level
+    - Passage-Level
+    - Doc-Level (≤8192)
+  - M3-Embedding
+- Pre-Training → Fine-Tuning
+  - Pre-Training: 1.2 Billion multilingual unsupervised data
+  - Fine-Tuning:
+    - Labled data (EN, ZH, Mul)
+    - Synthetic data (Long)
+- Scoring
+  - dense score: M3 (Query) ↔ M3 (Answer)
+  - inter score: dense, multi-vec, lex
+- Model
+  - Model Name: BAAI/bge-m3
+  - Dimension: 1024
+  - Sequence Length: 8192
+  - Introduction: multilingual; unified fine-tuning (dense, sparse, and colbert) from bge-m3-unsupervised
+- Model Results
+  - Baselines (Prior Work)
+    - BM25: Avg 31.9; ar 39.5; bn 48.2; en 26.7; es 7.7; fa 28.7; fi 45.8; fr 11.5; hi 35.0; id 29.7; ja 31.2; ko 37.1; ru 25.6; sw 35.1; te 38.3; th 49.1; zh 17.5; de 12.0; yo 56.1
+    - mDPR: 41.8; 49.9; 44.3; 39.4; 47.8; 48.0; 47.2; 43.5; 38.3; 27.2; 43.9; 41.9; 40.7; 29.9; 35.6; 35.8; 51.2; 49.0; 39.6
+    - mContriever: 43.1; 52.5; 50.1; 36.4; 41.8; 21.5; 60.2; 31.4; 28.6; 39.2; 42.4; 48.3; 39.1; 56.0; 52.8; 51.7; 41.0; 40.8; 41.5
+    - E5large: 65.4; 76.0; 75.9; 52.9; 52.9; 59.0; 77.8; 54.5; 62.0; 52.9; 70.6; 66.5; 67.4; 74.9; 84.6; 80.2; 56.0; 56.4; 56.5
+    - E5mistral-7b: 62.2; 73.3; 70.3; 57.3; 52.2; 52.1; 74.7; 55.2; 52.1; 52.7; 66.8; 61.8; 67.7; 68.4; 73.9; 74.0; 54.0; 54.0; 58.8
+    - OpenAI-3: 54.9; -; -; -; -; -; -; -; -; -; -; -; -; -; -; -; -; -; -
+  - M3-Embedding (Our Work)
+    - Dense: 67.8; 78.4; 80.0; 56.9; 55.5; 57.7; 78.6; 57.8; 59.3; 56.0; 72.8; 69.9; 70.1; 78.6; 86.2; 82.6; 61.7; 56.8; 60.7
+    - Sparse: 53.9; 67.1; 68.7; 43.7; 38.8; 45.2; 65.3; 35.5; 48.2; 48.9; 56.3; 61.5; 44.5; 57.9; 79.0; 70.9; 36.3; 32.2; 70.0
+    - Multi-vec: 69.0; 79.6; 81.1; 59.4; 57.2; 58.8; 80.1; 59.0; 61.4; 58.2; 74.5; 71.2; 71.2; 79.0; 87.9; 83.0; 62.7; 57.9; 60.4
+    - Dense+Sparse: 68.9; 79.6; 80.7; 58.1; 57.5; 59.2; 79.7; 57.6; 62.8; 58.3; 73.9; 71.3; 69.8; 78.5; 87.2; 83.1; 62.5; 57.6; 61.8
+    - All: 70.0; 80.2; 81.5; 59.8; 59.2; 60.3; 80.4; 60.7; 63.2; 59.1; 75.2; 72.2; 71.7; 79.6; 88.2; 83.8; 63.9; 59.8; 61.5
+- BGE M3-Embedding: Multi-Lingual, Multi-Functionality, Multi-Granularity Text Embeddings Through Self-Knowledge Distillation, arxiv24’
+- 9",,
+10,제목 없음,"- 제목: 제목 없음
+- Knowledge Intelligence Lab. Hanbat National University
+- Retrievals – Embeddings and ranking
+- Ranking
+- Ranking with GPT4
+- Is ChatGPT Good at Search? Investigating Large Language Models as Re-Ranking Agent, EMNLP23’
+- (a) Query generation
+  - Please write a question based on this passage.
+  - Passage: {{passage}}
+  - Query:
+  - {{query}}
+- (b) Relevance generation
+  - Passage: {{passage}}
+  - Query: {{query}}
+  - Does the passage answer the query?
+  - Yes (or No)
+- (c) Permutation generation
+  - The following are passages related to query {{query}}
+  - [1] {{passage_1}}
+  - [2] {{passage_2}}
+  - (more passages)
+  - Rank these passages based on their relevance to the query.
+  - [2] > [3] > [1] > [...]
+- 그래프 제목: Average nDCG@10
+  - 범례: BM25, SOTA sup., ChatGPT, GPT-4
+  - TREC: BM25 49.3, SOTA sup. 70.4, ChatGPT 64.4, GPT-4 73.1
+  - BEIR: BM25 43.4, SOTA sup. 51.4, ChatGPT 49.4, GPT-4 53.7
+  - Mr.TyDi: BM25 38.1, SOTA sup. 60.3, ChatGPT 56.0, GPT-4 62.9
+  - Figure 1: Average results of ChatGPT and GPT-4 (zero-shot) on passage re-ranking benchmarks (TREC, BEIR, and Mr.TyDi), compared with BM25 and previous best-supervised systems (SOTA sup., e.g., monoT5 (Nogueira et al., 2020)).
+- 10",,
+11,제목 없음,"제목: 제목 없음
+
+상단 표기: Knowledge Intelligence Lab. Hanbat National University
+
+섹션: Retrievals – Embeddings and ranking – RAG
+
+슬라이드 제목: Basic RAG
+
+핵심 문장:
+- Jointly learn to retrieve and generate e2e
+- Latent retrieval: no labels needed for retrieved docs
+- RAG models: parametric + non-parametric memory
+- Generator    Retrieval
+
+도식 구성요소/라벨:
+- End-to-End Backprop through q and pθ
+- Query Encoder
+- q
+- q(x)
+- Retriever pη (Non-Parametric)
+- MIPS
+- Document Index
+- d(z)
+- z1, z2, z3, z4
+- Generator pθ (Parametric)
+- Marginalize
+
+예시 입력 쿼리와 태스크:
+- Define ""middle ear"" (x) — Question Answering: Question Query
+- Barack Obama was born in Hawaii. (x) — Fact Verification: Fact Query
+- The Divine Comedy (x) — Jeopardy Question Generation: Answer Query
+
+예시 출력:
+- The middle ear includes the tympanic cavity and the three ossicles. (y) — Question Answering: Answer Generation
+- supports (y) — Fact Verification: Label Generation
+- This 14th century work is divided into 3 sections: ""Inferno"", ""Purgatorio"" & ""Paradiso"" (y) — Question Generation
+
+출처: Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks, NeurIPS 20’
+
+슬라이드 번호: 11",,
+12,제목 없음,"제목 없음
+
+Retrievals – Embeddings and ranking – RAG
+Basic RAG
+- Jointly learn to retrieve and generate e2e
+- Latent retrieval: no labels needed for retrieved docs
+- RAG models: parametric + non-parametric memory
+Generator    Retrieval
+
+RAG sequence
+p_RAG-Sequence(y | x) ≈ ∑_{z ∈ top-k(p(· | x))} p_η(z | x) p_θ(y | x, z)
+= ∑_{z ∈ top-k(p(· | x))} p_η(z | x) ∏_{i=1}^N p_θ(y_i | x, z, y_{1:i−1})
+[Retrieval: p_η(z | x)] [Generator: p_θ(·)]
+
+RAG token
+p_RAG-Token(y | x) ≈ ∏_{i=1}^N ∑_{z ∈ top-k(p(· | x))} p_η(z | x) p_θ(y_i | x, z, y_{1:i−1})
+[Retrieval] [Generator]
+
+Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks, NeurIPS 20’
+
+Knowledge Intelligence Lab. Hanbat National University
+
+12",,
+13,제목 없음,"제목 없음
+
+- 상단 표기: Knowledge Intelligence Lab. Hanbat National University
+- 메인 제목: RAG with Large Language Model
+- 부제: Retrievals – Embeddings and ranking – RAG
+- 왼쪽 도식: 일반 LLM 시스템
+  - 흐름: Question → Generator (LLM) → Answer
+- 오른쪽 도식 구성
+  - User
+  - Input
+    - Query: How do you evaluate the fact that OpenAI's CEO, Sam Altman, went through a sudden dismissal by the board in just three days, and then was rehired by the company, resembling a real-life version of ""Game of Thrones"" in terms of power dynamics?
+  - Indexing
+    - Documents → Chunks/Vectors
+    - embeddings
+  - Retrieval
+    - Relevant Documents
+      - Chunk 1: ""Sam Altman Returns to OpenAI as CEO, Silicon Valley Drama Resembles the 'Zhen Huan' Comedy""
+      - Chunk 2: ""The Drama Concludes? Sam Altman to Return as CEO of OpenAI, Board to Undergo Restructuring""
+      - Chunk 3: ""The Personnel Turmoil at OpenAI Comes to an End: Who Won and Who Lost?""
+  - Generation
+    - LLM
+    - Combine Context and Prompts
+    - 프롬프트 예시:
+      - Question : How do you evaluate the fact that the OpenAI's CEO, ... ... dynamics?
+      - Please answer the above questions based on the following information :
+      - Chunk 1 :
+      - Chunk 2 :
+      - Chunk 3 :
+  - Output
+    - without RAG: ...I am unable to provide comments on future events. Currently, I do not have any information regarding the dismissal and rehiring of OpenAI's CEO ...
+    - with RAG: ......This suggests significant internal disagreements within OpenAI regarding the company's future direction and strategic decisions. All of these twists and turns reflect power struggles and corporate governance issues within OpenAI...
+  - Answer
+- 하단 캡션: Naïve RAG: LLM을 이용한 RAG 시스템
+  - Retrieval-Augmented Generation for Large Language Models: A Survey, Arxiv23’
+- 슬라이드 번호: 13",,
+14,제목 없음,"- 제목 없음
+- Knowledge Intelligence Lab. Hanbat National University
+
+- Retrievals – Embeddings and ranking – RAG
+- Advanced RAG
+  - REPLUG: Retrieve and Plug
+  - LM의 성능 향상을 위해 retriever를 강화
+  - Replug LSR (LM-Supervised Retrieval) training
+    - LM을 black-box 로 고정, retriever을 학습
+    - 1-step: input text에 대한 retrieving
+    - 2-step: input reformulation -> [retrieved document; input text]
+    - 3-step: score ensemble -> LM perplexity를 증가시키는 문서에 scoring
+
+- REPLUG: Retrieval-Augmented Black-Box Language Models, NAACL24’
+- 14",,
+15,제목 없음,"제목 없음
+
+Knowledge Intelligence Lab. Hanbat National University
+
+Retrievals – Embeddings and ranking – RAG
+
+Advanced RAG
+- SuRE framework
+1. Query와 관련된 passages 검색
+2. LLM을 이용하여 answer candidates 생성
+3. 각 candidate 별로 요약 생성
+   - 이를 통해 LLM이 더 근거 있는 답변 유도
+4. Prompting으로 요약 verification 수행
+   - Q;C;P -> True or False
+5. Prompting으로 pair-wise ranking 수행
+6. 최종 answer 선택
+
+예시 흐름
+- Query: The concept of micro financing was developed by who in 1976?
+- Retrieved Passages
+  - Title: Innovative financing, Text: Innovative financing Innovative financing refers to … first mentioned and introduced at the International Conference on Financing for Development in 2002.
+  - Title: ACORN International, Text: interns and volunteers that have come from George Brown College (Toronto), Carleton University … micro-finance since it has failed to reduce poverty.
+- 1. Answer Candidates Generation
+  - Candidates: (a) Muhammad Yunus, (b) Grameen Bank
+- 2. Conditional Summarization
+  - Summarization for (a): Microfinance is a term used to describe financial services… In 1976, Muhammad Yunus, a Bangladeshi economist, began experimenting… Therefore, it can be concluded that the concept of micro financing was developed by Muhammad Yunus in 1976.
+  - Summarization for (b): … Grameen Bank is one of the pioneers of microfinance, having been founded in Bangladesh in 1983 by Muhammad Yunus. … the concept of micro financing was not developed by Muhammad Yunus in 1976, but rather by the Grameen Bank in 1983.
+- 3. Verification
+  - Validity of Summarization for (a): True, Validity of Summarization for (b): False, Relative informativeness: (a) > (b)
+- Prediction
+  - Therefore, the answer is ""Muhammad Yunus""
+
+Listing 4 Prompt for pair-wise ranking.
+f'''
+Question: Given the following passages, determine which one provides a
+    more informative answer to the subsequent question.
+
+Passage 1: {Passage 1}
+
+Passage 2: {Passage 2}
+
+Target Question: {Question}
+
+Your Task:
+Identify which passage (Passage 1 or Passage 2) is more relevant and
+    informative to answer the question at hand. Choices: [Passage 1,
+    Passage 2].
+
+Answer:
+'''
+
+수식
+- r(sk, SK) = Σ_{i≠k} r_pair(sk, si),  r_pair(sk, si) = { 1, M(prank(q, sk, si)) = sk; 0, M(prank(q, sk, si)) = si; 0.5, else }
+- â = ŷ_{k*},  k* = arg max_k v(sk) + r(sk, SK)
+
+SURE: SUMMARIZING RETRIEVALS USING ANSWER CANDIDATES FOR OPEN-DOMAIN QA OF LLMS, ICLR24’
+
+15",,

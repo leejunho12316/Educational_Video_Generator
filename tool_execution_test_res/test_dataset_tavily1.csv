@@ -1,0 +1,321 @@
+﻿slide_index,title,content,answer_tool,answer_query
+1,제목 없음,"제목: 제목 없음
+
+MAAL (Multilingual Adaptive Augmentation Language-model)
+
+한국어에 강한 언어 생성 모델 MAAL을 기반으로 On-premise LLM 솔루션을 제공합니다. 다양한 파라미터 수의 모델(8B-70B)을 기반으로 고객의 니즈에 맞는 모델을 지원합니다. On-premise용으로는 성능이 뛰어나며 범용적으로 사용하기 좋은 MAAL-albatross(70B)를 권장하고 있습니다.
+
+모델 비교
+- MAAL-hummingbird*
+  - 특징: 가장 가볍고 빠름, 특정 Task 특화
+  - 주요 용도: On-device AI
+  - 모델 사이즈: 8B
+  - 최소 GPU 사양: L40S 1EA (혹은 이하)
+  - Max Token Length: 8k
+- MAAL-albatross
+  - 특징: 가장 성능이 우수, 범용적 사용 가능
+  - 주요 용도: ChatGPT와 같은 범용적인 활용
+  - 모델 사이즈: 70B
+  - 최소 GPU 사양: A100 2EA
+  - Max Token Length: 8k",,
+2,제목 없음,"제목: 제목 없음
+
+슬라이드 대제목
+- MAAL : 오픈소스컨설팅의 On-premise LLM 솔루션
+
+설명
+- 오픈소스컨설팅의 MAAL 솔루션은 고객사 내부 망에 탑재되어 다양한 대내/대외 서비스를 구현해드립니다.
+
+Service
+- 내부 서비스 (직원 사무 생산성 향상)
+  - 문서 요약
+  - 보고서 첨삭
+  - 코드 작성
+  - 번역
+  - 단위 통일
+  - 홍보 문구 생성
+- 외부 서비스 (업무 무인화 + 고객 만족도 향상)
+  - 고객 상담
+  - 예약 접수
+  - 제품 추천
+
+System
+- AI 제공 솔루션
+  - Large Language Model
+  - RAG
+  - Agent
+- 고객사 내부 망 (On-premise)
+  - 고객사 Knowledge Base
+  - 고객사 내부 시스템
+- 가드레일
+
+보안/데이터 안내
+- *외부 유출이 불가한 자료는 Data Base에 적재
+
+프로세스 캡션
+- [On-premise LLM 서비스 프로세스]
+
+기타 표기
+- Service
+- System
+- MAAL : 오픈소스컨설팅의 On-premise LLM 솔루션
+- 오픈소스컨설팅 OPEN SOURCE CONSULTING
+- 페이지 번호: 14",,
+3,제목 없음,"제목 없음
+
+MAAL : 오픈소스컨설팅의 On-premise LLM 솔루션
+
+1. MAAL 챗봇
+- 자유로운 채팅을 통해 질문에 대한 답변을 제공받을 수 있습니다.
+
+2. Task UI
+- Task UI는 31개 이상의 사내 업무 (생성/요약/첨삭/번역/분석/코드) 를 자동화 할 수 있도록 사전 제작된 툴입니다. 고객사에 맞는 커스터마이징이 가능합니다.
+
+- *어떤 프롬프트를 넣을 지의 고민/노하우 없이 ‘빈칸을 채워 넣는’ 간단한 방식으로 높은 퀄리티의 결과물 획득 가능",,
+4,제목 없음,"제목 없음
+
+MAAL : 오픈소스컨설팅의 On-premise LLM 솔루션
+3. Chatplay – 내부 문서 기반 RAG 챗봇
+
+사내 지식 기반의 검색 / 대화를 가능하게 만드는 툴입니다.
+
+대화를 통한 편리한 검색
+- 원하는 정보를 얻기 위해 방대한 양의 회사 문서를 일일이 찾아야 했던 기존의 검색 방식과 달리, LLM 검색 툴을 활용하면 ‘단 한 마디의 질문’만으로 쉽고 빠르게 필요한 정보를 찾을 수 있습니다.
+
+파일 업로드를 통한 RAG 구현
+- .pdf, .doc, .txt 형식의 문서를 업로드하여 RAG 챗봇을 구축할 수 있습니다. 답변과 함께, 답변의 근거로 정보를 가져온 문서와 페이지까지 제시하기 때문에 할루시네이션(거짓 정보)의 우려 없이 활용이 가능합니다.",,
+5,맞춤형 AI 솔루션 제시,"- 슬라이드 제목: 맞춤형 AI 솔루션 제시
+- 상단 헤더: MAAL : 오픈소스컨설팅의 On-premise LLM 솔루션
+- 소개 문구: 'MAAL'을 바탕으로 보안에 대한 걱정 없이 최상의 업무 효율성을 달성할 수 있도록 다양한 업종별 기업에게 '안전하고 커스터마이징이 용이한 On-premise LLM 구축' 서비스를 제공하고 있습니다.
+- 섹션 타이틀: 맞춤형 AI 솔루션 제시
+- 본문: 기업 니즈에 맞는 최적의 AI 솔루션 도입이 가능하며, 소프트웨어 및 하드웨어를 묶은 하나의 패키지로 제공되어 추가적인 RAG 구축이나 개발에 시간을 들일 필요 없이 즉시 회사 서버 내 가져다 사용하실 수 있습니다.
+- 제품/서비스명: MAAL : 오픈소스컨설팅의 On-premise LLM 솔루션
+- 패키지 설명: Language Foundation Model 'MAAL' 기반 On-premise 패키지
+  - 구성: LLM 챗봇 + RAG 챗봇 제작 툴 Chatplay + 업무 효율화 툴 LLM Task UI
+- 하단 표시: 오픈소스컨설팅 OPEN SOURCE CONSULTING
+- 페이지 번호: 17
+- 표: 없음",,
+6,제목 없음,"제목: 제목 없음
+
+- MAAL : 오픈소스컨설팅의 On-premise LLM 솔루션
+- 자체 챗봇 서비스 개발을 위한 Chatplay를 제공합니다. 파일을 첨부하는 방식으로 자신만의 LLM/RAG 챗봇을 제작 할 수 있습니다. 생성된 답변 로그를 통해 성능 테스트도 진행하며 프롬프트 엔지니어링 실험용 툴로도 활용 가능합니다.
+
+표: 없음",,
+7,제목 없음,"제목 없음
+
+MAAL : 오픈소스컨설팅의 On-premise LLM 솔루션
+
+Chatplay를 통한 RAG Chatbot 생성 과정
+- 신규 Retrieval 모델 등록
+  - Retrieval 모델명 및 Text Split 정보를 입력해 주세요.
+  - 주의! 한번 설정한 모델명은 변경할 수 없습니다.
+  - 모델명* : maumAI  [중복 확인]  사용 가능한 모델명입니다.
+  - Chunk Size (300~700)* : 300
+  - Chunk Overlap (0~200) : 200
+  - [취소] [다음]
+- 신규 Retrieval 모델 등록
+  - RAG 챗봇을 구현하기 위해 파일을 등록하는 단계입니다. 임베딩하기 위한 파일을 선택후 [지정] 버튼을 눌러주세요.
+  - [파일업로드]
+  - No 1 | 파일명: On_premise_Large_Language_Model_053... | 사이즈: 3.0MB | 삭제
+  - * 각 파일의 최대 사이즈는 30MB 이내이며, 5개까지 등록 가능합니다.
+  - * 등록 가능한 파일은 .pdf, .docx, .txt 입니다.
+  - 3.0MB / 150MB
+  - [뒤로] [생성]
+- 채팅 화면 예시
+  - User: 어떤 상품이 있어?
+  - 마음AI 마케팅 팀장: (응답 표시)
+  - 출처(리스트에 표시): On_premise_Large_Language_Model_0530.pdf (반복 표시)
+
+하단 단계 안내
+- 원하는 RAG 모델 등록
+- 내부 PDF 파일 업로드
+- PDF 내의 내용을 찾아 답변을 생성하는 RAG 챗봇 생성
+
+오픈소스컨설팅 OPEN SOURCE CONSULTING
+19",,
+8,제목 없음,"제목: 제목 없음
+
+MAAL : 오픈소스컨설팅의 On-premise LLM 솔루션
+자체 챗봇 Task UI는 생성/요약/첨삭/번역/코드 등 31개 이상의 사내 업무를 자동화 할 수 있도록 사전 제작된 툴입니다.
+Task UI Builder를 통해 고객사에 맞는 커스터마이징이 가능하며 프론트, 백엔드 없이도 원하는 Task를 생성하여 관리할 수 있습니다.
+
+표: 없음",,
+9,"Agados UI, Flow Design & Visibility Technologies","Agados UI, Flow Design & Visibility Technologies
+Structure of this presentation
+
+Application을 위한 Architecture
+- SW Package를 위한 Smart Architecture
+- Hybrid Architecture Overview
+- 타 시스템과의 Interface
+
+Designer 개요
+- Functions & Features ( 다양한 Controls, Object/Node 유형)
+- 화면 디자인/재설정
+- Flow(Logic) 디자인/재설정
+- ResultSet Manager
+- Scripts Manager
+- Test Tool ( Unit, Stress )
+
+Visibility(가시성) 개요
+- 디자인 Time
+- 실행 Time
+- 모니터 Time
+
+Application를 위한 Benefit
+- 선진 고도화된 SW PKG 자격 조건
+- 선진 고도화된 SW PKG 제작 & 커스터마이징 라이프사이클 Governing
+
+9
+Ⓒ 2014 agados All rights reserved.",,
+10,"업무처리 Application 를 위한 Agados의 Smart Architecture
+SW Package 아키텍처의 새로운 패러다임","업무처리 Application 를 위한 Agados의 Smart Architecture
+SW Package 아키텍처의 새로운 패러다임
+
+Biz. Application을 위한 Smart Architecture
+
+- Visual
+  - 비쥬얼한 모든 Logics (Design Flow)
+  - 비쥬얼한 모니터링
+  - 비쥬얼한 Objects 관계성
+- Smart
+  - Design, Flows & Rules 정의
+  - 변화에 대한 높은 대응력
+  - 지능적인 Customizing 능력
+- Hybrid
+  - Agados & 타 시스템간 교차 이용
+  - Java & .NET 환경 모두 지원
+  - 대부분의 RDBMS, WAS 지원
+- Cloud
+  - Cloud 컴퓨팅 지향
+  - PKG의 ‘SaaS’ & ‘PaaS’ 서비스 가능
+  - Private / Public 클라우드 구성 가능
+
+Visual / Hybrid / Smart / Cloud
+
+10
+Ⓒ 2014 agados All rights reserved.",,
+11,업무처리 Application 를 위한 Agados의 Smart Architecture,"제목
+- 업무처리 Application 를 위한 Agados의 Smart Architecture
+
+설명
+- Application 에게 Hybrid Architecture 제공
+- 타 프래임웍 상의 컴포넌트와 교차 사용 인터페이스 가진 Hybrid Architecture
+
+구성/요소
+- General JSP /Servlet / ASP
+- Presentation Layer by Agados
+  - Object    Object
+- Biz. Logics by Agados
+  - I/F Object
+- Data Access by Agados
+  - Object    Object
+- Servlet ( java, .NET)
+- EJB/COM/ …
+- JDBC/ODBC Connection
+- Middleware
+- External Module
+- Application DB
+- I/F OBJ
+- I/F, I/F, I/F
+- Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object
+
+기타
+- 11
+- Ⓒ 2014 agados All rights reserved.",,
+12,업무처리 Application 를 위한 Agados의 Smart Architecture,"업무처리 Application 를 위한 Agados의 Smart Architecture
+Application 에게 Hybrid Architecture 제공
+Agados Smart Client를 General JSP or ASP로 대체 (아키텍처 응용)
+I/F OBJ
+Biz. Logics by Agados
+General JSP /Servlet / ASP
+Object
+Servlet
+( java,
+.NET)
+Object
+Object
+Object
+Object
+Object
+I/F Object
+Object
+Object
+Object
+Data Access by Agados
+Object	Object
+Object
+Object
+Object
+Object
+Object
+Object
+Presentation Layer by Agados
+Object	Object
+Object
+EJB/COM/ …
+JDBC/ODBC Connection
+Middleware
+External Module
+I/F
+Application DB
+12
+Ⓒ 2014 agados All rights reserved.
+I/F
+I/F",,
+13,업무처리 Application 를 위한 Agados의 Smart Architecture,"- 제목: 업무처리 Application 를 위한 Agados의 Smart Architecture
+- 설명: 타 System 과의 인터페이스 , 외부 System 에서 Agados 기반 Application 기능 사용 ( Call Agados Engine )
+- 구성 요소: 외부 Module, Agados Engine
+- 코드:
+  CoMap coMap = new CoMap();
+  new SopRun().Run(coMap);
+  // Call Agados engine module
+- 기능 블록: Rule run
+- 파라미터: Input Parameters, Output Parameters
+- 사용 방식: 외부 JSP , ASP , Class , 기타 모듈 내부에서 Agados 기반 Application 의 Object를 호출해 사용
+- 슬라이드 번호: 13
+- 저작권: Ⓒ 2014 agados All rights reserved.",,
+14,Agados based Biz. Application 이 갖게 될 Benefit,"제목
+- Agados based Biz. Application 이 갖게 될 Benefit
+
+텍스트
+- '' (빈 문자열)
+- Agados based Biz. Application 이 갖게 될 Benefit
+- 14
+- Ⓒ 2014 agados All rights reserved.
+- 선진 고도화된 SW PKG를 위한 제품화 지수들
+- 글로벌 비즈니스를 해야 할 SW 패키지 제품의 품질은 소스 품질, 안전성 검증 등만으로는 한계
+
+표
+- Technical Categories: 커스터마이징 시 (가장 기본 요건)
+  - SW PKG 제품화 지수 항목: 커스터마이징 경우 패키지 본체에 대한 재컴파일이 발생 하지 않도록 함.
+  - Agados 기반의 Application: ○
+- Technical Categories: Customizing 방법
+  - SW PKG 제품화 지수 항목: 제품 본체 : Configurable Changing (재조정)
+  - Agados 기반의 Application: ○
+- Technical Categories: (공란)
+  - SW PKG 제품화 지수 항목: Add-On 기능 : ① 3GL 코딩을 통해 패키지와 인터페이스 할 수 있는 Biz. API 제공하는가? ② Coding 과 재컴파일 없이 사용자 추가 기능을 패키지에 탑재할 수 있는가?
+  - Agados 기반의 Application: ① Designed BAPIs for Add-On (컨설팅 제공) ② Adding Design & Rule Definition on Agados
+- Technical Categories: Customizing 시 (Locale; 지역화)
+  - SW PKG 제품화 지수 항목: Locale Data Setting 자동화 ( 통화, Date-Time 표기방식, 기타…)
+  - Agados 기반의 Application: ○
+- Technical Categories: (공란)
+  - SW PKG 제품화 지수 항목: 다중 언어 지원 자동화 ( 화면 문자, 메뉴, 메시지, etc…)
+  - Agados 기반의 Application: ○
+
+이미지
+- 슬라이드 이미지 및 agados 로고 이미지 포함",,
+15,제목 없음,"제목: 제목 없음
+
+텍스트:
+ 
+- Agados based Biz. Application 이 갖게 될 Benefit
+- 선진 고도화된 SW PKG를 위한 제품화 지수들
+
+표:
+- Technical Categories | SW PKG 제품화 지수 항목 | Agados 기반의 Application
+- Customizing ( 패키지 Source 유출 방 지) | 커스터마이징 할 경우 제품 소스가 오픈 되지 않는가? (SW Package 가치 보호) | ○
+- Customizing (Application DB , DB Handling ) | SW Package Data Model 유지성 ( 데이터의 추가에 대한 Impact로 부터 제품이 받는 영향 도를 낮출 수 있는가) | ○ (Provide Consulting, Applied Application DB Model)
+-  | SW (Package) Data Model 확장성 ( Expansibility for Base on Adding) | (Provide Consulting, Applied Application DB Model)
+-  | DB Locking 방지 ( Prevent Mistakes of Customizer ) | ○ (Agados 내 DB Handling 시 Locking 방지)
+-  | 제품 개발 소스와 SQL Statements, Procedures 등의 문 장 정보들의 분리성 (소스 내에 있는 경우, 요구사항 변경 시 , 소스를 변경해야 함으로 Impact 커짐) | (SQL Statements, Procedures are managed Separately )
+- Customizing ( 다른 시스템과의 Interface) | 타 시스템 ( 어플리케이션 ) 과 SW PKG 간의 I/F 를 위한 방법 제공 | ○ ( I/F 방법 제공 )",,
