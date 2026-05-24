@@ -456,7 +456,8 @@ def tool_search(state : State):
     - 검색 결과 요약 시 검색 결과를 제외한 다른 어떠한 출력도 하지 마세요.
     """
 
-    human_msg = "[슬라이드 내용]" + "\n\n".join([message.content for message in state['messages']])
+    # human_msg = "[슬라이드 내용]" + "\n\n".join([message.content for message in state['messages']])
+    human_msg = "[슬라이드 내용]\n" + state.get("cur_page_content", "") + "\n[대화 로그]"+ "\n\n".join([message.content for message in state['messages']])
 
     # LLM 호출
     result = llm_with_tools.invoke([SystemMessage(content = sys_msg), HumanMessage(content = human_msg)])
