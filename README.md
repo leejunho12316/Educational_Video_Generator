@@ -461,11 +461,86 @@ arxiv를 Call 해야 할 데이터.
 
 
 
+<br><br><br>
 
 
 ## Test Dataset 무결성 검사
 
-Rule-Based, LLM-as-a-Judge
+### 1. Rule-Based
+
+Rule-Based로 다음 내용 점검
+
+  | Check | 대상 컬럼 | 검사 내용                                                                                                                      |
+  |-------|-----------|----------------------------------------------------------------------------------------------------------------------------|
+  | 0 | 전체 | 필수 8개 컬럼 존재, extra 컬럼 없음                                                                                                   |
+  | 1 | `slide_index` | not null, 양의 정수                                                                                                            |
+  | 2 | `title` | not null, not blank                                                                                                        |
+  | 3 | `content` | not null, not blank                                                                                                        |
+  | 4 | `tool_called` | bool 타입 (True/False)                                                                                                       |
+  | 5 | `tool_name` | `none` / `tavily_search` / `arxiv_tool` 중 하나                                                                               |
+  | 6 | `query` | `tool_name=none` → null, 그 외 → not null, not blank                                                                         |
+  | 7 | `raw_tool_result` | `tool_name=none` → null, 그 외 → not null                                                                                    |
+  | 7c | `raw_tool_result` (tavily) | JSON 파싱 가능 여부, 최상위 키 7개 존재 여부, `results` not blank, 각 항목 url/title/content/score 존재 및 값 있음, `query` 필드가 `query` 컬럼값과 일치하는지 |
+  | 7d | `raw_tool_result` (arxiv) | `제목:` / `연도:` / `요약:` / `URL:` 키워드 포함, 연도 4자리 숫자                                                                           |
+  | 8 | `tool_node_result` | not null, not blank                                                                                                        |
+  | 9 | 교차 필드 | `tool_called` ↔ `tool_name` / `query` / `raw_tool_result` 일관성 (6가지 조합)                                                     |
+
+
+PASS: 130 | FAIL: 1
+-> Error: arxiv.HTTPError 발생. 1행 삭제.
+
+
+### 2. LLM-as-a-Judge
+
+PPT 슬라이드 정제 데이터를 보고 생성된 Tool Node 결과를 LLM-as-a-Judge 방식으로 평가.
+
+| 평가 항목 | 타입 | 설명                                                 |
+|-----------|------|----------------------------------------------------|
+| `tool_called_correct` | bool | 검색 필요 여부 판단이 올바른지                                  |
+| `tool_name_correct` | bool | 선택한 도구(tavily/arxiv/none)가 적절한지                    |
+| `query_correct` | bool / null | 쿼리가 핵심 키워드 포함 및 적절한 길이인지 (Tool을 사용하지 않았으면 null) |
+|`reason`| str | LLM-as-a-Judge가 판단한 이유를 작성|
+
+모델 : GPT-5
+
+```
+기존 프롬프트...
+
+# 평가 항목
+
+1. tool_called_correct (true/false)
+   content를 보고 검색이 필요한 슬라이드인지 판단하여 에이전트의 tool_called 값이 올바른지 평가합니다.
+
+2. tool_name_correct (true/false)
+   - tool_called=false인데 tool_name이 none이 아니면 → false
+   - tool_called=true인데 잘못된 도구를 선택했으면 → false (예: 논문 내용인데 tavily_search 선택)
+   - tool_called와 tool_name이 모두 올바르면 → true
+
+3. query_correct (true/false/null)
+   - tool_name이 none이면 → null (평가 대상 아님)
+   - tool_name이 tavily_search: 핵심 제품/서비스 키워드를 포함하고 3~5단어로 간결한지 평가
+   - tool_name이 arxiv_tool: 핵심 연구/논문 주제 키워드를 포함하고 단일 주제에 집중하는지 평가
+
+# 출력 형식
+반드시 아래 JSON만 출력하세요. 다른 텍스트는 절대 출력하지 마세요.
+{"tool_called_correct": true 또는 false, "tool_name_correct": true 또는 false, "query_correct": true 또는 false 또는 null, "reason": "한 문장으로 판단 이유"}"""
+
+```
+
+**결과 요약** (130행 기준)
+
+| 항목 | 정확도 |
+|------|--------|
+| tool_called | 114/130 (87.7%) |
+| tool_name | 114/130 (87.7%) |
+| query | 86/88 (97.7%) ← 검색 있는 행만 |
+
+-> 전체 오류 16건 human review 진행. 14건은 judge 오판, 2건만 실제 오류로 판단해 제거 <br>
+최종적으로 false 분류 16건 중 실제 오류 2건을 제거해 **128행**으로 정제.
+
+최종 테스트 데이터셋: [test_dataset_cleaned3.csv](./tool_execution_test_Dataset/test_dataset_cleaned3.csv)
+
+
 
 ## 평가
 
