@@ -535,10 +535,14 @@ PPT 슬라이드 정제 데이터를 보고 생성된 Tool Node 결과를 LLM-as
 | tool_name | 114/130 (87.7%) |
 | query | 86/88 (97.7%) ← 검색 있는 행만 |
 
--> 전체 오류 16건 human review 진행. 14건은 judge 오판, 2건만 실제 오류로 판단해 제거 <br>
+judge가 False → 사람이 직접 확인하고 최종 판단 <br>
+judge가 True  → 신뢰하고 통과 <br>
+
+**결과** <br>
+전체 오류 16건 human review 진행. 14건은 judge 오판, 2건만 실제 오류로 판단해 제거 <br>
 최종적으로 false 분류 16건 중 실제 오류 2건을 제거해 **128행**으로 정제.
 
-최종 테스트 데이터셋: [test_dataset_cleaned3.csv](./tool_execution_test_Dataset/test_dataset_cleaned3.csv)
+**최종 테스트 데이터셋**: [test_dataset_cleaned3.csv](./tool_execution_test_Dataset/test_dataset_cleaned3.csv)
 
 
 
