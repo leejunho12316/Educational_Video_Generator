@@ -1,4 +1,4 @@
-﻿slide_index,title,content,tool_called,tool_name,query,gpt-4o-mini_tool_called,gpt-4o-mini_tool_name,gpt-4o-mini_query,gpt-4o_tool_called,gpt-4o_tool_name,gpt-4o_query,gpt-5_tool_called,gpt-5_tool_name,gpt-5_query
+﻿slide_index,title,content,tool_called,tool_name,query,gpt-4o-mini_tool_called,gpt-4o-mini_tool_name,gpt-4o-mini_query,gpt-4o_tool_called,gpt-4o_tool_name,gpt-4o_query,gpt-5_tool_called,gpt-5_tool_name,gpt-5_query,gemini-3-flash-preview_tool_called,gemini-3-flash-preview_tool_name,gemini-3-flash-preview_query,gemini-3.1-pro-preview_tool_called,gemini-3.1-pro-preview_tool_name,gemini-3.1-pro-preview_query,gemini-3.5-flash_tool_called,gemini-3.5-flash_tool_name,gemini-3.5-flash_query,claude-haiku-4-5_tool_called,claude-haiku-4-5_tool_name,claude-haiku-4-5_query,claude-sonnet-4-6_tool_called,claude-sonnet-4-6_tool_name,claude-sonnet-4-6_query,claude-opus-4-7_tool_called,claude-opus-4-7_tool_name,claude-opus-4-7_query
 1,제목 없음,"- 제목: 제목 없음
 - 본문 텍스트: """", """", """", """", """"
 - 표: 없음
@@ -12,7 +12,7 @@
   - Agile
   - Sharing
   - Culture Integration
-  - Open Source",False,none,,False,none,,False,none,,False,none,
+  - Open Source",False,none,,False,none,,False,none,,False,none,,False,none,,False,none,,False,none,,False,none,,False,none,,False,none,
 2,제목 없음,"- 제목: 제목 없음
 
 - 텍스트(추출 순서 그대로)
@@ -26,7 +26,7 @@
   8) III
   9) On-premise LLM 솔루션
 
-- 표: 없음",False,none,,False,none,,False,none,,False,none,
+- 표: 없음",False,none,,False,none,,False,none,,False,none,,False,none,,False,none,,False,none,,False,none,,False,none,,False,none,
 3,제목 없음,"- 제목: 제목 없음
 - I. 사내 On-premise LLM의 필요성
 - 내용:
@@ -34,7 +34,7 @@
   - LLM 을 활용한 Usercases
   - On-premise LLM, 왜 필요한가
 - 하단 표기: 오픈소스컨설팅 OPEN SOURCE CONSULTING
-- 표: 없음",False,none,,False,none,,False,none,,False,none,
+- 표: 없음",False,none,,False,none,,False,none,,False,none,,False,none,,False,none,,False,none,,False,none,,False,none,,False,none,
 4,제목 없음,"제목 없음
 
 Chapter 2. 오픈소스 컨설팅의 On-premise LLM 솔루션
@@ -43,7 +43,7 @@ MAAL (Multilingual Adaptive Augmentation Language-model)
 MAAL 기반 On-premise 패키지
 - 챗봇
 - Chatplay
-- LLM Task UI",False,none,,True,tavily_search,MAAL (Multilingual Adaptive Augmentation Language-model),False,none,,False,none,
+- LLM Task UI",False,none,,True,tavily_search,MAAL (Multilingual Adaptive Augmentation Language-model),False,none,,False,none,,False,none,,False,none,,False,none,,False,none,,False,none,,False,none,
 5,제목 없음,"제목: 제목 없음
 
 슬라이드 섹션: III. 제품의 차별성
@@ -55,7 +55,7 @@ MAAL 기반 On-premise 패키지
 
 하단 표기: 오픈소스컨설팅 OPEN SOURCE CONSULTING
 
-표: 없음",False,none,,False,none,,False,none,,False,none,
+표: 없음",False,none,,False,none,,False,none,,False,none,,False,none,,False,none,,False,none,,False,none,,False,none,,False,none,
 6,제목 없음,"- 제목 없음
 - 오픈소스컨설팅
 - OPEN SOURCE CONSULTING
@@ -72,13 +72,13 @@ MAAL 기반 On-premise 패키지
 - Open Source
 - www.osci.kr
 - T. 02-516-0711
-- E. yhlee@osci.kr",False,none,,False,none,,False,none,,False,none,
+- E. yhlee@osci.kr",False,none,,False,none,,False,none,,False,none,,False,none,,False,none,,False,none,,False,none,,False,none,,False,none,
 7,Trustworthy Analytics with Generative AI: Four Use Cases for ChatGPT / GPT-4,"- 제목: Trustworthy Analytics with Generative AI: Four Use Cases for ChatGPT / GPT-4
 - 텍스트:
   - Trustworthy Analytics with Generative AI: Four Use Cases for ChatGPT / GPT-4
   - Dr. Georg Wittenburg ▪ Inspirient
     General Online Research Conference 2023 (GOR 23) Kassel, 21 September 2023
-- 표: 없음",False,none,,False,none,,False,none,,False,none,
+- 표: 없음",False,none,,False,none,,False,none,,False,none,,False,none,,False,none,,False,none,,False,none,,False,none,,False,none,
 8,제목 없음,"제목 없음
 
 Dr. Georg Wittenburg
@@ -88,7 +88,7 @@ General Online Research Conference 2023 (GOR 23), 21.09.2023
 
 Copyright © 2023 by Inspirient GmbH. All rights reserved.
 
-1",False,none,,False,none,,False,none,,False,none,
+1",False,none,,False,none,,False,none,,False,none,,False,none,,False,none,,False,none,,False,none,,False,none,,False,none,
 9,Thank you for your time today,"[제목]
 Thank you for your time today
 
@@ -104,7 +104,7 @@ Thank you for your time today
 - inspirient
 
 [표]
-[없음]",False,none,,False,none,,False,none,,False,none,
+[없음]",False,none,,False,none,,False,none,,False,none,,False,none,,False,none,,False,none,,False,none,,False,none,,False,none,
 10,RAG 세미나,"- 제목: RAG 세미나
 - 텍스트:
   - Knowledge Intelligence Lab. Hanbat National University
@@ -115,7 +115,7 @@ Thank you for your time today
   - RAG 세미나
   - 자연어처리의 정보검색 기법과 최신 RAG 모델
   - 2024.05.01
-- 표: 없음",False,none,,False,none,,False,none,,False,none,
+- 표: 없음",False,none,,False,none,,False,none,,False,none,,False,none,,False,none,,False,none,,False,none,,False,none,,False,none,
 11,연사 소개,"- 제목: 연사 소개
 - 상단 표기: Knowledge Intelligence Lab. Hanbat National University
 
@@ -137,7 +137,7 @@ Thank you for your time today
   - 로고: SK telecom
   - 로고: 국립한밭대학교
   - 로고/텍스트: Knowledge Intelligence Lab. Hanbat National University
-  - 인물 사진 1장",False,none,,False,none,,False,none,,False,none,
+  - 인물 사진 1장",False,none,,False,none,,False,none,,False,none,,False,none,,False,none,,False,none,,False,none,,False,none,,False,none,
 12,Outline,"Outline
 
 Knowledge Intelligence Lab. Hanbat National University
@@ -165,7 +165,7 @@ Knowledge Intelligence Lab. Hanbat National University
 1) Multimodal RAG
 
 12
-Outline",False,none,,False,none,,False,none,,False,none,
+Outline",False,none,,False,none,,False,none,,False,none,,False,none,,False,none,,False,none,,False,none,,False,none,,False,none,
 13,Chapter 1,"Chapter 1
 
 Knowledge Intelligence Lab. Hanbat National University
@@ -180,7 +180,7 @@ Retrievals
 7) Generative Retrieval
 
 13
-Chapter 1",False,none,,False,none,,False,none,,False,none,
+Chapter 1",False,none,,False,none,,False,none,,False,none,,False,none,,False,none,,False,none,,False,none,,False,none,,False,none,
 14,Chapter 2,"제목: Chapter 2
 
 텍스트:
@@ -199,7 +199,7 @@ Chapter 1",False,none,,False,none,,False,none,,False,none,
 - 14
 - Chapter 2
 
-표: 없음",False,none,,False,none,,False,none,,False,none,
+표: 없음",False,none,,False,none,,False,none,,False,none,,False,none,,False,none,,False,none,,False,none,,False,none,,False,none,
 15,Chapter 3,"제목
 - Chapter 3
 
@@ -226,14 +226,14 @@ Chapter 1",False,none,,False,none,,False,none,,False,none,
 - Chapter 3
 
 표
-- 없음",False,none,,False,none,,False,none,,False,none,
+- 없음",False,none,,False,none,,False,none,,False,none,,False,none,,False,none,,False,none,,False,none,,False,none,,False,none,
 16,감사합니다,"- 제목: 감사합니다
 - 텍스트:
   - Knowledge Intelligence Lab. Hanbat National University
   - (빈 항목)
   - 감사합니다
   - Cheoneum Park / parkce@hanbat.ac.kr / https://sites.google.com/view/ki-lab
-- 표: 없음",False,none,,False,none,,False,none,,False,none,
+- 표: 없음",False,none,,False,none,,False,none,,False,none,,False,none,,False,none,,False,none,,False,none,,False,none,,False,none,
 17,1. Agados 기능과 특징,"- 제목: 1. Agados 기능과 특징
 
 - 텍스트:
@@ -242,37 +242,37 @@ Chapter 1",False,none,,False,none,,False,none,,False,none,
   - Functions & Features Revision: 2014.11.23
   - Template Revision:20131025 v2.0
 
-- 표: 없음",False,none,,False,none,,False,none,,False,none,
+- 표: 없음",False,none,,False,none,,False,none,,False,none,,False,none,,True,tavily_search,Agados UI Flow Design,True,tavily_search,Agados UI Flow Design,False,none,,False,none,,False,none,
 18,Biz. Application을 위한 Architecture,"- 제목: Biz. Application을 위한 Architecture
 - 본문 텍스트: Biz. Application을 위한 Architecture
 - 슬라이드 번호: 18
 - 저작권: Ⓒ 2014 agados All rights reserved.
-- 표: 없음",False,none,,False,none,,False,none,,False,none,
+- 표: 없음",False,none,,False,none,,False,none,,False,none,,False,none,,False,none,,False,none,,False,none,,False,none,,False,none,
 19,Biz. Application을 위한 디자이너/재조정기,"- 제목: Biz. Application을 위한 디자이너/재조정기
 - 텍스트:
   - Biz. Application을 위한 디자이너/재조정기
   - 19
   - Ⓒ 2014 agados All rights reserved.
   - ‘아가도스’는 귀사의 SW Application내에서 Configure Tool의 역할 수행
-- 표: 없음",False,none,,False,none,,False,none,,False,none,
+- 표: 없음",False,none,,False,none,,False,none,,False,none,,False,none,,False,none,,False,none,,False,none,,False,none,,False,none,
 20,정보처리 Application에 가시성(Visibilities) 부여하기,"- 제목: 정보처리 Application에 가시성(Visibilities) 부여하기
 - 텍스트:
   - 정보처리 Application에 가시성(Visibilities) 부여하기
   - 20
   - Ⓒ 2014 agados All rights reserved.
   - ‘아가도스’는 귀사의 Application에게 다양한 가시성 제공 기능을 부여합니다.
-- 표: 없음",False,none,,False,none,,False,none,,False,none,
+- 표: 없음",False,none,,False,none,,False,none,,False,none,,False,none,,False,none,,True,tavily_search,아가도스 가시성 기능 Agados,False,none,,False,none,,False,none,
 21,Agados-based Application 를 위한 Benefit,"- 제목: Agados-based Application 를 위한 Benefit
 - 본문: ‘아가도스’는 귀사의 Application에게 선진 고도화된 제품화 가능성을 제공합니다.
 - 페이지 번호: 21
 - 저작권: Ⓒ 2014 agados All rights reserved.
-- 표: 없음",False,none,,False,none,,False,none,,False,none,
+- 표: 없음",False,none,,False,none,,False,none,,False,none,,True,tavily_search,Agados software platform features benefits,False,none,,True,tavily_search,아가도스 Agados 플랫폼,False,none,,True,tavily_search,Agados application benefits,False,none,
 22,제목 없음,"제목 없음
 
 Pivotal HAWQ 소개
 Seungdon Choi Field Engineer Pivotal Korea
 
-표: 없음",False,none,,False,none,,False,none,,False,none,
+표: 없음",False,none,,False,none,,False,none,,False,none,,False,none,,False,none,,False,none,,False,none,,False,none,,False,none,
 23,Agenda,"제목: Agenda
 
 텍스트:
@@ -285,7 +285,7 @@ Seungdon Choi Field Engineer Pivotal Korea
 - Roadmap
 - Appendix: HAWQ vs Hive
 
-표: 없음",False,none,,False,none,,False,none,,False,none,
+표: 없음",False,none,,False,none,,False,none,,False,none,,False,none,,False,none,,False,none,,False,none,,False,none,,False,none,
 24,제목 없음,"제목: 제목 없음
 
 텍스트:
@@ -301,7 +301,7 @@ Seungdon Choi Field Engineer Pivotal Korea
 - PLATFORM
 - INTRODUCTION
 
-표: 없음",False,none,,False,none,,False,none,,False,none,
+표: 없음",False,none,,False,none,,False,none,,False,none,,False,none,,False,none,,False,none,,False,none,,False,none,,False,none,
 25,INDEX,"INDEX
 
 I 목차
@@ -331,7 +331,7 @@ INDEX
 13 캠퍼스 라이선스 혜택
 14 캠퍼스 라이선스 주요 구독 기관
 
-statista",False,none,,False,none,,False,none,,False,none,
+statista",False,none,,False,none,,False,none,,False,none,,False,none,,False,none,,False,none,,False,none,,False,none,,False,none,
 26,[1] About Statista,"[1] About Statista
 - [1] About Statista
 - 01 스타티스타 기업소개
@@ -341,13 +341,13 @@ statista",False,none,,False,none,,False,none,,False,none,
 - 05 데이터 출처
 - 06 데이터 혜택
 - 07 스타티스타 활용 범위
-- statista",False,none,,False,none,,False,none,,False,none,
+- statista",False,none,,False,none,,False,none,,False,none,,False,none,,False,none,,False,none,,False,none,,False,none,,False,none,
 27,제목 없음,"- 제목: 제목 없음
 - 텍스트: (빈 문자열)
 - 표: 없음
 - 이미지(2개):
   1) 어두운 남색 배경 중앙에 흰색 “statista” 로고와 우측의 사각형 안 곡선 아이콘이 있는 이미지
-  2) 흰색 “statista” 로고와 동일한 아이콘이 배경 없이 배치된 이미지",False,none,,False,none,,False,none,,False,none,
+  2) 흰색 “statista” 로고와 동일한 아이콘이 배경 없이 배치된 이미지",False,none,,False,none,,False,none,,False,none,,False,none,,False,none,,False,none,,False,none,,False,none,,False,none,
 28,Jamcracker 소개 시작,"- 제목: Jamcracker 소개 시작
 - 부제/설명: Cloud Management Platform & Cloud Service Brokerage
 - 핵심 항목:
@@ -359,7 +359,7 @@ statista",False,none,,False,none,,False,none,,False,none,
 - 연락처: @ OSC Korea & OSC Asia Group jerry@osckorea.com jerry@oscasia.net +82 10 9196 1416
 - 시각 요소: jamcracker 로고, Microsoft Cloud Solution Provider 로고, OSC ASIA GROUP LIMITED 로고
 - 기타: 텍스트 목록에 빈 문자열 1개 포함
-- 표: 없음",False,none,,False,none,,False,none,,False,none,
+- 표: 없음",False,none,,False,none,,False,none,,False,none,,False,none,,False,none,,False,none,,False,none,,False,none,,False,none,
 29,Large Language Model Mata AI-LLaMA 2,"제목
 - Large Language Model Mata AI -LLaMA 2
 
@@ -371,10 +371,10 @@ statista",False,none,,False,none,,False,none,,False,none,
 - © Rk Rahul
 
 표
-- 없음",False,none,,False,none,,False,none,,False,none,
+- 없음",False,none,,False,none,,False,none,,False,none,,False,none,,False,none,,False,none,,False,none,,False,none,,False,none,
 30,Thanks!,"- 제목: Thanks!
 - 텍스트: Thanks!, LLaMa 2
-- 표: 없음",False,none,,False,none,,False,none,,False,none,
+- 표: 없음",False,none,,False,none,,False,none,,False,none,,False,none,,False,none,,False,none,,False,none,,False,none,,False,none,
 1,제목 없음,"제목: 제목 없음
 
 MAAL (Multilingual Adaptive Augmentation Language-model)
@@ -393,7 +393,7 @@ MAAL (Multilingual Adaptive Augmentation Language-model)
   - 주요 용도: ChatGPT와 같은 범용적인 활용
   - 모델 사이즈: 70B
   - 최소 GPU 사양: A100 2EA
-  - Max Token Length: 8k",True,tavily_search,MAAL albatross language model,True,tavily_search,MAAL (Multilingual Adaptive Augmentation Language-model),True,tavily_search,MAAL Multilingual Adaptive Augmentation Language-model,,,
+  - Max Token Length: 8k",True,tavily_search,MAAL albatross language model,True,tavily_search,MAAL (Multilingual Adaptive Augmentation Language-model) On-premise LLM 솔루션,True,tavily_search,MAAL Multilingual Adaptive Augmentation Language-model,True,tavily_search,MAAL LLM,True,tavily_search,MAAL Multilingual Adaptive Augmentation Language-model 오픈소스컨설팅,True,tavily_search,MAAL LLM 언어 모델,True,tavily_search,MAAL LLM albatross,True,tavily_search,MAAL Multilingual Adaptive Augmentation Language model,True,tavily_search,MAAL Multilingual Adaptive Augmentation Language-model,True,tavily_search,MAAL Multilingual Adaptive Augmentation Language model 오픈소스컨설팅
 2,제목 없음,"제목: 제목 없음
 
 슬라이드 대제목
@@ -436,7 +436,7 @@ System
 - System
 - MAAL : 오픈소스컨설팅의 On-premise LLM 솔루션
 - 오픈소스컨설팅 OPEN SOURCE CONSULTING
-- 페이지 번호: 14",True,tavily_search,MAAL 오픈소스컨설팅 LLM,True,tavily_search,MAAL On-premise LLM 솔루션,True,tavily_search,MAAL On-premise LLM 솔루션,,,
+- 페이지 번호: 14",True,tavily_search,MAAL 오픈소스컨설팅 LLM,True,tavily_search,MAAL On-premise LLM 솔루션,True,tavily_search,MAAL On-premise LLM 솔루션,True,tavily_search,MAAL 오픈소스컨설팅 LLM,True,tavily_search,오픈소스컨설팅 MAAL LLM 솔루션 정보,True,tavily_search,오픈소스컨설팅 MAAL LLM,True,tavily_search,오픈소스컨설팅 MAAL LLM,False,none,,False,none,,True,tavily_search,MAAL 오픈소스컨설팅 On-premise LLM
 3,제목 없음,"제목 없음
 
 MAAL : 오픈소스컨설팅의 On-premise LLM 솔루션
@@ -447,7 +447,7 @@ MAAL : 오픈소스컨설팅의 On-premise LLM 솔루션
 2. Task UI
 - Task UI는 31개 이상의 사내 업무 (생성/요약/첨삭/번역/분석/코드) 를 자동화 할 수 있도록 사전 제작된 툴입니다. 고객사에 맞는 커스터마이징이 가능합니다.
 
-- *어떤 프롬프트를 넣을 지의 고민/노하우 없이 ‘빈칸을 채워 넣는’ 간단한 방식으로 높은 퀄리티의 결과물 획득 가능",True,tavily_search,MAAL 온프레미스 LLM,True,tavily_search,MAAL On-premise LLM 솔루션,True,tavily_search,MAAL On-premise LLM 솔루션,,,
+- *어떤 프롬프트를 넣을 지의 고민/노하우 없이 ‘빈칸을 채워 넣는’ 간단한 방식으로 높은 퀄리티의 결과물 획득 가능",True,tavily_search,MAAL 온프레미스 LLM,True,tavily_search,MAAL On-premise LLM 솔루션,True,tavily_search,MAAL On-premise LLM 솔루션,True,tavily_search,MAAL OpenSourceConsulting LLM,True,tavily_search,오픈소스컨설팅 MAAL LLM 솔루션,True,tavily_search,오픈소스컨설팅 MAAL LLM,True,tavily_search,오픈소스컨설팅 MAAL LLM,True,tavily_search,MAAL 오픈소스컨설팅 On-premise LLM,True,tavily_search,MAAL 오픈소스컨설팅 On-premise LLM,True,tavily_search,MAAL 오픈소스컨설팅 On-premise LLM
 4,제목 없음,"제목 없음
 
 MAAL : 오픈소스컨설팅의 On-premise LLM 솔루션
@@ -459,7 +459,7 @@ MAAL : 오픈소스컨설팅의 On-premise LLM 솔루션
 - 원하는 정보를 얻기 위해 방대한 양의 회사 문서를 일일이 찾아야 했던 기존의 검색 방식과 달리, LLM 검색 툴을 활용하면 ‘단 한 마디의 질문’만으로 쉽고 빠르게 필요한 정보를 찾을 수 있습니다.
 
 파일 업로드를 통한 RAG 구현
-- .pdf, .doc, .txt 형식의 문서를 업로드하여 RAG 챗봇을 구축할 수 있습니다. 답변과 함께, 답변의 근거로 정보를 가져온 문서와 페이지까지 제시하기 때문에 할루시네이션(거짓 정보)의 우려 없이 활용이 가능합니다.",True,tavily_search,MAAL Chatplay RAG,True,tavily_search,MAAL On-premise LLM 솔루션,False,none,,,,
+- .pdf, .doc, .txt 형식의 문서를 업로드하여 RAG 챗봇을 구축할 수 있습니다. 답변과 함께, 답변의 근거로 정보를 가져온 문서와 페이지까지 제시하기 때문에 할루시네이션(거짓 정보)의 우려 없이 활용이 가능합니다.",True,tavily_search,MAAL Chatplay RAG,True,tavily_search,MAAL On-premise LLM 솔루션,False,none,,True,tavily_search,MAAL Chatplay 오픈소스컨설팅,True,tavily_search,오픈소스컨설팅 MAAL Chatplay 기능,True,tavily_search,오픈소스컨설팅 MAAL Chatplay,True,tavily_search,오픈소스컨설팅 MAAL Chatplay,False,none,,False,none,,True,tavily_search,Chatplay 오픈소스컨설팅 RAG 챗봇
 5,맞춤형 AI 솔루션 제시,"- 슬라이드 제목: 맞춤형 AI 솔루션 제시
 - 상단 헤더: MAAL : 오픈소스컨설팅의 On-premise LLM 솔루션
 - 소개 문구: 'MAAL'을 바탕으로 보안에 대한 걱정 없이 최상의 업무 효율성을 달성할 수 있도록 다양한 업종별 기업에게 '안전하고 커스터마이징이 용이한 On-premise LLM 구축' 서비스를 제공하고 있습니다.
@@ -470,13 +470,13 @@ MAAL : 오픈소스컨설팅의 On-premise LLM 솔루션
   - 구성: LLM 챗봇 + RAG 챗봇 제작 툴 Chatplay + 업무 효율화 툴 LLM Task UI
 - 하단 표시: 오픈소스컨설팅 OPEN SOURCE CONSULTING
 - 페이지 번호: 17
-- 표: 없음",True,tavily_search,MAAL 오픈소스컨설팅 LLM,True,tavily_search,MAAL On-premise LLM 솔루션,True,tavily_search,MAAL On-premise LLM 솔루션,,,
+- 표: 없음",True,tavily_search,MAAL 오픈소스컨설팅 LLM,True,tavily_search,MAAL On-premise LLM 솔루션,True,tavily_search,MAAL On-premise LLM 솔루션,True,tavily_search,오픈소스컨설팅 MAAL LLM,True,tavily_search,오픈소스컨설팅 MAAL LLM 솔루션,True,tavily_search,오픈소스컨설팅 MAAL LLM,True,tavily_search,오픈소스컨설팅 MAAL LLM,True,tavily_search,MAAL 오픈소스컨설팅 On-premise LLM,True,tavily_search,MAAL On-premise LLM 오픈소스컨설팅,True,tavily_search,MAAL 오픈소스컨설팅 On-premise LLM 솔루션
 6,제목 없음,"제목: 제목 없음
 
 - MAAL : 오픈소스컨설팅의 On-premise LLM 솔루션
 - 자체 챗봇 서비스 개발을 위한 Chatplay를 제공합니다. 파일을 첨부하는 방식으로 자신만의 LLM/RAG 챗봇을 제작 할 수 있습니다. 생성된 답변 로그를 통해 성능 테스트도 진행하며 프롬프트 엔지니어링 실험용 툴로도 활용 가능합니다.
 
-표: 없음",True,tavily_search,MAAL Chatplay 오픈소스컨설팅,True,tavily_search,MAAL On-premise LLM 솔루션,True,tavily_search,MAAL On-premise LLM 솔루션,,,
+표: 없음",True,tavily_search,MAAL Chatplay 오픈소스컨설팅,True,tavily_search,MAAL On-premise LLM 솔루션,True,tavily_search,MAAL On-premise LLM 솔루션,True,tavily_search,MAAL OpenSourceConsulting LLM,True,tavily_search,오픈소스컨설팅 MAAL Chatplay 기능,True,tavily_search,오픈소스컨설팅 MAAL LLM,True,tavily_search,오픈소스컨설팅 MAAL Chatplay,True,tavily_search,MAAL 오픈소스컨설팅 On-premise LLM,False,none,,True,tavily_search,오픈소스컨설팅 Chatplay MAAL 챗봇
 7,제목 없음,"제목 없음
 
 MAAL : 오픈소스컨설팅의 On-premise LLM 솔루션
@@ -508,14 +508,14 @@ Chatplay를 통한 RAG Chatbot 생성 과정
 - PDF 내의 내용을 찾아 답변을 생성하는 RAG 챗봇 생성
 
 오픈소스컨설팅 OPEN SOURCE CONSULTING
-19",True,tavily_search,MAAL 오픈소스컨설팅 LLM,True,tavily_search,MAAL On-premise LLM 솔루션,True,tavily_search,MAAL On-premise LLM 솔루션,,,
+19",True,tavily_search,MAAL 오픈소스컨설팅 LLM,True,tavily_search,MAAL On-premise LLM 솔루션,False,none,,True,tavily_search,MAAL Open Source Consulting LLM,True,tavily_search,오픈소스컨설팅 MAAL LLM Chatplay 기능,True,tavily_search,오픈소스컨설팅 MAAL LLM,True,tavily_search,오픈소스컨설팅 MAAL LLM,False,none,,False,none,,False,none,
 8,제목 없음,"제목: 제목 없음
 
 MAAL : 오픈소스컨설팅의 On-premise LLM 솔루션
 자체 챗봇 Task UI는 생성/요약/첨삭/번역/코드 등 31개 이상의 사내 업무를 자동화 할 수 있도록 사전 제작된 툴입니다.
 Task UI Builder를 통해 고객사에 맞는 커스터마이징이 가능하며 프론트, 백엔드 없이도 원하는 Task를 생성하여 관리할 수 있습니다.
 
-표: 없음",True,tavily_search,오픈소스컨설팅 MAAL LLM,True,tavily_search,MAAL On-premise LLM 솔루션,False,none,,,,
+표: 없음",True,tavily_search,오픈소스컨설팅 MAAL LLM,True,tavily_search,MAAL On-premise LLM 솔루션,True,tavily_search,MAAL On-premise LLM 솔루션,True,tavily_search,MAAL Open Source Consulting,True,tavily_search,오픈소스컨설팅 MAAL LLM 솔루션,True,tavily_search,오픈소스컨설팅 MAAL LLM,True,tavily_search,오픈소스컨설팅 MAAL LLM,False,none,,False,none,,True,tavily_search,오픈소스컨설팅 MAAL On-premise LLM Task UI
 9,"Agados UI, Flow Design & Visibility Technologies","Agados UI, Flow Design & Visibility Technologies
 Structure of this presentation
 
@@ -542,7 +542,7 @@ Application를 위한 Benefit
 - 선진 고도화된 SW PKG 제작 & 커스터마이징 라이프사이클 Governing
 
 9
-Ⓒ 2014 agados All rights reserved.",True,tavily_search,Agados UI Flow Designer,False,none,,False,none,,,,
+Ⓒ 2014 agados All rights reserved.",True,tavily_search,Agados UI Flow Designer,False,none,,False,none,,True,tavily_search,Agados UI software,True,tavily_search,Agados UI Flow Design Visibility,False,none,,False,none,,False,none,,True,tavily_search,Agados UI Flow Design Visibility Technologies,True,tavily_search,Agados UI Flow Design Visibility
 10,"업무처리 Application 를 위한 Agados의 Smart Architecture
 SW Package 아키텍처의 새로운 패러다임","업무처리 Application 를 위한 Agados의 Smart Architecture
 SW Package 아키텍처의 새로운 패러다임
@@ -569,7 +569,7 @@ Biz. Application을 위한 Smart Architecture
 Visual / Hybrid / Smart / Cloud
 
 10
-Ⓒ 2014 agados All rights reserved.",True,tavily_search,Agados Smart Architecture,True,tavily_search,Agados Smart Architecture,False,none,,,,
+Ⓒ 2014 agados All rights reserved.",True,tavily_search,Agados Smart Architecture,True,tavily_search,Agados Smart Architecture,False,none,,True,tavily_search,Agados software Korea,True,tavily_search,Agados Smart Architecture business application,True,tavily_search,Agados Smart Architecture,True,tavily_search,Agados Smart Architecture,False,none,,True,tavily_search,Agados Smart Architecture SW Package,True,tavily_search,Agados Smart Architecture business application
 11,업무처리 Application 를 위한 Agados의 Smart Architecture,"제목
 - 업무처리 Application 를 위한 Agados의 Smart Architecture
 
@@ -597,7 +597,7 @@ Visual / Hybrid / Smart / Cloud
 
 기타
 - 11
-- Ⓒ 2014 agados All rights reserved.",True,tavily_search,Agados Smart Architecture,False,none,,False,none,,,,
+- Ⓒ 2014 agados All rights reserved.",True,tavily_search,Agados Smart Architecture,False,none,,False,none,,True,tavily_search,Agados UI software,True,tavily_search,Agados Smart Architecture Hybrid Architecture,True,tavily_search,Agados Smart Architecture,True,tavily_search,Agados Smart Architecture,False,none,,False,none,,True,tavily_search,Agados Smart Architecture framework
 12,업무처리 Application 를 위한 Agados의 Smart Architecture,"업무처리 Application 를 위한 Agados의 Smart Architecture
 Application 에게 Hybrid Architecture 제공
 Agados Smart Client를 General JSP or ASP로 대체 (아키텍처 응용)
@@ -637,7 +637,7 @@ Application DB
 12
 Ⓒ 2014 agados All rights reserved.
 I/F
-I/F",True,tavily_search,Agados Smart Architecture,False,none,,False,none,,,,
+I/F",True,tavily_search,Agados Smart Architecture,True,tavily_search,Agados Smart Architecture,False,none,,True,tavily_search,Agados Smart Client,True,tavily_search,Agados Smart Architecture Hybrid Architecture features,True,tavily_search,Agados software architecture,True,tavily_search,Agados Smart Architecture,False,none,,True,tavily_search,Agados Smart Architecture Hybrid,True,tavily_search,Agados Smart Architecture application framework
 13,업무처리 Application 를 위한 Agados의 Smart Architecture,"- 제목: 업무처리 Application 를 위한 Agados의 Smart Architecture
 - 설명: 타 System 과의 인터페이스 , 외부 System 에서 Agados 기반 Application 기능 사용 ( Call Agados Engine )
 - 구성 요소: 외부 Module, Agados Engine
@@ -649,7 +649,7 @@ I/F",True,tavily_search,Agados Smart Architecture,False,none,,False,none,,,,
 - 파라미터: Input Parameters, Output Parameters
 - 사용 방식: 외부 JSP , ASP , Class , 기타 모듈 내부에서 Agados 기반 Application 의 Object를 호출해 사용
 - 슬라이드 번호: 13
-- 저작권: Ⓒ 2014 agados All rights reserved.",True,tavily_search,Agados Smart Architecture,True,tavily_search,Agados Smart Architecture,True,tavily_search,Agados Smart Architecture,,,
+- 저작권: Ⓒ 2014 agados All rights reserved.",True,tavily_search,Agados Smart Architecture,True,tavily_search,Agados Smart Architecture,True,tavily_search,Agados Smart Architecture,True,tavily_search,Agados UI software Korea,True,tavily_search,Agados Smart Architecture Engine,True,tavily_search,Agados application architecture,True,tavily_search,Agados engine SopRun CoMap,False,none,,True,tavily_search,Agados Engine Smart Architecture,True,tavily_search,Agados Smart Architecture application engine
 14,Agados based Biz. Application 이 갖게 될 Benefit,"제목
 - Agados based Biz. Application 이 갖게 될 Benefit
 
@@ -679,7 +679,7 @@ I/F",True,tavily_search,Agados Smart Architecture,False,none,,False,none,,,,
   - Agados 기반의 Application: ○
 
 이미지
-- 슬라이드 이미지 및 agados 로고 이미지 포함",True,tavily_search,Agados Biz Application,True,tavily_search,Agados based Biz. Application benefits,False,none,,,,
+- 슬라이드 이미지 및 agados 로고 이미지 포함",True,tavily_search,Agados Biz Application,True,tavily_search,Agados based Biz. Application benefits,False,none,,True,tavily_search,Agados UI software,True,tavily_search,Agados Biz Application platform features,True,tavily_search,Agados software platform,True,tavily_search,Agados SW 패키지 플랫폼,False,none,,False,none,,False,none,
 15,제목 없음,"제목: 제목 없음
 
 텍스트:
@@ -694,7 +694,7 @@ I/F",True,tavily_search,Agados Smart Architecture,False,none,,False,none,,,,
 -  | SW (Package) Data Model 확장성 ( Expansibility for Base on Adding) | (Provide Consulting, Applied Application DB Model)
 -  | DB Locking 방지 ( Prevent Mistakes of Customizer ) | ○ (Agados 내 DB Handling 시 Locking 방지)
 -  | 제품 개발 소스와 SQL Statements, Procedures 등의 문 장 정보들의 분리성 (소스 내에 있는 경우, 요구사항 변경 시 , 소스를 변경해야 함으로 Impact 커짐) | (SQL Statements, Procedures are managed Separately )
-- Customizing ( 다른 시스템과의 Interface) | 타 시스템 ( 어플리케이션 ) 과 SW PKG 간의 I/F 를 위한 방법 제공 | ○ ( I/F 방법 제공 )",True,tavily_search,Agados application framework,True,tavily_search,Agados based Biz. Application benefits,False,none,,,,
+- Customizing ( 다른 시스템과의 Interface) | 타 시스템 ( 어플리케이션 ) 과 SW PKG 간의 I/F 를 위한 방법 제공 | ○ ( I/F 방법 제공 )",True,tavily_search,Agados application framework,True,tavily_search,Agados based Biz. Application benefits,False,none,,True,tavily_search,Agados UI software,True,tavily_search,Agados software platform features,True,tavily_search,Agados Biz Application,True,tavily_search,Agados SW Package 아가도스,False,none,,False,none,,False,none,
 16,제목 없음,"제목 없음
 
 Agados based Biz. Application 이 갖게 될 Benefit
@@ -713,7 +713,7 @@ Technical Categories | Qualification Indicators | Agados Based Application
   - SERVER 상의 리소스 라이프타임 관리 (Database Resource , 등 ) | ○
 
 1
-Ⓒ 2014 agados All rights reserved.",True,tavily_search,Agados Smart Client Publishing,True,tavily_search,Agados based Biz. Application benefits,False,none,,,,
+Ⓒ 2014 agados All rights reserved.",True,tavily_search,Agados Smart Client Publishing,True,tavily_search,Agados based application benefits,False,none,,True,tavily_search,Agados UI software,True,tavily_search,Agados Biz Application platform features,True,tavily_search,Agados software platform,True,tavily_search,Agados software platform,False,none,,False,none,,True,tavily_search,Agados SW package smart client publishing
 17,Agados based Biz. Application 이 갖게 될 Benefit,"Agados based Biz. Application 이 갖게 될 Benefit
 
 Agados based Biz. Application 이 갖게 될 Benefit
@@ -739,7 +739,7 @@ Customizing/Changing Needs
 변경된 요구 사항
 추가된 요구 사항
 2
-Ⓒ 2014 agados All rights reserved.",True,tavily_search,Agados Biz Application,False,none,,False,none,,,,
+Ⓒ 2014 agados All rights reserved.",True,tavily_search,Agados Biz Application,False,none,,False,none,,True,tavily_search,Agados software platform,True,tavily_search,Agados software platform features benefits,True,tavily_search,Agados platform,True,tavily_search,Agados platform software,False,none,,False,none,,True,tavily_search,Agados business application platform
 18,제목 없음,"제목 없음
 
 Agados based Biz. Application 이 갖게 될 Benefit
@@ -770,7 +770,7 @@ Upgrade (버전 업)
 - 재작업 최소화
 
 3
-Ⓒ 2014 agados All rights reserved.",True,tavily_search,Agados Biz Application,False,none,,False,none,,,,
+Ⓒ 2014 agados All rights reserved.",True,tavily_search,Agados Biz Application,False,none,,False,none,,True,tavily_search,Agados UI Flow Design,True,tavily_search,Agados software platform features,True,tavily_search,Agados Biz Application,True,tavily_search,Agados Biz Application software,False,none,,False,none,,True,tavily_search,Agados Biz Application Smart Architecture
 19,Agados based Biz. Application 이 갖게 될 Benefit,"제목
 - Agados based Biz. Application 이 갖게 될 Benefit
 
@@ -821,7 +821,7 @@ PKG Customer
 - Sales/ Marketing
 - * Before/After 서비스 : 교육/훈련/Contents 제공 등
 - 4
-- Ⓒ 2014 agados All rights reserved.",True,tavily_search,Agados application platform,True,tavily_search,Agados,False,none,,,,
+- Ⓒ 2014 agados All rights reserved.",True,tavily_search,Agados application platform,False,none,,False,none,,False,none,,True,tavily_search,Agados platform business application features,True,tavily_search,Agados software platform,True,tavily_search,아가도스 Agados 플랫폼,False,none,,False,none,,False,none,
 20,제목 없음,"제목: 제목 없음
 
 - “Software-Defined Application”이 될 수 있다
@@ -834,7 +834,7 @@ PKG Customer
   - Configure (재조정)
   - Value Create (가치 창출)
 - 5
-- Ⓒ 2014 agados All rights reserved.",True,tavily_search,Agados application platform,False,none,,False,none,,,,
+- Ⓒ 2014 agados All rights reserved.",True,tavily_search,Agados application platform,False,none,,False,none,,True,tavily_search,Agados software configure tool,True,tavily_search,Agados Biz. Application platform,True,tavily_search,Agados Biz Application platform,True,tavily_search,Agados platform metadata,False,none,,True,tavily_search,Agados Software-Defined Application,True,tavily_search,Agados Software-Defined Application platform
 21,"Agados based Biz. Application 이 갖게 될 Benefit
 Technical(기술적) Benefit"," 
 Agados based Biz. Application 이 갖게 될 Benefit
@@ -860,7 +860,7 @@ Analyzability (분석성)
 Design viewer , Visibility , 영향도 분석 , 실행 패턴 분석 등을 통하여 분석성을 높인다.
 
 6
-Ⓒ 2014 agados All rights reserved.",True,tavily_search,Agados Biz Application,True,tavily_search,Agados,False,none,,,,
+Ⓒ 2014 agados All rights reserved.",True,tavily_search,Agados Biz Application,False,none,,False,none,,True,tavily_search,Agados software Korea,True,tavily_search,Agados software platform technical features,True,tavily_search,Agados software platform,True,tavily_search,Agados software platform,False,none,,False,none,,True,tavily_search,Agados business application platform benefits
 22,"Agados based Biz. Application 이 갖게 될 Benefit
 Business(사업적) Benefit","- Agados based Biz. Application 이 갖게 될 Benefit
 - Business(사업적) Benefit
@@ -881,7 +881,7 @@ Business(사업적) Benefit","- Agados based Biz. Application 이 갖게 될 Ben
 
 - 7
 
-- Ⓒ 2014 agados All rights reserved.",True,tavily_search,Agados business application,False,none,,False,none,,,,
+- Ⓒ 2014 agados All rights reserved.",True,tavily_search,Agados business application,True,tavily_search,Agados based Biz. Application benefits,False,none,,False,none,,True,tavily_search,Agados business application platform features,True,tavily_search,아가도스 소프트웨어 플랫폼,True,tavily_search,Agados software platform,False,none,,False,none,,False,none,
 23,제목 없음,"제목: 제목 없음
 
 Agados based Biz. Application 이 가 갖게 될 Benefit
@@ -905,7 +905,7 @@ Agados 기반 Application
 - 동시 업그래이드 가능
 
 8
-Ⓒ 2014 agados All rights reserved.",True,tavily_search,Agados Biz Application,False,none,,False,none,,,,
+Ⓒ 2014 agados All rights reserved.",True,tavily_search,Agados Biz Application,False,none,,False,none,,True,tavily_search,Agados software platform,True,tavily_search,Agados software platform features,True,tavily_search,Agados software platform,True,tavily_search,Agados platform application,False,none,,False,none,,False,none,
 24,Agados 기반 Application의 아키텍처 형상,"제목
 - Agados 기반 Application의 아키텍처 형상
 
@@ -944,7 +944,7 @@ Agados 기반 Application
 - Ⓒ 2014 agados All rights reserved.
 - Operating Environment
   Server : Windows Server, Unix, Linux for Java / .NET
-  DBMS : SQL Server, Oracle, MySQL, …",True,tavily_search,Agados application architecture,True,tavily_search,Agados Application architecture,False,none,,,,
+  DBMS : SQL Server, Oracle, MySQL, …",True,tavily_search,Agados application architecture,True,tavily_search,Agados Application architecture,False,none,,True,tavily_search,Agados Smart Client,True,tavily_search,Agados low-code platform architecture,True,tavily_search,Agados software architecture,True,tavily_search,Agados application architecture 아키텍처,False,none,,True,tavily_search,Agados application architecture,True,tavily_search,Agados application architecture configure tool
 25,Agados 기반 Application의 아키텍처 형상,"제목: Agados 기반 Application의 아키텍처 형상
 
 부분적인 Agados 적용 시의 Application 아키텍처 (Hybrid 아키텍처)
@@ -987,7 +987,7 @@ Reporting Tool
 Agados 기반 Application의 아키텍처 형상
 
 10
-Ⓒ 2014 agados All rights reserved.",True,tavily_search,Agados application framework,True,tavily_search,Agados architecture application,True,tavily_search,Agados Application Architecture,,,
+Ⓒ 2014 agados All rights reserved.",True,tavily_search,Agados application framework,False,none,,True,tavily_search,Agados Application Architecture,True,tavily_search,Agados Smart Client software,True,tavily_search,Agados software architecture,True,tavily_search,Agados software platform,True,tavily_search,Agados platform architecture,False,none,,True,tavily_search,Agados hybrid architecture application,True,tavily_search,Agados application architecture framework
 26,Pivotal HAWQ,"Pivotal HAWQ
 
 - 15년 이상 기업 시장에서 검증된 Greenplum 데이터베이스 엔진 사용
@@ -1001,7 +1001,7 @@ Agados 기반 Application의 아키텍처 형상
 - 보안 및 유저 권한 관리, 암호화 지원
 
 © 2015 Pivotal Software, Inc. All rights reserved.
-11",True,tavily_search,Pivotal HAWQ latest,True,tavily_search,Pivotal HAWQ,False,none,,,,
+11",True,tavily_search,Pivotal HAWQ latest,True,tavily_search,Pivotal HAWQ,False,none,,True,tavily_search,Pivotal HAWQ,True,tavily_search,Pivotal HAWQ features and current status,True,tavily_search,Pivotal HAWQ,True,tavily_search,Pivotal HAWQ,False,none,,True,tavily_search,Pivotal HAWQ features capabilities,True,tavily_search,Pivotal HAWQ Greenplum SQL on Hadoop
 27,"Pivotal Query Optimizer (PQO)
 For HAWQ and Greenplum Database","제목: Pivotal Query Optimizer (PQO) For HAWQ and Greenplum Database
 
@@ -1014,7 +1014,7 @@ For HAWQ and Greenplum Database","제목: Pivotal Query Optimizer (PQO) For HAWQ
 - 1.2B Possible Plans in 250ms for TPC-H Query 21
 - © 2015 Pivotal Software, Inc. All rights reserved. 18
 
-표: 없음",True,tavily_search,Pivotal Query Optimizer Greenplum,False,none,,True,tavily_search,Pivotal Query Optimizer Greenplum Database,,,
+표: 없음",True,tavily_search,Pivotal Query Optimizer Greenplum,False,none,,True,tavily_search,Pivotal Query Optimizer Greenplum Database,True,tavily_search,Pivotal Query Optimizer ORCA,True,tavily_search,Pivotal Query Optimizer PQO Greenplum HAWQ features,True,tavily_search,Pivotal Query Optimizer HAWQ Greenplum,True,tavily_search,Pivotal Query Optimizer Greenplum HAWQ,False,none,,True,tavily_search,Pivotal Query Optimizer PQO Greenplum HAWQ,True,tavily_search,Pivotal Query Optimizer PQO HAWQ Greenplum
 28,Pivotal HAWQ – Polymorphic AO Storage,"- 제목: Pivotal HAWQ – Polymorphic AO Storage
 - 설명: GPDB와 동일한 유연한 Row/column based table/partition 구성으로 성능 및 저장공간 최적화
 - 저장 방식 및 활용
@@ -1035,7 +1035,7 @@ For HAWQ and Greenplum Database","제목: Pivotal Query Optimizer (PQO) For HAWQ
   - Column-oriented for Full Scans
   - Row-oriented for Small Scans
 - 저작권: © 2015 Pivotal Software, Inc. All rights reserved.
-- 페이지: 13",True,tavily_search,Pivotal HAWQ storage,True,tavily_search,Pivotal HAWQ Polymorphic AO Storage,False,none,,,,
+- 페이지: 13",True,tavily_search,Pivotal HAWQ storage,True,tavily_search,Pivotal HAWQ Polymorphic AO Storage,False,none,,True,tavily_search,Pivotal HAWQ polymorphic AO storage,True,tavily_search,Pivotal HAWQ Polymorphic AO Storage features,True,tavily_search,Pivotal HAWQ Polymorphic AO Storage,True,tavily_search,Pivotal HAWQ Polymorphic AO Storage,False,none,,True,tavily_search,Pivotal HAWQ Polymorphic AO Storage,True,tavily_search,Pivotal HAWQ Polymorphic AO Storage
 29,Pivotal eXtension Framework (PXF),"Pivotal eXtension Framework (PXF)
 
 - Pivotal eXtension Framework (PXF)
@@ -1057,7 +1057,7 @@ For HAWQ and Greenplum Database","제목: Pivotal Query Optimizer (PQO) For HAWQ
 - HAWQ
 - HAWQ
 - © 2015 Pivotal Software, Inc. All rights reserved.
-- 14",True,tavily_search,Pivotal Extension Framework PXF,True,tavily_search,Pivotal eXtension Framework PXF,True,tavily_search,Pivotal eXtension Framework PXF,,,
+- 14",True,tavily_search,Pivotal Extension Framework PXF,True,tavily_search,Pivotal eXtension Framework PXF,False,none,,True,tavily_search,Pivotal eXtension Framework PXF,True,tavily_search,Pivotal eXtension Framework PXF features HAWQ,True,tavily_search,Pivotal eXtension Framework PXF,True,tavily_search,Pivotal eXtension Framework PXF,False,none,,True,tavily_search,Pivotal eXtension Framework PXF HAWQ,True,tavily_search,Pivotal eXtension Framework PXF HAWQ
 30,PXF Features,"제목: PXF Features
 
 - PXF Features
@@ -1073,7 +1073,7 @@ For HAWQ and Greenplum Database","제목: Pivotal Query Optimizer (PQO) For HAWQ
   3) 다양한 포맷과 저장소의 데이터에 대한 materialization없이 통합(federation) 쿼리 엔진 으로 사용
 - © 2015 Pivotal Software, Inc. All rights reserved.
 - 15
-- \uf09f",True,tavily_search,Apache HAWQ PXF features,True,tavily_search,PXF Features,False,none,,,,
+- \uf09f",True,tavily_search,Apache HAWQ PXF features,True,tavily_search,PXF Features,False,none,,True,tavily_search,Greenplum PXF features,True,tavily_search,PXF Pivotal Extension Framework features HAWQ Greenplum,True,tavily_search,PXF Pivotal eXtension Framework features,True,tavily_search,Pivotal Extension Framework PXF features,False,none,,True,tavily_search,HAWQ PXF features Pivotal,True,tavily_search,PXF HAWQ Pivotal Extension Framework features
 31,PXF External Table 예제,"- 제목: PXF External Table 예제
 - Simple HDFS Text
 - CREATE EXTERNAL TABLE jan_2012_sales (
@@ -1097,7 +1097,7 @@ profile=HBase
 LOCATION(‘pxf://<host:port>/sales? profile=HdfsTextSimple&COMPRESSION_CODEC=org.apache.hadoop.io.compress.GzipCodec') FORMAT ‘text’(delimiter ‘,’);
 - © 2015 Pivotal Software, Inc. All rights reserved.
 - 1
-- 표: 없음",True,tavily_search,Greenplum PXF external table,False,none,,False,none,,,,
+- 표: 없음",True,tavily_search,Greenplum PXF external table,False,none,,False,none,,True,tavily_search,Greenplum PXF external table,True,tavily_search,Pivotal Extension Framework PXF,True,tavily_search,PXF External Table,True,tavily_search,Greenplum PXF external table,False,none,,False,none,,False,none,
 32,MADlib Advantages,"제목: MADlib Advantages
 
 핵심 내용
@@ -1117,7 +1117,7 @@ LOCATION(‘pxf://<host:port>/sales? profile=HdfsTextSimple&COMPRESSION_CODEC=or
   - Powerful analytics for Big Data
 - HAWQ
 - © 2015 Pivotal Software, Inc. All rights reserved.
-- 2",True,tavily_search,Apache MADlib machine learning,True,tavily_search,MADlib advantages,False,none,,,,
+- 2",True,tavily_search,Apache MADlib machine learning,True,tavily_search,MADlib advantages,False,none,,True,tavily_search,Apache MADlib machine learning,True,tavily_search,Apache MADlib features and updates,True,tavily_search,Apache MADlib machine learning,True,tavily_search,Apache MADlib machine learning SQL,False,none,,True,tavily_search,MADlib big data machine learning SQL,True,tavily_search,Apache MADlib advantages features
 33,Functions,"Functions
 
 Predictive Modeling Library
@@ -1170,7 +1170,7 @@ Support Modules
 
 Oct 2014
 © 2015 Pivotal Software, Inc. All rights reserved.
-3",True,tavily_search,Pivotal MADlib functions,False,none,,False,none,,,,
+3",True,tavily_search,Pivotal MADlib functions,False,none,,False,none,,False,none,,True,tavily_search,Pivotal Predictive Modeling Library Apache MADlib functions,True,tavily_search,Pivotal Predictive Modeling Library,True,tavily_search,Pivotal Predictive Modeling Library MADlib,False,none,,False,none,,False,none,
 34,"Calling MADlib Functons: Fast Training, Scoring","Calling MADlib Functons: Fast Training, Scoring
 
 SELECT madlib.linregr_train( 'houses’,
@@ -1195,7 +1195,7 @@ Open---source lets you tweak and extend methods, or build your own
 
 HAWQ
 © 2015 Pivotal Software, Inc. All rights reserved.
-4",True,tavily_search,Apache MADlib database ML,True,tavily_search,MADlib functions training scoring,False,none,,,,
+4",True,tavily_search,Apache MADlib database ML,False,none,,False,none,,True,tavily_search,Apache MADlib linregr_train,True,tavily_search,Apache MADlib features and performance,True,tavily_search,Apache MADlib machine learning,True,tavily_search,Apache MADlib linregr_train,False,none,,False,none,,True,tavily_search,MADlib linregr_train function Pivotal HAWQ
 35,PivotalR: Bringing MADlib and HAWQ to a familiar R interface,"PivotalR: Bringing MADlib and HAWQ to a familiar R interface
 
 Challenge
@@ -1221,7 +1221,7 @@ https://github.com/pivotalsoftware/PivotalR
 
 © 2015 Pivotal Software, Inc. All rights reserved.
 
-5",True,tavily_search,PivotalR MADlib HAWQ,True,tavily_search,PivotalR,False,none,,,,
+5",True,tavily_search,PivotalR MADlib HAWQ,True,tavily_search,PivotalR MADlib HAWQ R interface,False,none,,True,tavily_search,PivotalR GitHub MADlib,True,tavily_search,PivotalR MADlib HAWQ R interface,True,tavily_search,PivotalR,True,tavily_search,PivotalR MADlib HAWQ R interface,True,tavily_search,PivotalR MADlib HAWQ R interface,True,tavily_search,PivotalR MADlib HAWQ R interface,True,tavily_search,PivotalR MADlib HAWQ R interface
 36,PivotalR Design Overview,"PivotalR Design Overview
 
 - PivotalR Design Overview
@@ -1238,7 +1238,7 @@ https://github.com/pivotalsoftware/PivotalR
 - Data doesn’t need to leave the database
   All heavy lifting, including model estimation & computation, are done in the database
 - © 2015 Pivotal Software, Inc. All rights reserved.
-- 6",True,tavily_search,PivotalR MADlib R,False,none,,False,none,,,,
+- 6",True,tavily_search,PivotalR MADlib R,False,none,,False,none,,True,tavily_search,PivotalR R package MADlib,True,tavily_search,PivotalR MADlib features overview,True,tavily_search,PivotalR,True,tavily_search,PivotalR MADlib overview,False,none,,True,tavily_search,PivotalR MADlib in-database machine learning R,True,tavily_search,PivotalR MADlib in-database machine learning R
 37,제목 없음,"제목 없음
 
 Statista's Data
@@ -1256,7 +1256,7 @@ Statista's Data
 16% 신뢰도 높은 오픈 소스 데이터
 - ✓ 국가별 공공기관 및 국제기구 발간 데이터
 
-statista",True,tavily_search,Statista data sources,False,none,,False,none,,,,
+statista",True,tavily_search,Statista data sources,True,tavily_search,Statista 데이터,False,none,,False,none,,True,tavily_search,Statista data sources and methodology,False,none,,False,none,,False,none,,False,none,,False,none,
 38,Statista’s Data,"Statista’s Data
 
 Statista’s Data
@@ -1281,7 +1281,7 @@ ALL PUBLICATION RIGHTS
 - 스태티스타 소속 리서치 전문가가 공신력 있는 기관에서 수집한 데이터를 바탕으로 통계 자료 및 연구 리포트를 제작해 발행합니다.
 - 약 22,500개의 오픈 소스를 비롯해 데이터 파트너십 기업에서 독점 제공하는 2차 출처에서 데이터까지 스태티스타 안에서 합리적인 구독료로 이용이 가능합니다.
 
-statista",True,tavily_search,Statista data subscription,True,tavily_search,Statista data benefits,False,none,,,,
+statista",True,tavily_search,Statista data subscription,True,tavily_search,Statista data benefits,False,none,,True,tavily_search,Statista subscription features pricing,True,tavily_search,Statista data platform features and benefits,True,tavily_search,Statista platform features,True,tavily_search,Statista 서비스 특징 혜택,False,none,,False,none,,True,tavily_search,Statista data subscription features benefits
 39,제목 없음,"- 제목: 제목 없음
 - Statista’s Data
 - 스태티스타를 통한 리서치 시간 절약
@@ -1295,7 +1295,7 @@ statista",True,tavily_search,Statista data subscription,True,tavily_search,Stati
 - with statista
   - 통계 검색 1.4 min.
   - 파워포인트 변환 1.6 min.
-  - 엑셀 변환 5 sec.",True,tavily_search,Statista data platform research,False,none,,False,none,,,,
+  - 엑셀 변환 5 sec.",True,tavily_search,Statista data platform research,False,none,,False,none,,True,tavily_search,Statista time savings,True,tavily_search,Statista service features and benefits,True,tavily_search,Statista research platform,True,tavily_search,Statista platform features benefits,False,none,,False,none,,True,tavily_search,Statista research time saving features
 40,제목 없음,"제목: 제목 없음
 
 메인 타이틀
@@ -1345,7 +1345,7 @@ statista",True,tavily_search,Statista data subscription,True,tavily_search,Stati
 - 파란색 톤의 그래픽 요소(원형/사각형 장식, 별 패턴 배경) 포함
 
 표
-- 없음",True,tavily_search,Statista data platform features,False,none,,False,none,,,,
+- 없음",True,tavily_search,Statista data platform features,False,none,,False,none,,True,tavily_search,Statista platform features,True,tavily_search,Statista data platform features and usage,True,tavily_search,Statista service features,True,tavily_search,Statista 데이터 활용 범위,False,none,,False,none,,True,tavily_search,Statista data platform features business use
 42,"비엣서베이는,","비엣서베이는,
 
 비엣서베이는,
@@ -1357,7 +1357,7 @@ statista",True,tavily_search,Statista data subscription,True,tavily_search,Stati
 진정성 있는 콘텐츠 — 설문에서 이미 제품을 경험하고 만족한 인플루언서가 제작하므로 광고가 아닌 진짜 후기처럼 느껴집니다베트남
 현지 최적화 — 베트남 소비자의 정서와 트렌드에 맞는 SNS 콘텐츠를 현지 감각으로 제작합니다조사 → 홍보 원스톱 — 시장조사부터 인플루언서 마케팅까지 하나의 플랫폼에서 연결됩니다
 
-12",True,tavily_search,비엣서베이 베트남 설문조사,False,none,,False,none,,,,
+12",True,tavily_search,비엣서베이 베트남 설문조사,False,none,,False,none,,True,tavily_search,비엣서베이,True,tavily_search,비엣서베이 베트남 인플루언서 마케팅 서비스,True,tavily_search,비엣서베이,True,tavily_search,비엣서베이 베트남 설문조사 마케팅,False,none,,False,none,,False,none,
 43,베트남 현지 판매도 가능합니다.,"- 제목: 베트남 현지 판매도 가능합니다.
 
 - 비엣서베이는, 베트남 현지 판매도 가능합니다.
@@ -1382,7 +1382,7 @@ statista",True,tavily_search,Statista data subscription,True,tavily_search,Stati
   위드소프트 베트남
 - STEP 3
   SNS 링크 판매
-- 캐치셀로 베트남 판매",True,tavily_search,CATCHSELL 베트남 SNS 판매,True,tavily_search,CATCHSELL 베트남 판매 플랫폼,True,tavily_search,CATCHSELL 베트남 SNS 링크 판매 플랫폼,,,
+- 캐치셀로 베트남 판매",True,tavily_search,CATCHSELL 베트남 SNS 판매,False,none,,False,none,,True,tavily_search,CATCHSELL Vietnam social commerce,True,tavily_search,비엣서베이 캐치셀 베트남 판매,True,tavily_search,위드소프트 캐치셀로 베트남,True,tavily_search,위드소프트 비엣서베이 캐치셀 베트남,False,none,,False,none,,False,none,
 44,제목 없음,"제목 없음
 
 하나의 동의창, 한 번의 클릭으로
@@ -1393,18 +1393,18 @@ statista",True,tavily_search,Statista data subscription,True,tavily_search,Stati
 기존의 소셜로그인과 달리 회원 가입에 필수적인 고객 정보를 제공할 뿐만 아니라, 여러분의 서비스 이용 약관과 플러스친구 추가 항목까지 하나의 동의창에 담았습니다.
 
 단 한 번의 클릭으로 고객은 내 서비스의 회원이 됩니다.
-6",True,tavily_search,카카오싱크 원클릭 간편가입,False,none,,True,tavily_search,카카오싱크 원클릭 간편가입,,,
+6",True,tavily_search,카카오싱크 원클릭 간편가입,False,none,,True,tavily_search,카카오싱크 원클릭 간편가입,True,tavily_search,카카오싱크 원클릭 간편가입,True,tavily_search,카카오싱크 원클릭 간편가입 주요 기능 및 도입 효과,True,tavily_search,카카오싱크 간편가입 특징,True,tavily_search,카카오싱크 원클릭 간편가입 기능,False,none,,False,none,,True,tavily_search,카카오싱크 원클릭 간편가입 기능
 45,"""오프라인 매장에 방문하는 고객들을 온라인 회원으로 만들고 싶🕔요.""","- 제목: ""오프라인 매장에 방문하는 고객들을 온라인 회원으로 만들고 싶🕔요.""
 - 카카오싱크 활용하기 #1
 - 내용: 고객들을 위한 혜택(멤버십 포인트 적립, 할인 쿠폰 등)을 마련하여 매장 곳곳에 QR코드를 설치해 보세요. QR코드 스캔을 통해 고객들은 손쉽게 여러분들의 멤버십 회원이 됩니다.
 - 표: 없음
-- 페이지: 13",True,tavily_search,카카오싱크 QR코드 멤버십,False,none,,False,none,,,,
+- 페이지: 13",True,tavily_search,카카오싱크 QR코드 멤버십,False,none,,False,none,,True,tavily_search,카카오싱크 QR코드 회원가입,True,tavily_search,카카오싱크 주요 기능 및 오프라인 활용 사례,True,tavily_search,카카오싱크 기능,True,tavily_search,카카오싱크 오프라인 QR 회원가입,False,none,,True,tavily_search,카카오싱크 QR코드 멤버십 회원가입,True,tavily_search,카카오싱크 멤버십 QR코드 활용
 46,카카오싱크 활용하기 #2,"- 제목: 카카오싱크 활용하기 #2
 - 인용: ""온라인 스토어 매출을 더 많이 늘리고 싶어요.""
 - 본문: 고객들은 카카오톡 내에서 여러분의 온라인 스토어에 방문해도 자동으로 로그인 상태가 유지됩니다. 고객들이 번거롭게 회원 정보를 입력할 필요가 없어 구매전환율을 높일 수 있어요.
 - 부제/반복 문구: 카카오싱크 활용하기 #2
 - 표: 없음
-- 페이지: 14",True,tavily_search,카카오싱크 자동 로그인 구매전환,False,none,,False,none,,,,
+- 페이지: 14",True,tavily_search,카카오싱크 자동 로그인 구매전환,False,none,,False,none,,True,tavily_search,카카오싱크 자동 로그인 쇼핑몰,True,tavily_search,카카오싱크 주요 기능 및 효과,True,tavily_search,카카오싱크 기능,True,tavily_search,카카오싱크 자동 로그인 기능 효과,False,none,,True,tavily_search,카카오싱크 온라인 스토어 구매전환율,True,tavily_search,카카오싱크 온라인 스토어 구매전환율
 47,카카오싱크 활용하기 #3,"제목: 카카오싱크 활용하기 #3
 
 “온/오프라인 프로모션에 고객들의 참여를 더 높이고 싶어요."" (온 / 오프라인)
@@ -1442,12 +1442,12 @@ statista",True,tavily_search,Statista data subscription,True,tavily_search,Stati
   - 버튼: 쇼핑하러가기
   - 안내: 쿠폰은 마이페이지에서 확인할 수 있으며, 다운로드 후 30일 동안 사용하실 수 있습니다.
 
-15",True,tavily_search,카카오싱크 간편가입 프로모션,False,none,,False,none,,,,
+15",True,tavily_search,카카오싱크 간편가입 프로모션,False,none,,False,none,,True,tavily_search,카카오싱크 간편가입 기능,True,tavily_search,카카오싱크 주요 기능 및 활용 사례,True,tavily_search,카카오싱크,True,tavily_search,카카오싱크 온오프라인 프로모션 활용,False,none,,True,tavily_search,카카오싱크 간편가입 프로모션,True,tavily_search,카카오싱크 간편가입 프로모션 활용
 48,카카오싱크  활용하기 #4,"- 제목: 카카오싱크  활용하기 #4
 - 인용문: ""고객들에게 APP 다운로드를 유도하고 싶어요.""
 - 본문: 앱 다운로드를 유도하고 싶은 그룹에게 타게팅 된 메시지를 보내 보세요. 정확한 데이터를 바탕으로 높은 앱 다운로드 전환율을 경험할 수 있습니다.
 - 페이지 번호: 16
-- 섹션 표기: 카카오싱크  활용하기 #4",True,tavily_search,카카오싱크 앱 다운로드 메시지,False,none,,False,none,,,,
+- 섹션 표기: 카카오싱크  활용하기 #4",True,tavily_search,카카오싱크 앱 다운로드 메시지,False,none,,False,none,,False,none,,True,tavily_search,카카오싱크 앱 다운로드 유도 기능 및 타겟 메시지,True,tavily_search,카카오싱크 타게팅 메시지,True,tavily_search,카카오싱크 앱 다운로드 유도 타게팅,False,none,,False,none,,True,tavily_search,카카오싱크 앱 다운로드 타게팅 메시지
 49,카카오싱크  활용하기 #5,"카카오싱크  활용하기 #5
 
 ""멤버십 회원에게 더 효과적인 마케팅 활동을 하고 싶어요.""
@@ -1455,7 +1455,7 @@ statista",True,tavily_search,Statista data subscription,True,tavily_search,Stati
 카카오싱크  활용하기 #5
 멤버십 회원 데이터를 바탕으로 기존보다 더욱 세분화된 고객별 맞춤 혜택을 제공해 보세요. 신규 등록, 구매, 적립, 등급별로 고객에게 딱 맞는 마케팅 활동이 가능해집니다.
 
-17",True,tavily_search,카카오싱크 멤버십 마케팅,False,none,,False,none,,,,
+17",True,tavily_search,카카오싱크 멤버십 마케팅,False,none,,False,none,,False,none,,True,tavily_search,카카오싱크 멤버십 마케팅 기능 및 활용 사례,True,tavily_search,카카오싱크 멤버십 마케팅,True,tavily_search,카카오싱크 멤버십 마케팅 활용,False,none,,False,none,,True,tavily_search,카카오싱크 멤버십 마케팅 활용
 50,카카오싱크  활용하기 #6,"제목: 카카오싱크  활용하기 #6
 
 인용문: ""플러스친구 메시지 클릭율을 더 높이고 싶어요.""
@@ -1508,7 +1508,7 @@ statista",True,tavily_search,Statista data subscription,True,tavily_search,Stati
 - 상품 구매(렌탈) 유도 메시지
 - 상품/고객관리 메시지
 
-페이지: 18",True,tavily_search,카카오싱크 타겟 메시지,True,tavily_search,카카오싱크,False,none,,,,
+페이지: 18",True,tavily_search,카카오싱크 타겟 메시지,True,tavily_search,카카오싱크,False,none,,True,tavily_search,카카오싱크 주요 기능,True,tavily_search,카카오싱크 타겟팅 메시지 기능 및 활용,True,tavily_search,카카오싱크 타겟 마케팅,True,tavily_search,카카오싱크 타겟 메시지 발송 회원 데이터,False,none,,False,none,,True,tavily_search,카카오싱크 타겟 메시지 플러스친구 활용
 1,차별성 1 – 독보적인 성능,"오픈소스컨설팅 LLM의 차별성
 
 차별성 1 – 독보적인 성능
@@ -1536,7 +1536,7 @@ LLM ‘MAAL’은 모델 별 한국어 문장 이해 능력 향상 평가(KoBEST
   (1642.321295874146, 1221.83604127356558)
   1642 -> 1221로 문서의 평균 perplexity가 감소함
 
-차별성 1 – 독보적인 성능",True,arxiv_tool,LogicKor Korean LLM benchmark GPT-4-turbo MAAL 70B,True,arxiv_tool,MAAL Korean language performance KoBEST,True,arxiv_tool,MAAL KoBEST LogicKor GPT-4o Gemini-1.0-pro,,,
+차별성 1 – 독보적인 성능",True,arxiv_tool,LogicKor Korean LLM benchmark GPT-4-turbo MAAL 70B,True,arxiv_tool,MAAL Korean language performance KoBEST,True,arxiv_tool,MAAL KoBEST LogicKor GPT-4o performance,True,arxiv_tool,KoBEST Korean language benchmark,True,arxiv_tool,MAAL LLM CoIT LogicKor,True,arxiv_tool,KoBEST,True,arxiv_tool,Multilingual Adaptive Augmentation Language-model MAAL,True,arxiv_tool,MAAL Multilingual Adaptive Augmentation Language model Korean,True,arxiv_tool,MAAL Korean LLM CoIT learning KoBEST LogicKor,True,arxiv_tool,LogicKor Korean LLM benchmark evaluation
 2,Generative AI: Your Mileage May Vary,"Generative AI: Your Mileage May Vary
 State of the Art (1/2)
 Generative AI: Your Mileage May Vary
@@ -1546,7 +1546,7 @@ Who Answers It Better? An In-Depth Analysis of ChatGPT and Stack Overflow Answer
 Kabir, Udo-Imeh, Kou, Zhang (Purdue) https://doi.org/10.48550/arXiv.2308.02312
 General Online Research Conference 2023 (GOR 23), 21.09.2023
 Copyright © 2023 by Inspirient GmbH. All rights reserved.
-7",True,arxiv_tool,Who Answers It Better? An In-Depth Analysis of ChatGPT and Stack Overflow Answers to Software Engineering Questions,True,arxiv_tool,Who Answers It Better? An In-Depth Analysis of ChatGPT and Stack Overflow Answers to Software Engineering Questions,True,arxiv_tool,Who Answers It Better? An In-Depth Analysis of ChatGPT and Stack Overflow Answers to Software Engineering Questions,,,
+7",True,arxiv_tool,Who Answers It Better? An In-Depth Analysis of ChatGPT and Stack Overflow Answers to Software Engineering Questions,True,arxiv_tool,Who Answers It Better? An In-Depth Analysis of ChatGPT and Stack Overflow Answers to Software Engineering Questions,True,arxiv_tool,Who Answers It Better? An In-Depth Analysis of ChatGPT and Stack Overflow Answers to Software Engineering Questions,True,arxiv_tool,Who Answers It Better? An In-Depth Analysis of ChatGPT and Stack Overflow Answers to Software Engineering Questions arXiv:2308.02312,True,arxiv_tool,2308.02312,True,arxiv_tool,Who Answers It Better? An In-Depth Analysis of ChatGPT and Stack Overflow Answers to Software Engineering Questions,True,arxiv_tool,2308.02312,False,none,,True,arxiv_tool,Who Answers It Better ChatGPT Stack Overflow Software Engineering Questions,True,arxiv_tool,Who Answers It Better ChatGPT Stack Overflow Software Engineering Questions Kabir
 3,"State of the Art (2/2)
 Generative AI: Know Your Use Case","- Title: State of the Art (2/2)
 - Subtitle: Generative AI: Know Your Use Case
@@ -1572,7 +1572,7 @@ Generative AI: Know Your Use Case","- Title: State of the Art (2/2)
   - 8
 
 - Legal:
-  - Copyright © 2023 by Inspirient GmbH. All rights reserved.",True,arxiv_tool,Navigating the Jagged Technological Frontier Field Experimental Evidence Effects of AI on Knowledge Worker Productivity and Quality GPT-4 BCG consultants creative product innovation business problem solving,False,none,,False,none,,,,
+  - Copyright © 2023 by Inspirient GmbH. All rights reserved.",True,arxiv_tool,Navigating the Jagged Technological Frontier Field Experimental Evidence Effects of AI on Knowledge Worker Productivity and Quality GPT-4 BCG consultants creative product innovation business problem solving,False,none,,False,none,,True,arxiv_tool,GPT-4 creativity problem solving performance,True,tavily_search,BCG GPT-4 performance creative product innovation vs business problem solving study,True,arxiv_tool,Human-Generative AI Collaboration Experiment,True,arxiv_tool,Navigating the Jagged Technological Frontier,False,none,,True,tavily_search,BCG Generative AI performance creative tasks business problem solving,False,none,
 4,제목 없음,"제목 없음
 
 - Knowledge Intelligence Lab. Hanbat National University
@@ -1608,7 +1608,7 @@ Generative AI: Know Your Use Case","- Title: State of the Art (2/2)
   - DPR: HITS@1 19.106, HITS@5 39.024, HITS@10 47.561, HITS@100 73.78, HITS@1000 87.195
   - ColBERT: HITS@1 25.203, HITS@5 43.089, HITS@10 52.642, HITS@100 79.268, HITS@1000 92.886
   - SCV: HITS@1 27.439, HITS@5 50.813, HITS@10 61.179, HITS@100 83.13, HITS@1000 92.48
-- SCV: Light and Effective Multi-Vector Retrieval with Sequence Compressive Vectors, kcc24’ 5",True,arxiv_tool,SCV: Light and Effective Multi-Vector Retrieval with Sequence Compressive Vectors,True,arxiv_tool,SCV: Light and Effective Multi-Vector Retrieval with Sequence Compressive Vectors,True,arxiv_tool,SCV: Light and Effective Multi-Vector Retrieval with Sequence Compressive Vectors,,,
+- SCV: Light and Effective Multi-Vector Retrieval with Sequence Compressive Vectors, kcc24’ 5",True,arxiv_tool,SCV: Light and Effective Multi-Vector Retrieval with Sequence Compressive Vectors,True,arxiv_tool,SCV: Light and Effective Multi-Vector Retrieval with Sequence Compressive Vectors,True,arxiv_tool,SCV: Light and Effective Multi-Vector Retrieval with Sequence Compressive Vectors,True,arxiv_tool,SCV: Light and Effective Multi-Vector Retrieval with Sequence Compressive Vectors,True,arxiv_tool,SCV: Light and Effective Multi-Vector Retrieval with Sequence Compressive Vectors,True,arxiv_tool,Sequence Compressive Vectors,True,arxiv_tool,Sequence Compressive Vectors,True,arxiv_tool,SCV Sequence Compressive Vectors retrieval,True,arxiv_tool,SCV Sequence Compressive Vectors Multi-Vector Retrieval,True,arxiv_tool,SCV Sequence Compressive Vectors multi-vector retrieval
 5,제목 없음,"Knowledge Intelligence Lab. Hanbat National University
 
 Benchmark Datasets
@@ -1633,7 +1633,7 @@ Retrievals
 - MS MARCO: A Human Generated MAchine Reading COmprehension Dataset, ICLR17’
 - A Heterogeneous Benchmark for Zero-shot Evaluation of Information Retrieval Models, NeurIPS21’
 
-6",True,arxiv_tool,A Heterogeneous Benchmark for Zero-shot Evaluation of Information Retrieval Models BEIR NeurIPS 2021,True,arxiv_tool,"MS MARCO: A Human Generated MAchine Reading COmprehension Dataset, ICLR17",True,arxiv_tool,MS MARCO A Human Generated MAchine Reading COmprehension Dataset ICLR17,,,
+6",True,arxiv_tool,A Heterogeneous Benchmark for Zero-shot Evaluation of Information Retrieval Models BEIR NeurIPS 2021,True,arxiv_tool,"MS MARCO: A Human Generated MAchine Reading COmprehension Dataset, ICLR17",True,arxiv_tool,MS MARCO A Human Generated MAchine Reading COmprehension Dataset ICLR17,True,arxiv_tool,A Heterogeneous Benchmark for Zero-shot Evaluation of Information Retrieval Models arXiv,True,arxiv_tool,BEIR: A Heterogeneous Benchmark for Zero-shot Evaluation of Information Retrieval Models,True,arxiv_tool,BEIR A Heterogeneous Benchmark for Zero-shot Evaluation of Information Retrieval Models,True,arxiv_tool,A Heterogeneous Benchmark for Zero-shot Evaluation of Information Retrieval Models,False,none,,True,arxiv_tool,MS MARCO Human Generated Machine Reading Comprehension Dataset,True,arxiv_tool,BEIR Heterogeneous Benchmark Zero-shot Information Retrieval
 6,제목 없음,"제목 없음
 
 Knowledge Intelligence Lab. Hanbat National University
@@ -1665,7 +1665,7 @@ Benchmark Datasets
 
 Mr. TyDi: A Multi-lingual Benchmark for Dense Retrieval, ACL21’ MTEB: Massive Text Embedding Benchmark, EACL23’ Multilingual Information Retrieval Across a Continuum of Languages, TACL23’
 
-7",True,arxiv_tool,MTEB: Massive Text Embedding Benchmark,True,arxiv_tool,"Mr. TyDI: A Multi-lingual Benchmark for Dense Retrieval, ACL21",True,arxiv_tool,"MTEB: Massive Text Embedding Benchmark, EACL23",,,
+7",True,arxiv_tool,MTEB: Massive Text Embedding Benchmark,True,arxiv_tool,"Mr. TyDI: A Multi-lingual Benchmark for Dense Retrieval, ACL21",True,arxiv_tool,"Mr. TyDI: A Multi-lingual Benchmark for Dense Retrieval, ACL21’",True,arxiv_tool,Massive Text Embedding Benchmark MTEB 2023,True,arxiv_tool,MTEB: Massive Text Embedding Benchmark,True,arxiv_tool,MTEB: Massive Text Embedding Benchmark,True,arxiv_tool,Massive Text Embedding Benchmark,False,none,,True,arxiv_tool,MTEB Massive Text Embedding Benchmark,True,arxiv_tool,MTEB Massive Text Embedding Benchmark
 7,제목 없음,"- 제목 없음
 - Knowledge Intelligence Lab. Hanbat National University
 - Retrievals
@@ -1680,7 +1680,7 @@ Mr. TyDi: A Multi-lingual Benchmark for Dense Retrieval, ACL21’ MTEB: Massive 
     - L(q_i, p_i^+, p_{i,1}^-, ···, p_{i,n}^-) = -log( e^{sim(q_i, p_i^+)} / ( e^{sim(q_i, p_i^+)} + Σ_{j=1}^{n} e^{sim(q_i, p_{i,j}^-)} ) )
 - Dot Product, Question Vector, Passage Vector, pooling, Question Encoder, Passage Encoder, [CLS] Speed of Light, [CLS] Theory of Relativity
 - Dense Passage Retrieval for Open-Domain Question Answering, EMNLP20’
-- 8",True,arxiv_tool,Dense Passage Retrieval for Open-Domain Question Answering,True,arxiv_tool,"Dense Passage Retrieval for Open-Domain Question Answering, EMNLP20",True,arxiv_tool,"Dense Passage Retrieval for Open-Domain Question Answering, EMNLP20",,,
+- 8",True,arxiv_tool,Dense Passage Retrieval for Open-Domain Question Answering,True,arxiv_tool,"Dense Passage Retrieval for Open-Domain Question Answering, EMNLP20",True,arxiv_tool,"Dense Passage Retrieval for Open-Domain Question Answering, EMNLP20",True,arxiv_tool,Dense Passage Retrieval for Open-Domain Question Answering,True,arxiv_tool,Dense Passage Retrieval for Open-Domain Question Answering,True,arxiv_tool,Dense Passage Retrieval for Open-Domain Question Answering,True,arxiv_tool,Dense Passage Retrieval for Open-Domain Question Answering,True,arxiv_tool,Dense Passage Retrieval DPR EMNLP,True,arxiv_tool,Dense Passage Retrieval for Open-Domain Question Answering,True,arxiv_tool,Dense Passage Retrieval for Open-Domain Question Answering
 8,제목 없음,"- Knowledge Intelligence Lab. Hanbat National University
 - Retrievals
 - Single Vector Retrieval
@@ -1709,7 +1709,7 @@ Mr. TyDi: A Multi-lingual Benchmark for Dense Retrieval, ACL21’ MTEB: Massive 
   - Query, document regularizations
   - L = Lrank-IBN + λq Lreg^q + λd Lreg^d
 - SPLADE: Sparse Lexical and Expansion Model for First Stage Ranking, SIGIR21’ SPLADE v2: Sparse Lexical and Expansion Model for Information Retrieval, Arxiv22’
-- 9",True,arxiv_tool,SPLADE Sparse Lexical and Expansion Model for First Stage Ranking SPLADE v2 Sparse Lexical and Expansion Model for Information Retrieval,True,arxiv_tool,SPLADE: Sparse Lexical AnD Expansion,True,arxiv_tool,"SPLADE: Sparse Lexical and Expansion Model for First Stage Ranking, SIGIR21’",,,
+- 9",True,arxiv_tool,SPLADE Sparse Lexical and Expansion Model for First Stage Ranking SPLADE v2 Sparse Lexical and Expansion Model for Information Retrieval,True,arxiv_tool,SPLADE: Sparse Lexical AnD Expansion,True,arxiv_tool,"SPLADE: Sparse Lexical and Expansion Model for First Stage Ranking, SIGIR21’",True,arxiv_tool,SPLADE Sparse Lexical and Expansion Model,True,arxiv_tool,SPLADE: Sparse Lexical and Expansion Model,True,arxiv_tool,SPLADE Sparse Lexical and Expansion Model,True,arxiv_tool,SPLADE Sparse Lexical and Expansion Model,True,arxiv_tool,SPLADE Sparse Lexical Expansion retrieval,True,arxiv_tool,SPLADE Sparse Lexical and Expansion Model First Stage Ranking,True,arxiv_tool,SPLADE Sparse Lexical and Expansion Model First Stage Ranking
 9,제목 없음,"제목 없음
 
 - Knowledge Intelligence Lab. Hanbat National University
@@ -1730,7 +1730,7 @@ Mr. TyDi: A Multi-lingual Benchmark for Dense Retrieval, ACL21’ MTEB: Massive 
 - 2nd-stage
 - Figure 1: Multi-stage multi-representation dense retrieval.
 - Figure 3: The general architecture of ColBERT given a query q and a document d.
-- 10",True,arxiv_tool,ColBERT Efficient and Effective Passage Search via Contextualized Late Interaction over BERT,True,arxiv_tool,ColBERT: Efficient and Effective Passage Search via Contextualized Late Interaction over BERT,True,arxiv_tool,"ColBERT: Efficient and Effective Passage Search via Contextualized Late Interaction over BERT, SIGIR20",,,
+- 10",True,arxiv_tool,ColBERT Efficient and Effective Passage Search via Contextualized Late Interaction over BERT,True,arxiv_tool,ColBERT: Efficient and Effective Passage Search via Contextualized Late Interaction over BERT,True,arxiv_tool,"ColBERT: Efficient and Effective Passage Search via Contextualized Late Interaction over BERT, SIGIR20",True,arxiv_tool,ColBERT Efficient and Effective Passage Search via Contextualized Late Interaction over BERT,True,arxiv_tool,ColBERT: Efficient and Effective Passage Search via Contextualized Late Interaction over BERT,True,arxiv_tool,ColBERT: Efficient and Effective Passage Search via Contextualized Late Interaction over BERT,True,arxiv_tool,ColBERT: Efficient and Effective Passage Search via Contextualized Late Interaction over BERT,True,arxiv_tool,ColBERT contextualized late interaction BERT,True,arxiv_tool,ColBERT Efficient Effective Passage Search Contextualized Late Interaction BERT,True,arxiv_tool,ColBERT Efficient Effective Passage Search Contextualized Late Interaction BERT
 10,제목 없음,"- 제목: 제목 없음
 - 소속/표기: Knowledge Intelligence Lab. Hanbat National University
 - 페이지 제목: Multi Vector Retrieval
@@ -1747,7 +1747,7 @@ Mr. TyDi: A Multi-lingual Benchmark for Dense Retrieval, ACL21’ MTEB: Massive 
 - Figure 1: Sequence Compressive Vectors architecture overview.
   - 구성 요소: Query Encoder, SCV Encoder, MaxSim, Sum
   - 표기: q1, q2, q3, …, qn / d1, d2, d3, d4, d5, …, d_{m-2}, d_{m-1}, d_m
-- 출처/표기: SCV: Light and Effective Multi-Vector Retrieval with Sequence Compressive Vectors, kcc24’ 11",True,arxiv_tool,SCV: Light and Effective Multi-Vector Retrieval with Sequence Compressive Vectors,True,arxiv_tool,Light and Effective Multi-Vector Retrieval with Sequence Compressive Vectors,True,arxiv_tool,"SCV: Light and Effective Multi-Vector Retrieval with Sequence Compressive Vectors, kcc24’ 11",,,
+- 출처/표기: SCV: Light and Effective Multi-Vector Retrieval with Sequence Compressive Vectors, kcc24’ 11",True,arxiv_tool,SCV: Light and Effective Multi-Vector Retrieval with Sequence Compressive Vectors,True,arxiv_tool,Sequence Compressive Vectors,True,arxiv_tool,"SCV: Light and Effective Multi-Vector Retrieval with Sequence Compressive Vectors, kcc24’ 11",True,arxiv_tool,SCV Sequence Compressive Vectors multi-vector retrieval,True,tavily_search,SCV: Light and Effective Multi-Vector Retrieval with Sequence Compressive Vectors kcc24,True,arxiv_tool,Sequence Compressive Vectors,True,tavily_search,SCV Light and Effective Multi-Vector Retrieval with Sequence Compressive Vectors,True,arxiv_tool,SCV Sequence Compressive Vectors Multi-Vector Retrieval,True,arxiv_tool,SCV Sequence Compressive Vectors multi-vector retrieval,True,arxiv_tool,SCV Sequence Compressive Vectors Multi-Vector Retrieval
 11,제목 없음,"제목 없음
 
 - Knowledge Intelligence Lab. Hanbat National University
@@ -1784,7 +1784,7 @@ Mr. TyDi: A Multi-lingual Benchmark for Dense Retrieval, ACL21’ MTEB: Massive 
 - x4 . 5
 - x1 . 3
 - SCV: Light and Effective Multi-Vector Retrieval with Sequence Compressive Vectors, kcc24’
-- 12",True,arxiv_tool,SCV Light and Effective Multi-Vector Retrieval with Sequence Compressive Vectors,True,arxiv_tool,Multi Vector Retrieval SCV Sequence Compressive Vectors,True,arxiv_tool,"SCV: Light and Effective Multi-Vector Retrieval with Sequence Compressive Vectors, kcc24’",,,
+- 12",True,arxiv_tool,SCV Light and Effective Multi-Vector Retrieval with Sequence Compressive Vectors,True,arxiv_tool,Multi Vector Retrieval SCV Sequence Compressive Vectors,True,arxiv_tool,"SCV: Light and Effective Multi-Vector Retrieval with Sequence Compressive Vectors, kcc24’",True,arxiv_tool,SCV: Light and Effective Multi-Vector Retrieval with Sequence Compressive Vectors,True,tavily_search,SCV: Light and Effective Multi-Vector Retrieval with Sequence Compressive Vectors KCC 2024,True,arxiv_tool,SCV: Light and Effective Multi-Vector Retrieval with Sequence Compressive Vectors,True,arxiv_tool,Sequence Compressive Vectors,True,arxiv_tool,SCV Sequence Compressive Vectors retrieval,True,arxiv_tool,SCV Sequence Compressive Vectors Multi-Vector Retrieval,True,arxiv_tool,SCV Sequence Compressive Vectors multi-vector retrieval
 12,제목 없음,"제목 없음
 
 - Knowledge Intelligence Lab. Hanbat National University
@@ -1825,7 +1825,7 @@ Mr. TyDi: A Multi-lingual Benchmark for Dense Retrieval, ACL21’ MTEB: Massive 
 - [CLS], Speed, of, Light; [CLS], Theory, of, Relativity
 - Einstein, Relativity
 - MaxSim, Sum
-- CITADEL: dynamic lexical routing",True,arxiv_tool,CITADEL Conditional Token Interaction via Dynamic Lexical Routing for Efficient and Effective Multi-Vector Retrieval ACL 2023,True,arxiv_tool,CITADEL: Conditional Token Interaction via Dynamic Lexical Routing for Efficient and Effective Multi-Vector Retrieval,True,arxiv_tool,"CITADEL: Conditional Token Interaction via Dynamic Lexical Routing for Efficient and Effective Multi-Vector Retrieval, ACL23",,,
+- CITADEL: dynamic lexical routing",True,arxiv_tool,CITADEL Conditional Token Interaction via Dynamic Lexical Routing for Efficient and Effective Multi-Vector Retrieval ACL 2023,True,arxiv_tool,CITADEL: Conditional Token Interaction via Dynamic Lexical Routing for Efficient and Effective Multi-Vector Retrieval,True,arxiv_tool,CITADEL: Conditional Token Interaction via Dynamic Lexical Routing for Efficient and Effective Multi-Vector Retrieval,True,arxiv_tool,CITADEL Conditional Token Interaction Dynamic Lexical Routing multi-vector retrieval,True,arxiv_tool,CITADEL: Conditional Token Interaction via Dynamic Lexical Routing for Efficient and Effective Multi-Vector Retrieval,True,arxiv_tool,CITADEL Conditional Token Interaction via Dynamic Lexical Routing,True,arxiv_tool,CITADEL Conditional Token Interaction,True,arxiv_tool,CITADEL Conditional Token Interaction Dynamic Lexical Routing,True,arxiv_tool,CITADEL Conditional Token Interaction Dynamic Lexical Routing Multi-Vector Retrieval,True,arxiv_tool,CITADEL Conditional Token Interaction Dynamic Lexical Routing Multi-Vector Retrieval
 13,제목 없음,"제목 없음
 
 Knowledge Intelligence Lab. Hanbat National University
@@ -1856,7 +1856,7 @@ f_k = (1/B) ∑_{i=1}^B ∑_{j=1}^T I{argmax(p_ij) = k}
 p_ij = softmax(W^T v_ij + b)
 
 CITADEL: Conditional Token Interaction via Dynamic Lexical Routing for Efficient and Effective Multi-Vector Retrieval, ACL23’
-14",True,arxiv_tool,CITADEL Conditional Token Interaction via Dynamic Lexical Routing for Efficient and Effective Multi-Vector Retrieval ACL 2023,True,arxiv_tool,CITADEL: Conditional Token Interaction via Dynamic Lexical Routing for Efficient and Effective Multi-Vector Retrieval,True,arxiv_tool,"CITADEL: Conditional Token Interaction via Dynamic Lexical Routing for Efficient and Effective Multi-Vector Retrieval, ACL23",,,
+14",True,arxiv_tool,CITADEL Conditional Token Interaction via Dynamic Lexical Routing for Efficient and Effective Multi-Vector Retrieval ACL 2023,True,arxiv_tool,CITADEL: Conditional Token Interaction via Dynamic Lexical Routing for Efficient and Effective Multi-Vector Retrieval,True,arxiv_tool,"CITADEL: Conditional Token Interaction via Dynamic Lexical Routing for Efficient and Effective Multi-Vector Retrieval, ACL23",True,arxiv_tool,CITADEL Conditional Token Interaction via Dynamic Lexical Routing multi-vector retrieval ACL 2023 arXiv,True,arxiv_tool,CITADEL: Conditional Token Interaction via Dynamic Lexical Routing,True,arxiv_tool,CITADEL: Conditional Token Interaction via Dynamic Lexical Routing,True,arxiv_tool,CITADEL: Conditional Token Interaction via Dynamic Lexical Routing for Efficient and Effective Multi-Vector Retrieval,True,arxiv_tool,CITADEL Conditional Token Interaction Dynamic Lexical Routing,True,arxiv_tool,CITADEL Conditional Token Interaction Dynamic Lexical Routing Multi-Vector Retrieval,True,arxiv_tool,CITADEL Conditional Token Interaction Dynamic Lexical Routing Multi-Vector Retrieval
 14,제목 없음,"제목 없음
 
 - Knowledge Intelligence Lab. Hanbat National University
@@ -1885,7 +1885,7 @@ Models with further pre-training/hard-negative mining/distillation
 Table 2: Out-of-domain evaluation on BEIR benchmark. nDCG@10 score is reported. Dataset Legend (Chen et al., 2022): TC=TREC-COVID, NF=NFCorpus, NQ=NaturalQuestions, HQ=HotpotQA, FQ=FiQA, AA=ArguAna, T2=Touché-2020 (v2), Qu=Quora, DB=DBPedia, SD=SCIDOCS, Fe=FEVER, CF=Climate-FEVER, SF=SciFact.
 
 CITADEL: Conditional Token Interaction via Dynamic Lexical Routing for Efficient and Effective Multi-Vector Retrieval, ACL23’
-15",True,arxiv_tool,CITADEL Conditional Token Interaction via Dynamic Lexical Routing for Efficient and Effective Multi-Vector Retrieval ACL 2023,True,arxiv_tool,"CITADEL: Conditional Token Interaction via Dynamic Lexical Routing for Efficient and Effective Multi-Vector Retrieval, ACL23",True,arxiv_tool,"Conditional Token Interaction via Dynamic Lexical Routing for Efficient and Effective Multi-Vector Retrieval, ACL23",,,
+15",True,arxiv_tool,CITADEL Conditional Token Interaction via Dynamic Lexical Routing for Efficient and Effective Multi-Vector Retrieval ACL 2023,True,arxiv_tool,CITADEL: Conditional Token Interaction via Dynamic Lexical Routing for Efficient and Effective Multi-Vector Retrieval,True,arxiv_tool,"Conditional Token Interaction via Dynamic Lexical Routing for Efficient and Effective Multi-Vector Retrieval, ACL23",True,arxiv_tool,CITADEL Conditional Token Interaction via Dynamic Lexical Routing for Efficient and Effective Multi-Vector Retrieval,True,arxiv_tool,CITADEL: Conditional Token Interaction via Dynamic Lexical Routing for Efficient and Effective Multi-Vector Retrieval,True,arxiv_tool,CITADEL Conditional Token Interaction via Dynamic Lexical Routing,True,arxiv_tool,Conditional Token Interaction via Dynamic Lexical Routing for Efficient and Effective Multi-Vector Retrieval,True,arxiv_tool,CITADEL Conditional Token Interaction Dynamic Lexical Routing Multi-Vector Retrieval,True,arxiv_tool,CITADEL Conditional Token Interaction Dynamic Lexical Routing Multi-Vector Retrieval,True,arxiv_tool,CITADEL Conditional Token Interaction Dynamic Lexical Routing Multi-Vector Retrieval
 15,제목 없음,"제목: 제목 없음
 
 소속: Knowledge Intelligence Lab. Hanbat National University
@@ -1933,7 +1933,7 @@ CITADEL: Conditional Token Interaction via Dynamic Lexical Routing for Efficient
 참고 문헌
 - Precise Zero-Shot Dense Retrieval without Relevance Labels, ACL23’
 
-페이지: 23",True,arxiv_tool,Precise Zero-Shot Dense Retrieval without Relevance Labels HyDE,True,arxiv_tool,"Precise Zero-Shot Dense Retrieval without Relevance Labels, ACL23",True,arxiv_tool,"Precise Zero-Shot Dense Retrieval without Relevance Labels, ACL23",,,
+페이지: 23",True,arxiv_tool,Precise Zero-Shot Dense Retrieval without Relevance Labels HyDE,True,arxiv_tool,HyDE: Hypothetical Document Embeddings,True,arxiv_tool,"Precise Zero-Shot Dense Retrieval without Relevance Labels, ACL23",True,arxiv_tool,Precise Zero-Shot Dense Retrieval without Relevance Labels HyDE,True,arxiv_tool,Precise Zero-Shot Dense Retrieval without Relevance Labels HyDE,True,arxiv_tool,Precise Zero-Shot Dense Retrieval without Relevance Labels,True,arxiv_tool,Precise Zero-Shot Dense Retrieval without Relevance Labels,True,arxiv_tool,HyDE Hypothetical Document Embeddings retrieval,True,arxiv_tool,HyDE Hypothetical Document Embeddings zero-shot dense retrieval,True,arxiv_tool,HyDE Hypothetical Document Embeddings Precise Zero-Shot Dense Retrieval
 16,제목 없음,"제목 없음
 
 Knowledge Intelligence Lab. Hanbat National University
@@ -1961,7 +1961,7 @@ Generative Retrieval
 
 2
 
-A Neural Corpus Indexer for Document Retrieval, NeurIPS22’",True,arxiv_tool,A Neural Corpus Indexer for Document Retrieval NeurIPS 2022,True,arxiv_tool,"A Neural Corpus Indexer for Document Retrieval, NeurIPS22'",True,arxiv_tool,"A Neural Corpus Indexer for Document Retrieval, NeurIPS22",,,
+A Neural Corpus Indexer for Document Retrieval, NeurIPS22’",True,arxiv_tool,A Neural Corpus Indexer for Document Retrieval NeurIPS 2022,True,arxiv_tool,"A Neural Corpus Indexer for Document Retrieval, NeurIPS22'",True,arxiv_tool,"A Neural Corpus Indexer for Document Retrieval, NeurIPS22",True,arxiv_tool,A Neural Corpus Indexer for Document Retrieval,True,arxiv_tool,A Neural Corpus Indexer for Document Retrieval,True,arxiv_tool,A Neural Corpus Indexer for Document Retrieval,True,arxiv_tool,A Neural Corpus Indexer for Document Retrieval,True,arxiv_tool,Neural Corpus Indexer Document Retrieval,True,arxiv_tool,Neural Corpus Indexer Document Retrieval,True,arxiv_tool,A Neural Corpus Indexer for Document Retrieval NeurIPS 2022
 17,제목 없음,"- 제목 없음
 
 - Knowledge Intelligence Lab. Hanbat National University
@@ -1992,7 +1992,7 @@ A Neural Corpus Indexer for Document Retrieval, NeurIPS22’",True,arxiv_tool,A 
     - Cross-Entropy Loss
     - Consistency-based Regularization Loss
 
-- Knowledge Intelligence Lab. Hanbat National University",True,arxiv_tool,A Neural Corpus Indexer for Document Retrieval,True,arxiv_tool,Neural Corpus Indexer for Document Retrieval NeurIPS22,True,arxiv_tool,"A Neural Corpus Indexer for Document Retrieval, NeurIPS22",,,
+- Knowledge Intelligence Lab. Hanbat National University",True,arxiv_tool,A Neural Corpus Indexer for Document Retrieval,True,arxiv_tool,Neural Corpus Indexer for Document Retrieval NeurIPS22,True,arxiv_tool,"A Neural Corpus Indexer for Document Retrieval, NeurIPS22",True,arxiv_tool,A Neural Corpus Indexer for Document Retrieval,True,arxiv_tool,A Neural Corpus Indexer for Document Retrieval,True,arxiv_tool,A Neural Corpus Indexer for Document Retrieval,True,arxiv_tool,A Neural Corpus Indexer for Document Retrieval,True,arxiv_tool,Neural Corpus Indexer Document Retrieval NeurIPS,True,arxiv_tool,Neural Corpus Indexer NCI Document Retrieval,True,arxiv_tool,Neural Corpus Indexer NCI document retrieval
 18,제목 없음,"제목: 제목 없음
 
 소속
@@ -2036,7 +2036,7 @@ A Neural Corpus Indexer for Document Retrieval, NeurIPS22’",True,arxiv_tool,A 
 - A Neural Corpus Indexer for Document Retrieval, NeurIPS22’
 
 페이지 표기
-- 4",True,arxiv_tool,A Neural Corpus Indexer for Document Retrieval NeurIPS 2022 Prefix-Aware Weight-Adaptive Decoder,True,arxiv_tool,Neural Corpus Indexer for Document Retrieval,True,arxiv_tool,"A Neural Corpus Indexer for Document Retrieval, NeurIPS22",,,
+- 4",True,arxiv_tool,A Neural Corpus Indexer for Document Retrieval NeurIPS 2022 Prefix-Aware Weight-Adaptive Decoder,True,arxiv_tool,Neural Corpus Indexer for Document Retrieval,True,arxiv_tool,"A Neural Corpus Indexer for Document Retrieval, NeurIPS22",True,arxiv_tool,A Neural Corpus Indexer for Document Retrieval,True,arxiv_tool,A Neural Corpus Indexer for Document Retrieval,True,arxiv_tool,A Neural Corpus Indexer for Document Retrieval,True,arxiv_tool,A Neural Corpus Indexer for Document Retrieval,False,none,,True,arxiv_tool,Neural Corpus Indexer NCI Document Retrieval,True,arxiv_tool,A Neural Corpus Indexer for Document Retrieval NCI PAWA
 19,제목 없음,"제목: 제목 없음
 
 텍스트:
@@ -2066,7 +2066,7 @@ Method — Recall@1 — Recall@10 — Recall@100 — MRR@100
 - BERT + BruteForce [15]: 28.65 — 53.42 — 73.16 — 36.60
 - BERT + ANN (Faiss) [28]: 27.92 — 53.63 — 73.01 — 37.08
 - BM25 + DocT5Query [40]: 35.43 — 61.83 — 76.92 — 44.47
-- BM25 [44]: 15.11 — 32.48 — 50.54 — 21.07",True,arxiv_tool,A Neural Corpus Indexer for Document Retrieval NeurIPS 2022 NQ320k Recall@1 65.86,True,arxiv_tool,Neural Corpus Indexer for Document Retrieval,True,arxiv_tool,"A Neural Corpus Indexer for Document Retrieval, NeurIPS22",,,
+- BM25 [44]: 15.11 — 32.48 — 50.54 — 21.07",True,arxiv_tool,A Neural Corpus Indexer for Document Retrieval NeurIPS 2022 NQ320k Recall@1 65.86,True,arxiv_tool,Neural Corpus Indexer for Document Retrieval,True,arxiv_tool,"A Neural Corpus Indexer for Document Retrieval, NeurIPS22",True,arxiv_tool,A Neural Corpus Indexer for Document Retrieval NeurIPS 2022 arXiv,True,arxiv_tool,A Neural Corpus Indexer for Document Retrieval,True,arxiv_tool,A Neural Corpus Indexer for Document Retrieval,True,arxiv_tool,A Neural Corpus Indexer for Document Retrieval,False,none,,True,arxiv_tool,Neural Corpus Indexer document retrieval NCI,True,arxiv_tool,A Neural Corpus Indexer for Document Retrieval
 20,제목 없음,"제목 없음
 
 Knowledge Intelligence Lab. Hanbat National University
@@ -2105,7 +2105,7 @@ Transfer from NLI data
 - cpt-text XL: 92.4, 93.9, 97.0, 91.8, 95.8, 96.4, 78.1, 92.2
 
 Text and Code Embeddings by Contrastive Pre-Training, arxiv22’
-6",True,arxiv_tool,Text and Code Embeddings by Contrastive Pre-Training CPT-text,True,arxiv_tool,Text and Code Embeddings by Contrastive Pre-Training,True,arxiv_tool,"Text and Code Embeddings by Contrastive Pre-Training, arxiv22",,,
+6",True,arxiv_tool,Text and Code Embeddings by Contrastive Pre-Training CPT-text,True,arxiv_tool,Text and Code Embeddings by Contrastive Pre-Training,True,arxiv_tool,"Text and Code Embeddings by Contrastive Pre-Training, arxiv22",True,arxiv_tool,Text and Code Embeddings by Contrastive Pre-Training,True,arxiv_tool,Text and Code Embeddings by Contrastive Pre-Training,True,arxiv_tool,Text and Code Embeddings by Contrastive Pre-Training,True,arxiv_tool,Text and Code Embeddings by Contrastive Pre-Training,True,arxiv_tool,CPT-text Contrastive Pre-Training embeddings,True,arxiv_tool,CPT-text Text and Code Embeddings Contrastive Pre-Training,True,arxiv_tool,Text and Code Embeddings by Contrastive Pre-Training cpt-text
 21,제목 없음,"제목: 제목 없음
 
 - Knowledge Intelligence Lab. Hanbat National University
@@ -2126,7 +2126,7 @@ Figure 1: Overview of our data curation pipeline and model architecture.
 - 파이프라인: 1.3B unfiltered → consistency-based filter → 270M CCPairs
 - 모델 구조: 두 개의 Encoder(share)와 average pool을 통해 Eq, Ep 생성, query: text 1 / passage: text 2, ⊗ 표시
 
-7",True,arxiv_tool,Text Embeddings by Weakly-Supervised Contrastive Pre-training E5,True,arxiv_tool,Text Embeddings by Weakly-Supervised Contrastive Pre-training E5,True,arxiv_tool,Text Embeddings by Weakly-Supervised Contrastive Pre-training (E5),,,
+7",True,arxiv_tool,Text Embeddings by Weakly-Supervised Contrastive Pre-training E5,True,arxiv_tool,Text Embeddings by Weakly-Supervised Contrastive Pre-training E5,True,arxiv_tool,Text Embeddings by Weakly-Supervised Contrastive Pre-training (E5),True,arxiv_tool,Text Embeddings by Weakly-Supervised Contrastive Pre-training E5 arXiv 2022,True,arxiv_tool,Text Embeddings by Weakly-Supervised Contrastive Pre-training E5,True,arxiv_tool,Text Embeddings by Weakly-Supervised Contrastive Pre-training,True,arxiv_tool,Text Embeddings by Weakly-Supervised Contrastive Pre-training,True,arxiv_tool,E5 Text Embeddings Weakly-Supervised Contrastive Pre-training,True,arxiv_tool,E5 Text Embeddings Weakly-Supervised Contrastive Pre-training,True,arxiv_tool,E5 Text Embeddings Weakly-Supervised Contrastive Pre-training
 22,제목 없음,"제목 없음
 
 Knowledge Intelligence Lab. Hanbat National University
@@ -2150,7 +2150,7 @@ Query와 document가 의미는 같지만 다른 형태를 가진 경우 생성
 학습: (Q_inst; d)로 contrastive learning
 
 Improving Text Embeddings with Large Language Models, arxiv24’
-8",True,arxiv_tool,Improving Text Embeddings with Large Language Models E5_mistral-7b,True,arxiv_tool,Improving Text Embeddings with Large Language Models,True,arxiv_tool,"Improving Text Embeddings with Large Language Models, arxiv24",,,
+8",True,arxiv_tool,Improving Text Embeddings with Large Language Models E5_mistral-7b,True,arxiv_tool,Improving Text Embeddings with Large Language Models,True,arxiv_tool,"Improving Text Embeddings with Large Language Models, arxiv24",True,arxiv_tool,Improving Text Embeddings with Large Language Models,True,arxiv_tool,Improving Text Embeddings with Large Language Models,True,arxiv_tool,Improving Text Embeddings with Large Language Models,True,arxiv_tool,Improving Text Embeddings with Large Language Models,True,arxiv_tool,Improving Text Embeddings with Large Language Models,True,arxiv_tool,Improving Text Embeddings with Large Language Models E5-mistral,True,arxiv_tool,Improving Text Embeddings with Large Language Models E5-mistral-7b
 23,제목 없음,"제목 없음
 
 - Knowledge Intelligence Lab. Hanbat National University
@@ -2198,7 +2198,7 @@ Improving Text Embeddings with Large Language Models, arxiv24’
     - Dense+Sparse: 68.9; 79.6; 80.7; 58.1; 57.5; 59.2; 79.7; 57.6; 62.8; 58.3; 73.9; 71.3; 69.8; 78.5; 87.2; 83.1; 62.5; 57.6; 61.8
     - All: 70.0; 80.2; 81.5; 59.8; 59.2; 60.3; 80.4; 60.7; 63.2; 59.1; 75.2; 72.2; 71.7; 79.6; 88.2; 83.8; 63.9; 59.8; 61.5
 - BGE M3-Embedding: Multi-Lingual, Multi-Functionality, Multi-Granularity Text Embeddings Through Self-Knowledge Distillation, arxiv24’
-- 9",True,arxiv_tool,BGE M3-Embedding Multi-Lingual Multi-Functionality Multi-Granularity Text Embeddings Through Self-Knowledge Distillation,True,arxiv_tool,"BGE M3-Embedding: Multi-Lingual, Multi-Functionality, Multi-Granularity Text Embeddings Through Self-Knowledge Distillation",True,arxiv_tool,"BGE M3-Embedding: Multi-Lingual, Multi-Functionality, Multi-Granularity Text Embeddings Through Self-Knowledge Distillation, arxiv24’",,,
+- 9",True,arxiv_tool,BGE M3-Embedding Multi-Lingual Multi-Functionality Multi-Granularity Text Embeddings Through Self-Knowledge Distillation,True,arxiv_tool,"BGE M3-Embedding: Multi-Lingual, Multi-Functionality, Multi-Granularity Text Embeddings Through Self-Knowledge Distillation",True,arxiv_tool,"BGE M3-Embedding: Multi-Lingual, Multi-Functionality, Multi-Granularity Text Embeddings Through Self-Knowledge Distillation, arxiv24’",True,arxiv_tool,BGE M3-Embedding Multi-Lingual Multi-Functionality Multi-Granularity Self-Knowledge Distillation arXiv 2024,True,arxiv_tool,"BGE M3-Embedding: Multi-Lingual, Multi-Functionality, Multi-Granularity Text Embeddings Through Self-Knowledge Distillation",True,arxiv_tool,"BGE M3-Embedding: Multi-Lingual, Multi-Functionality, Multi-Granularity Text Embeddings Through Self-Knowledge Distillation",True,arxiv_tool,"BGE M3-Embedding: Multi-Lingual, Multi-Functionality, Multi-Granularity Text Embeddings Through Self-Knowledge Distillation",True,arxiv_tool,M3-Embedding multilingual text embeddings,True,arxiv_tool,BGE M3-Embedding Multi-Lingual Multi-Functionality Multi-Granularity Self-Knowledge Distillation,True,arxiv_tool,BGE M3-Embedding Multi-Lingual Multi-Functionality Multi-Granularity Self-Knowledge Distillation
 24,제목 없음,"- 제목: 제목 없음
 - Knowledge Intelligence Lab. Hanbat National University
 - Retrievals – Embeddings and ranking
@@ -2228,7 +2228,7 @@ Improving Text Embeddings with Large Language Models, arxiv24’
   - BEIR: BM25 43.4, SOTA sup. 51.4, ChatGPT 49.4, GPT-4 53.7
   - Mr.TyDi: BM25 38.1, SOTA sup. 60.3, ChatGPT 56.0, GPT-4 62.9
   - Figure 1: Average results of ChatGPT and GPT-4 (zero-shot) on passage re-ranking benchmarks (TREC, BEIR, and Mr.TyDi), compared with BM25 and previous best-supervised systems (SOTA sup., e.g., monoT5 (Nogueira et al., 2020)).
-- 10",True,arxiv_tool,Is ChatGPT Good at Search? Investigating Large Language Models as Re-Ranking Agent EMNLP 2023,True,arxiv_tool,"Is ChatGPT Good at Search? Investigating Large Language Models as Re-Ranking Agent, EMNLP23",True,arxiv_tool,"Is ChatGPT Good at Search? Investigating Large Language Models as Re-Ranking Agent, EMNLP23",,,
+- 10",True,arxiv_tool,Is ChatGPT Good at Search? Investigating Large Language Models as Re-Ranking Agent EMNLP 2023,True,arxiv_tool,"Is ChatGPT Good at Search? Investigating Large Language Models as Re-Ranking Agent, EMNLP23",True,arxiv_tool,"Is ChatGPT Good at Search? Investigating Large Language Models as Re-Ranking Agent, EMNLP23",True,arxiv_tool,Is ChatGPT Good at Search? Investigating Large Language Models as Re-Ranking Agent,True,arxiv_tool,Is ChatGPT Good at Search? Investigating Large Language Models as Re-Ranking Agent,True,arxiv_tool,Is ChatGPT Good at Search? Investigating Large Language Models as Re-Ranking Agent,True,arxiv_tool,Is ChatGPT Good at Search? Investigating Large Language Models as Re-Ranking Agent,True,arxiv_tool,Is ChatGPT Good at Search Investigating Large Language Models Re-Ranking Agent EMNLP23,True,arxiv_tool,Is ChatGPT Good at Search Investigating Large Language Models as Re-Ranking Agent,True,arxiv_tool,Is ChatGPT Good at Search Investigating Large Language Models as Re-Ranking Agent
 25,제목 없음,"제목: 제목 없음
 
 상단 표기: Knowledge Intelligence Lab. Hanbat National University
@@ -2268,7 +2268,7 @@ Improving Text Embeddings with Large Language Models, arxiv24’
 
 출처: Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks, NeurIPS 20’
 
-슬라이드 번호: 11",True,arxiv_tool,Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks,True,arxiv_tool,Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks,True,arxiv_tool,"Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks, NeurIPS 20",,,
+슬라이드 번호: 11",True,arxiv_tool,Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks,True,arxiv_tool,Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks,True,arxiv_tool,"Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks, NeurIPS 20’",True,arxiv_tool,Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks,True,arxiv_tool,Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks,True,arxiv_tool,Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks,True,arxiv_tool,Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks,False,none,,True,arxiv_tool,Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks RAG,True,arxiv_tool,Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks
 26,제목 없음,"제목 없음
 
 Retrievals – Embeddings and ranking – RAG
@@ -2291,7 +2291,7 @@ Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks, NeurIPS 20’
 
 Knowledge Intelligence Lab. Hanbat National University
 
-12",True,arxiv_tool,Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks,True,arxiv_tool,"Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks, NeurIPS 20’",True,arxiv_tool,"Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks, NeurIPS 20’",,,
+12",True,arxiv_tool,Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks,True,arxiv_tool,"Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks, NeurIPS 20’",True,arxiv_tool,"Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks, NeurIPS 20’",True,arxiv_tool,Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks,True,arxiv_tool,Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks,True,arxiv_tool,Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks,True,arxiv_tool,Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks,False,none,,True,arxiv_tool,Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks,True,arxiv_tool,Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks
 27,제목 없음,"제목 없음
 
 - 상단 표기: Knowledge Intelligence Lab. Hanbat National University
@@ -2326,7 +2326,7 @@ Knowledge Intelligence Lab. Hanbat National University
   - Answer
 - 하단 캡션: Naïve RAG: LLM을 이용한 RAG 시스템
   - Retrieval-Augmented Generation for Large Language Models: A Survey, Arxiv23’
-- 슬라이드 번호: 13",True,arxiv_tool,Retrieval-Augmented Generation for Large Language Models: A Survey,True,arxiv_tool,"Retrieval-Augmented Generation for Large Language Models: A Survey, Arxiv23’",True,arxiv_tool,"Retrieval-Augmented Generation for Large Language Models: A Survey, Arxiv23",,,
+- 슬라이드 번호: 13",True,arxiv_tool,Retrieval-Augmented Generation for Large Language Models: A Survey,True,arxiv_tool,Retrieval-Augmented Generation for Large Language Models: A Survey,True,arxiv_tool,"Retrieval-Augmented Generation for Large Language Models: A Survey, Arxiv23",True,arxiv_tool,Retrieval-Augmented Generation for Large Language Models: A Survey,True,arxiv_tool,Retrieval-Augmented Generation for Large Language Models: A Survey,True,arxiv_tool,Retrieval-Augmented Generation for Large Language Models: A Survey,True,arxiv_tool,Retrieval-Augmented Generation for Large Language Models: A Survey,False,none,,True,arxiv_tool,Retrieval-Augmented Generation for Large Language Models: A Survey,True,arxiv_tool,Retrieval-Augmented Generation for Large Language Models: A Survey
 28,제목 없음,"- 제목 없음
 - Knowledge Intelligence Lab. Hanbat National University
 
@@ -2341,7 +2341,7 @@ Knowledge Intelligence Lab. Hanbat National University
     - 3-step: score ensemble -> LM perplexity를 증가시키는 문서에 scoring
 
 - REPLUG: Retrieval-Augmented Black-Box Language Models, NAACL24’
-- 14",True,arxiv_tool,REPLUG: Retrieval-Augmented Black-Box Language Models,True,arxiv_tool,"REPLUG: Retrieval-Augmented Black-Box Language Models, NAACL24",True,arxiv_tool,"REPLUG: Retrieval-Augmented Black-Box Language Models, NAACL24",,,
+- 14",True,arxiv_tool,REPLUG: Retrieval-Augmented Black-Box Language Models,True,arxiv_tool,"REPLUG: Retrieval-Augmented Black-Box Language Models, NAACL24",True,arxiv_tool,"REPLUG: Retrieval-Augmented Black-Box Language Models, NAACL24",True,arxiv_tool,REPLUG Retrieval-Augmented Black-Box Language Models,True,arxiv_tool,REPLUG: Retrieval-Augmented Black-Box Language Models,True,arxiv_tool,REPLUG Retrieval-Augmented Black-Box Language Models,True,arxiv_tool,REPLUG: Retrieval-Augmented Black-Box Language Models,True,arxiv_tool,REPLUG Retrieval-Augmented Black-Box Language Models,True,arxiv_tool,REPLUG Retrieval-Augmented Black-Box Language Models,True,arxiv_tool,REPLUG Retrieval-Augmented Black-Box Language Models
 29,제목 없음,"제목 없음
 
 Knowledge Intelligence Lab. Hanbat National University
@@ -2399,7 +2399,7 @@ Answer:
 
 SURE: SUMMARIZING RETRIEVALS USING ANSWER CANDIDATES FOR OPEN-DOMAIN QA OF LLMS, ICLR24’
 
-15",True,arxiv_tool,SURE Summarizing Retrievals using Answer Candidates for Open-Domain QA of LLMs ICLR 2024,True,arxiv_tool,"SUMMARIZING RETRIEVALS USING ANSWER CANDIDATES FOR OPEN-DOMAIN QA OF LLMS, ICLR24",True,arxiv_tool,"SURE: SUMMARIZING RETRIEVALS USING ANSWER CANDIDATES FOR OPEN-DOMAIN QA OF LLMS, ICLR24’",,,
+15",True,arxiv_tool,SURE Summarizing Retrievals using Answer Candidates for Open-Domain QA of LLMs ICLR 2024,True,arxiv_tool,"SUMMARIZING RETRIEVALS USING ANSWER CANDIDATES FOR OPEN-DOMAIN QA OF LLMS, ICLR24",True,arxiv_tool,"SURE: SUMMARIZING RETRIEVALS USING ANSWER CANDIDATES FOR OPEN-DOMAIN QA OF LLMS, ICLR24’",True,arxiv_tool,SuRE Summarizing Retrievals Using Answer Candidates Open-Domain QA,True,arxiv_tool,SURE: SUMMARIZING RETRIEVALS USING ANSWER CANDIDATES FOR OPEN-DOMAIN QA OF LLMS,True,arxiv_tool,Summarizing Retrievals using Answer Candidates for Open-domain QA of LLMs,True,arxiv_tool,SURE: SUMMARIZING RETRIEVALS USING ANSWER CANDIDATES FOR OPEN-DOMAIN QA OF LLMS,True,arxiv_tool,SuRE Summarizing Retrievals Answer Candidates Open-Domain QA,True,arxiv_tool,SuRE Summarizing Retrievals Using Answer Candidates Open-Domain QA,True,arxiv_tool,SuRE Summarizing Retrievals Answer Candidates Open-Domain QA LLMs
 30,제목 없음,"- 제목: 제목 없음
 - 상단 표기: Knowledge Intelligence Lab. Hanbat National University
 - 섹션: Retrievals – Embeddings and ranking – RAG
@@ -2414,7 +2414,7 @@ SURE: SUMMARIZING RETRIEVALS USING ANSWER CANDIDATES FOR OPEN-DOMAIN QA OF LLMS,
     - Gaussian Mixture Models
     - 100 token chunking
 - 참고: RAPTOR: Recursive Abstractive Processing for Tree-Organized Retrieval, ICLR24’
-- 페이지: 1",True,arxiv_tool,RAPTOR: Recursive Abstractive Processing for Tree-Organized Retrieval,True,arxiv_tool,"RAPTOR: Recursive Abstractive Processing for Tree-Organized Retrieval, ICLR24",True,arxiv_tool,"RAPTOR: Recursive Abstractive Processing for Tree-Organized Retrieval, ICLR24",,,
+- 페이지: 1",True,arxiv_tool,RAPTOR: Recursive Abstractive Processing for Tree-Organized Retrieval,True,arxiv_tool,"RAPTOR: Recursive Abstractive Processing for Tree-Organized Retrieval, ICLR24",True,arxiv_tool,"RAPTOR: Recursive Abstractive Processing for Tree-Organized Retrieval, ICLR24",True,arxiv_tool,RAPTOR Recursive Abstractive Processing for Tree-Organized Retrieval,True,arxiv_tool,RAPTOR: Recursive Abstractive Processing for Tree-Organized Retrieval,True,arxiv_tool,RAPTOR: Recursive Abstractive Processing for Tree-Organized Retrieval,True,arxiv_tool,RAPTOR: Recursive Abstractive Processing for Tree-Organized Retrieval,True,arxiv_tool,RAPTOR Recursive Abstractive Processing Tree-Organized Retrieval,True,arxiv_tool,RAPTOR Recursive Abstractive Processing Tree-Organized Retrieval,True,arxiv_tool,RAPTOR Recursive Abstractive Processing Tree-Organized Retrieval
 31,제목 없음,"제목 없음
 
 - 상단 표기: Knowledge Intelligence Lab. Hanbat National University
@@ -2439,7 +2439,7 @@ SURE: SUMMARIZING RETRIEVALS USING ANSWER CANDIDATES FOR OPEN-DOMAIN QA OF LLMS,
   - Rewrite / Rerank 와 같은 모듈
 - 모듈간 흐름 제어 (Adjusting the Flow between Modules)
 - 출처: Retrieval-Augmented Generation for Large Language Models: A Survey, Arxiv24’
-- 슬라이드 번호: 2",True,arxiv_tool,Retrieval-Augmented Generation for Large Language Models: A Survey,True,arxiv_tool,Retrieval-Augmented Generation for Large Language Models,True,arxiv_tool,"Retrieval-Augmented Generation for Large Language Models: A Survey, Arxiv24",,,
+- 슬라이드 번호: 2",True,arxiv_tool,Retrieval-Augmented Generation for Large Language Models: A Survey,True,arxiv_tool,Retrieval-Augmented Generation for Large Language Models,True,arxiv_tool,Retrieval-Augmented Generation for Large Language Models: A Survey,True,arxiv_tool,Retrieval-Augmented Generation for Large Language Models: A Survey,True,arxiv_tool,Retrieval-Augmented Generation for Large Language Models: A Survey,True,arxiv_tool,Retrieval-Augmented Generation for Large Language Models: A Survey,True,arxiv_tool,Retrieval-Augmented Generation for Large Language Models: A Survey,True,arxiv_tool,Retrieval-Augmented Generation Large Language Models Survey,True,arxiv_tool,Retrieval-Augmented Generation for Large Language Models: A Survey,True,arxiv_tool,Retrieval-Augmented Generation for Large Language Models: A Survey
 33,제목 없음,"제목 없음
 
 - Knowledge Intelligence Lab. Hanbat National University
@@ -2459,7 +2459,7 @@ SURE: SUMMARIZING RETRIEVALS USING ANSWER CANDIDATES FOR OPEN-DOMAIN QA OF LLMS,
     4. Retrieval이 필요하지 않는 경우
        1. 바로 LLM으로 응답 생성
 - SELF-RAG: LEARNING TO RETRIEVE, GENERATE, AND CRITIQUE THROUGH SELF-REFLECTION, ICLR24’
-- 4",True,arxiv_tool,"SELF-RAG: LEARNING TO RETRIEVE, GENERATE, AND CRITIQUE THROUGH SELF-REFLECTION ICLR 2024",True,arxiv_tool,"SELF-RAG: LEARNING TO RETRIEVE, GENERATE, AND CRITIQUE THROUGH SELF-REFLECTION, ICLR24",True,arxiv_tool,"SELF-RAG: LEARNING TO RETRIEVE, GENERATE, AND CRITIQUE THROUGH SELF-REFLECTION, ICLR24’",,,
+- 4",True,arxiv_tool,"SELF-RAG: LEARNING TO RETRIEVE, GENERATE, AND CRITIQUE THROUGH SELF-REFLECTION ICLR 2024",True,arxiv_tool,"SELF-RAG: LEARNING TO RETRIEVE, GENERATE, AND CRITIQUE THROUGH SELF-REFLECTION, ICLR24",True,arxiv_tool,"SELF-RAG: LEARNING TO RETRIEVE, GENERATE, AND CRITIQUE THROUGH SELF-REFLECTION, ICLR24",True,arxiv_tool,"SELF-RAG: Learning to Retrieve, Generate, and Critique through Self-Reflection",True,arxiv_tool,"SELF-RAG: LEARNING TO RETRIEVE, GENERATE, AND CRITIQUE THROUGH SELF-REFLECTION",True,arxiv_tool,"SELF-RAG: LEARNING TO RETRIEVE, GENERATE, AND CRITIQUE THROUGH SELF-REFLECTION",True,arxiv_tool,Self-RAG Learning to Retrieve Generate and Critique,True,arxiv_tool,Self-RAG Learning to Retrieve Generate Critique Self-Reflection,True,arxiv_tool,Self-RAG Learning to Retrieve Generate and Critique through Self-Reflection,True,arxiv_tool,"Self-RAG: Learning to Retrieve, Generate, and Critique through Self-Reflection"
 34,제목 없음,"제목: 제목 없음
 
 소속/로고: Knowledge Intelligence Lab. Hanbat National University
@@ -2510,7 +2510,7 @@ SURE: SUMMARIZING RETRIEVALS USING ANSWER CANDIDATES FOR OPEN-DOMAIN QA OF LLMS,
 참고
 - Adaptive-RAG: Learning to Adapt Retrieval-Augmented Large Language Models through Question Complexity, NAACL24’
 - Knowledge Intelligence Lab. Hanbat National University
-- 5",True,arxiv_tool,Adaptive-RAG: Learning to Adapt Retrieval-Augmented Large Language Models through Question Complexity,True,arxiv_tool,"Adaptive-RAG: Learning to Adapt Retrieval-Augmented Large Language Models through Question Complexity, NAACL24",True,arxiv_tool,"Adaptive-RAG: Learning to Adapt Retrieval-Augmented Large Language Models through Question Complexity, NAACL24",,,
+- 5",True,arxiv_tool,Adaptive-RAG: Learning to Adapt Retrieval-Augmented Large Language Models through Question Complexity,True,arxiv_tool,"Adaptive-RAG: Learning to Adapt Retrieval-Augmented Large Language Models through Question Complexity, NAACL24",True,arxiv_tool,"Adaptive-RAG: Learning to Adapt Retrieval-Augmented Large Language Models through Question Complexity, NAACL24",True,arxiv_tool,Adaptive-RAG Learning to Adapt Retrieval-Augmented Large Language Models through Question Complexity,True,arxiv_tool,Adaptive-RAG: Learning to Adapt Retrieval-Augmented Large Language Models through Question Complexity,True,arxiv_tool,Adaptive-RAG: Learning to Adapt Retrieval-Augmented Large Language Models through Question Complexity,True,arxiv_tool,Adaptive-RAG: Learning to Adapt Retrieval-Augmented Large Language Models through Question Complexity,True,arxiv_tool,Adaptive-RAG Learning to Adapt Retrieval-Augmented Large Language Models Question Complexity,True,arxiv_tool,Adaptive-RAG Learning to Adapt Retrieval-Augmented Large Language Models through Question Complexity,True,arxiv_tool,Adaptive-RAG Learning to Adapt Retrieval-Augmented Large Language Models through Question Complexity
 35,제목 없음,"제목 없음
 
 - Knowledge Intelligence Lab. Hanbat National University
@@ -2561,7 +2561,7 @@ Step n
   - Tn*: Craft diamond sword
 
 - RAT: Retrieval Augmented Thoughts Elicit Context-Aware Reasoning in Long-Horizon Generation, Arxiv24’
-- 6",True,arxiv_tool,RAT: Retrieval Augmented Thoughts Elicit Context-Aware Reasoning in Long-Horizon Generation,True,arxiv_tool,RAT: Retrieval Augmented Thoughts Elicit Context-Aware Reasoning in Long-Horizon Generation,True,arxiv_tool,Retrieval Augmented Thoughts Elicit Context-Aware Reasoning in Long-Horizon Generation,,,
+- 6",True,arxiv_tool,RAT: Retrieval Augmented Thoughts Elicit Context-Aware Reasoning in Long-Horizon Generation,True,arxiv_tool,RAT: Retrieval Augmented Thoughts Elicit Context-Aware Reasoning in Long-Horizon Generation,True,arxiv_tool,Retrieval Augmented Thoughts Elicit Context-Aware Reasoning in Long-Horizon Generation,True,arxiv_tool,Retrieval Augmented Thoughts Elicit Context-Aware Reasoning in Long-Horizon Generation arXiv 2024,True,arxiv_tool,RAT: Retrieval Augmented Thoughts Elicit Context-Aware Reasoning in Long-Horizon Generation,True,arxiv_tool,RAT: Retrieval Augmented Thoughts Elicit Context-Aware Reasoning in Long-Horizon Generation,True,arxiv_tool,Retrieval Augmented Thoughts Elicit Context-Aware Reasoning in Long-Horizon Generation,False,none,,True,arxiv_tool,RAT Retrieval Augmented Thoughts Elicit Context-Aware Reasoning Long-Horizon Generation,True,arxiv_tool,RAT Retrieval Augmented Thoughts Long-Horizon Generation
 36,제목 없음,"제목 없음
 
 Knowledge Intelligence Lab. Hanbat National University
@@ -2603,7 +2603,7 @@ Charts
 
 RAT: Retrieval Augmented Thoughts Elicit Context-Aware Reasoning in Long-Horizon Generation, Arxiv24’
 
-7",True,arxiv_tool,RAT: Retrieval Augmented Thoughts Elicit Context-Aware Reasoning in Long-Horizon Generation,True,arxiv_tool,Retrieval Augmented Thoughts Elicit Context-Aware Reasoning in Long-Horizon Generation,True,arxiv_tool,Retrieval Augmented Thoughts Elicit Context-Aware Reasoning in Long-Horizon Generation,,,
+7",True,arxiv_tool,RAT: Retrieval Augmented Thoughts Elicit Context-Aware Reasoning in Long-Horizon Generation,True,arxiv_tool,Retrieval Augmented Thoughts Elicit Context-Aware Reasoning in Long-Horizon Generation,True,arxiv_tool,Retrieval Augmented Thoughts Elicit Context-Aware Reasoning in Long-Horizon Generation,True,arxiv_tool,Retrieval Augmented Thoughts arXiv 2024,True,arxiv_tool,RAT: Retrieval Augmented Thoughts Elicit Context-Aware Reasoning in Long-Horizon Generation,True,arxiv_tool,RAT: Retrieval Augmented Thoughts Elicit Context-Aware Reasoning in Long-Horizon Generation,True,arxiv_tool,Retrieval Augmented Thoughts Elicit Context-Aware Reasoning in Long-Horizon Generation,False,none,,True,arxiv_tool,RAT Retrieval Augmented Thoughts Context-Aware Reasoning Long-Horizon Generation,True,arxiv_tool,RAT Retrieval Augmented Thoughts Context-Aware Reasoning Long-Horizon Generation
 37,제목 없음,"제목 없음
 
 - Knowledge Intelligence Lab. Hanbat National University
@@ -2623,7 +2623,7 @@ RAT: Retrieval Augmented Thoughts Elicit Context-Aware Reasoning in Long-Horizon
   - WikiData knowledge graph
   - Web image-text pairs and VQA data
 - REVEAL: Retrieval-Augmented Visual-Language Pre-Training with Multi-Source Multimodal Knowledge Memory, CVF23’
-- 8",True,arxiv_tool,REVEAL Retrieval-Augmented Visual-Language Pre-Training with Multi-Source Multimodal Knowledge Memory,True,arxiv_tool,"REVEAL: Retrieval-Augmented Visual-Language Pre-Training with Multi-Source Multimodal Knowledge Memory, CVF23",True,arxiv_tool,"REVEAL: Retrieval-Augmented Visual-Language Pre-Training with Multi-Source Multimodal Knowledge Memory, CVF23",,,
+- 8",True,arxiv_tool,REVEAL Retrieval-Augmented Visual-Language Pre-Training with Multi-Source Multimodal Knowledge Memory,True,arxiv_tool,"REVEAL: Retrieval-Augmented Visual-Language Pre-Training with Multi-Source Multimodal Knowledge Memory, CVF23",True,arxiv_tool,"REVEAL: Retrieval-Augmented Visual-Language Pre-Training with Multi-Source Multimodal Knowledge Memory, CVF23’",True,arxiv_tool,REVEAL Retrieval-Augmented Visual-Language Pre-Training with Multi-Source Multimodal Knowledge Memory 2023,True,arxiv_tool,REVEAL: Retrieval-Augmented Visual-Language Pre-Training with Multi-Source Multimodal Knowledge Memory,True,arxiv_tool,REVEAL: Retrieval-Augmented Visual-Language Pre-Training with Multi-Source Multimodal Knowledge Memory,True,arxiv_tool,REVEAL: Retrieval-Augmented Visual-Language Pre-Training with Multi-Source Multimodal Knowledge Memory,True,arxiv_tool,REVEAL Retrieval-Augmented Visual Language Model,True,arxiv_tool,REVEAL Retrieval-Augmented Visual-Language Pre-Training Multi-Source Multimodal Knowledge Memory,True,arxiv_tool,REVEAL Retrieval-Augmented Visual-Language Pre-Training Multi-Source Multimodal Knowledge Memory
 38,제목 없음,"- 제목: 제목 없음
 - 소속: Knowledge Intelligence Lab. Hanbat National University
 - 주제/섹션 표기:
@@ -2680,7 +2680,7 @@ RAT: Retrieval Augmented Thoughts Elicit Context-Aware Reasoning in Long-Horizon
   - vector-wise multiply
   - one d-dim embedding
   - sequence of scalar
-  - sequence of token embeddings",True,arxiv_tool,REVEAL: Retrieval-Augmented Visual-Language Pre-Training with Multi-Source Multimodal Knowledge Memory,True,arxiv_tool,"REVEAL: Retrieval-Augmented Visual-Language Pre-Training with Multi-Source Multimodal Knowledge Memory, CVF23",True,arxiv_tool,"REVEAL: Retrieval-Augmented Visual-Language Pre-Training with Multi-Source Multimodal Knowledge Memory, CVF23",,,
+  - sequence of token embeddings",True,arxiv_tool,REVEAL: Retrieval-Augmented Visual-Language Pre-Training with Multi-Source Multimodal Knowledge Memory,True,arxiv_tool,"REVEAL: Retrieval-Augmented Visual-Language Pre-Training with Multi-Source Multimodal Knowledge Memory, CVF23",True,arxiv_tool,"REVEAL: Retrieval-Augmented Visual-Language Pre-Training with Multi-Source Multimodal Knowledge Memory, CVF23",True,arxiv_tool,REVEAL Retrieval-Augmented Visual-Language Pre-Training with Multi-Source Multimodal Knowledge Memory,True,arxiv_tool,REVEAL: Retrieval-Augmented Visual-Language Pre-Training,True,arxiv_tool,REVEAL: Retrieval-Augmented Visual-Language Pre-Training with Multi-Source Multimodal Knowledge Memory,True,arxiv_tool,REVEAL: Retrieval-Augmented Visual-Language Pre-Training with Multi-Source Multimodal Knowledge Memory,True,arxiv_tool,REVEAL Retrieval-Augmented Visual Language Model,True,arxiv_tool,REVEAL Retrieval-Augmented Visual-Language Pre-Training Multi-Source Multimodal Knowledge Memory,True,arxiv_tool,REVEAL Retrieval-Augmented Visual-Language Pre-Training Multimodal Knowledge Memory
 39,제목 없음,"- 출처/라벨
   - Knowledge Intelligence Lab. Hanbat National University
   - Retrievals – Embeddings and ranking – RAG
@@ -2729,7 +2729,7 @@ RAT: Retrieval Augmented Thoughts Elicit Context-Aware Reasoning in Long-Horizon
     - TopK(M)
     - f_θ
     - 하단 모듈: Emb, ViT, Emb, ViT, Emb
-    - 하단 라벨: m_1^I, m_1^T, …, m_k^I, m_k^T",True,arxiv_tool,MuRAG: Multimodal Retrieval-Augmented Generator for Open Question Answering over Images and Text,True,arxiv_tool,"MuRAG: Multimodal Retrieval-Augmented Generator for Open Question Answering over Images and Text, EMNLP22",True,arxiv_tool,"MuRAG: Multimodal Retrieval-Augmented Generator for Open Question Answering over Images and Text, EMNLP22",,,
+    - 하단 라벨: m_1^I, m_1^T, …, m_k^I, m_k^T",True,arxiv_tool,MuRAG: Multimodal Retrieval-Augmented Generator for Open Question Answering over Images and Text,True,arxiv_tool,"MuRAG: Multimodal Retrieval-Augmented Generator for Open Question Answering over Images and Text, EMNLP22",True,arxiv_tool,"MuRAG: Multimodal Retrieval-Augmented Generator for Open Question Answering over Images and Text, EMNLP22",True,arxiv_tool,MuRAG Multimodal Retrieval-Augmented Generator EMNLP 2022,True,arxiv_tool,MuRAG: Multimodal Retrieval-Augmented Generator for Open Question Answering over Images and Text,True,arxiv_tool,MuRAG Multimodal Retrieval-Augmented Generator for Open Question Answering over Images and Text,True,arxiv_tool,MuRAG: Multimodal Retrieval-Augmented Generator for Open Question Answering over Images and Text,True,arxiv_tool,MuRAG Multimodal Retrieval-Augmented Generator,True,arxiv_tool,MuRAG Multimodal Retrieval-Augmented Generator Open Question Answering Images Text,True,arxiv_tool,MuRAG Multimodal Retrieval-Augmented Generator Open Question Answering Images Text
 40,Abstract,"제목: Abstract
 페이지: 2
 링크: https://arxiv.org/pdf/2009.07118.pdf
@@ -2748,7 +2748,7 @@ Abstract
 
 그림/도표
 - 축/범례 표기: SuperGLUE Performance(세로축), Parameters (Millions)(가로축), 범례 iPET / PET / GPT-3
-- Figure 1: Performance of ALBERT with PET/iPET and GPT-3 on SuperGLUE for 32 training examples. ALBERT with PET/iPET outperforms GPT-3 even though it has three orders of magnitude fewer parameters.",True,arxiv_tool,It’s Not Just Size That Matters: Small Language Models Are Also Few-Shot Learners,True,arxiv_tool,It’s Not Just Size That Matters: Small Language Models Are Also Few-Shot Learners,True,arxiv_tool,It’s Not Just Size That Matters: Small Language Models Are Also Few-Shot Learners,,,
+- Figure 1: Performance of ALBERT with PET/iPET and GPT-3 on SuperGLUE for 32 training examples. ALBERT with PET/iPET outperforms GPT-3 even though it has three orders of magnitude fewer parameters.",True,arxiv_tool,It’s Not Just Size That Matters: Small Language Models Are Also Few-Shot Learners,True,arxiv_tool,Small Language Models Few-Shot Learners,True,arxiv_tool,It’s Not Just Size That Matters: Small Language Models Are Also Few-Shot Learners,True,arxiv_tool,It’s Not Just Size That Matters: Small Language Models Are Also Few-Shot Learners,True,arxiv_tool,It’s Not Just Size That Matters: Small Language Models Are Also Few-Shot Learners,True,arxiv_tool,It’s Not Just Size That Matters: Small Language Models Are Also Few-Shot Learners,True,arxiv_tool,It's Not Just Size That Matters: Small Language Models Are Also Few-Shot Learners,False,none,,True,arxiv_tool,PET iPET small language models few-shot learners SuperGLUE,True,arxiv_tool,PET iPET small language models few-shot learners Schick Schütze SuperGLUE
 41,GPT-3: Larger model,"제목
 - GPT-3: Larger model
 
@@ -2772,7 +2772,7 @@ Figure caption
 - Figure 1.2: Larger models make increasingly efficient use of in-context information. We show in-context learning performance on a simple task requiring the model to remove random symbols from a word, both with and without a natural language task description (see Sec. 3.9.2). The steeper “in-context learning curves” for large models demonstrate improved ability to learn a task from contextual information. We see qualitatively similar behavior across a wide range of tasks.
 
 표
-- 없음",True,arxiv_tool,Language Models are Few-Shot Learners GPT-3 larger models make increasingly efficient use of in-context information Figure 1.2,True,arxiv_tool,GPT-3 in-context learning performance,True,arxiv_tool,GPT-3 in-context learning performance,,,
+- 없음",True,arxiv_tool,Language Models are Few-Shot Learners GPT-3 larger models make increasingly efficient use of in-context information Figure 1.2,True,arxiv_tool,GPT-3 in-context learning performance,True,arxiv_tool,GPT-3 in-context learning performance,True,arxiv_tool,Language Models are Few-Shot Learners,True,arxiv_tool,Language Models are Few-Shot Learners GPT-3,True,arxiv_tool,GPT-3 Language Models are Few-Shot Learners,True,arxiv_tool,Language Models are Few-Shot Learners,False,none,,False,none,,True,arxiv_tool,GPT-3 few-shot in-context learning language models
 42,GPT-3: Performance,"- 제목: GPT-3: Performance
 - 본문 텍스트: 
   - 'GPT-3: Performance'
@@ -2793,7 +2793,7 @@ Figure caption
     - y축: SuperGLUE Score
   - 범례: Few-shot GPT-3 175B(주황색)
   - 기준선(점선): Human, Fine-tuned SOTA, Fine-tuned BERT++, Fine-tuned BERT Large, Random Guessing
-  - 내용 요약: K가 0에서 1~4로 늘어날 때 급격히 상승하고, 이후 8→16→32로 증가하면서 완만히 추가 개선. 전체 구간에서 ‘Random Guessing’보다 높고, ‘Fine-tuned BERT Large’ 위, ‘Fine-tuned BERT++’ 부근에서 형성되며 ‘Fine-tuned SOTA’와 ‘Human’ 기준선 아래에 위치함.",True,arxiv_tool,Language Models are Few-Shot Learners GPT-3 SuperGLUE performance,True,arxiv_tool,GPT-3 performance SuperGLUE,True,arxiv_tool,GPT-3 SuperGLUE Performance,,,
+  - 내용 요약: K가 0에서 1~4로 늘어날 때 급격히 상승하고, 이후 8→16→32로 증가하면서 완만히 추가 개선. 전체 구간에서 ‘Random Guessing’보다 높고, ‘Fine-tuned BERT Large’ 위, ‘Fine-tuned BERT++’ 부근에서 형성되며 ‘Fine-tuned SOTA’와 ‘Human’ 기준선 아래에 위치함.",True,arxiv_tool,Language Models are Few-Shot Learners GPT-3 SuperGLUE performance,True,arxiv_tool,GPT-3 performance SuperGLUE,True,arxiv_tool,GPT-3 SuperGLUE Performance,True,arxiv_tool,Language Models are Few-Shot Learners SuperGLUE,True,arxiv_tool,Language Models are Few-Shot Learners GPT-3 SuperGLUE performance,True,arxiv_tool,GPT-3 SuperGLUE,True,arxiv_tool,Language Models are Few-Shot Learners GPT-3 SuperGLUE,True,arxiv_tool,GPT-3 performance SuperGLUE,True,arxiv_tool,GPT-3 few-shot learners SuperGLUE performance,True,arxiv_tool,GPT-3 SuperGLUE few-shot in-context learning performance
 43,PET: Without Knowledge Distillation,"제목
 - PET: Without Knowledge Distillation
 
@@ -2811,7 +2811,7 @@ Figure caption
 - PET (pcomb) - dist | 83.9 / 76.2 | 72.9 | 39.6 / 76.6 | 70.4
 
 캡션
-- Table 2: Results on selected tasks for various sets of PVPs for regular PET and for an ensemble of PET models with no knowledge distillation (“- dist”)",True,arxiv_tool,"""Table 2"" ""PET"" ""PVPs"" ""no knowledge distillation""",True,arxiv_tool,PET: Without Knowledge Distillation,True,arxiv_tool,PET Without Knowledge Distillation,,,
+- Table 2: Results on selected tasks for various sets of PVPs for regular PET and for an ensemble of PET models with no knowledge distillation (“- dist”)",True,arxiv_tool,"""Table 2"" ""PET"" ""PVPs"" ""no knowledge distillation""",True,arxiv_tool,PET without knowledge distillation,True,arxiv_tool,PET Without Knowledge Distillation,True,arxiv_tool,Exploiting Cloze Questions for Few-Shot Text Classification and Natural Language Inference PET Schick Schütze,True,arxiv_tool,PET Pattern-Exploiting Training without knowledge distillation,True,arxiv_tool,Pattern-Exploiting Training,True,arxiv_tool,"""Pattern-Exploiting Training"" ""knowledge distillation""",True,arxiv_tool,PET Pattern-Exploiting Training knowledge distillation,True,arxiv_tool,PET Pattern-Exploiting Training knowledge distillation PVP,True,arxiv_tool,PET Pattern Exploiting Training knowledge distillation few-shot
 44,iPET,"제목: iPET
 
 텍스트:
@@ -2820,7 +2820,7 @@ Figure caption
 - 15
 
 그림 설명:
-- Figure 2: Schematic representation of iPET (a) The initial training set is used to train an ensemble of models as in regular PET. (b) For each model, a random subset of two other models (λ = 2/3) is used to generate a new training set by labeling examples from D. (c) A new set of PET models is trained using the larger, model-specific datasets. (d) The previous two steps are repeated k times, each time increasing the size of the generated training sets by a factor of d. (e) The set of models at iteration k is used to create a soft-labeled dataset T_C as in regular PET; the final classifier C is trained on this dataset.",True,arxiv_tool,iPET iterative Pattern-Exploiting Training,True,arxiv_tool,iPET,True,arxiv_tool,iPET model training schematic representation,,,
+- Figure 2: Schematic representation of iPET (a) The initial training set is used to train an ensemble of models as in regular PET. (b) For each model, a random subset of two other models (λ = 2/3) is used to generate a new training set by labeling examples from D. (c) A new set of PET models is trained using the larger, model-specific datasets. (d) The previous two steps are repeated k times, each time increasing the size of the generated training sets by a factor of d. (e) The set of models at iteration k is used to create a soft-labeled dataset T_C as in regular PET; the final classifier C is trained on this dataset.",True,arxiv_tool,iPET iterative Pattern-Exploiting Training,True,arxiv_tool,iPET,True,arxiv_tool,iPET model training schematic,True,arxiv_tool,iPET Pattern-Exploiting Training,True,arxiv_tool,iPET Iterative Pattern-Exploiting Training,True,arxiv_tool,iPET Pattern-Exploiting Training,True,arxiv_tool,Iterative Pattern-Exploiting Training iPET,True,arxiv_tool,iPET Iterative Pattern-Exploiting Training,True,arxiv_tool,iPET iterative PET pattern exploiting training,True,arxiv_tool,iPET Pattern Exploiting Training few-shot text classification
 45,PET vs. GPT-3,"제목: PET vs. GPT-3
 
 텍스트:
@@ -2847,7 +2847,7 @@ Figure caption
   - SotA: 11,000 | 91.2 | 93.9 / 96.8 | 94.8 | 92.5 | 76.9 | 93.8 | 88.1 / 63.3 | 94.1 / 93.4 | 89.3
 
 표 캡션(이미지 내 문구):
-- Table 1: Results on SuperGLUE for GPT-3 primed with 32 randomly selected examples and for PET / iPET with ALBERT-xxlarge-v2 after training on FewGLUE. State-of-the-art results when using the regular, full size training sets for all tasks (Raffel et al., 2019) are shown in italics.",True,arxiv_tool,"""PET"" ""GPT-3"" ""SuperGLUE"" ""FewGLUE"" ""ALBERT-xxlarge-v2""",True,arxiv_tool,PET vs GPT-3 performance comparison,True,arxiv_tool,PET vs. GPT-3 SuperGLUE performance,,,
+- Table 1: Results on SuperGLUE for GPT-3 primed with 32 randomly selected examples and for PET / iPET with ALBERT-xxlarge-v2 after training on FewGLUE. State-of-the-art results when using the regular, full size training sets for all tasks (Raffel et al., 2019) are shown in italics.",True,arxiv_tool,"""PET"" ""GPT-3"" ""SuperGLUE"" ""FewGLUE"" ""ALBERT-xxlarge-v2""",True,arxiv_tool,PET vs. GPT-3 performance comparison,True,arxiv_tool,PET vs. GPT-3 SuperGLUE performance,True,arxiv_tool,Pattern-Exploiting Training PET iPET FewGLUE,True,arxiv_tool,Pattern-Exploiting Training PET iPET GPT-3 SuperGLUE,True,arxiv_tool,PET iPET FewGLUE,True,arxiv_tool,It's Not Just Size That Matters: Small Language Models Are Also Few-Shot Learners,True,arxiv_tool,PET Pattern-Exploiting Training SuperGLUE,True,arxiv_tool,PET iPET pattern exploiting training SuperGLUE few-shot,True,arxiv_tool,PET iPET Pattern Exploiting Training SuperGLUE FewGLUE GPT-3 comparison
 47,제목 없음,"제목: 제목 없음
 
 본문:
@@ -2871,7 +2871,7 @@ Figure caption
     - Q: The cafeteria had 23 apples. If they used 20 to make lunch and bought 6 more, how many apples do they have?
   - Model Output
     - A: The cafeteria had 23 apples originally. They used 20 to make lunch. So they had 23 - 20 = 3. They bought 6 more apples, so they have 3 + 6 = 9. The answer is 9.
-- Figure 1: Chain-of-thought prompting enables large language models to tackle complex arithmetic, commonsense, and symbolic reasoning tasks. Chain-of-thought reasoning processes are highlighted.",True,arxiv_tool,Chain-of-Thought Prompting Elicits Reasoning in Large Language Models,True,arxiv_tool,Few-shot In-context Learning LLM chain-of-thought reasoning,False,none,,,,
+- Figure 1: Chain-of-thought prompting enables large language models to tackle complex arithmetic, commonsense, and symbolic reasoning tasks. Chain-of-thought reasoning processes are highlighted.",True,arxiv_tool,Chain-of-Thought Prompting Elicits Reasoning in Large Language Models,True,arxiv_tool,Few-shot In-context Learning,False,none,,False,none,,True,arxiv_tool,Chain-of-Thought Prompting Elicits Reasoning in Large Language Models,True,arxiv_tool,Chain-of-Thought Prompting,True,arxiv_tool,Chain-of-Thought Prompting Elicits Reasoning in Large Language Models,False,none,,True,arxiv_tool,Chain-of-Thought Prompting large language models reasoning,True,arxiv_tool,Chain-of-Thought Prompting Elicits Reasoning in Large Language Models
 48,제목 없음,"제목 없음
 
 Context Window Size
@@ -2883,7 +2883,7 @@ Input Size
 
 ChatGPT Prompt Learning Research LAB Leader TAE YOUNG LEE
 
-표: 없음",True,arxiv_tool,LongNet transformer 1 billion tokens dilated attention,True,arxiv_tool,LongNet transformer model context window size,False,none,,,,
+표: 없음",True,arxiv_tool,LongNet transformer 1 billion tokens dilated attention,True,arxiv_tool,LongNet transformer model context window size,False,none,,True,arxiv_tool,"LongNet Scaling Transformers to 1,000,000,000 Tokens",True,arxiv_tool,"LongNet Scaling Transformers to 1,000,000,000 Tokens",True,arxiv_tool,LongNet,True,arxiv_tool,LongNet Scaling Transformers,False,none,,False,none,,True,arxiv_tool,LongNet scaling transformers to 1 billion tokens
 49,InstructGPT,"제목: InstructGPT
 
 - 출현 배경
@@ -2904,7 +2904,7 @@ Prompt 유형
 - Dataset RealToxicity: GPT 0.233, Supervised Fine-Tuning 0.199, InstructGPT 0.196
 - Dataset TruthfulQA: GPT 0.224, Supervised Fine-Tuning 0.206, InstructGPT 0.413
 - API Dataset Hallucinations: GPT 0.414, Supervised Fine-Tuning 0.078, InstructGPT 0.172
-- API Dataset Customer Assistant Appropriate: GPT 0.811, Supervised Fine-Tuning 0.880, InstructGPT 0.902",True,arxiv_tool,InstructGPT Training language models to follow instructions with human feedback Likert RealToxicity TruthfulQA hallucinations,True,arxiv_tool,InstructGPT performance evaluation,True,arxiv_tool,InstructGPT performance metrics,,,
+- API Dataset Customer Assistant Appropriate: GPT 0.811, Supervised Fine-Tuning 0.880, InstructGPT 0.902",True,arxiv_tool,InstructGPT Training language models to follow instructions with human feedback Likert RealToxicity TruthfulQA hallucinations,True,arxiv_tool,InstructGPT performance evaluation,True,arxiv_tool,InstructGPT performance metrics,True,arxiv_tool,Training language models to follow instructions with human feedback InstructGPT arXiv,True,arxiv_tool,Training language models to follow instructions with human feedback InstructGPT,True,arxiv_tool,InstructGPT,True,arxiv_tool,Training language models to follow instructions with human feedback InstructGPT,True,arxiv_tool,InstructGPT,True,arxiv_tool,InstructGPT training language models to follow instructions human feedback,True,arxiv_tool,InstructGPT training language models to follow instructions with human feedback
 50,제목 없음,"제목 없음
 
 Instruction Tuning
@@ -2930,7 +2930,7 @@ Performance on unseen task types
 
 ChatGPT Prompt Learning Research LAB Leader TAE YOUNG LEE
 
-[표] 없음",True,arxiv_tool,Finetuned language models are zero-shot learners Wei Jason FLAN arXiv 2109.01652,True,arxiv_tool,Finetuned language models are zero-shot learners,True,arxiv_tool,Finetuned language models are zero-shot learners,,,
+[표] 없음",True,arxiv_tool,Finetuned language models are zero-shot learners Wei Jason FLAN arXiv 2109.01652,True,arxiv_tool,Finetuned language models are zero-shot learners,True,arxiv_tool,Finetuned language models are zero-shot learners,True,arxiv_tool,Finetuned language models are zero-shot learners,True,arxiv_tool,Finetuned language models are zero-shot learners,True,arxiv_tool,Finetuned language models are zero-shot learners,True,arxiv_tool,Finetuned language models are zero-shot learners,True,arxiv_tool,Instruction Tuning Finetuned Language Models Zero-Shot Learners,True,arxiv_tool,Finetuned language models zero-shot learners instruction tuning FLAN,True,arxiv_tool,Finetuned language models are zero-shot learners FLAN instruction tuning
 51,제목 없음,"제목: 제목 없음
 
 텍스트
@@ -2959,4 +2959,4 @@ ChatGPT Prompt Learning Research LAB Leader TAE YOUNG LEE
   - 파란 선: big base model
   - 빨간 선: small base model
 - 이미지 상단 표기: 출처 : https://twitter.com/karpathy/status/1655994367033884672
-- 이미지 하단 표기: ChatGPT Prompt Learning Research LAB Leader TAE YOUNG LEE",True,arxiv_tool,large language models base model prompt engineering fine-tuning RLHF retrieval augmented prompting task accuracy,True,arxiv_tool,Base Model importance in machine learning,False,none,,,,
+- 이미지 하단 표기: ChatGPT Prompt Learning Research LAB Leader TAE YOUNG LEE",True,arxiv_tool,large language models base model prompt engineering fine-tuning RLHF retrieval augmented prompting task accuracy,False,none,,False,none,,False,none,,True,tavily_search,Andrej Karpathy tweet base model importance task accuracy effort complexity,False,none,,True,tavily_search,karpathy status 1655994367033884672 base model,False,none,,False,none,,False,none,

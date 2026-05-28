@@ -50,7 +50,7 @@ PPT 기반 교육 동영상 자동 생성 Agent System
 # Stacks
 
 - Language : Python
-- AI : LangGraph, LangChain, OpenAI, Tavily
+- AI : LangGraph, LangChain, LangSmith, OpenAI, Tavily
 - Others : LibreOffice, python-pptx, FFmpeg
 
 예시 slide 출처 : 
@@ -550,6 +550,7 @@ judge가 True  → 신뢰하고 통과 <br>
 
 LLM 종류별로 tool calling 정확도, query 적절성, 검색 결과 등 평가.
 
+![metrics_comparison.png](tool_execution_test_Dataset/metrics_comparison.png)
 
 
 # Special Requirements
