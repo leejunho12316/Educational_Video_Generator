@@ -4,6 +4,12 @@
 - [Implementation Details](#implementation-details)
   - [State Specifications](#state-specifications)
   - [Node Specifications](#node-specifications)
+- [Evaluation](#evaluation)
+  - [Test Dataset 생성](#test-dataset-생성)
+  - [Test Dataset 무결성 검사](#test-dataset-무결성-검사)
+  - [평가](#평가)
+    - [tool calling 정확도](#1-tool-calling-정확도)
+    - [tool calling Query LLM-as-a-Judge](#2-tool-calling-query-llm-as-a-judge)
 - [Special Requirements](#special-requirements)
 
 
@@ -432,8 +438,7 @@ Biz. Application을 위한 디자이너/재조정기\n‘아가도스’는 귀�
 
 <br>
 
-**test_dataset_None_labeled.csv**
-
+**test_dataset_None_labeled.csv** : 
 Tool Calling을 하지 말아야 할 데이터.
 
 | slide_index | title | tool_called | tool_name | query | raw_tool_result | tool_node_result |
@@ -441,18 +446,14 @@ Tool Calling을 하지 말아야 할 데이터.
 | 1 | 제목 없음 | False | none | | | 검색 필요 없음: 표지 슬라이드로 판단됩니다. 구체적인 제품/서비스 기능, 성능, 연구 논문 내용이 없어 검색 대상이 아닙니다. |
 | 2 | 제목 없음 | False | none | | | 검색 필요 없음: 제품 차별성, 사내 On-premise LLM 필요성, On-premise LLM 솔루션 등 큰 항목만 나열된 목차/섹션 구분 슬라이드로 판단됩니다. |
 
-**test_dataset_tavily_labeled.csv**
-
-tavily search를 Call 해야 할 데이터.
+**test_dataset_tavily_labeled.csv** : tavily search를 Call 해야 할 데이터.
 
 | slide_index | title | tool_called | tool_name | query | raw_tool_result | tool_node_result |
 |---|---|---|---|---|---|---|
 | 1 | 제목 없음 | True | tavily_search | MAAL albatross language model | {"query": "MAAL albatross language model", "results": [{"url": "https://albatross-lang.sourceforge.net", "title": "Albatross", ...}]} | MAAL-Albatross 관련 직접 정보는 공개 웹에서 제한적으로 확인됨. 마음AI 인스타그램 게시물이 가장 유의미한 결과로 확인됨. |
 | 2 | 제목 없음 | True | tavily_search | MAAL 오픈소스컨설팅 LLM | {"query": "MAAL 오픈소스컨설팅 LLM", "results": [{"url": "https://www.irobotnews.com/...", "title": "마음AI, 거대언어모델 '라마3 MAAL-허밍버드' 오픈소스 공개", ...}]} | 오픈소스컨설팅의 기업용 On-premise LLM 관련 자료 확인. 사내망 기반 LLM 도입 필요성, 업무 자동화, 생산성 향상, 보안 요구사항 대응 등이 핵심 주제. |
 
-**test_dataset_arxiv_labeled.csv**
-
-arxiv를 Call 해야 할 데이터.
+**test_dataset_arxiv_labeled.csv** : arxiv를 Call 해야 할 데이터.
 
 | slide_index | title | tool_called | tool_name | query | raw_tool_result | tool_node_result |
 |---|---|---|---|---|---|---|
@@ -548,9 +549,125 @@ judge가 True  → 신뢰하고 통과 <br>
 
 ## 평가
 
-LLM 종류별로 tool calling 정확도, query 적절성, 검색 결과 등 평가.
+### 1. tool calling 정확도
+테스트 데이터를 사용해 9가지의 LLM 별로 tool calling 여부, tool 종류 선택 accuracy, recall, f1-score 검사.<br>
+LangSmith 사용해 tool node 실행 시 전체 토큰수와 비용 계산.
+
+전체 모델 : gpt-4o-mini, gpt-4o, gpt-5, gemini-3-flash-preview, gemini-3.1-pro-preview, gemini-3.5-flash, claude-haiku-4-5, claude-sonnet-4-6, claude-opus-4-7
 
 ![metrics_comparison.png](tool_execution_test_Dataset/metrics_comparison.png)
+
+**tool_called** : tool calling 여부
+
+| 모델 | Accuracy | Recall | F1-Score |
+|:---|:---:|:---:|:---:|
+| gpt-4o-mini | 0.7891 | 0.7347 | 0.8421 |
+| gpt-4o | 0.6641 | 0.5612 | 0.7190 |
+| gpt-5 | 0.9375 | 0.9184 | 0.9574 |
+| gemini-3-flash-preview | 0.9922 | 1.0000 | 0.9949 |
+| gemini-3.1-pro-preview | 0.9688 | 0.9694 | 0.9794 |
+| gemini-3.5-flash | 0.9609 | 0.9796 | 0.9746 |
+| claude-haiku-4-5 | 0.5312 | 0.3878 | 0.5588 |
+| claude-sonnet-4-6 | 0.7500 | 0.6837 | 0.8072 |
+| claude-opus-4-7 | 0.8984 | 0.8673 | 0.9290 |
+
+**tool_name (macro)** : 올바른 tool 선택 여부
+
+| 모델 | Accuracy | Recall | F1-Score |
+|:---|:---:|:---:|:---:|
+| gpt-4o-mini | 0.7891 | 0.8120 | 0.7761 |
+| gpt-4o | 0.6641 | 0.7075 | 0.6263 |
+| gpt-5 | 0.9375 | 0.9456 | 0.9321 |
+| gemini-3-flash-preview | 0.9609 | 0.9617 | 0.9640 |
+| gemini-3.1-pro-preview | 0.9688 | 0.9685 | 0.9647 |
+| gemini-3.5-flash | 0.9453 | 0.9395 | 0.9417 |
+| claude-haiku-4-5 | 0.5312 | 0.5918 | 0.4967 |
+| claude-sonnet-4-6 | 0.7422 | 0.7712 | 0.7284 |
+| claude-opus-4-7 | 0.8984 | 0.9116 | 0.8915 |
+
+**비용 (LangSmith)**
+
+| 모델 | 비용 |
+|:---|---:|
+| gpt-4o-mini | $0.034 |
+| gpt-4o | $0.58 |
+| gpt-5 | $0.76 |
+| gemini-3-flash-preview | $0.28 |
+| gemini-3.1-pro-preview | $1.64 |
+| gemini-3.5-flash | $1.03 |
+| claude-haiku-4-5 | $0.69 |
+| claude-sonnet-4-6 | $1.96 |
+| claude-opus-4-7 | $3.91 |
+| **합계** | **$10.90** |
+
+
+### 2. tool calling Query LLM-as-a-Judge
+
+LLM 모델 별 tool calling Query를 LLM-as-a-Judge 방식으로 평가.
+PPT 슬라이드의 정제 데이터, 모범 Query와 함께 LLM 모델 별 Query를 입력해 1~5점으로 이유와 함꼐 평가.
+tool call 해야하는데 하지 않은 경우 1점 부여.
+
+
+**Prompt 전문**
+```
+"""당신은 검색 쿼리 품질 평가 전문가입니다.
+아래는 PPT 슬라이드 내용과 해당 슬라이드에 대한 정답 검색 쿼리, 그리고 평가 대상 쿼리입니다.
+정답 쿼리를 참고하여 평가 대상 쿼리의 품질을 1~5점으로 평가하세요.
+
+# 채점 기준
+1점: 슬라이드 내용과 무관하거나 완전히 잘못된 키워드를 사용한 쿼리. 검색 시 관련 결과가 나올 가능성이 거의 없음.
+2점: 관련 키워드를 일부 포함하나 핵심 주제를 벗어났거나, 불필요한 단어가 많아 검색 노이즈가 발생할 수 있음.
+3점: 핵심 키워드를 포함하지만 범위가 너무 넓거나 좁음. 또는 검색어가 지나치게 길어 간결성이 부족함.
+4점: 핵심 키워드를 잘 포함하고 간결하며 검색에 효과적. 정답 쿼리와 의미적으로 유사한 수준.
+5점: 정답 쿼리와 동일하거나 그보다 더 정확하고 간결한 최적의 쿼리. 검색 결과의 품질이 충분히 보장됨.
+
+# 출력 형식
+반드시 아래 JSON만 출력하세요. 다른 텍스트는 절대 출력하지 마세요.
+{"score": 1~5 정수, "reason": "한 문장 평가 이유"}"""
+```
+
+
+![query_score_comparison.png](tool_execution_test_Dataset/query_score_comparison.png)
+
+
+**LLM별 Query 평균 점수**
+
+| 모델 | 평균 점수 |
+|:---|---:|
+| gpt-4o-mini | 3.469 |
+| gpt-4o | 2.959 |
+| gpt-5 | 3.816 |
+| gemini-3-flash-preview | 4.143 |
+| gemini-3.1-pro-preview | 4.071 |
+| gemini-3.5-flash | 4.061 |
+| claude-haiku-4-5 | 2.224 |
+| claude-sonnet-4-6 | 3.194 |
+| claude-opus-4-7 | 3.867 |
+
+**점수 분포 (개수)**
+
+| 모델 | 1점 | 2점 | 3점 | 4점 | 5점 |
+|:---|---:|---:|---:|---:|---:|
+| gpt-4o-mini | 26 | 2 | 5 | 30 | 35 |
+| gpt-4o | 43 | 2 | 1 | 20 | 32 |
+| gpt-5 | 8 | 8 | 10 | 40 | 32 |
+| gemini-3-flash-preview | 2 | 1 | 7 | 59 | 29 |
+| gemini-3.1-pro-preview | 5 | 0 | 14 | 43 | 36 |
+| gemini-3.5-flash | 6 | 2 | 11 | 40 | 39 |
+| claude-haiku-4-5 | 60 | 0 | 3 | 26 | 9 |
+| claude-sonnet-4-6 | 33 | 1 | 3 | 36 | 25 |
+| claude-opus-4-7 | 14 | 1 | 2 | 48 | 33 |
+
+### 3. 결과
+
+**gemini-3-flash-preview 선정**<br>
+
+성능 : tool calling 여부 **accuracy 0.9922, recall 1.0000, f1-score 0.9949**이고 tool name 관련 **accuracy 0.9609, recall 0.9617, f1-score 0.9640** 달성. LLM-as-a-Judge Query 평가 **4.14점**으로 최고점 달성.<br>
+비용 : 같은 gemini 모델 gemini-3.5-flash 대비 **72.8%**, gemini-3.1-pro-preview 대비 **82.9%** 저렴. LLM 모델 중 가장 비싼 claude-opus-4-7 대비 최대 **92.8%** 저렴<br>
+따라서 tool calling node의 LLM은 비용과 성능 면에서 가장 탁월한 gemini-3-flash-preview 모델로 선정.
+
+
+<br><br><br>
 
 
 # Special Requirements
