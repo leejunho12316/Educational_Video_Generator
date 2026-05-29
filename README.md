@@ -306,7 +306,10 @@ RAG는 정보 검색과 콘텐츠 생성을 결합하여 데이터 활용의 효
 
 # Evaluation
 
-검색 Tool을 사용한 Script 보완 Node의 성능평가 진행.
+**개요**<br>
+전체 Agent Graph 중 검색 Node를 보완하기 위한 LLM 별 성능평가 진행.
+테스트 데이터셋 제작 후 9가지 LLM의 Tool Calling 성능을 **Accuracy, Recall, F1-Score, LLM-as-a-Judge** 방식으로 평가.
+최종적으로 **gemini-3-flash-preview** 모델 성정.
 
 ## Test Dataset 생성
 
@@ -566,7 +569,7 @@ LangSmith 사용해 tool node 실행 시 전체 토큰수와 비용 계산.
 | gpt-4o-mini | 0.7891 | 0.7347 | 0.8421 |
 | gpt-4o | 0.6641 | 0.5612 | 0.7190 |
 | gpt-5 | 0.9375 | 0.9184 | 0.9574 |
-| gemini-3-flash-preview | 0.9922 | 1.0000 | 0.9949 |
+| **gemini-3-flash-preview** | **0.9922** | **1.0000** | **0.9949** |
 | gemini-3.1-pro-preview | 0.9688 | 0.9694 | 0.9794 |
 | gemini-3.5-flash | 0.9609 | 0.9796 | 0.9746 |
 | claude-haiku-4-5 | 0.5312 | 0.3878 | 0.5588 |
@@ -580,7 +583,7 @@ LangSmith 사용해 tool node 실행 시 전체 토큰수와 비용 계산.
 | gpt-4o-mini | 0.7891 | 0.8120 | 0.7761 |
 | gpt-4o | 0.6641 | 0.7075 | 0.6263 |
 | gpt-5 | 0.9375 | 0.9456 | 0.9321 |
-| gemini-3-flash-preview | 0.9609 | 0.9617 | 0.9640 |
+| **gemini-3-flash-preview** | **0.9609** | **0.9617** | **0.9640** |
 | gemini-3.1-pro-preview | 0.9688 | 0.9685 | 0.9647 |
 | gemini-3.5-flash | 0.9453 | 0.9395 | 0.9417 |
 | claude-haiku-4-5 | 0.5312 | 0.5918 | 0.4967 |
@@ -594,7 +597,7 @@ LangSmith 사용해 tool node 실행 시 전체 토큰수와 비용 계산.
 | gpt-4o-mini | $0.034 |
 | gpt-4o | $0.58 |
 | gpt-5 | $0.76 |
-| gemini-3-flash-preview | $0.28 |
+| **gemini-3-flash-preview** | **$0.28** |
 | gemini-3.1-pro-preview | $1.64 |
 | gemini-3.5-flash | $1.03 |
 | claude-haiku-4-5 | $0.69 |
@@ -639,7 +642,7 @@ tool call 해야하는데 하지 않은 경우 1점 부여.
 | gpt-4o-mini | 3.469 |
 | gpt-4o | 2.959 |
 | gpt-5 | 3.816 |
-| gemini-3-flash-preview | 4.143 |
+| **gemini-3-flash-preview** | **4.143** |
 | gemini-3.1-pro-preview | 4.071 |
 | gemini-3.5-flash | 4.061 |
 | claude-haiku-4-5 | 2.224 |
@@ -653,7 +656,7 @@ tool call 해야하는데 하지 않은 경우 1점 부여.
 | gpt-4o-mini | 26 | 2 | 5 | 30 | 35 |
 | gpt-4o | 43 | 2 | 1 | 20 | 32 |
 | gpt-5 | 8 | 8 | 10 | 40 | 32 |
-| gemini-3-flash-preview | 2 | 1 | 7 | 59 | 29 |
+| **gemini-3-flash-preview** | 2 | 1 | 7 | **59** | **29** |
 | gemini-3.1-pro-preview | 5 | 0 | 14 | 43 | 36 |
 | gemini-3.5-flash | 6 | 2 | 11 | 40 | 39 |
 | claude-haiku-4-5 | 60 | 0 | 3 | 26 | 9 |
