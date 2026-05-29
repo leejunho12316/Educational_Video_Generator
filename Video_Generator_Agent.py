@@ -13,6 +13,7 @@ from openai import OpenAI
 
 from langchain_tavily import TavilySearch
 from langchain_openai import ChatOpenAI
+from langchain_google_genai import ChatGoogleGenerativeAI
 from langchain_core.messages import SystemMessage, HumanMessage, AIMessage
 from langgraph.graph.message import add_messages
 from typing import Annotated
@@ -396,7 +397,7 @@ wiki_tool = WikipediaQueryRun(api_wrapper=WikipediaAPIWrapper(top_k_results=3, d
 tool_list = [tavily_tool, arxiv_tool, wiki_tool]
 tool_node = ToolNode(tool_list, handle_tool_errors=True)
 
-tool_llm = ChatOpenAI(model='gpt-5.5', temperature=0.3)
+tool_llm = ChatGoogleGenerativeAI(model='gemini-3-flash-preview', temperature=0)
 llm_with_tools = tool_llm.bind_tools(tool_list)
 
 def tool_search(state : State):
