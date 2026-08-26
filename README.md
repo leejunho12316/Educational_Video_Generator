@@ -57,6 +57,8 @@ PPT 기반 교육 동영상 자동 생성 Agent System
 
 - Language : Python
 - AI : LangGraph, LangChain, LangSmith, OpenAI, Tavily
+- Backend: FastAPI
+- Frontend: HTML, CSS, JS
 - Others : LibreOffice, python-pptx, FFmpeg
 
 예시 slide 출처 : 
